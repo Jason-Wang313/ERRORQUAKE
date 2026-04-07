@@ -43,10 +43,21 @@
 \titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
-% Abstract formatting
-\renewenvironment{abstract}%
-  {\small\quotation\noindent\textbf{\abstractname.}\quad}%
-  {\endquotation}
+% Abstract formatting: centered bold "Abstract" label on its own line,
+% followed by a small-text indented block. Matches NeurIPS convention.
+\renewenvironment{abstract}
+  {\vspace{0.5\baselineskip}%
+   \begin{center}{\bfseries Abstract}\end{center}%
+   \vspace{-0.25\baselineskip}%
+   \begin{list}{}{%
+     \setlength{\leftmargin}{0.3in}%
+     \setlength{\rightmargin}{0.3in}%
+     \setlength{\topsep}{0pt}%
+   }\item\relax\small}
+  {\end{list}\vspace{0.5\baselineskip}}
+
+% Suppress the automatic date under the title.
+\date{}
 
 % Line numbering if [preprint]
 \ifneurips@preprint
@@ -54,21 +65,37 @@
   \linenumbers
 \fi
 
-% The E&D track gets a tiny banner on the first page.
+% The E&D track banner: define a fresh \@maketitle so the banner sits
+% INSIDE the title block, after the implicit \newpage that any inner
+% maketitle starts with. This is why a wrapper around the original
+% \@maketitle does not work — the original starts with \newpage and
+% would put the banner on page 1 and the title on page 2.
 \ifneurips@eandd
-  \AtBeginDocument{%
-    \vspace*{-0.3in}%
-    \noindent\hfill\textsf{\footnotesize Evaluations \& Datasets Track}\hfill\null\par%
-    \vspace{0.3in}%
+  \makeatletter
+  \renewcommand{\@maketitle}{%
+    \newpage\null\vskip 1em%
+    \begin{center}%
+      {\sffamily\footnotesize Evaluations \& Datasets Track}\par%
+      \vskip 1em%
+      {\LARGE\bfseries \@title\par}%
+      \vskip 1em%
+      {\large
+        \lineskip .5em%
+        \begin{tabular}[t]{c}\@author\end{tabular}\par}%
+    \end{center}%
+    \par\vskip 1em%
   }
+  \makeatother
 \fi
 
 % Title block. For double-blind (default, no option), author block is
 % suppressed in favour of an Anonymous banner.
+\makeatletter
 \ifneurips@nonanon\else
   \renewcommand{\and}{\quad}
-  \renewcommand{\author}[1]{\gdef\@author{Anonymous authors\\\texttt{Paper submitted to NeurIPS 2026}}}
+  \renewcommand{\author}[1]{\gdef\@author{Anonymous authors\\[-2pt]\texttt{\footnotesize Paper submitted to NeurIPS 2026 E\&D track}}}
 \fi
+\makeatother
 
 % Paragraph spacing
 \setlength{\parskip}{0.25\baselineskip}
