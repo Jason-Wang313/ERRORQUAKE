@@ -1,0 +1,56 @@
+# ERRORQUAKE — .gitignore
+# Exclude large raw data, build artifacts, and local-only state.
+
+# Python build / caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# LaTeX build artifacts (keep main.pdf but not the intermediate files)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+
+# Large raw data — excluded from the public repo because GitHub is not
+# an LFS host for us and these files are either reproducible from the
+# public pipeline or too large to ship in git.
+data/queries/
+data/queries_shadow/
+data/synthetic/
+data/pilot/
+data/synthetic_sanity/
+results/evaluations/
+results/llama32_resume.log
+results/phase4_log.txt
+results/phase4_pid.txt
+results/evaluation_progress.json
+
+# Progress / session state that isn't part of the deliverable
+*.pid
+*.pid.txt
+.DS_Store
+Thumbs.db
+
+# Secrets — belt-and-braces even though there shouldn't be any
+.env
+.env.*
+*.key
+*_API_KEY*

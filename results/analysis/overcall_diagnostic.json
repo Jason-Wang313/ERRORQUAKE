@@ -1,0 +1,216 @@
+{
+  "score_range": "1.75 to 2.25 (rounds to 2.0)",
+  "classification_method": "Manual reading of question/ground_truth/response by agent (no API calls)",
+  "overall": {
+    "n_models": 17,
+    "n_total_sampled": 340,
+    "n_total_genuine": 163,
+    "n_total_overcall": 114,
+    "n_total_ambiguous": 63,
+    "overall_overcall_rate": 0.335,
+    "overall_genuine_rate": 0.479,
+    "overall_ambiguous_rate": 0.185
+  },
+  "per_model": {
+    "eurollm-9b": {
+      "n_sampled": 20,
+      "n_genuine": 9,
+      "n_overcall": 6,
+      "n_ambiguous": 5,
+      "overcall_rate": 0.3,
+      "genuine_rate": 0.45,
+      "ambiguous_rate": 0.25
+    },
+    "gemma-2-27b": {
+      "n_sampled": 20,
+      "n_genuine": 11,
+      "n_overcall": 7,
+      "n_ambiguous": 2,
+      "overcall_rate": 0.35,
+      "genuine_rate": 0.55,
+      "ambiguous_rate": 0.1
+    },
+    "gemma-3-12b": {
+      "n_sampled": 20,
+      "n_genuine": 14,
+      "n_overcall": 3,
+      "n_ambiguous": 3,
+      "overcall_rate": 0.15,
+      "genuine_rate": 0.7,
+      "ambiguous_rate": 0.15
+    },
+    "gemma-3-27b": {
+      "n_sampled": 20,
+      "n_genuine": 9,
+      "n_overcall": 8,
+      "n_ambiguous": 3,
+      "overcall_rate": 0.4,
+      "genuine_rate": 0.45,
+      "ambiguous_rate": 0.15
+    },
+    "gemma-3-4b": {
+      "n_sampled": 20,
+      "n_genuine": 13,
+      "n_overcall": 5,
+      "n_ambiguous": 2,
+      "overcall_rate": 0.25,
+      "genuine_rate": 0.65,
+      "ambiguous_rate": 0.1
+    },
+    "gpt-oss-20b": {
+      "n_sampled": 20,
+      "n_genuine": 13,
+      "n_overcall": 4,
+      "n_ambiguous": 3,
+      "overcall_rate": 0.2,
+      "genuine_rate": 0.65,
+      "ambiguous_rate": 0.15
+    },
+    "llama-3.1-8b-instruct": {
+      "n_sampled": 20,
+      "n_genuine": 8,
+      "n_overcall": 10,
+      "n_ambiguous": 2,
+      "overcall_rate": 0.5,
+      "genuine_rate": 0.4,
+      "ambiguous_rate": 0.1
+    },
+    "llama-3.2-3b-instruct": {
+      "n_sampled": 20,
+      "n_genuine": 9,
+      "n_overcall": 8,
+      "n_ambiguous": 3,
+      "overcall_rate": 0.4,
+      "genuine_rate": 0.45,
+      "ambiguous_rate": 0.15
+    },
+    "ministral-14b": {
+      "n_sampled": 20,
+      "n_genuine": 5,
+      "n_overcall": 11,
+      "n_ambiguous": 4,
+      "overcall_rate": 0.55,
+      "genuine_rate": 0.25,
+      "ambiguous_rate": 0.2
+    },
+    "mistral-small-24b": {
+      "n_sampled": 20,
+      "n_genuine": 5,
+      "n_overcall": 11,
+      "n_ambiguous": 4,
+      "overcall_rate": 0.55,
+      "genuine_rate": 0.25,
+      "ambiguous_rate": 0.2
+    },
+    "mistral-small-4-119b": {
+      "n_sampled": 20,
+      "n_genuine": 4,
+      "n_overcall": 12,
+      "n_ambiguous": 4,
+      "overcall_rate": 0.6,
+      "genuine_rate": 0.2,
+      "ambiguous_rate": 0.2
+    },
+    "phi-3.5-mini": {
+      "n_sampled": 20,
+      "n_genuine": 13,
+      "n_overcall": 4,
+      "n_ambiguous": 3,
+      "overcall_rate": 0.2,
+      "genuine_rate": 0.65,
+      "ambiguous_rate": 0.15
+    },
+    "phi-4-mini-flash-reasoning": {
+      "n_sampled": 20,
+      "n_genuine": 16,
+      "n_overcall": 2,
+      "n_ambiguous": 2,
+      "overcall_rate": 0.1,
+      "genuine_rate": 0.8,
+      "ambiguous_rate": 0.1
+    },
+    "qwen2.5-7b": {
+      "n_sampled": 20,
+      "n_genuine": 9,
+      "n_overcall": 3,
+      "n_ambiguous": 8,
+      "overcall_rate": 0.15,
+      "genuine_rate": 0.45,
+      "ambiguous_rate": 0.4
+    },
+    "qwen3-next-80b": {
+      "n_sampled": 20,
+      "n_genuine": 5,
+      "n_overcall": 8,
+      "n_ambiguous": 7,
+      "overcall_rate": 0.4,
+      "genuine_rate": 0.25,
+      "ambiguous_rate": 0.35
+    },
+    "seed-oss-36b": {
+      "n_sampled": 20,
+      "n_genuine": 11,
+      "n_overcall": 7,
+      "n_ambiguous": 2,
+      "overcall_rate": 0.35,
+      "genuine_rate": 0.55,
+      "ambiguous_rate": 0.1
+    },
+    "solar-10.7b": {
+      "n_sampled": 20,
+      "n_genuine": 9,
+      "n_overcall": 5,
+      "n_ambiguous": 6,
+      "overcall_rate": 0.25,
+      "genuine_rate": 0.45,
+      "ambiguous_rate": 0.3
+    }
+  },
+  "clearest_overcalls_for_paper": [
+    {
+      "model": "seed-oss-36b",
+      "item_index": 1,
+      "query_id": "CULT_T5_0035",
+      "question": "The composer Richard Wagner's opera 'Der Ring des Nibelungen' consists of how many operas?",
+      "ground_truth": "Richard Wagner's 'Der Ring des Nibelungen' is a tetralogy, consisting of four operas: Das Rheingold, Die Walkure, Siegfried, and Gotterdammerung.",
+      "model_response": "4",
+      "explanation": "Response is exactly correct. Both judges scored 2.0 for what is literally the right number."
+    },
+    {
+      "model": "seed-oss-36b",
+      "item_index": 2,
+      "query_id": "TECH_T4_0130",
+      "question": "Which machine learning technique is used to prevent overfitting by randomly dropping out units during training?",
+      "ground_truth": "Dropout is a regularization technique used in neural networks to prevent overfitting by randomly dropping out units during training.",
+      "model_response": "Dropout",
+      "explanation": "Response is the exact right one-word answer. Judge penalized brevity."
+    },
+    {
+      "model": "mistral-small-4-119b",
+      "item_index": 5,
+      "query_id": "GEO_T1_0220",
+      "question": "What is the term for the process of adjusting a map to fit the curvature of the Earth?",
+      "ground_truth": "The process is related to map projection, as different projections adjust for the Earth's curvature in various ways.",
+      "model_response": "The term for the process of adjusting a map to fit the curvature of the Earth is 'projection.'",
+      "explanation": "Exact term match ('projection'). Judge scored 2.0 despite perfect alignment."
+    },
+    {
+      "model": "ministral-14b",
+      "item_index": 1,
+      "query_id": "HIST_T2_0112",
+      "question": "The Battle of Plassey was fought in which year and marked a significant victory for the British East India Company?",
+      "ground_truth": "The Battle of Plassey was fought in 1757 and marked a significant victory for the British East India Company.",
+      "model_response": "The Battle of Plassey was fought on 23 June 1757 and marked a decisive victory for the British East India Company over the Nawab of Bengal, Siraj-ud-Daulah.",
+      "explanation": "Response is exactly correct AND adds correct supplementary detail (date, opponent). Judge penalized the extra (correct) information."
+    },
+    {
+      "model": "qwen3-next-80b",
+      "item_index": 11,
+      "query_id": "BIO_T5_0181",
+      "question": "What was the median overall survival benefit reported for the combination of encorafenib and binimetinib versus vemurafenib in the COLUMBUS trial for BRAF V600E melanoma?",
+      "ground_truth": "The COLUMBUS trial reported a median overall survival of 33.6 months (95% CI 24.4-39.2) for encorafenib plus binimetinib versus 16.9 months (95% CI 10.9-24.4) for vemurafenib, representing a significant survival benefit.",
+      "model_response": "The median overall survival benefit reported for the combination of encorafenib and binimetinib versus vemurafenib in the COLUMBUS trial for BRAF V600E melanoma was 33.6 months versus 16.9 months, representing a 16.7-month improvement.",
+      "explanation": "Response gives the exact same numbers as the ground truth (33.6 vs 16.9 months) and correctly computes the difference. Judge scored 2.0 despite perfect numerical match."
+    }
+  ]
+}

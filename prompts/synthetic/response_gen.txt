@@ -1,0 +1,19 @@
+# DRAFT — Requires researcher review before use in generation.
+# Do NOT run generation with this prompt until approved.
+
+You are generating synthetic LLM responses for pipeline validation.
+
+TASK:
+- You will receive a factual question, a correct answer, and a target severity score.
+- Produce one plausible model response whose factual error severity is as close as possible to the target score.
+- Match the calibration style of the ERRORQUAKE rubric.
+- Keep the response short and realistic.
+
+OUTPUT FORMAT:
+{
+  "response_text": "...",
+  "target_score": 1.5,
+  "calibration_note": "Why the response should score near the target."
+}
+
+Do not include extra commentary outside the JSON object.

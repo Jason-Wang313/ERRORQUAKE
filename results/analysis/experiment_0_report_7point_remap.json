@@ -1,0 +1,270 @@
+{
+  "experiment": "Experiment 0: Synthetic Pipeline Validation (7-point remap)",
+  "date": "2026-04-03",
+  "mapping": {
+    "1.5": 1.0,
+    "2.5": 3.0
+  },
+  "results": {
+    "power_law": {
+      "target_final_spearman_rho_7point": 0.63650140264845,
+      "target_primary_spearman_rho_7point": 0.617883630815117,
+      "rho_passes_0_70": false,
+      "best_fit_family_7point": "lognormal",
+      "bic_ranking_7point": [
+        {
+          "distribution": "lognormal",
+          "bic": 1491.1515641866752,
+          "aic": 1483.1836916253008,
+          "chi2_pvalue": 2.2550823700141193e-61,
+          "parameters": {
+            "mu": 0.5973538852997657,
+            "sigma": 0.7273898446777494
+          }
+        },
+        {
+          "distribution": "stretched_exp",
+          "bic": 1507.1055080245,
+          "aic": 1499.1376354631257,
+          "chi2_pvalue": 4.982183795437019e-69,
+          "parameters": {
+            "lambda": 0.07506774751983479,
+            "gamma": 2.2719604316376683
+          }
+        },
+        {
+          "distribution": "exponential",
+          "bic": 1515.0258892316288,
+          "aic": 1511.0419529509415,
+          "chi2_pvalue": 3.5613517865452525e-73,
+          "parameters": {
+            "lambda": 0.30553305279079424
+          }
+        },
+        {
+          "distribution": "truncated_power_law",
+          "bic": 1522.8911065644152,
+          "aic": 1514.9232340030408,
+          "chi2_pvalue": 7.310382969838179e-74,
+          "parameters": {
+            "beta": 0.05,
+            "lambda": 0.27276456029225377
+          }
+        },
+        {
+          "distribution": "power_law",
+          "bic": 1531.7997289499597,
+          "aic": 1527.8157926692725,
+          "chi2_pvalue": 1.9180769691856643e-77,
+          "parameters": {
+            "beta": 0.33196247847833216
+          }
+        }
+      ],
+      "recovered_b_7point": 14.418576799187994,
+      "recovery_7point": {
+        "distribution": "power_law",
+        "family_recovered": false,
+        "true_family": "power_law",
+        "best_fit_family": "lognormal",
+        "param_recovered": false,
+        "true_b": 1.0,
+        "recovered_b": 14.418576799187994,
+        "judge_correlation": 0.63650140264845,
+        "judge_calibration_pass": false,
+        "verdict": "FAIL",
+        "details": "Best fit: lognormal. Judge-target Spearman rho=0.637. Family recovered=False. Recovered b=14.418576799187994 vs true b=1.0."
+      },
+      "target_bin_counts_7point": {
+        "0.5": 182,
+        "1.0": 160,
+        "2.0": 40,
+        "3.0": 73,
+        "3.5": 28,
+        "4.0": 17
+      },
+      "final_bin_counts_7point": {
+        "0.0": 103,
+        "0.5": 47,
+        "1.0": 134,
+        "2.0": 133,
+        "3.0": 78,
+        "3.5": 5
+      }
+    },
+    "exponential": {
+      "target_final_spearman_rho_7point": 0.5806377521200087,
+      "target_primary_spearman_rho_7point": 0.5754361641081575,
+      "rho_passes_0_70": false,
+      "best_fit_family_7point": "lognormal",
+      "bic_ranking_7point": [
+        {
+          "distribution": "lognormal",
+          "bic": 1571.9341764634946,
+          "aic": 1563.8206084370374,
+          "chi2_pvalue": 1.3188094209630054e-66,
+          "parameters": {
+            "mu": 0.40674495182607995,
+            "sigma": 0.5755135469829251
+          }
+        },
+        {
+          "distribution": "stretched_exp",
+          "bic": 1627.0973714640402,
+          "aic": 1618.983803437583,
+          "chi2_pvalue": 5.6569802628907306e-89,
+          "parameters": {
+            "lambda": 0.2246219935273637,
+            "gamma": 1.7605669012372769
+          }
+        },
+        {
+          "distribution": "exponential",
+          "bic": 1651.7785450905762,
+          "aic": 1647.7217610773475,
+          "chi2_pvalue": 2.1208498696410038e-98,
+          "parameters": {
+            "lambda": 0.5062009995051853
+          }
+        },
+        {
+          "distribution": "truncated_power_law",
+          "bic": 1661.5485181744486,
+          "aic": 1653.4349501479915,
+          "chi2_pvalue": 9.899684271885488e-100,
+          "parameters": {
+            "beta": 0.05,
+            "lambda": 0.47442256064903865
+          }
+        },
+        {
+          "distribution": "power_law",
+          "bic": 1710.3026612329816,
+          "aic": 1706.2458772197529,
+          "chi2_pvalue": 5.269402446331217e-116,
+          "parameters": {
+            "beta": 0.5760497529158999
+          }
+        }
+      ],
+      "recovered_b_7point": null,
+      "recovery_7point": {
+        "distribution": "exponential",
+        "family_recovered": false,
+        "true_family": "exponential",
+        "best_fit_family": "lognormal",
+        "param_recovered": null,
+        "true_b": null,
+        "recovered_b": 5.645828264742261,
+        "judge_correlation": 0.5806377521200087,
+        "judge_calibration_pass": false,
+        "verdict": "FAIL",
+        "details": "Best fit: lognormal. Judge-target Spearman rho=0.581. Family recovered=False."
+      },
+      "target_bin_counts_7point": {
+        "0.5": 175,
+        "1.0": 183,
+        "2.0": 55,
+        "3.0": 62,
+        "3.5": 10,
+        "4.0": 15
+      },
+      "final_bin_counts_7point": {
+        "0.0": 73,
+        "0.5": 44,
+        "1.0": 163,
+        "2.0": 155,
+        "3.0": 57,
+        "3.5": 6,
+        "4.0": 2
+      }
+    },
+    "uniform": {
+      "target_final_spearman_rho_7point": 0.5656095810175473,
+      "target_primary_spearman_rho_7point": 0.5540692447704746,
+      "rho_passes_0_70": false,
+      "best_fit_family_7point": "lognormal",
+      "bic_ranking_7point": [
+        {
+          "distribution": "lognormal",
+          "bic": 1758.4914651455638,
+          "aic": 1750.2160110373914,
+          "chi2_pvalue": 4.907378475939582e-75,
+          "parameters": {
+            "mu": 0.8274515747751773,
+            "sigma": 0.7041149219897692
+          }
+        },
+        {
+          "distribution": "stretched_exp",
+          "bic": 1792.047584692894,
+          "aic": 1783.7721305847215,
+          "chi2_pvalue": 6.706393671424678e-88,
+          "parameters": {
+            "lambda": 0.00136531504389819,
+            "gamma": 5.0
+          }
+        },
+        {
+          "distribution": "exponential",
+          "bic": 1805.4783020684245,
+          "aic": 1801.3405750143381,
+          "chi2_pvalue": 5.323622066401844e-96,
+          "parameters": {
+            "lambda": 0.07460011850931351
+          }
+        },
+        {
+          "distribution": "power_law",
+          "bic": 1808.9155697733518,
+          "aic": 1804.7778427192654,
+          "chi2_pvalue": 3.84081575517363e-97,
+          "parameters": {
+            "beta": 0.05000531921999756
+          }
+        },
+        {
+          "distribution": "truncated_power_law",
+          "bic": 1814.1714384929376,
+          "aic": 1805.8959843847651,
+          "chi2_pvalue": 6.467644667830797e-97,
+          "parameters": {
+            "beta": 0.05,
+            "lambda": 0.04353372043845848
+          }
+        }
+      ],
+      "recovered_b_7point": null,
+      "recovery_7point": {
+        "distribution": "uniform",
+        "family_recovered": true,
+        "true_family": "uniform",
+        "best_fit_family": "lognormal",
+        "param_recovered": null,
+        "true_b": null,
+        "recovered_b": 6.369652401247678,
+        "judge_correlation": 0.5656095810175473,
+        "judge_calibration_pass": false,
+        "verdict": "FAIL",
+        "details": "Best fit: lognormal. Judge-target Spearman rho=0.566. Family recovered=True."
+      },
+      "target_bin_counts_7point": {
+        "0.5": 61,
+        "1.0": 116,
+        "2.0": 78,
+        "3.0": 114,
+        "3.5": 62,
+        "4.0": 69
+      },
+      "final_bin_counts_7point": {
+        "0.0": 37,
+        "0.5": 25,
+        "1.0": 138,
+        "2.0": 168,
+        "3.0": 114,
+        "3.5": 18
+      }
+    }
+  },
+  "overall_passes_0_70": false
+}

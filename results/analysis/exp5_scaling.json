@@ -1,0 +1,199 @@
+{
+  "points": [
+    {
+      "name": "qwen3-next-80b",
+      "active_params_b": 3.0,
+      "log_params": 9.477121254719663,
+      "architecture": "moe",
+      "b_value": 1.05209367446985,
+      "error_rate": 0.5915
+    },
+    {
+      "name": "llama-3.2-3b-instruct",
+      "active_params_b": 3.2,
+      "log_params": 9.505149978319906,
+      "architecture": "dense",
+      "b_value": 1.046370330667484,
+      "error_rate": 0.4495
+    },
+    {
+      "name": "gpt-oss-20b",
+      "active_params_b": 3.6,
+      "log_params": 9.556302500767288,
+      "architecture": "moe",
+      "b_value": 0.9375245958546385,
+      "error_rate": 0.5861
+    },
+    {
+      "name": "phi-3.5-mini",
+      "active_params_b": 3.8,
+      "log_params": 9.57978359661681,
+      "architecture": "dense",
+      "b_value": 1.3088326851878813,
+      "error_rate": 0.2851
+    },
+    {
+      "name": "gemma-3-4b",
+      "active_params_b": 4.0,
+      "log_params": 9.602059991327963,
+      "architecture": "dense",
+      "b_value": 0.979429782853737,
+      "error_rate": 0.3865
+    },
+    {
+      "name": "qwen2.5-7b",
+      "active_params_b": 7.6,
+      "log_params": 9.880813592280791,
+      "architecture": "dense",
+      "b_value": 1.2566819050817495,
+      "error_rate": 0.3155
+    },
+    {
+      "name": "llama-3.1-8b-instruct",
+      "active_params_b": 8.0,
+      "log_params": 9.903089986991944,
+      "architecture": "dense",
+      "b_value": 1.0005099943996716,
+      "error_rate": 0.6072
+    },
+    {
+      "name": "eurollm-9b",
+      "active_params_b": 9.2,
+      "log_params": 9.963787827345556,
+      "architecture": "dense",
+      "b_value": 1.066688201165882,
+      "error_rate": 0.3442
+    },
+    {
+      "name": "solar-10.7b",
+      "active_params_b": 10.7,
+      "log_params": 10.02938377768521,
+      "architecture": "dense",
+      "b_value": 0.9052899059391726,
+      "error_rate": 0.6444
+    },
+    {
+      "name": "gemma-3-12b",
+      "active_params_b": 12.0,
+      "log_params": 10.079181246047625,
+      "architecture": "dense",
+      "b_value": 0.9382618753417843,
+      "error_rate": 0.6309
+    },
+    {
+      "name": "ministral-14b",
+      "active_params_b": 14.0,
+      "log_params": 10.146128035678238,
+      "architecture": "dense",
+      "b_value": 1.1222476877499956,
+      "error_rate": 0.5863
+    },
+    {
+      "name": "mistral-small-4-119b",
+      "active_params_b": 16.0,
+      "log_params": 10.204119982655925,
+      "architecture": "moe",
+      "b_value": 0.8878909407799812,
+      "error_rate": 0.5785
+    },
+    {
+      "name": "llama-4-maverick",
+      "active_params_b": 17.0,
+      "log_params": 10.230448921378274,
+      "architecture": "moe",
+      "b_value": 1.1184570218878271,
+      "error_rate": 0.5535
+    },
+    {
+      "name": "mistral-medium-3",
+      "active_params_b": 24.0,
+      "log_params": 10.380211241711606,
+      "architecture": "dense",
+      "b_value": 0.9063537013633084,
+      "error_rate": 0.5892
+    },
+    {
+      "name": "mistral-small-24b",
+      "active_params_b": 24.0,
+      "log_params": 10.380211241711606,
+      "architecture": "dense",
+      "b_value": 0.9988773083774788,
+      "error_rate": 0.5664
+    },
+    {
+      "name": "gemma-2-27b",
+      "active_params_b": 27.0,
+      "log_params": 10.431363764158988,
+      "architecture": "dense",
+      "b_value": 0.6190104528798855,
+      "error_rate": 0.6664
+    },
+    {
+      "name": "gemma-3-27b",
+      "active_params_b": 27.0,
+      "log_params": 10.431363764158988,
+      "architecture": "dense",
+      "b_value": 0.9563557929019344,
+      "error_rate": 0.6305
+    },
+    {
+      "name": "kimi-k2-instruct",
+      "active_params_b": 32.0,
+      "log_params": 10.505149978319906,
+      "architecture": "moe",
+      "b_value": 1.040607805049357,
+      "error_rate": 0.6153
+    },
+    {
+      "name": "seed-oss-36b",
+      "active_params_b": 36.0,
+      "log_params": 10.556302500767288,
+      "architecture": "dense",
+      "b_value": 0.5736443770317645,
+      "error_rate": 0.568
+    },
+    {
+      "name": "deepseek-v3.1",
+      "active_params_b": 37.0,
+      "log_params": 10.568201724066995,
+      "architecture": "moe",
+      "b_value": 0.8075947165703135,
+      "error_rate": 0.5708
+    },
+    {
+      "name": "deepseek-v3.2",
+      "active_params_b": 37.0,
+      "log_params": 10.568201724066995,
+      "architecture": "moe",
+      "b_value": 0.6554331426337371,
+      "error_rate": 0.5865
+    }
+  ],
+  "correlations": {
+    "all": {
+      "label": "all",
+      "n": 21,
+      "spearman_rho": -0.5849856534027732,
+      "spearman_p": 0.005344131296254408,
+      "pearson_r": -0.5847624376271049,
+      "pearson_p": 0.0053659492781807944
+    },
+    "dense": {
+      "label": "dense",
+      "n": 14,
+      "spearman_rho": -0.6894289852069257,
+      "spearman_p": 0.006375119913556469,
+      "pearson_r": -0.6685908595469283,
+      "pearson_p": 0.008945085585125998
+    },
+    "moe": {
+      "label": "moe",
+      "n": 7,
+      "spearman_rho": -0.594618725379069,
+      "spearman_p": 0.15908999370118462,
+      "pearson_r": -0.4483461052021555,
+      "pearson_p": 0.3129982384674106
+    }
+  },
+  "interpretation": "Pre-registered prediction was NO clean correlation. Spearman rho on dense models is the headline number."
+}

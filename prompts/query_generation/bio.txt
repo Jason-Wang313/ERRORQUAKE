@@ -1,0 +1,90 @@
+# CORRECTED — ready for researcher final review before generation.
+# Changes from draft: added diversity enforcement, T5 difficulty
+# rationale, ground truth format spec, expanded pitfalls.
+
+DOMAIN: Biomedical (BIO)
+
+SCOPE:
+Human biology, medicine, pharmacology, epidemiology, genetics, neuroscience,
+microbiology, immunology, and biochemistry. Exclude veterinary medicine,
+ecology (use SCI), and health-law policy (use LAW).
+
+SUB-TOPICS — distribute questions evenly across these. No sub-topic should
+have more than 15% of questions in any single batch:
+1. Anatomy and physiology
+2. Pharmacology and drug mechanisms
+3. Infectious disease and microbiology
+4. Genetics and genomics
+5. Neuroscience and neuroanatomy
+6. Epidemiology and public health
+7. Clinical diagnostics and procedures
+8. Immunology
+9. Biochemistry and molecular biology
+10. Medical history and landmark discoveries
+
+DIFFICULTY TIERS:
+
+T1 (Elementary, <5% error expected)
+Questions a well-read undergraduate or pre-med student answers correctly.
+Basic definitions, well-known functions, textbook fundamentals.
+  Example: "What organ produces insulin?" → "The pancreas produces insulin, specifically the beta cells in the islets of Langerhans."
+  Example: "What does DNA stand for?" → "Deoxyribonucleic acid."
+
+T2 (Intermediate, 5–20% error expected)
+Requires basic medical or biological knowledge beyond introductory level.
+Named pathways, drug classes, chromosome assignments, standard lab values.
+  Example: "Which chromosome carries the BRCA1 gene?" → "Chromosome 17."
+  Example: "What class of drug is amoxicillin?" → "A beta-lactam antibiotic in the aminopenicillin subclass."
+
+T3 (Advanced, 20–50% error expected)
+Requires specialist-level knowledge. Specific enzyme names, receptor subtypes,
+diagnostic criteria, named clinical scales.
+  Example: "Which CYP enzyme primarily metabolizes warfarin's S-enantiomer?" → "CYP2C9."
+  Example: "What is the main neurotransmitter released by postganglionic parasympathetic neurons?" → "Acetylcholine."
+
+T4 (Expert, 50–80% error expected)
+Requires deep domain expertise: staging thresholds, specific protein names,
+numerical criteria from clinical guidelines, pathway details.
+  Example: "What Breslow thickness threshold changes melanoma staging from T1 to T2?" → "1.0 mm, according to the AJCC 8th edition staging system."
+  Example: "Name the three Yamanaka factors besides Oct4." → "Sox2, Klf4, and c-Myc."
+
+T5 (Frontier, >80% error expected)
+Questions that target specific numerical results from named clinical trials,
+exact dates or figures from recent (pre-2025) guidelines, or details that
+require precise recall of particular studies rather than general domain
+knowledge. Models fail these because the specific numbers/details are
+unlikely to be memorized even with strong biomedical training data.
+  Example: "What was the primary endpoint hazard ratio reported in the EMPEROR-Reduced trial for empagliflozin in heart failure?" → "Hazard ratio 0.75 (95% CI 0.65–0.86) for the composite of cardiovascular death or hospitalization for heart failure."
+  Example: "Which three spike protein receptor-binding domain substitutions characterized the SARS-CoV-2 Beta (B.1.351) variant?" → "K417N, E484K, and N501Y."
+
+GROUND TRUTH FORMAT:
+Every ground truth answer must be a complete factual statement of 1–3
+sentences. Do NOT provide bare numbers, single words, or yes/no answers.
+Include enough context that a judge can verify correctness without external
+lookup. If the answer involves a number, include units and source context.
+
+  BAD:  "0.75"
+  GOOD: "Hazard ratio 0.75 (95% CI 0.65–0.86) for the composite of
+         cardiovascular death or hospitalization for heart failure, as
+         reported in the EMPEROR-Reduced trial (Packer et al., NEJM 2020)."
+
+  BAD:  "CYP2C9"
+  GOOD: "CYP2C9 is the primary cytochrome P450 enzyme responsible for
+         metabolizing the more pharmacologically active S-enantiomer of
+         warfarin."
+
+PITFALLS TO AVOID:
+- Questions where clinical guidelines changed after December 2024 (the
+  ground truth may be ambiguous or contested)
+- Questions about drug dosages that vary by age, weight, indication, or
+  renal function (no single correct answer)
+- Questions requiring clinical judgment or differential diagnosis rather
+  than factual recall (e.g., "What would you diagnose given symptoms X?")
+- Preliminary findings from preprints or unpublished trials
+- Questions with genuinely contested answers in the literature (two
+  legitimate answers both supported by evidence)
+- Questions that are essentially "name a specific number" without enough
+  context to distinguish from adjacent numbers (e.g., "What percentage
+  of X?" where the answer is 34% but 32% or 36% are also defensible)
+- Trick questions or questions designed to be misleading — questions
+  should be straightforward and test factual knowledge, not cleverness

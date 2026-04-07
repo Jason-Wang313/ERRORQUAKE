@@ -1,0 +1,629 @@
+{
+  "experiment": "Experiment 0: Synthetic Pipeline Validation",
+  "date": "2026-04-03",
+  "n_per_distribution": 500,
+  "generation_model": "deepseek-ai/deepseek-v3.2",
+  "primary_judge": "meta/llama-3.1-405b-instruct",
+  "secondary_judge": "qwen/qwen3-next-80b-a3b-instruct",
+  "scale": "11-point",
+  "results": {
+    "power_law": {
+      "true_parameters": {
+        "b": 1.0
+      },
+      "true_b": 1.0,
+      "recovered_b": 8.338454052542412,
+      "best_fit_family": "lognormal",
+      "bic_ranking": [
+        {
+          "distribution": "lognormal",
+          "bic": 1474.740141840408,
+          "aic": 1466.7722692790335,
+          "chi2_stat": 96.99682575400244,
+          "chi2_pvalue": 1.0610520254607738e-18,
+          "parameters": {
+            "mu": 0.5804735903256902,
+            "sigma": 0.6423738801772165
+          }
+        },
+        {
+          "distribution": "stretched_exp",
+          "bic": 1495.6754573643157,
+          "aic": 1487.7075848029413,
+          "chi2_stat": 130.028085364759,
+          "chi2_pvalue": 1.2679505805920831e-25,
+          "parameters": {
+            "lambda": 0.06929081337434045,
+            "gamma": 2.5412490331524538
+          }
+        },
+        {
+          "distribution": "exponential",
+          "bic": 1521.1489470108934,
+          "aic": 1517.1650107302062,
+          "chi2_stat": 159.36785832338376,
+          "chi2_pvalue": 8.059721954542902e-32,
+          "parameters": {
+            "lambda": 0.27766027347549366
+          }
+        },
+        {
+          "distribution": "truncated_power_law",
+          "bic": 1529.960736123599,
+          "aic": 1521.9928635622246,
+          "chi2_stat": 162.60954064097638,
+          "chi2_pvalue": 1.6583302500308642e-32,
+          "parameters": {
+            "beta": 0.05,
+            "lambda": 0.24510447920180106
+          }
+        },
+        {
+          "distribution": "power_law",
+          "bic": 1541.1531327549876,
+          "aic": 1537.1691964743004,
+          "chi2_stat": 173.65515322172504,
+          "chi2_pvalue": 7.543114543708408e-35,
+          "parameters": {
+            "beta": 0.24055471547234425
+          }
+        }
+      ],
+      "ratio_test": {
+        "ratios": [
+          0.8816120906801007,
+          0.7771428571428571,
+          0.7941176470588235,
+          0.38425925925925924,
+          0.5783132530120482,
+          0.10416666666666667,
+          0.0
+        ],
+        "cv": 0.6445063580154445,
+        "supports_power_law": false
+      },
+      "judge_target_correlation": 0.6713934698549553,
+      "primary_target_correlation": 0.6596650248061862,
+      "per_level_accuracy": {
+        "0.5": 0.7967032967032966,
+        "1.0": 0.6235294117647059,
+        "1.5": 0.7466666666666667,
+        "2.0": 0.75,
+        "2.5": 0.673469387755102,
+        "3.0": 0.6666666666666666,
+        "3.5": 0.32142857142857145,
+        "4.0": 0.0
+      },
+      "systematic_bias": -0.087,
+      "resolution_stats": {
+        "primary_only": 215,
+        "averaged": 203,
+        "human_required": 82,
+        "human_required_fraction": 0.164
+      },
+      "target_bin_counts": {
+        "0.5": 182,
+        "1.0": 85,
+        "1.5": 75,
+        "2.0": 40,
+        "2.5": 49,
+        "3.0": 24,
+        "3.5": 28,
+        "4.0": 17
+      },
+      "final_bin_counts": {
+        "0.5": 150,
+        "1.0": 78,
+        "1.5": 56,
+        "2.0": 133,
+        "2.5": 35,
+        "3.0": 43,
+        "3.5": 5,
+        "4.0": 0
+      },
+      "recovery": {
+        "distribution": "power_law",
+        "family_recovered": false,
+        "true_family": "power_law",
+        "best_fit_family": "lognormal",
+        "param_recovered": false,
+        "true_b": 1.0,
+        "recovered_b": 8.338454052542412,
+        "judge_correlation": 0.6713934698549553,
+        "judge_calibration_pass": false,
+        "verdict": "FAIL",
+        "details": "Best fit: lognormal. Judge-target Spearman rho=0.671. Family recovered=False. Recovered b=8.338454052542412 vs true b=1.0."
+      },
+      "verdict": "FAIL"
+    },
+    "exponential": {
+      "true_parameters": {
+        "lambda_": 0.8
+      },
+      "true_b": null,
+      "recovered_b": null,
+      "best_fit_family": "stretched_exp",
+      "bic_ranking": [
+        {
+          "distribution": "stretched_exp",
+          "bic": 1552.7435310484866,
+          "aic": 1544.6299630220294,
+          "chi2_stat": 119.69327185926467,
+          "chi2_pvalue": 8.875085773687829e-23,
+          "parameters": {
+            "lambda": 0.0046600797021205,
+            "gamma": 5.0
+          }
+        },
+        {
+          "distribution": "lognormal",
+          "bic": 1555.017675337051,
+          "aic": 1546.9041073105939,
+          "chi2_stat": 123.20914519985085,
+          "chi2_pvalue": 1.6429403683196828e-23,
+          "parameters": {
+            "mu": 0.45143487661659626,
+            "sigma": 0.5281684832908525
+          }
+        },
+        {
+          "distribution": "exponential",
+          "bic": 1673.9282038552158,
+          "aic": 1669.871419841987,
+          "chi2_stat": 274.983343321787,
+          "chi2_pvalue": 1.3187157124510464e-55,
+          "parameters": {
+            "lambda": 0.4571108453348049
+          }
+        },
+        {
+          "distribution": "truncated_power_law",
+          "bic": 1684.8035730512756,
+          "aic": 1676.6900050248184,
+          "chi2_stat": 280.9213548567431,
+          "chi2_pvalue": 7.140962951486981e-57,
+          "parameters": {
+            "beta": 0.05,
+            "lambda": 0.4257776035470735
+          }
+        },
+        {
+          "distribution": "power_law",
+          "bic": 1736.857474517004,
+          "aic": 1732.8006905037753,
+          "chi2_stat": 333.12578771778453,
+          "chi2_pvalue": 5.029812407437387e-68,
+          "parameters": {
+            "beta": 0.46206533391847593
+          }
+        }
+      ],
+      "ratio_test": {
+        "ratios": [
+          0.8969555035128806,
+          0.7754569190600522,
+          0.7407407407407407,
+          0.29545454545454547,
+          0.5230769230769231,
+          0.23529411764705882,
+          0.25
+        ],
+        "cv": 0.48256849777743194,
+        "supports_power_law": false
+      },
+      "judge_target_correlation": 0.6071664537830138,
+      "primary_target_correlation": 0.6056084295814784,
+      "per_level_accuracy": {
+        "0.5": 0.6971428571428572,
+        "1.0": 0.6296296296296297,
+        "1.5": 0.8,
+        "2.0": 0.8727272727272727,
+        "2.5": 0.7105263157894737,
+        "3.0": 0.5,
+        "3.5": 0.2,
+        "4.0": 0.26666666666666666
+      },
+      "systematic_bias": 0.076,
+      "resolution_stats": {
+        "primary_only": 239,
+        "averaged": 206,
+        "human_required": 55,
+        "human_required_fraction": 0.11
+      },
+      "target_bin_counts": {
+        "0.5": 175,
+        "1.0": 108,
+        "1.5": 75,
+        "2.0": 55,
+        "2.5": 38,
+        "3.0": 24,
+        "3.5": 10,
+        "4.0": 15
+      },
+      "final_bin_counts": {
+        "0.5": 117,
+        "1.0": 86,
+        "1.5": 77,
+        "2.0": 155,
+        "2.5": 31,
+        "3.0": 26,
+        "3.5": 6,
+        "4.0": 2
+      },
+      "recovery": {
+        "distribution": "exponential",
+        "family_recovered": false,
+        "true_family": "exponential",
+        "best_fit_family": "stretched_exp",
+        "param_recovered": null,
+        "true_b": null,
+        "recovered_b": 1.7531153397929442,
+        "judge_correlation": 0.6071664537830138,
+        "judge_calibration_pass": false,
+        "verdict": "FAIL",
+        "details": "Best fit: stretched_exp. Judge-target Spearman rho=0.607. Family recovered=False."
+      },
+      "verdict": "FAIL"
+    },
+    "uniform": {
+      "true_parameters": {},
+      "true_b": null,
+      "recovered_b": null,
+      "best_fit_family": "lognormal",
+      "bic_ranking": [
+        {
+          "distribution": "lognormal",
+          "bic": 1715.19964882357,
+          "aic": 1706.9241947153976,
+          "chi2_stat": 110.35724057357784,
+          "chi2_pvalue": 1.7158503926971823e-21,
+          "parameters": {
+            "mu": 0.7439326786122991,
+            "sigma": 0.5917792218308581
+          }
+        },
+        {
+          "distribution": "exponential",
+          "bic": 1806.4165550495657,
+          "aic": 1802.2788279954793,
+          "chi2_stat": 228.24953016585903,
+          "chi2_pvalue": 1.8096082221938598e-46,
+          "parameters": {
+            "lambda": 0.05943894046190063
+          }
+        },
+        {
+          "distribution": "power_law",
+          "bic": 1810.4652173912812,
+          "aic": 1806.3274903371948,
+          "chi2_stat": 232.54382575096236,
+          "chi2_pvalue": 2.193509088827692e-47,
+          "parameters": {
+            "beta": 0.05000531921999756
+          }
+        },
+        {
+          "distribution": "stretched_exp",
+          "bic": 1814.1915077072704,
+          "aic": 1805.916053599098,
+          "chi2_stat": 229.03783582293588,
+          "chi2_pvalue": 1.2284985533893215e-46,
+          "parameters": {
+            "lambda": 0.001,
+            "gamma": 0.1
+          }
+        },
+        {
+          "distribution": "truncated_power_law",
+          "bic": 1816.2249985896985,
+          "aic": 1807.9495444815261,
+          "chi2_stat": 232.55444755572773,
+          "chi2_pvalue": 2.1820880691992578e-47,
+          "parameters": {
+            "beta": 0.05,
+            "lambda": 0.028480365335578618
+          }
+        }
+      ],
+      "ratio_test": {
+        "ratios": [
+          0.9460043196544277,
+          0.817351598173516,
+          0.8379888268156425,
+          0.44,
+          0.6666666666666666,
+          0.20454545454545456,
+          0.0
+        ],
+        "cv": 0.5888264902307234,
+        "supports_power_law": false
+      },
+      "judge_target_correlation": 0.6019479710853126,
+      "primary_target_correlation": 0.5908211153275349,
+      "per_level_accuracy": {
+        "0.5": 0.819672131147541,
+        "1.0": 0.676923076923077,
+        "1.5": 0.7843137254901961,
+        "2.0": 0.8205128205128205,
+        "2.5": 0.6491228070175439,
+        "3.0": 0.5614035087719298,
+        "3.5": 0.3064516129032258,
+        "4.0": 0.15942028985507245
+      },
+      "systematic_bias": -0.472,
+      "resolution_stats": {
+        "primary_only": 216,
+        "averaged": 210,
+        "human_required": 74,
+        "human_required_fraction": 0.148
+      },
+      "target_bin_counts": {
+        "0.5": 61,
+        "1.0": 65,
+        "1.5": 51,
+        "2.0": 78,
+        "2.5": 57,
+        "3.0": 57,
+        "3.5": 62,
+        "4.0": 69
+      },
+      "final_bin_counts": {
+        "0.5": 62,
+        "1.0": 80,
+        "1.5": 58,
+        "2.0": 168,
+        "2.5": 44,
+        "3.0": 70,
+        "3.5": 18,
+        "4.0": 0
+      },
+      "recovery": {
+        "distribution": "uniform",
+        "family_recovered": true,
+        "true_family": "uniform",
+        "best_fit_family": "lognormal",
+        "param_recovered": null,
+        "true_b": null,
+        "recovered_b": 4.246434934165137,
+        "judge_correlation": 0.6019479710853126,
+        "judge_calibration_pass": false,
+        "verdict": "FAIL",
+        "details": "Best fit: lognormal. Judge-target Spearman rho=0.602. Family recovered=True."
+      },
+      "verdict": "FAIL"
+    }
+  },
+  "overall_verdict": "NO-GO",
+  "score_disagreement_stats": {
+    "primary_only": 670,
+    "averaged": 619,
+    "human_required": 211,
+    "human_required_fraction": 0.14066666666666666
+  },
+  "overall_per_level_accuracy": {
+    "0.5": 0.7583732057416268,
+    "1.0": 0.6395348837209303,
+    "1.5": 0.7761194029850746,
+    "2.0": 0.8208092485549133,
+    "2.5": 0.6736111111111112,
+    "3.0": 0.5714285714285714,
+    "3.5": 0.3,
+    "4.0": 0.1485148514851485
+  },
+  "overall_systematic_bias": -0.161,
+  "judge_confusion_matrix": {
+    "scale_points": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0
+    ],
+    "target_vs_primary": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        158,
+        32,
+        179,
+        1,
+        45,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        40,
+        8,
+        141,
+        4,
+        51,
+        7,
+        6,
+        1,
+        0
+      ],
+      [
+        5,
+        1,
+        45,
+        5,
+        127,
+        3,
+        12,
+        3,
+        0
+      ],
+      [
+        2,
+        1,
+        21,
+        3,
+        122,
+        11,
+        9,
+        3,
+        1
+      ],
+      [
+        6,
+        1,
+        36,
+        2,
+        88,
+        2,
+        8,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        18,
+        3,
+        28,
+        2,
+        49,
+        3,
+        0
+      ],
+      [
+        3,
+        1,
+        15,
+        2,
+        46,
+        1,
+        27,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        1,
+        39,
+        10,
+        35,
+        6,
+        2
+      ]
+    ],
+    "target_vs_final": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        160,
+        78,
+        79,
+        55,
+        43,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        35,
+        30,
+        80,
+        55,
+        37,
+        15,
+        5,
+        1,
+        0
+      ],
+      [
+        5,
+        1,
+        24,
+        27,
+        105,
+        27,
+        10,
+        2,
+        0
+      ],
+      [
+        3,
+        2,
+        10,
+        16,
+        107,
+        19,
+        14,
+        2,
+        0
+      ],
+      [
+        6,
+        4,
+        21,
+        15,
+        79,
+        11,
+        7,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        10,
+        12,
+        21,
+        7,
+        48,
+        5,
+        0
+      ],
+      [
+        2,
+        1,
+        13,
+        9,
+        30,
+        15,
+        25,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        2,
+        34,
+        14,
+        29,
+        13,
+        2
+      ]
+    ]
+  }
+}

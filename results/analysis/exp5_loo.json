@@ -1,0 +1,111 @@
+{
+  "baseline_rho": -0.6894289852069257,
+  "baseline_p": 0.006375119913556469,
+  "n_dense": 14,
+  "loo_min_rho": -0.7768624519573112,
+  "loo_median_rho": -0.6896163150861325,
+  "loo_max_rho": -0.6115725685621386,
+  "loo_max_p": 0.026345171160441043,
+  "n_significant_after_drop": 14,
+  "n_sign_preserved": 14,
+  "per_drop": [
+    {
+      "dropped": "ministral-14b",
+      "rho": -0.7768624519573112,
+      "p": 0.0017836981278672001,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "gemma-3-4b",
+      "rho": -0.7355399811085181,
+      "p": 0.004163708308729075,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "solar-10.7b",
+      "rho": -0.7245206555488398,
+      "p": 0.005091369705728572,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "gemma-3-12b",
+      "rho": -0.7107464985992421,
+      "p": 0.00646572893713721,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "llama-3.2-3b-instruct",
+      "rho": -0.705236835819403,
+      "p": 0.007088644012512904,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "mistral-small-24b",
+      "rho": -0.7042647652873337,
+      "p": 0.0072031432160994955,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "eurollm-9b",
+      "rho": -0.699727173039564,
+      "p": 0.007756437715831642,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "gemma-3-27b",
+      "rho": -0.6795054571327009,
+      "p": 0.01062634212856808,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "llama-3.1-8b-instruct",
+      "rho": -0.6776885219202077,
+      "p": 0.010918829856709458,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "qwen2.5-7b",
+      "rho": -0.6666691963605295,
+      "p": 0.012825366520641729,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "mistral-medium-3",
+      "rho": -0.662999251696279,
+      "p": 0.01351290165400435,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "phi-3.5-mini",
+      "rho": -0.6336112196814948,
+      "p": 0.02006459101606463,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "gemma-2-27b",
+      "rho": -0.6217337381052244,
+      "p": 0.023291994047210947,
+      "still_significant": true,
+      "sign_preserved": true
+    },
+    {
+      "dropped": "seed-oss-36b",
+      "rho": -0.6115725685621386,
+      "p": 0.026345171160441043,
+      "still_significant": true,
+      "sign_preserved": true
+    }
+  ]
+}

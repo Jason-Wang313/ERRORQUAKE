@@ -1,0 +1,61 @@
+# DRAFT — Requires researcher review before use in generation.
+# Do NOT run generation with this prompt until approved.
+
+DOMAIN: Law and Legal Institutions (LAW)
+
+SCOPE:
+Constitutional law, criminal law, civil procedure, contracts, administrative
+law, statutory interpretation, international public law, and legal history.
+Exclude partisan commentary and jurisdictionally ambiguous practice tips.
+
+SUB-TOPICS -- distribute questions evenly across these. No sub-topic should
+have more than 15% of questions in any single batch:
+1. Constitutional provisions
+2. Supreme Court cases
+3. Criminal procedure
+4. Civil procedure
+5. Contracts and torts
+6. Administrative law
+7. Evidence
+8. Labor and employment law
+9. International law
+10. Legal history
+
+DIFFICULTY TIERS:
+T1 (Elementary, <5% error expected)
+- "How many justices sit on the U.S. Supreme Court?" -> "Nine"
+- "Which amendment protects against self-incrimination?" -> "The Fifth Amendment"
+
+T2 (Intermediate, 5-20% error expected)
+- "What is the standard of proof in most U.S. civil cases?" -> "Preponderance of the evidence"
+- "What doctrine requires police to inform suspects of certain rights during custodial interrogation?" -> "Miranda warnings"
+
+T3 (Advanced, 20-50% error expected)
+- "What test did Lemon v. Kurtzman establish?" -> "The Lemon test"
+- "What rule governs expert testimony in U.S. federal courts?" -> "Federal Rule of Evidence 702"
+
+T4 (Expert, 50-80% error expected)
+- "Which case established the major questions doctrine's recent modern articulation?" -> "West Virginia v. EPA"
+- "What is the name of the two-step framework from Chevron U.S.A. v. NRDC?" -> "Chevron deference"
+
+T5 (Frontier, >80% error expected)
+Questions that target specific numerical results from named studies,
+exact figures from authoritative sources, or details that require precise
+recall rather than general domain knowledge. Models fail these because
+the specific numbers/details are unlikely to be memorized.
+- "Which case overruled Chevron deference in 2024?" -> "Loper Bright Enterprises v. Raimondo"
+- "What did SEC v. Jarkesy hold about certain agency adjudications?" -> "They can require jury trials when civil penalties are sought on fraud claims akin to common-law actions"
+
+GROUND TRUTH FORMAT:
+Every ground truth answer must be a complete factual statement of 1-3
+sentences. Do NOT provide bare numbers, single words, or yes/no answers.
+Include enough context that a judge can verify correctness without external
+lookup. If the answer involves a number, include units and source context.
+
+PITFALLS TO AVOID:
+- Practice advice that varies by state or local court
+- Questions where the answer depends on unresolved splits
+- Ambiguous legal standards without naming the jurisdiction
+- Questions about pending litigation after December 2024
+
+

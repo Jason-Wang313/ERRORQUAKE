@@ -1,0 +1,198 @@
+{
+  "pairs": [
+    {
+      "label": "Gemma-3 4B vs 12B",
+      "hypothesis": "scale within Gemma-3",
+      "model_a": "gemma-3-4b",
+      "model_b": "gemma-3-12b",
+      "b_a_full": 0.979429782853737,
+      "b_b_full": 0.9382618753417843,
+      "shared_m_min": 3.0,
+      "bootstrap": {
+        "mean_diff": -0.16945770391208356,
+        "ci_lower": -0.45349500755875194,
+        "ci_upper": 0.06947083487759598,
+        "p_two_sided": 0.205,
+        "n_a_above_mmin": 243,
+        "n_b_above_mmin": 34
+      },
+      "significant": false
+    },
+    {
+      "label": "Gemma-3 12B vs 27B",
+      "hypothesis": "scale within Gemma-3",
+      "model_a": "gemma-3-12b",
+      "model_b": "gemma-3-27b",
+      "b_a_full": 0.9382618753417843,
+      "b_b_full": 0.9563557929019344,
+      "shared_m_min": 2.5,
+      "bootstrap": {
+        "mean_diff": -0.1980674849165615,
+        "ci_lower": -0.3887536846178657,
+        "ci_upper": 0.008016022976582894,
+        "p_two_sided": 0.057,
+        "n_a_above_mmin": 101,
+        "n_b_above_mmin": 102
+      },
+      "significant": false
+    },
+    {
+      "label": "Gemma-3 4B vs 27B",
+      "model_a": "gemma-3-4b",
+      "model_b": "gemma-3-27b",
+      "hypothesis": "scale within Gemma-3",
+      "b_a": 0.979429782853737,
+      "b_b": 0.9563557929019344,
+      "shared_m_min": 3.0,
+      "bootstrap": {
+        "error": "too_few_above_mmin",
+        "n_a": 243,
+        "n_b": 23
+      }
+    },
+    {
+      "label": "Gemma-2 vs Gemma-3 27B",
+      "hypothesis": "generation upgrade",
+      "model_a": "gemma-2-27b",
+      "model_b": "gemma-3-27b",
+      "b_a_full": 0.6190104528798855,
+      "b_b_full": 0.9563557929019344,
+      "shared_m_min": 2.0,
+      "bootstrap": {
+        "mean_diff": 0.040332407648339084,
+        "ci_lower": -0.07575524121562424,
+        "ci_upper": 0.1553646967009812,
+        "p_two_sided": 0.496,
+        "n_a_above_mmin": 303,
+        "n_b_above_mmin": 316
+      },
+      "significant": false
+    },
+    {
+      "label": "Llama-3.2 3B vs 3.1 8B",
+      "hypothesis": "scale within Llama",
+      "model_a": "llama-3.2-3b-instruct",
+      "model_b": "llama-3.1-8b-instruct",
+      "b_a_full": 1.046370330667484,
+      "b_b_full": 1.0005099943996716,
+      "shared_m_min": 3.0,
+      "bootstrap": {
+        "mean_diff": -0.5316213072200519,
+        "ci_lower": -0.7486181124520145,
+        "ci_upper": -0.287105315696097,
+        "p_two_sided": 0.0,
+        "n_a_above_mmin": 206,
+        "n_b_above_mmin": 39
+      },
+      "significant": true
+    },
+    {
+      "label": "Qwen2.5 7B vs Llama 3.1 8B",
+      "hypothesis": "family at ~8B",
+      "model_a": "qwen2.5-7b",
+      "model_b": "llama-3.1-8b-instruct",
+      "b_a_full": 1.2566819050817495,
+      "b_b_full": 1.0005099943996716,
+      "shared_m_min": 3.0,
+      "bootstrap": {
+        "mean_diff": -0.3174848990699654,
+        "ci_lower": -0.5558969368361624,
+        "ci_upper": -0.040287057690468586,
+        "p_two_sided": 0.021,
+        "n_a_above_mmin": 68,
+        "n_b_above_mmin": 39
+      },
+      "significant": true
+    },
+    {
+      "label": "Gemma-3 12B vs Ministral 14B",
+      "hypothesis": "family at ~13B",
+      "model_a": "gemma-3-12b",
+      "model_b": "ministral-14b",
+      "b_a_full": 0.9382618753417843,
+      "b_b_full": 1.1222476877499956,
+      "shared_m_min": 2.5,
+      "bootstrap": {
+        "mean_diff": -0.18855050096105347,
+        "ci_lower": -0.4079770822977261,
+        "ci_upper": 0.030001599568352244,
+        "p_two_sided": 0.091,
+        "n_a_above_mmin": 101,
+        "n_b_above_mmin": 73
+      },
+      "significant": false
+    },
+    {
+      "label": "Llama-4 Maverick (MoE) vs Ministral 14B (dense)",
+      "hypothesis": "MoE vs dense at ~14-17B",
+      "model_a": "llama-4-maverick",
+      "model_b": "ministral-14b",
+      "b_a_full": 1.1184570218878271,
+      "b_b_full": 1.1222476877499956,
+      "shared_m_min": 2.5,
+      "bootstrap": {
+        "mean_diff": 0.0007039532164914311,
+        "ci_lower": -0.2718808828615372,
+        "ci_upper": 0.2814779727789447,
+        "p_two_sided": 0.982,
+        "n_a_above_mmin": 47,
+        "n_b_above_mmin": 73
+      },
+      "significant": false
+    },
+    {
+      "label": "DeepSeek v3.1 vs v3.2",
+      "hypothesis": "minor version bump",
+      "model_a": "deepseek-v3.1",
+      "model_b": "deepseek-v3.2",
+      "b_a_full": 0.8075947165703135,
+      "b_b_full": 0.6554331426337371,
+      "shared_m_min": 1.5,
+      "bootstrap": {
+        "mean_diff": -0.005622652932881699,
+        "ci_lower": -0.07118000740146546,
+        "ci_upper": 0.06255798084182185,
+        "p_two_sided": 0.872,
+        "n_a_above_mmin": 523,
+        "n_b_above_mmin": 599
+      },
+      "significant": false
+    },
+    {
+      "label": "Mistral small 24B vs medium 3",
+      "hypothesis": "Mistral tier",
+      "model_a": "mistral-small-24b",
+      "model_b": "mistral-medium-3",
+      "b_a_full": 0.9988773083774788,
+      "b_b_full": 0.9063537013633084,
+      "shared_m_min": 2.5,
+      "bootstrap": {
+        "mean_diff": 0.09841637092744414,
+        "ci_lower": -0.1425647539378453,
+        "ci_upper": 0.3656467873845557,
+        "p_two_sided": 0.446,
+        "n_a_above_mmin": 46,
+        "n_b_above_mmin": 72
+      },
+      "significant": false
+    },
+    {
+      "label": "Mistral 24B vs Gemma-3 27B",
+      "hypothesis": "family at ~25B",
+      "model_a": "mistral-small-24b",
+      "model_b": "gemma-3-27b",
+      "b_a_full": 0.9988773083774788,
+      "b_b_full": 0.9563557929019344,
+      "shared_m_min": 2.5,
+      "bootstrap": {
+        "mean_diff": -0.1316379660152512,
+        "ci_lower": -0.3777672636237809,
+        "ci_upper": 0.12712734043053975,
+        "p_two_sided": 0.301,
+        "n_a_above_mmin": 46,
+        "n_b_above_mmin": 102
+      },
+      "significant": false
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+% --------------------------------------------------------------------
+% neurips_2026.sty — PLACEHOLDER SHIM (phase 6, errorquake)
+% --------------------------------------------------------------------
+% WARNING: This is NOT the official NeurIPS 2026 style file. It is a
+% minimal shim that accepts the [eandd] option and provides page
+% geometry close to the real NeurIPS template, so that the paper can
+% be compiled, reviewed and self-reviewed BEFORE the real .sty is
+% available. REPLACE this file with the official
+%     neurips_2026.sty
+% from the NeurIPS 2026 main-track style files before submission.
+% --------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2026}[2026/04/07 NeurIPS 2026 shim v0.1]
+
+% Option plumbing: accept [eandd], [final], [preprint], [nonanonymous]
+\newif\ifneurips@eandd       \neurips@eanddfalse
+\newif\ifneurips@final       \neurips@finalfalse
+\newif\ifneurips@preprint    \neurips@preprintfalse
+\newif\ifneurips@nonanon     \neurips@nonanonfalse
+
+\DeclareOption{eandd}{\neurips@eanddtrue}
+\DeclareOption{final}{\neurips@finaltrue}
+\DeclareOption{preprint}{\neurips@preprinttrue}
+\DeclareOption{nonanonymous}{\neurips@nonanontrue}
+\DeclareOption*{\PackageWarning{neurips_2026}{Unknown option `\CurrentOption'}}
+\ProcessOptions\relax
+
+% Geometry matches the NeurIPS 2024/2025 main track (single-column,
+% ~5.5in text width). The real 2026 sty may differ slightly.
+% NeurIPS 2025 main-track geometry: 6.3in x 9.0in text area on US letter.
+\RequirePackage[
+  left=1.1in, right=1.1in,
+  top=1.0in, bottom=1.0in,
+  headheight=12pt
+]{geometry}
+
+\RequirePackage{times}
+\RequirePackage{indentfirst}
+
+% Section formatting (approximate NeurIPS look)
+\RequirePackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Abstract formatting
+\renewenvironment{abstract}%
+  {\small\quotation\noindent\textbf{\abstractname.}\quad}%
+  {\endquotation}
+
+% Line numbering if [preprint]
+\ifneurips@preprint
+  \RequirePackage{lineno}
+  \linenumbers
+\fi
+
+% The E&D track gets a tiny banner on the first page.
+\ifneurips@eandd
+  \AtBeginDocument{%
+    \vspace*{-0.3in}%
+    \noindent\hfill\textsf{\footnotesize Evaluations \& Datasets Track}\hfill\null\par%
+    \vspace{0.3in}%
+  }
+\fi
+
+% Title block. For double-blind (default, no option), author block is
+% suppressed in favour of an Anonymous banner.
+\ifneurips@nonanon\else
+  \renewcommand{\and}{\quad}
+  \renewcommand{\author}[1]{\gdef\@author{Anonymous authors\\\texttt{Paper submitted to NeurIPS 2026}}}
+\fi
+
+% Paragraph spacing
+\setlength{\parskip}{0.25\baselineskip}
+\setlength{\parindent}{1em}
+
+\endinput

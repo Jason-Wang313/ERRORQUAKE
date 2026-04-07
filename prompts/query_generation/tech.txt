@@ -1,0 +1,61 @@
+# DRAFT — Requires researcher review before use in generation.
+# Do NOT run generation with this prompt until approved.
+
+DOMAIN: Technology and Computing (TECH)
+
+SCOPE:
+Computer science, software engineering, networking, cybersecurity, hardware,
+data systems, and internet standards. Exclude finance-product questions and
+current vendor announcements after December 2024.
+
+SUB-TOPICS -- distribute questions evenly across these. No sub-topic should
+have more than 15% of questions in any single batch:
+1. Programming languages
+2. Operating systems
+3. Networking protocols
+4. Databases
+5. Distributed systems
+6. Machine learning foundations
+7. Cybersecurity
+8. Hardware architecture
+9. Web standards
+10. Software history
+
+DIFFICULTY TIERS:
+T1 (Elementary, <5% error expected)
+- "What does CPU stand for?" -> "Central processing unit"
+- "Which protocol secures most web traffic?" -> "HTTPS"
+
+T2 (Intermediate, 5-20% error expected)
+- "What does SQL stand for?" -> "Structured Query Language"
+- "Which company created CUDA?" -> "NVIDIA"
+
+T3 (Advanced, 20-50% error expected)
+- "What transport protocol does HTTP/3 use?" -> "QUIC over UDP"
+- "What data structure underlies a binary heap priority queue?" -> "A heap-ordered complete binary tree"
+
+T4 (Expert, 50-80% error expected)
+- "Which RFC standardized the original IPv6 specification?" -> "RFC 1883"
+- "Which consensus algorithm is associated with the Raft paper's leader-based design?" -> "Raft"
+
+T5 (Frontier, >80% error expected)
+Questions that target specific numerical results from named studies,
+exact figures from authoritative sources, or details that require precise
+recall rather than general domain knowledge. Models fail these because
+the specific numbers/details are unlikely to be memorized.
+- "Which instruction set extension introduced AVX-512 masked operations?" -> "AVX-512"
+- "What database isolation anomaly is prevented by serializable isolation but allowed by snapshot isolation in many systems?" -> "Write skew"
+
+GROUND TRUTH FORMAT:
+Every ground truth answer must be a complete factual statement of 1-3
+sentences. Do NOT provide bare numbers, single words, or yes/no answers.
+Include enough context that a judge can verify correctness without external
+lookup. If the answer involves a number, include units and source context.
+
+PITFALLS TO AVOID:
+- Questions tied to fast-moving product releases after December 2024
+- Vendor marketing claims instead of technical facts
+- Questions requiring code execution rather than factual recall
+- Ambiguous terminology across subfields without clarification
+
+

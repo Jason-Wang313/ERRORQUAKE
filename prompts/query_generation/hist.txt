@@ -1,0 +1,61 @@
+# DRAFT — Requires researcher review before use in generation.
+# Do NOT run generation with this prompt until approved.
+
+DOMAIN: History (HIST)
+
+SCOPE:
+Political, military, social, economic, intellectual, and diplomatic history
+across global regions. Exclude folklore, pure literary criticism, and
+questions whose answers depend on disputed fringe theories.
+
+SUB-TOPICS -- distribute questions evenly across these. No sub-topic should
+have more than 15% of questions in any single batch:
+1. Ancient empires
+2. Medieval states and religions
+3. Early modern Europe
+4. Colonialism and empire
+5. Revolutions
+6. Nineteenth-century industrial change
+7. World wars
+8. Cold War history
+9. Asian history
+10. African and Latin American history
+
+DIFFICULTY TIERS:
+T1 (Elementary, <5% error expected)
+- "Which treaty ended World War I?" -> "The Treaty of Versailles"
+- "Who was the first president of the United States?" -> "George Washington"
+
+T2 (Intermediate, 5-20% error expected)
+- "In what year did the Berlin Wall fall?" -> "1989"
+- "Which dynasty built much of the Great Wall as seen today?" -> "The Ming dynasty"
+
+T3 (Advanced, 20-50% error expected)
+- "Which battle in 732 is often associated with Charles Martel?" -> "The Battle of Tours"
+- "What was the primary language of administration in the Mughal Empire?" -> "Persian"
+
+T4 (Expert, 50-80% error expected)
+- "Which treaty concluded the War of the Spanish Succession in 1713?" -> "The Treaty of Utrecht"
+- "Which Qing emperor ruled immediately before the Jiaqing Emperor?" -> "The Qianlong Emperor"
+
+T5 (Frontier, >80% error expected)
+Questions that target specific numerical results from named studies,
+exact figures from authoritative sources, or details that require precise
+recall rather than general domain knowledge. Models fail these because
+the specific numbers/details are unlikely to be memorized.
+- "What was the codename for the Soviet deployment of missiles to Cuba in 1962?" -> "Operation Anadyr"
+- "Which conference in 1884-1885 formalized European claims in Africa?" -> "The Berlin Conference"
+
+GROUND TRUTH FORMAT:
+Every ground truth answer must be a complete factual statement of 1-3
+sentences. Do NOT provide bare numbers, single words, or yes/no answers.
+Include enough context that a judge can verify correctness without external
+lookup. If the answer involves a number, include units and source context.
+
+PITFALLS TO AVOID:
+- Questions whose answer changes depending on nationalist framing
+- Recently revised archaeological claims without consensus
+- Questions that hinge on speculative counterfactuals
+- Topic repetition around only Europe and the world wars
+
+

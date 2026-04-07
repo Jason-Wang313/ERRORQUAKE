@@ -1,0 +1,75 @@
+============================================================
+REASONING MODEL TRUNCATION CHECK
+============================================================
+
+Identified 3 reasoning models:
+  deepseek-r1-distill-llama-8b  ->  deepseek-ai/deepseek-r1-distill-llama-8b
+  qwq-32b  ->  qwen/qwq-32b
+  phi-4-mini-flash-reasoning  ->  microsoft/phi-4-mini-flash-reasoning
+
+Loaded 4000 subset queries for smoke tests
+
+--- deepseek-r1-distill-llama-8b ---
+  Running 10-query smoke test...
+  Recommendation: ok
+    source: smoke_test
+    smoke_size: 10
+    successful_calls: 10
+    failed_calls: 0
+    think_tag_rate: 100.0
+    closed_tag_rate: 70.0
+    truncation_rate: 30.0
+    final_answer_rate: 70.0
+    avg_length: 1828
+  Sample excerpts:
+    TECH_T2_0229 (970 chars):
+      <think>
+Okay, so I need to figure out who the author of the original paper on the MapReduce programming model is. I'm not super familiar with MapReduce, but I know it's related to distributed computin
+    BIO_T5_0024 (2029 chars):
+      <think>
+Okay, so I need to figure out the name of the protein complex that regulates the activity of cyclin-dependent kinases. Hmm, I remember that cyclin-dependent kinases, or CDKs, are involved in c
+    BIO_T2_0216 (2458 chars):
+      <think>
+Okay, so I need to figure out which part of the brain is mainly responsible for regulating body temperature. I'm not exactly sure, but I'll try to think it through.
+
+First, I remember that the
+
+--- qwq-32b ---
+  Running 10-query smoke test...
+  Recommendation: ok
+    source: smoke_test
+    smoke_size: 2
+    successful_calls: 2
+    failed_calls: 8
+    think_tag_rate: 0.0
+    closed_tag_rate: 50.0
+    truncation_rate: 50.0
+    final_answer_rate: 50.0
+    avg_length: 1576
+  Sample excerpts:
+    BIO_T5_0024 (2163 chars):
+      Okay, so the question is asking for the name of the protein complex that regulates cyclin-dependent kinases. Let me think. I remember that cyclin-dependent kinases, or CDKs, need to be activated to fu
+    HIST_T1_0123 (989 chars):
+      Okay, so the question is asking for the name of the ship that Charles Darwin sailed on when he visited the Galapagos Islands. Let me think. I remember that Darwin was a naturalist who traveled on a Br
+
+--- phi-4-mini-flash-reasoning ---
+  Analyzing existing eval responses...
+  Recommendation: exclude_or_higher_max_tokens
+    source: existing_eval
+    sample_size: 50
+    total_responses: 3045
+    sample_think_tag_rate: 100.0
+    sample_closed_tag_rate: 10.0
+    sample_truncation_rate: 70.0
+    sample_final_answer_rate: 10.0
+    sample_avg_length: 2186
+    all_think_tag_rate: 99.6
+    all_closed_tag_rate: 12.3
+    all_truncation_rate: 73.1
+
+Report saved to C:\projects\errorquake\results\analysis\reasoning_model_check.json
+
+=== SUMMARY ===
+  deepseek-r1-distill-llama-8b        -> ok
+  qwq-32b                             -> ok
+  phi-4-mini-flash-reasoning          -> exclude_or_higher_max_tokens

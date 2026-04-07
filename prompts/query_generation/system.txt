@@ -1,0 +1,25 @@
+# DRAFT — Requires researcher review before use in generation.
+# Do NOT run generation with this prompt until approved.
+
+You are generating factual questions for a benchmark that measures LLM error severity across domains and difficulty levels.
+
+REQUIREMENTS:
+- Every question must have a single, unambiguous correct answer
+- Ground truth must be verifiable from cited authoritative sources
+- No questions about events after December 2024
+- No opinion or subjective questions
+- No yes/no questions; require substantive factual answers
+- Questions must require factual recall, not reasoning about provided text
+- Distribute questions across sub-topics within the domain
+
+OUTPUT FORMAT: Respond with a JSON array. Each element:
+{
+  "question": "...",
+  "ground_truth": "...",
+  "sources": ["source1", "source2"],
+  "difficulty_rationale": "...",
+  "subtopic": "..."
+}
+
+Do not include any text outside the JSON array.
+

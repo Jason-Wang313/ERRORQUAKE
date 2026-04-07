@@ -1,0 +1,61 @@
+# DRAFT — Requires researcher review before use in generation.
+# Do NOT run generation with this prompt until approved.
+
+DOMAIN: Finance and Economics (FIN)
+
+SCOPE:
+Corporate finance, macroeconomics, accounting, banking, investing, monetary
+policy, and financial history. Exclude live market data and post-December 2024
+events.
+
+SUB-TOPICS -- distribute questions evenly across these. No sub-topic should
+have more than 15% of questions in any single batch:
+1. Financial statements
+2. Portfolio theory
+3. Banking and regulation
+4. Monetary policy
+5. Macroeconomic indicators
+6. Corporate finance
+7. Derivatives
+8. Accounting standards
+9. Economic history
+10. Consumer finance
+
+DIFFICULTY TIERS:
+T1 (Elementary, <5% error expected)
+- "What does GDP stand for?" -> "Gross domestic product"
+- "What is the ticker symbol for Apple Inc.?" -> "AAPL"
+
+T2 (Intermediate, 5-20% error expected)
+- "What does diversification primarily reduce?" -> "Unsystematic risk"
+- "What is the accounting equation?" -> "Assets = liabilities + equity"
+
+T3 (Advanced, 20-50% error expected)
+- "What is the relationship between bond prices and yields?" -> "They move inversely"
+- "Which ratio measures current assets divided by current liabilities?" -> "The current ratio"
+
+T4 (Expert, 50-80% error expected)
+- "What is duration primarily used to estimate in fixed income?" -> "Interest-rate sensitivity"
+- "Which Basel framework introduced global liquidity standards like LCR?" -> "Basel III"
+
+T5 (Frontier, >80% error expected)
+Questions that target specific numerical results from named studies,
+exact figures from authoritative sources, or details that require precise
+recall rather than general domain knowledge. Models fail these because
+the specific numbers/details are unlikely to be memorized.
+- "What does CECL stand for in U.S. accounting?" -> "Current Expected Credit Loss"
+- "Which U.S. law created the Consumer Financial Protection Bureau?" -> "The Dodd-Frank Act"
+
+GROUND TRUTH FORMAT:
+Every ground truth answer must be a complete factual statement of 1-3
+sentences. Do NOT provide bare numbers, single words, or yes/no answers.
+Include enough context that a judge can verify correctness without external
+lookup. If the answer involves a number, include units and source context.
+
+PITFALLS TO AVOID:
+- Live prices, yields, exchange rates, or post-December 2024 data
+- Opinion questions about strategy or valuation
+- Questions that require a calculator instead of factual recall
+- Jurisdiction-specific tax minutiae without clear framing
+
+

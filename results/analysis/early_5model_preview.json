@@ -1,0 +1,327 @@
+{
+  "deepseek-v3.1": {
+    "error_count": 2161,
+    "error_rate": 0.5732,
+    "fits": [
+      {
+        "distribution": "truncated_power_law",
+        "bic": 5167.150073724966,
+        "aic": 5155.793421011953,
+        "parameters": {
+          "beta": 0.5950876070160073,
+          "lambda": 1.1309871401339722
+        },
+        "chi2_pvalue": 6.571842900725183e-22
+      },
+      {
+        "distribution": "stretched_exp",
+        "bic": 5173.749794441311,
+        "aic": 5162.393141728297,
+        "parameters": {
+          "lambda": 2.3369469234828837,
+          "gamma": 0.746291638836525
+        },
+        "chi2_pvalue": 3.0080692529399914e-23
+      },
+      {
+        "distribution": "exponential",
+        "bic": 5174.430670527354,
+        "aic": 5168.752344170847,
+        "parameters": {
+          "lambda": 1.6572931520956111
+        },
+        "chi2_pvalue": 2.0303481893072124e-24
+      },
+      {
+        "distribution": "lognormal",
+        "bic": 5188.39929624886,
+        "aic": 5177.042643535847,
+        "parameters": {
+          "mu": -0.7146694657465151,
+          "sigma": 0.9175261751764198
+        },
+        "chi2_pvalue": 2.863231622327967e-26
+      },
+      {
+        "distribution": "power_law",
+        "bic": 5235.940244659243,
+        "aic": 5230.261918302736,
+        "parameters": {
+          "beta": 1.8563733740856698
+        },
+        "chi2_pvalue": 6.394765296683497e-35
+      }
+    ],
+    "b_value": {
+      "b": 0.8052712636411697,
+      "ci_lower": 0.7545010964063498,
+      "ci_upper": 0.8633669860681882,
+      "m_min": 1.5,
+      "n_above_mmin": 496
+    },
+    "ratio_test": {
+      "cv": 0.5307134467638915,
+      "supports_power_law": false
+    }
+  },
+  "deepseek-v3.2": {
+    "error_count": 1887,
+    "error_rate": 0.5964,
+    "fits": [
+      {
+        "distribution": "exponential",
+        "bic": 4705.095344132522,
+        "aic": 4699.552600587153,
+        "parameters": {
+          "lambda": 1.5621452992532792
+        },
+        "chi2_pvalue": 1.056966502763698e-31
+      },
+      {
+        "distribution": "truncated_power_law",
+        "bic": 4709.19219680983,
+        "aic": 4698.1067097190935,
+        "parameters": {
+          "beta": 0.29805694525143617,
+          "lambda": 1.3017085763721787
+        },
+        "chi2_pvalue": 6.352256326033637e-31
+      },
+      {
+        "distribution": "stretched_exp",
+        "bic": 4712.450100896358,
+        "aic": 4701.364613805621,
+        "parameters": {
+          "lambda": 1.6501211078705589,
+          "gamma": 0.9563905321289096
+        },
+        "chi2_pvalue": 1.1251524812319733e-31
+      },
+      {
+        "distribution": "lognormal",
+        "bic": 4735.908405565002,
+        "aic": 4724.822918474265,
+        "parameters": {
+          "mu": -0.545689106455383,
+          "sigma": 0.8582736653374721
+        },
+        "chi2_pvalue": 2.9233571807272173e-36
+      },
+      {
+        "distribution": "power_law",
+        "bic": 4795.6664490861795,
+        "aic": 4790.123705540811,
+        "parameters": {
+          "beta": 1.7609157335217156
+        },
+        "chi2_pvalue": 2.071466145872514e-45
+      }
+    ],
+    "b_value": {
+      "b": 0.6604986398157858,
+      "ci_lower": 0.6354050686965971,
+      "ci_upper": 0.6870791761487622,
+      "m_min": 0.5,
+      "n_above_mmin": 1887
+    },
+    "ratio_test": {
+      "cv": 0.6404779030612279,
+      "supports_power_law": false
+    }
+  },
+  "eurollm-9b": {
+    "error_count": 1356,
+    "error_rate": 0.3442,
+    "fits": [
+      {
+        "distribution": "stretched_exp",
+        "bic": 4794.186384786121,
+        "aic": 4783.761795849121,
+        "parameters": {
+          "lambda": 0.005654772354724776,
+          "gamma": 5.0
+        },
+        "chi2_pvalue": 0.0
+      },
+      {
+        "distribution": "lognormal",
+        "bic": 4890.124735992494,
+        "aic": 4879.700147055493,
+        "parameters": {
+          "mu": 0.4765819820889467,
+          "sigma": 0.5091020274510427
+        },
+        "chi2_pvalue": 0.0
+      },
+      {
+        "distribution": "exponential",
+        "bic": 5340.060532801839,
+        "aic": 5334.8482383333385,
+        "parameters": {
+          "lambda": 0.43033508536621645
+        },
+        "chi2_pvalue": 0.0
+      },
+      {
+        "distribution": "truncated_power_law",
+        "bic": 5364.142640037801,
+        "aic": 5353.718051100801,
+        "parameters": {
+          "beta": 0.05,
+          "lambda": 0.39924130081296894
+        },
+        "chi2_pvalue": 0.0
+      },
+      {
+        "distribution": "power_law",
+        "bic": 5539.269629739471,
+        "aic": 5534.057335270971,
+        "parameters": {
+          "beta": 0.40304515258241885
+        },
+        "chi2_pvalue": 0.0
+      }
+    ],
+    "b_value": {
+      "b": 1.066688201165882,
+      "ci_lower": 0.9354034994839268,
+      "ci_upper": 1.2408413768664335,
+      "m_min": 3.0,
+      "n_above_mmin": 70
+    },
+    "ratio_test": {
+      "cv": 0.6309224146539731,
+      "supports_power_law": false
+    }
+  },
+  "gemma-2-27b": {
+    "error_count": 2665,
+    "error_rate": 0.6664,
+    "fits": [
+      {
+        "distribution": "stretched_exp",
+        "bic": 6991.548819341553,
+        "aic": 6979.772900668353,
+        "parameters": {
+          "lambda": 0.9116984828530504,
+          "gamma": 1.411979673923073
+        },
+        "chi2_pvalue": 2.7728130351408408e-09
+      },
+      {
+        "distribution": "exponential",
+        "bic": 7011.590528601484,
+        "aic": 7005.702569264884,
+        "parameters": {
+          "lambda": 1.4645320870841254
+        },
+        "chi2_pvalue": 1.3177650369612088e-13
+      },
+      {
+        "distribution": "truncated_power_law",
+        "bic": 7022.701612677838,
+        "aic": 7010.925694004638,
+        "parameters": {
+          "beta": 0.05,
+          "lambda": 1.4227197402978269
+        },
+        "chi2_pvalue": 3.937771852143397e-14
+      },
+      {
+        "distribution": "lognormal",
+        "bic": 7047.07400957527,
+        "aic": 7035.29809090207,
+        "parameters": {
+          "mu": -0.27360918338072854,
+          "sigma": 0.6739790446913563
+        },
+        "chi2_pvalue": 2.6227802948029314e-19
+      },
+      {
+        "distribution": "power_law",
+        "bic": 7341.419196042484,
+        "aic": 7335.531236705884,
+        "parameters": {
+          "beta": 1.691257278095044
+        },
+        "chi2_pvalue": 1.5066043521545027e-69
+      }
+    ],
+    "b_value": {
+      "b": 0.6190104528798855,
+      "ci_lower": 0.6000711835529619,
+      "ci_upper": 0.6388313960612001,
+      "m_min": 0.5,
+      "n_above_mmin": 2665
+    },
+    "ratio_test": {
+      "cv": 0.4037248958291064,
+      "supports_power_law": false
+    }
+  },
+  "gemma-3-12b": {
+    "error_count": 2521,
+    "error_rate": 0.6309,
+    "fits": [
+      {
+        "distribution": "stretched_exp",
+        "bic": 7171.566750234168,
+        "aic": 7159.901928379792,
+        "parameters": {
+          "lambda": 0.7325099793127505,
+          "gamma": 1.4663162439147208
+        },
+        "chi2_pvalue": 1.4789298399427964e-41
+      },
+      {
+        "distribution": "exponential",
+        "bic": 7189.6997411676775,
+        "aic": 7183.8673302404895,
+        "parameters": {
+          "lambda": 1.2831657134489909
+        },
+        "chi2_pvalue": 8.459907780747083e-48
+      },
+      {
+        "distribution": "truncated_power_law",
+        "bic": 7199.626224724658,
+        "aic": 7187.961402870282,
+        "parameters": {
+          "beta": 0.05,
+          "lambda": 1.2433795173516127
+        },
+        "chi2_pvalue": 2.8982001710485264e-48
+      },
+      {
+        "distribution": "lognormal",
+        "bic": 7255.6035601080985,
+        "aic": 7243.9387382537225,
+        "parameters": {
+          "mu": -0.24397557866658431,
+          "sigma": 0.7685960169037848
+        },
+        "chi2_pvalue": 1.4241995025751245e-59
+      },
+      {
+        "distribution": "power_law",
+        "bic": 7449.559975744706,
+        "aic": 7443.727564817518,
+        "parameters": {
+          "beta": 1.5449551730371949
+        },
+        "chi2_pvalue": 8.718624112904821e-95
+      }
+    ],
+    "b_value": {
+      "b": 0.9382618753417843,
+      "ci_lower": 0.8237322567554638,
+      "ci_upper": 1.0764108631221698,
+      "m_min": 2.5,
+      "n_above_mmin": 101
+    },
+    "ratio_test": {
+      "cv": 0.48917799807129464,
+      "supports_power_law": false
+    }
+  }
+}
