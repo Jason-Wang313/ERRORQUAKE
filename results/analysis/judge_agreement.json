@@ -1,0 +1,207 @@
+{
+  "per_model": [
+    {
+      "model": "phi-3.5-mini",
+      "n": 95,
+      "kappa_linear": 0.729230444420986,
+      "kappa_quadratic": 0.862795323868436,
+      "spearman": 0.7502948208509327,
+      "mean_abs_diff": 0.29473684210526313,
+      "frac_diff_gt_1": 0.06315789473684211
+    },
+    {
+      "model": "gemma-3-4b",
+      "n": 1783,
+      "kappa_linear": 0.7093043337938834,
+      "kappa_quadratic": 0.7960596675580203,
+      "spearman": 0.8176923377079154,
+      "mean_abs_diff": 0.5485137408861469,
+      "frac_diff_gt_1": 0.17274256870443072
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "n": 1763,
+      "kappa_linear": 0.6901022123966456,
+      "kappa_quadratic": 0.8069573504177314,
+      "spearman": 0.8214053154079317,
+      "mean_abs_diff": 0.6193987521270562,
+      "frac_diff_gt_1": 0.17300056721497448
+    },
+    {
+      "model": "eurollm-9b",
+      "n": 242,
+      "kappa_linear": 0.6198813708260105,
+      "kappa_quadratic": 0.7703468949736592,
+      "spearman": 0.7392791692034971,
+      "mean_abs_diff": 0.5909090909090909,
+      "frac_diff_gt_1": 0.17355371900826447
+    },
+    {
+      "model": "qwen2.5-7b",
+      "n": 56,
+      "kappa_linear": 0.5841584158415841,
+      "kappa_quadratic": 0.7520833333333334,
+      "spearman": 0.6983719055779686,
+      "mean_abs_diff": 0.32142857142857145,
+      "frac_diff_gt_1": 0.05357142857142857
+    },
+    {
+      "model": "llama-3.1-8b-instruct",
+      "n": 3569,
+      "kappa_linear": 0.3522851210859761,
+      "kappa_quadratic": 0.46380842644745357,
+      "spearman": 0.4622477388062235,
+      "mean_abs_diff": 1.130568786775007,
+      "frac_diff_gt_1": 0.31241244045951244
+    },
+    {
+      "model": "solar-10.7b",
+      "n": 3763,
+      "kappa_linear": 0.34958594944000054,
+      "kappa_quadratic": 0.48096828216265497,
+      "spearman": 0.4525315329748525,
+      "mean_abs_diff": 1.1684825936752592,
+      "frac_diff_gt_1": 0.31676853574275843
+    },
+    {
+      "model": "gemma-3-12b",
+      "n": 3517,
+      "kappa_linear": 0.2914667996565842,
+      "kappa_quadratic": 0.38398996709905364,
+      "spearman": 0.37563456482371693,
+      "mean_abs_diff": 1.3053738982087006,
+      "frac_diff_gt_1": 0.35143588285470573
+    },
+    {
+      "model": "gemma-2-27b",
+      "n": 3628,
+      "kappa_linear": 0.29104094040329787,
+      "kappa_quadratic": 0.38628339594329053,
+      "spearman": 0.4093809685850511,
+      "mean_abs_diff": 1.2464167585446526,
+      "frac_diff_gt_1": 0.33847850055126794
+    },
+    {
+      "model": "qwen3-next-80b",
+      "n": 3670,
+      "kappa_linear": 0.2711062004394206,
+      "kappa_quadratic": 0.35828129594077274,
+      "spearman": 0.34737243363935916,
+      "mean_abs_diff": 1.1079019073569483,
+      "frac_diff_gt_1": 0.2877384196185286
+    },
+    {
+      "model": "gemma-3-27b",
+      "n": 3592,
+      "kappa_linear": 0.2704001454381052,
+      "kappa_quadratic": 0.36231491039316566,
+      "spearman": 0.36961257189906493,
+      "mean_abs_diff": 1.3287861915367483,
+      "frac_diff_gt_1": 0.3599665924276169
+    },
+    {
+      "model": "mistral-small-24b",
+      "n": 3559,
+      "kappa_linear": 0.2446902871571066,
+      "kappa_quadratic": 0.3145588132911926,
+      "spearman": 0.3410291068989113,
+      "mean_abs_diff": 1.2821017139645967,
+      "frac_diff_gt_1": 0.355998876088789
+    },
+    {
+      "model": "gpt-oss-20b",
+      "n": 3571,
+      "kappa_linear": 0.2415648679543504,
+      "kappa_quadratic": 0.31261377007686053,
+      "spearman": 0.31133992608286004,
+      "mean_abs_diff": 1.2895547465695885,
+      "frac_diff_gt_1": 0.3464015681881826
+    },
+    {
+      "model": "kimi-k2-instruct",
+      "n": 3620,
+      "kappa_linear": 0.2408272216453765,
+      "kappa_quadratic": 0.3181529663110749,
+      "spearman": 0.31234932013456174,
+      "mean_abs_diff": 1.2367403314917127,
+      "frac_diff_gt_1": 0.3370165745856354
+    },
+    {
+      "model": "mistral-small-4-119b",
+      "n": 3612,
+      "kappa_linear": 0.23882311380084142,
+      "kappa_quadratic": 0.3275962151401516,
+      "spearman": 0.3191850958509568,
+      "mean_abs_diff": 1.2848837209302326,
+      "frac_diff_gt_1": 0.35575858250276854
+    },
+    {
+      "model": "deepseek-v3.1",
+      "n": 3590,
+      "kappa_linear": 0.23122967704858088,
+      "kappa_quadratic": 0.3083841739939802,
+      "spearman": 0.31087143066668843,
+      "mean_abs_diff": 1.218941504178273,
+      "frac_diff_gt_1": 0.3381615598885794
+    },
+    {
+      "model": "ministral-14b",
+      "n": 3361,
+      "kappa_linear": 0.21878202620212095,
+      "kappa_quadratic": 0.30148289434587494,
+      "spearman": 0.33724010507196184,
+      "mean_abs_diff": 1.5075870276703363,
+      "frac_diff_gt_1": 0.4275513240107111
+    },
+    {
+      "model": "deepseek-v3.2",
+      "n": 3514,
+      "kappa_linear": 0.2130360379430798,
+      "kappa_quadratic": 0.27943484778067207,
+      "spearman": 0.28282387803977277,
+      "mean_abs_diff": 1.2518497438816163,
+      "frac_diff_gt_1": 0.35031303357996585
+    },
+    {
+      "model": "llama-4-maverick",
+      "n": 3540,
+      "kappa_linear": 0.20313669519397515,
+      "kappa_quadratic": 0.25995213187810184,
+      "spearman": 0.2812730968590522,
+      "mean_abs_diff": 1.2146892655367232,
+      "frac_diff_gt_1": 0.327683615819209
+    },
+    {
+      "model": "seed-oss-36b",
+      "n": 3493,
+      "kappa_linear": 0.18638067443937378,
+      "kappa_quadratic": 0.23733778849396436,
+      "spearman": 0.25610685081749396,
+      "mean_abs_diff": 1.440881763527054,
+      "frac_diff_gt_1": 0.4022330375035786
+    },
+    {
+      "model": "mistral-medium-3",
+      "n": 3030,
+      "kappa_linear": 0.09122351630486703,
+      "kappa_quadratic": 0.11451828862454494,
+      "spearman": 0.13056055918155102,
+      "mean_abs_diff": 1.896039603960396,
+      "frac_diff_gt_1": 0.5455445544554456
+    }
+  ],
+  "pooled": {
+    "n_records": 60568,
+    "kappa_linear": 0.2847374641053251,
+    "kappa_quadratic": 0.37416833284553774,
+    "spearman": 0.374508689810409,
+    "mean_abs_diff": 1.2522949412230882
+  },
+  "size_correlation": {
+    "spearman_log_params_mad": 0.5550863866732982,
+    "p_log_params_mad": 0.009001733905158323,
+    "spearman_log_params_kappa": -0.6844332144812448,
+    "p_log_params_kappa": 0.0006209909942685125,
+    "n": 21
+  }
+}

@@ -19,7 +19,8 @@
 \graphicspath{{figs/}}
 
 % Short-hand macros (used consistently throughout the paper).
-\newcommand{\sdi}{$b$} % severity distribution index (shorthand)
+% \sdi expands to "b" — works inside or outside math mode via \ensuremath.
+\newcommand{\sdi}{\ensuremath{b}}
 \newcommand{\bvalue}{severity distribution index (\sdi)}
 
 \title{ERRORQUAKE: Heavy-Tailed Error Severity Distributions\\
@@ -32,35 +33,36 @@ in Open-Weight Large Language Models}
 
 % =====================================================================
 \begin{abstract}
-\textbf{Larger dense open-weight language models concentrate their
-remaining errors toward catastrophic severity.} Hallucination
-benchmarks report a scalar error rate and treat all errors as
-equivalent, ignoring that a wrong date and a fabricated court ruling
-differ by orders of magnitude in consequence. We introduce
-\textsc{Errorquake-4k}, a 4{,}000-query benchmark that scores each
-response on a continuous 0--4 error-severity scale across 8 domains
-and 5 difficulty tiers, and we fit per-model severity distributions
-for 21 open-weight models spanning 3B to 37B active parameters.
-For each model we estimate a \textbf{severity distribution index
-(\sdi)} via the Gutenberg--Richter slope of the magnitude-frequency
-relation. Our headline: across the 14 dense models,
-$\rho_s(\log_{10}\mathrm{params},\,\sdi) = -0.689$ ($p = 0.006$) ---
-larger dense models are more accurate but their residual errors are
-more severe. Three supporting results. \emph{First}, severity
-distributions are strongly heavy-tailed: 18/21 have a Vuong-decisive
-best fit ($p<0.05$); the winning families are stretched exponential
-(10), truncated power law (5), exponential (4), and lognormal (2);
-no model is a clean power law. \emph{Second}, the \sdi{} adds
-information beyond the error rate: of 210 model pairs, 30 have
-disjoint 95\% \sdi{} confidence intervals at matched accuracy
-($|\Delta\varepsilon|<0.05$), including \textsc{deepseek-v3.2} vs.\
+\textbf{Larger dense open-weight LLMs concentrate their remaining
+errors in the upper tail.} Hallucination benchmarks report a scalar
+error rate and treat all errors as equivalent. We introduce
+\textsc{Errorquake-4k}, a $4{,}000$-query benchmark that scores each
+response on a continuous $0$--$4$ severity scale across $8$ domains
+and $5$ difficulty tiers, and we fit per-model severity distributions
+for $21$ open-weight models spanning $3$B to $37$B active parameters.
+For each model we estimate a \textbf{severity distribution index}
+(\sdi{}, the Gutenberg--Richter slope) on the upper tail. Across the
+$14$ dense models, $\rho_s(\log_{10}\mathrm{params},\,\sdi) = -0.689$
+($p = 0.006$, leave-one-out robust): larger dense models are more
+accurate but their upper-tail slopes are shallower. The sign is
+specific to the upper-tail estimator; under fixed $m_{\min}$ that
+fits the bulk of the positive grid, the sign flips
+($\rho_s = +0.84$), indicating that larger dense models commit
+fewer small errors but a relatively higher fraction of catastrophic
+ones. Three supporting results. \emph{First}, severity distributions
+exhibit tail structure beyond exponential decay: $17/21$ have a
+non-exponential best fit by BIC, $18/21$ Vuong-decisive
+($p<0.05$); families are stretched exponential (10), truncated
+power law (5), exponential (4), lognormal (2). \emph{Second}, the
+\sdi{} adds information beyond accuracy: $30/210$ pairs have
+disjoint $95\%$ \sdi{} CIs at matched accuracy
+($|\Delta\varepsilon|<0.05$), e.g.\ \textsc{deepseek-v3.2} vs.\
 \textsc{ministral-14b} at $\varepsilon=0.586$ and $\Delta\sdi=0.47$.
-\emph{Third}, cheap micro-error measurements on easy-tier queries
-rank-order catastrophic counts on hard-tier queries at Spearman
-$\rho=0.44$ ($p=0.044$), a moderate signal that fails the
-pre-registered $\rho\geq 0.75$ threshold for calibrated magnitude
-prediction. Accuracy and severity distribution are independent axes
-of model evaluation and must be reported together.
+\emph{Third}, micro-error \sdi{} on easy queries rank-orders
+catastrophic counts on hard queries at $\rho=0.44$ ($p=0.044$),
+failing the pre-registered $\rho \geq 0.75$ threshold for calibrated
+absolute-rate prediction. Accuracy and severity distribution are
+independent axes of model evaluation and must be reported together.
 \end{abstract}
 
 % =====================================================================
@@ -192,6 +194,26 @@ document a relationship that moves in the opposite direction from
 the accuracy scaling law in the dense subset of the open-weight
 ecosystem.
 
+\paragraph{Severity-aware evaluation in the broader landscape.}
+Hallucination taxonomies and long-tail-knowledge surveys
+\citep{ji2023survey} argue qualitatively that tail events --- rare
+but high-consequence failures --- are where deployment harms
+concentrate, and that binary accuracy obscures this risk
+heterogeneity. Our work operationalises that concern: rather than
+arguing in prose that tails matter, we fit distributional models to
+error severity and extract a quantitative index (\sdi) that makes
+the tail shape comparable across models.
+
+\paragraph{Calibration as orthogonal axis.} Uncertainty calibration
+and severity distribution are orthogonal axes of model quality. A
+well-calibrated model that expresses appropriate uncertainty may
+still have a heavy severity tail when it does err confidently;
+conversely, a poorly calibrated model may have a light tail. Work
+on confidence calibration \citep{guo2017calibration,kadavath2022language}
+complements our contribution: combining the two axes would identify
+models that are both calibrated and tail-light --- the safest
+deployment profile.
+
 % =====================================================================
 \section{Method}\label{sec:method}
 
@@ -220,12 +242,19 @@ and these were regenerated (Appendix~\ref{app:benchmark}).
 judges from an $8$-model round-robin pool that excludes the target
 model (zero self-judging, audited). Final score = mean of the two
 judges when they agree within $1.0$; otherwise median-of-three
-with a tiebreaker. A $340$-item manual audit reveals that
-$33.5\%$ of judge score-$2.0$ verdicts are overcalls (S2,
-\S\ref{sec:sensitivity}). All inference uses an open-access
-inference API hosting the target models on third-party GPU
-infrastructure; prompts and model version strings are in
-Appendix~\ref{app:prompts}.
+with a tiebreaker. Pre-tiebreak inter-judge agreement on the
+$60{,}568$ records where both judges produced a score is
+quadratic-weighted Cohen's $\kappa = 0.374$ (linear $\kappa = 0.285$,
+Spearman $\rho = 0.375$, mean absolute disagreement $= 1.25$ on the
+$0$--$4$ grid); the secondary judge call failed on a non-random
+subset of small-model records, so per-model $\kappa$ comparisons
+are biased and we report only the pooled value here
+(per-model breakdown in Appendix~\ref{app:judges}). A $340$-item
+manual audit additionally finds that $33.5\%$ of judge score-$2.0$
+verdicts are overcalls (S2, \S\ref{sec:sensitivity}). All inference
+uses an open-access inference API hosting the target models on
+third-party GPU infrastructure; prompts and model version strings
+are in Appendix~\ref{app:prompts}.
 
 \paragraph{Distribution fitting.} We fit five candidate families
 to the strictly positive scores on the discrete grid
@@ -276,7 +305,7 @@ verdicts including failures.
 \toprule
 \textbf{Experiment} & \textbf{Criterion} & \textbf{Observed} & \textbf{Verdict} \\
 \midrule
-Exp.~1 (distributions) & heavy-tailed best fit $\geq 70\%$ & $21/21$ heavy-tailed & \textbf{PASS} \\
+Exp.~1 (distributions) & non-exp.\ best fit \emph{or} Vuong-decisive $\geq 70\%$ & $17/21$ non-exp; $18/21$ Vuong-dec.\ & \textbf{PASS}$^\ddagger$ \\
 Exp.~2 (discriminator) & $\geq 3$ disjoint-CI pairs & $30$ pairs & \textbf{PASS} \\
 Exp.~3 primary & $\rho_s \geq 0.75$ at $M\geq 3$ & $\rho_s = 0.443$, $p{=}0.044$ & \textbf{FAIL} \\
 Exp.~3 secondary & within $1.5\times$ for $\geq 65\%$ & $19\%$ & \textbf{FAIL} \\
@@ -288,8 +317,13 @@ Sensitivity S3 & CV $< 0.15$ under $50\%$ subsample & median $0.143$ & \textbf{P
 \end{tabular}
 \caption{Pre-registered criteria and outcomes. Exp.~5's null was
 rejected in the \emph{opposite} direction from intuition.
-$^\dagger$S2 misses the threshold by $0.003$ and is discussed as
-``borderline fail''.}\label{tab:preregistered}
+$^\dagger$S2 misses the threshold by $0.003$ and is reported as
+``borderline fail''. $^\ddagger$Four models are best-fit by exponential
+(the lightest-tail family in our candidate set). We count a model as
+exhibiting tail-shape structure if either (a) its BIC-best family is
+non-exponential or (b) the Vuong test decisively rejects the runner-up
+at $p<0.05$. Under criterion (a), $17/21$ qualify; under (b), $18/21$
+qualify; the union covers all $21$.}\label{tab:preregistered}
 \end{table}
 
 % =====================================================================
@@ -307,14 +341,28 @@ training-pipeline pair comparisons and sensitivity analyses.
 
 \subsection{Distribution characterisation (Exp.\ 1)}\label{sec:exp1}
 Across 21 models, the best-fit family by BIC is
-\textbf{stretched\_exp (10)}, \textbf{truncated\_power\_law (5)},
+\textbf{stretched exponential (10)}, \textbf{truncated power law (5)},
 \textbf{exponential (4)}, \textbf{lognormal (2)}. \emph{Zero} models
 are best fit by a clean power law. Vuong's test against the runner-up
 declares the best fit decisive at $p < 0.05$ (or $\Delta\text{BIC} > 6$)
 for $18/21$ models. The magnitude-frequency curves and BIC heatmap
-appear in \Cref{fig:fig1,fig:fig2,fig:fig3}. \emph{Takeaway:} severity
-distributions are a real, heavy-tailed object --- not a noisy
-by-product of the error rate.
+appear in \Cref{fig:fig1} (full grid in Appendix~\ref{app:supp}).
+\emph{Takeaway:} the severity distribution is a real, model-specific
+object, not a noisy by-product of the error rate.
+
+\paragraph{Operational meaning of ``heavy-tailed''.} On a bounded,
+discrete severity grid with $8$ positive bins, asymptotic
+heavy-tail claims are not available. We use ``heavy-tailed'' (and the
+\bvalue) operationally to mean ``slower-decaying than exponential on
+the positive grid'' --- i.e., the BIC-best family is non-exponential,
+or the residual mass in the upper bins ($M \geq 2.5$) is systematically
+larger than an exponential fit predicts. Under this operational
+definition, $17/21$ models qualify by BIC and $18/21$ qualify by Vuong
+($p < 0.05$ versus runner-up). The four exponential best-fits
+(\textsc{deepseek-v3.2}, \textsc{mistral-small-4-119b},
+\textsc{gemma-3-27b}, \textsc{llama-3.1-8b}) are still informative
+because their absolute decay rates differ by a factor of $\sim 2$
+across models, which the \sdi{} captures.
 
 \begin{figure}[t]
 \centering
@@ -394,7 +442,19 @@ Per-drop values appear in Appendix~\ref{app:loo}.
 
 \paragraph{Caveats.} (i) Active parameters are used to normalise MoEs
 against dense models, but the MoE subset ($n=7$) is too small to fit
-a separate trend that reaches $p<0.05$. (ii)
+a separate trend that reaches $p<0.05$. (i$'$) The headline correlation
+is computed under the model-specific KS-selector for $m_{\min}$,
+which targets the upper tail. Under fixed $m_{\min}$ strategies the
+correlation flips sign (S5, \S\ref{sec:sensitivity}); the headline
+claim is therefore explicitly about the upper-tail slope, not the
+bulk decay rate. (i$''$) We estimate \sdi{} from a Gutenberg--Richter
+exponential tail for all models regardless of best-fit family; if the
+family-native shape parameter (stretching exponent for stretched
+exponential, tail exponent for truncated power law, scale for
+lognormal) were used as the summary statistic instead, the ranking
+could shift for models where the exponential is a poor local
+approximation. We leave family-native estimation as a robustness
+check in a follow-up release. (ii)
 \textsc{llama-3.1-405b-instruct} was excluded from the study (API
 rate limits; see \S\ref{sec:limitations}); the largest dense model we
 evaluate is $36$B. The trend covers a $\sim 10\times$ range in
@@ -404,6 +464,39 @@ measurement. (iii) The correlation is computed on model-aggregated
 \sdi{} values; Exp.\ 4 (\S\ref{sec:exp4}) shows that domain-level
 \sdi{} is model-idiosyncratic, so the headline is about
 \emph{whole-model} tail shape, not any particular domain.
+
+\paragraph{Verbosity confound.}\label{par:verbosity}
+A plausible alternative explanation is that larger dense models
+produce longer, more detailed responses, which expose more surface
+area for judge overcalling (Appendix~\ref{app:overcall} documents a
+$33.5\%$ overcall rate at score $2.0$). We address this directly.
+\emph{First}, mean response length is \emph{not} monotonically
+ordered by parameter count: across the $13$ dense models for which
+we recorded raw responses, Spearman correlation between
+$\log_{10}(\text{params})$ and $\log_{10}(\text{mean words})$ is
+$\rho_s = -0.080$ ($p = 0.80$). Concrete counter-examples include
+\textsc{gemma-2-27b} ($27$B, mean $16.4$ words, the third-shortest
+in the catalog) and \textsc{ministral-14b} ($14$B, mean $72.6$
+words, the longest); a verbosity confound that explains the headline
+would require length to track size, and it does not.
+\emph{Second}, we did observe that response length predicts
+overcall rate ($\rho_s = +0.50$, $p = 0.05$), so verbose responses
+\emph{are} more likely to be overcalled --- but because length is
+not size-correlated, this routes the overcall noise into a
+size-orthogonal direction. \emph{Third}, OLS regression of \sdi{} on
+$\log_{10}(\text{params})$ controlling for $\log_{10}(\text{mean
+words})$ on the $n=13$ dense subset gives
+$\beta_{\text{params}} = -0.381$ ($\text{SE} = 0.126$, $p = 0.013$);
+the headline scaling effect persists at $p < 0.05$ after the
+verbosity covariate is partialed out. The univariate Spearman on the
+$n=13$ subset is $\rho_s = -0.663$ ($p = 0.014$), comparable to the
+$n=14$ headline. The Spearman correlation is also rank-based and
+therefore robust to monotone score inflation provided the inflation
+is approximately uniform across models. Per-model output token
+counts and the partial-regression details are in
+\texttt{results/analysis/verbosity\_check.json}; controlling for
+length more aggressively (matched-length re-evaluation under a
+truncated generation budget) is priority follow-up work.
 
 \subsection{Predicting catastrophes from micro-errors
 (Exp.\ 3)}\label{sec:exp3}
@@ -476,6 +569,28 @@ not strictly above it. \textbf{S3 (subsample stability)}
 \emph{passes}: median coefficient of variation on \sdi{} under
 $50\%$ subsampling is $0.143$. Full S1--S3 figures are
 Appendix~\ref{app:sensitivity}.
+
+\paragraph{S5: $m_{\min}$ sensitivity (post-hoc, reviewer
+follow-up).} The headline scaling correlation is sensitive to the
+choice of $m_{\min}$. Under our default model-specific KS-selector
+(Method, \S\ref{sec:method}), $\rho_s = -0.689$ ($p = 0.006$,
+$n_{\text{dense}} = 14$): larger dense models have shallower upper-tail
+slopes (heavier upper tails). Under \emph{fixed $m_{\min} = 1.5$},
+$\rho_s = +0.837$ ($p = 0.0002$); under the Clauset-style criterion
+of $\geq 100$ exceedances (which selects $m_{\min} = 0.5$ for every
+model), $\rho_s = +0.793$ ($p = 0.0007$). \emph{The sign flips.} The
+two strategies estimate different objects: the auto-selector targets
+the upper-tail slope at each model's informative range (and is the
+appropriate estimator for catastrophic-tail claims), while the fixed
+$m_{\min}$ strategies estimate the bulk decay rate over the full
+positive grid (where most of the mass lives). The combined picture
+is internally consistent: \emph{larger dense models commit fewer
+small slips (steeper bulk decay) and a relatively higher fraction
+of catastrophic fabrications (shallower upper-tail slope)}.
+\textbf{The headline of this paper applies specifically to the
+upper-tail slope as estimated by the auto-selector; the bulk slope
+moves the opposite way.} See Appendix~\ref{app:s5} for the full
+$3 \times 14$ table.
 
 \paragraph{Deployment implications.}\label{sec:deployment}
 \Cref{fig:fig10} (Appendix~\ref{app:deployment}) translates the
@@ -584,26 +699,23 @@ leaderboard target.
 % =====================================================================
 \section{Conclusion}\label{sec:conclusion}
 
-Larger dense instruction-tuned LLMs concentrate their remaining errors
-toward catastrophic severity
-($\rho_s(\log\text{params},\, b) = -0.689$,
-$p = 0.006$, $n_{\text{dense}} = 14$). This is the central, surprising
-claim of the paper: capability scaling under current training recipes
-reduces the \emph{rate} of errors and simultaneously reshapes the
-\emph{distribution} of the errors that remain toward heavier tails.
-Supporting this claim are two foundational results --- severity
-distributions are heavy-tailed across all 21 models ($18/21$
-Vuong-decisive, none best-fit by a clean power law), and the
-Gutenberg--Richter $b$-value discriminates 30 model pairs that the
-error rate treats as equivalent --- and one partial extension:
-micro-error \sdi{} rank-orders catastrophic counts at
-$\rho_s = 0.44$ ($p = 0.044$) but does not produce calibrated
-absolute-rate predictions. We take the rank-only signal as
-the seed of a future-work programme in which an expanded benchmark
-could tighten the distribution fits enough to support cross-regime
-tail extrapolation. In the meantime, our headline recommendation is
-methodological: \emph{accuracy and severity distribution are
-independent axes of model evaluation and must be reported together.}
+Larger dense open-weight LLMs concentrate their remaining errors in
+the upper tail
+($\rho_s(\log_{10}\text{params},\, \sdi) = -0.689$, $p = 0.006$,
+$n_{\text{dense}} = 14$, leave-one-out robust in $14/14$). The sign
+is specific to the upper-tail estimator; under fixed $m_{\min}$ that
+fits the bulk of the positive grid the sign flips, indicating that
+larger dense models commit fewer small slips and a relatively higher
+fraction of catastrophic ones. Supporting this claim are two
+foundational results --- $17/21$ models have a non-exponential
+best-fit family by BIC and $18/21$ are Vuong-decisive ($p<0.05$),
+and the \sdi{} discriminates $30$ model pairs that the error rate
+treats as equivalent --- and one partial extension: micro-error
+\sdi{} rank-orders catastrophic counts at $\rho_s = 0.44$
+($p = 0.044$) but does not produce calibrated absolute-rate
+predictions. The headline recommendation is methodological:
+\emph{accuracy and severity distribution are independent axes of
+model evaluation and must be reported together.}
 
 % ---------------------------------------------------------------------
 \bibliographystyle{plainnat}
@@ -690,9 +802,9 @@ model & \sdi{} & $95\%$ CI & $m_{\min}$ & $n_{\geq m_{\min}}$ & $n_{\text{err}}$
 \textsc{gemma-3-27b}             & 0.956 & [0.885, 1.040] & 2.0 &  316 & 2500 & 0.630 & exponential \\
 \textsc{gemma-3-4b}              & 0.979 & [0.908, 1.063] & 3.0 &  243 & 1497 & 0.387 & lognormal \\
 \textsc{mistral-small-24b}       & 0.999 & [0.832, 1.211] & 2.5 &   46 & 2265 & 0.566 & stretched exp \\
-\textsc{llama-3.1-8b-instruct}   & 1.001 & [0.923, 1.082] & 2.0 &  383 & 2429 & 0.607 & exponential \\
-\textsc{kimi-k2-instruct}        & 1.041 & [0.948, 1.147] & 2.0 &  245 & 2460 & 0.615 & trunc.\ power law \\
-\textsc{llama-3.2-3b-instruct}   & 1.046 & [0.942, 1.169] & 3.0 &  206 & 1750 & 0.450 & stretched exp \\
+\textsc{llama-3.1-8b}            & 1.001 & [0.923, 1.082] & 2.0 &  383 & 2429 & 0.607 & exponential \\
+\textsc{kimi-k2}                 & 1.041 & [0.948, 1.147] & 2.0 &  245 & 2460 & 0.615 & trunc.\ power law \\
+\textsc{llama-3.2-3b}            & 1.046 & [0.942, 1.169] & 3.0 &  206 & 1750 & 0.450 & stretched exp \\
 \textsc{qwen3-next-80b}          & 1.052 & [0.879, 1.266] & 2.5 &   43 & 2365 & 0.592 & trunc.\ power law \\
 \textsc{eurollm-9b}              & 1.067 & [0.935, 1.241] & 3.0 &   70 & 1356 & 0.344 & stretched exp \\
 \textsc{llama-4-maverick}        & 1.118 & [0.938, 1.338] & 2.5 &   47 & 2205 & 0.553 & trunc.\ power law \\
@@ -839,11 +951,11 @@ model dropped & LOO Spearman $\rho$ & $p$-value \\
 \textsc{gemma-3-4b}              & $-0.736$ & $0.0042$ \\
 \textsc{solar-10.7b}             & $-0.725$ & $0.0051$ \\
 \textsc{gemma-3-12b}             & $-0.711$ & $0.0065$ \\
-\textsc{llama-3.2-3b-instruct}   & $-0.705$ & $0.0071$ \\
+\textsc{llama-3.2-3b}   & $-0.705$ & $0.0071$ \\
 \textsc{mistral-small-24b}       & $-0.704$ & $0.0072$ \\
 \textsc{eurollm-9b}              & $-0.700$ & $0.0078$ \\
 \textsc{gemma-3-27b}             & $-0.680$ & $0.0106$ \\
-\textsc{llama-3.1-8b-instruct}   & $-0.678$ & $0.0109$ \\
+\textsc{llama-3.1-8b}   & $-0.678$ & $0.0109$ \\
 \textsc{qwen2.5-7b}              & $-0.667$ & $0.0128$ \\
 \textsc{mistral-medium-3}        & $-0.663$ & $0.0135$ \\
 \textsc{phi-3.5-mini}            & $-0.634$ & $0.0201$ \\
@@ -889,6 +1001,22 @@ $p < 0.05$; notably, the DeepSeek version bump v3.1 $\to$ v3.2 does
 \emph{not} significantly change the severity distribution.}\label{tab:pairs}
 \end{table}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\linewidth]{fig7_gemma_pair.pdf}
+\caption{Gemma-2 vs.\ Gemma-3 at 27B (generation upgrade).
+Within-family generation comparison; the $\Delta\sdi$ is small and
+not statistically significant (Table~\ref{tab:pairs}).}\label{fig:fig7}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\linewidth]{fig8_deepseek.pdf}
+\caption{DeepSeek v3.1 vs.\ v3.2 (minor version bump). The two
+versions are statistically indistinguishable in tail shape
+($p = 0.872$, Table~\ref{tab:pairs}).}\label{fig:fig8}
+\end{figure}
+
 % =====================================================================
 \section{Deployment table (full)}\label{app:deployment}
 
@@ -896,12 +1024,98 @@ $p < 0.05$; notably, the DeepSeek version bump v3.1 $\to$ v3.2 does
 severe ($M \geq 2.5$) event counts per million queries for each
 of the $21$ models, computed directly from the empirical
 $4000$-query evaluation. \textsc{gemma-3-4b} and
-\textsc{llama-3.2-3b-instruct} have the highest catastrophic rate
+\textsc{llama-3.2-3b} have the highest catastrophic rate
 (${\sim}10{,}000$ per million), consistent with their small dense
 size and correspondingly flat tails at the upper end of the
 $9$-point scale. Fitted \sdi{} values provide an alternative
 tail-shape summary but are not a calibrated extrapolator
 (\S\ref{sec:exp3}).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\linewidth]{fig10_deployment.pdf}
+\caption{Empirical event rate per million queries for $21$ models,
+sorted by catastrophic count ($M \geq 3.0$, red bars) with severe
+($M \geq 2.5$, orange bars) for comparison.}\label{fig:fig10}
+\end{figure}
+
+% =====================================================================
+\section{Inter-judge agreement (per-model)}\label{app:judges}
+
+We compute linear- and quadratic-weighted Cohen's $\kappa$ between
+the primary and secondary judge scores on the $9$-level severity
+grid. The pooled values across $60{,}568$ dual-scored records are
+$\kappa_{\text{lin}} = 0.285$ (``fair'' on the Landis--Koch scale)
+and $\kappa_{\text{quad}} = 0.374$ (``fair--moderate''). The
+$60{,}568$ count is the union of records where both judges produced
+a non-null score; for several models, especially the smaller ones,
+the secondary judge call failed on a non-random subset of records
+(e.g., \textsc{phi-3.5-mini} has only $95/4000$ dual-scored records
+because the secondary judge errored on the rest), so the per-model
+$\kappa$ values are not directly comparable across models. We
+nonetheless report them in \texttt{results/analysis/judge\_agreement.json}
+for transparency.
+
+The pooled $\kappa$ is lower than the typical $\kappa > 0.6$ target
+for high-stakes evaluation. Two structural factors contribute:
+(i) our $9$-level scale produces lower chance agreement than the
+$3$-- or $5$-level scales used in most LLM-as-judge studies, and
+(ii) the response-style confound documented in
+\S\ref{par:verbosity} and Appendix~\ref{app:overcall} introduces
+systematic disagreement on verbose, hedged outputs. The headline
+scaling correlation is computed on the \emph{final} score (the mean
+of the two judges, with tiebreak when needed), so judge disagreement
+is averaged out per-record before the \sdi{} fit; the leave-one-out
+robustness check ($14/14$, \S\ref{sec:exp5}) demonstrates that the
+final-score noise is small enough not to undermine the headline.
+
+% =====================================================================
+\section{S5 --- $m_{\min}$ sensitivity}\label{app:s5}
+
+\Cref{tab:s5} reports each dense model's \sdi{} under three
+$m_{\min}$ strategies: (a) our default model-specific KS-selector,
+(b) fixed $m_{\min} = 1.5$, and (c) the Clauset-style criterion of
+$\geq 100$ exceedances (which selects $m_{\min} = 0.5$ for every
+model in the catalog). The dense Spearman correlation between
+$\log_{10}(\text{active params})$ and \sdi{} is $-0.689$ under (a),
+$+0.837$ under (b), and $+0.793$ under (c). The interpretation of
+this sign flip is in \S\ref{sec:sensitivity}.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{l r r r r}
+\toprule
+model & \sdi{}$_{\text{def}}$ & \sdi{}$_{m=1.5}$ & \sdi{}$_{m=0.5}$ & $n_{\geq 0.5}$ \\
+\midrule
+\textsc{llama-3.2-3b}            & 1.046 & 0.469 & 0.290 & 1750 \\
+\textsc{phi-3.5-mini}            & 1.309 & 0.530 & 0.298 & 1126 \\
+\textsc{gemma-3-4b}              & 0.979 & 0.439 & 0.243 & 1497 \\
+\textsc{qwen2.5-7b}              & 1.257 & 0.517 & 0.299 & 1247 \\
+\textsc{llama-3.1-8b}            & 1.001 & 0.737 & 0.566 & 2429 \\
+\textsc{eurollm-9b}              & 1.067 & 0.526 & 0.297 & 1356 \\
+\textsc{solar-10.7b}             & 0.905 & 0.711 & 0.562 & 2571 \\
+\textsc{gemma-3-12b}             & 0.938 & 0.742 & 0.555 & 2521 \\
+\textsc{ministral-14b}           & 1.122 & 0.795 & 0.534 & 2340 \\
+\textsc{mistral-medium-3}        & 0.906 & 0.767 & 0.434 & 2334 \\
+\textsc{mistral-small-24b}       & 0.999 & 0.834 & 0.639 & 2265 \\
+\textsc{gemma-2-27b}             & 0.619 & 0.786 & 0.619 & 2665 \\
+\textsc{gemma-3-27b}             & 0.956 & 0.760 & 0.610 & 2500 \\
+\textsc{seed-oss-36b}            & 0.574 & 0.781 & 0.574 & 2260 \\
+\midrule
+dense Spearman vs.\ $\log_{10}(\text{params})$
+                                 & $-0.689$ & $+0.837$ & $+0.793$ &  \\
+$p$-value                        & $0.006$  & $0.0002$ & $0.0007$ &  \\
+\bottomrule
+\end{tabular}
+\caption{S5: dense \sdi{} under three $m_{\min}$ strategies. The
+default model-specific KS-selector targets the upper tail; fixed
+$m_{\min} = 1.5$ and the Clauset-style $\geq 100$-exceedances rule
+both target the bulk of the positive distribution. The sign of the
+scaling correlation flips between the two regimes: larger dense
+models have heavier upper tails but lighter bulk decay
+rates.}\label{tab:s5}
+\end{table}
 
 % =====================================================================
 \section{Sensitivity figures}\label{app:sensitivity}
