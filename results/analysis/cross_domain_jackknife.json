@@ -1,0 +1,48 @@
+{
+  "baseline_pairs": 30,
+  "per_domain_drop": [
+    {
+      "dropped_domain": "BIO",
+      "n_pairs": 29,
+      "rel_to_baseline": 0.9666666666666667
+    },
+    {
+      "dropped_domain": "CULT",
+      "n_pairs": 25,
+      "rel_to_baseline": 0.8333333333333334
+    },
+    {
+      "dropped_domain": "FIN",
+      "n_pairs": 31,
+      "rel_to_baseline": 1.0333333333333334
+    },
+    {
+      "dropped_domain": "GEO",
+      "n_pairs": 41,
+      "rel_to_baseline": 1.3666666666666667
+    },
+    {
+      "dropped_domain": "HIST",
+      "n_pairs": 36,
+      "rel_to_baseline": 1.2
+    },
+    {
+      "dropped_domain": "LAW",
+      "n_pairs": 40,
+      "rel_to_baseline": 1.3333333333333333
+    },
+    {
+      "dropped_domain": "SCI",
+      "n_pairs": 31,
+      "rel_to_baseline": 1.0333333333333334
+    },
+    {
+      "dropped_domain": "TECH",
+      "n_pairs": 34,
+      "rel_to_baseline": 1.1333333333333333
+    }
+  ],
+  "min_pairs_across_drops": 25,
+  "max_pairs_across_drops": 41,
+  "all_exceed_prereg_3": true
+}

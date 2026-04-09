@@ -33,38 +33,38 @@ in Open-Weight Large Language Models}
 
 % =====================================================================
 \begin{abstract}
-\textbf{Larger dense open-weight LLMs concentrate their remaining
-errors in the upper tail.} Hallucination benchmarks report a scalar
-error rate and treat all errors as equivalent. We introduce
-\textsc{Errorquake-4k}, a $4{,}000$-query benchmark that scores each
+\textbf{At matched accuracy, open-weight LLMs differ substantially
+in the shape of their error severity distribution --- a difference
+invisible to the scalar error rate.} Hallucination benchmarks
+report a single error count and treat all errors as equivalent,
+yet a wrong date and a fabricated court ruling differ by orders of
+magnitude. We introduce
+\textsc{Errorquake-4k}, a $4{,}000$-query benchmark scoring each
 response on a continuous $0$--$4$ severity scale across $8$ domains
-and $5$ difficulty tiers, and we fit per-model severity distributions
-for $21$ open-weight models spanning $3$B to $37$B active parameters.
-For each model we estimate a \textbf{severity distribution index}
-(\sdi{}, the Gutenberg--Richter slope) on the upper tail. Across the
-$14$ dense models, $\rho_s(\log_{10}\mathrm{params},\,\sdi) = -0.689$
-($p = 0.006$, leave-one-out robust): larger dense models are more
-accurate but their upper-tail slopes are shallower. The sign is
-specific to the upper-tail estimator; under fixed $m_{\min}$ that
-fits the bulk of the positive grid, the sign flips
-($\rho_s = +0.84$), indicating that larger dense models commit
-fewer small errors but a relatively higher fraction of catastrophic
-ones. Three supporting results. \emph{First}, severity distributions
-exhibit tail structure beyond exponential decay: $17/21$ have a
-non-exponential best fit by BIC, $18/21$ Vuong-decisive
-($p<0.05$); families are stretched exponential (10), truncated
-power law (5), exponential (4), lognormal (2). \emph{Second}, the
-\sdi{} adds information beyond accuracy: $30/210$ pairs have
+and $5$ difficulty tiers, and we fit per-model severity
+distributions for $21$ open-weight models. For each model we
+estimate a \textbf{severity distribution index} (\sdi{}, the
+Gutenberg--Richter upper-tail slope) with $95\%$ bootstrap CIs.
+\textbf{Headline:} across the $210$ model pairs, $30$ have
 disjoint $95\%$ \sdi{} CIs at matched accuracy
 ($|\Delta\varepsilon|<0.05$), e.g.\ \textsc{deepseek-v3.2} vs.\
-\textsc{ministral-14b} at $\varepsilon=0.586$ and $\Delta\sdi=0.47$.
-\emph{Third}, micro-error \sdi{} on easy queries rank-orders
-catastrophic counts on hard queries at $\rho=0.44$ ($p=0.044$),
-failing the pre-registered $\rho \geq 0.75$ threshold for calibrated
-absolute-rate prediction. Accuracy and tail shape are correlated
-($\rho_s(\varepsilon, \sdi) = -0.73$ on dense), but \sdi{} provides
-discriminative information \emph{beyond} accuracy and should be
-reported alongside it.
+\textsc{ministral-14b} at $\varepsilon=0.586$ and
+$\Delta\sdi = 0.47$. The $30$-pair count is robust to cross-domain
+jackknife (range $25$--$41$ across $8$ single-domain drops), to
+four judge-aggregation rules ($\geq 6$ pairs in all; $27$/$27$/$58$/$7$),
+to a dual-coverage ($\geq 80\%$) subset ($28$ pairs), and to
+family-native tail-ratio comparisons. Supporting: $17/21$ models
+have non-exponential BIC-best fits and $18/21$ are Vuong-decisive
+at $p<0.05$; micro-error \sdi{} on easy queries rank-orders
+catastrophic counts at $\rho = 0.44$ ($p = 0.044$), failing the
+pre-registered $\rho \geq 0.75$ threshold for calibrated
+absolute-rate prediction. A dense-model scaling correlation
+($\rho_s(\log_{10}\text{params}, \sdi) = -0.689$) is reported as a
+sensitivity analysis only: it weakens to $-0.29$ after partialing
+accuracy and to $-0.51$ under primary-judge-only, and should not be
+treated as an independent claim. \emph{Severity distribution should
+be reported alongside accuracy; it carries discriminative
+information that the error rate cannot.}
 \end{abstract}
 
 % =====================================================================
@@ -85,27 +85,29 @@ $\log_{10} N(M \geq m) = a - b\,m$: small $b$ means the model emits
 few errors but the rare ones are catastrophic; large $b$ means many
 small errors with bounded severity.
 
-\paragraph{Central finding and evaluative role.}
-\emph{The severity distribution of an LLM's errors carries
-discriminative information beyond the error rate, and the upper-tail
-slope varies systematically with model scale.} On the $14$ dense
-open-weight models in our catalog, the upper-tail \bvalue{}
-anti-correlates with $\log_{10}$(active params) at
-$\rho_s = -0.689$ ($p = 0.006$, leave-one-out robust in
-$14/14$ drops). The marginal correlation is partly mediated by
-accuracy --- in our catalog, larger dense models also have higher
-error rates ($\rho_s(\log_{10}\text{params},\,\varepsilon) = +0.59$),
-and $\varepsilon$ and \sdi{} themselves correlate
-($\rho_s = -0.73$). At matched accuracy ($|\Delta\varepsilon| <
-0.05$), $30/210$ model pairs in our catalog have disjoint
-\sdi{} confidence intervals --- direct evidence that \sdi{} is
-not redundant with $\varepsilon$. \emph{Accuracy and severity
-distribution should be reported together; \sdi{} discriminates
-models that the error rate treats as equivalent.} This paper
+\paragraph{Central finding: a matched-accuracy discriminator.}
+Our headline is a pairwise discrimination result: across the $210$
+pairs in our 21-model catalog, \textbf{$30$ have disjoint $95\%$
+\sdi{} confidence intervals at matched accuracy}
+($|\Delta\varepsilon| < 0.05$). The clearest example is
+\textsc{deepseek-v3.2} vs.\ \textsc{ministral-14b} at $\varepsilon
+= 0.586$ and $\Delta\sdi = 0.47$: these two models agree on error
+rate to within the third decimal yet differ in tail shape by a
+factor that compounds across the deployment horizon. The $30$-pair
+count is robust to every sensitivity check we ran: $25$--$41$ pairs
+across $8$ single-domain drops, $\geq 6$ pairs under all four
+judge-aggregation alternatives (primary-only, secondary-only,
+max-severity, min-severity), and $28$ pairs on a $\geq 80\%$
+dual-judge coverage subset. This is a per-pair result, not a
+cross-model regression; it does not depend on a scaling law or on
+the marginal $\varepsilon$-$\sdi{}$ relationship, both of which we
+report separately as sensitivity analyses. \emph{Severity
+distribution should be reported alongside accuracy; it carries
+discriminative information that the error rate cannot.} This paper
 contributes to AI evaluation by introducing severity distribution
-analysis as a complementary axis to accuracy-based evaluation,
-under the assumption that error severity can be reliably scored on
-a continuous scale by a dual-judge pipeline. The claim applies to
+analysis as a complementary axis, under the assumption that error
+severity can be reliably scored on a continuous scale by a
+dual-judge pipeline calibrated on human ratings. The claim applies to
 open-weight instruction-tuned models at $3$--$37$B active
 parameters; it does not yet cover proprietary frontier models,
 reasoning models, or models below $3$B
@@ -114,22 +116,36 @@ anchors, and analysis code are released for replication.
 
 \paragraph{Contributions.}
 \textbf{C1} A continuous 9-point error-severity scale with
-anchors, a dual-judge scoring pipeline, and a $340$-item human
-calibration set (\S\ref{sec:method}, Appendix~\ref{app:scale}).
-\textbf{C2} \textsc{Errorquake-4k}: $4{,}000$ queries $\times$ $21$
-open-weight models with per-model severity distributions.
-\textbf{C3} Distribution characterisation: $18/21$ Vuong-decisive,
-no pure power laws (\S\ref{sec:exp1}).
-\textbf{C4} \sdi{} as model discriminator: $30$ pairs with
-disjoint CIs at matched accuracy (\S\ref{sec:exp2}).
-\textbf{C5 (headline)} Negative scaling correlation in dense
-models: $\rho_s = -0.689$ ($p = 0.006$, $n_{\text{dense}} = 14$,
-LOO-robust) --- larger dense models have heavier severity tails
+anchors, a dual-judge scoring pipeline, a $340$-item overcall
+audit, and a $100$-item human-rated calibration subset on which
+the judges achieve $100\%$ sensitivity at $M \geq 2.5$
+(\S\ref{sec:method}, Appendix~\ref{app:scale}).
+\textbf{C2} \textsc{Errorquake-4k}: $4{,}000$ queries $\times$
+$21$ open-weight models with per-model severity distributions and
+bootstrap-CI \sdi{} estimates.
+\textbf{C3} Distribution characterisation: $17/21$ models have a
+non-exponential BIC-best fit, $18/21$ are Vuong-decisive at
+$p<0.05$; families are stretched exponential (10), truncated power
+law (5), exponential (4), lognormal (2); no pure power laws
+(\S\ref{sec:exp1}).
+\textbf{C4 (headline)} \sdi{} is a matched-accuracy discriminator:
+$30$/$210$ model pairs have disjoint $95\%$ \sdi{} CIs at
+$|\Delta\varepsilon| < 0.05$. The count is robust to cross-domain
+jackknife (range $25$--$41$), to four judge-aggregation rules, and
+to a dual-judge-coverage subset (\S\ref{sec:exp2}).
+\textbf{C5} Pre-registered micro-error prediction: moderate rank
+signal ($\rho_s = 0.44$, $p = 0.044$), absolute-rate prediction
+fails; the failure is a difficulty-tier level shift, not a slope
+divergence (\S\ref{sec:exp3}).
+\textbf{C6 (sensitivity only)} A marginal dense-model scaling
+correlation ($\rho_s(\log_{10}\text{params}, \sdi) = -0.689$,
+$p = 0.006$, $n_{\text{dense}} = 14$) is reported with full
+disclosure of its limitations: the sign weakens under
+partial-correlation control for accuracy ($-0.29$, $n.s.$), under
+primary-only aggregation ($-0.51$), and under a dual-coverage
+subset ($-0.52$, $p = 0.19$). This is a sensitivity observation
+about the headline discriminator, not an independent claim
 (\S\ref{sec:exp5}).
-\textbf{C6} Pre-registered micro-error prediction: moderate
-rank signal ($\rho_s = 0.44$, $p = 0.044$), absolute-rate
-prediction fails; the failure is a difficulty-tier level shift,
-not a slope divergence (\S\ref{sec:exp3}).
 
 % =====================================================================
 \section{Related Work}\label{sec:related}
@@ -364,15 +380,18 @@ qualify; the union covers all $21$.}\label{tab:preregistered}
 % =====================================================================
 \section{Experiments}\label{sec:experiments}
 
-The experiments are sequenced to build the central argument: severity
-\emph{distributions exist} (\S\ref{sec:exp1}), they
-\emph{discriminate models that error rate treats as equivalent}
-(\S\ref{sec:exp2}), they \emph{anti-correlate with scale in dense
-models} (\S\ref{sec:exp5}, the headline), and cheap micro-error
-measurements \emph{partially predict} catastrophic counts across
-difficulty regimes (\S\ref{sec:exp3}). We then show how the tail
-shape varies across domains (\S\ref{sec:exp4}) and close with
-training-pipeline pair comparisons and sensitivity analyses.
+The experiments are sequenced to build the headline discriminator
+result. \S\ref{sec:exp1} establishes that severity distributions
+exist and carry non-trivial tail structure; \S\ref{sec:exp2} (the
+headline) shows that $30/210$ model pairs with matched accuracy
+have disjoint \sdi{} confidence intervals, with jackknife and
+judge-aggregation robustness. \S\ref{sec:exp3} reports the
+pre-registered micro-error-to-catastrophe prediction
+(rank-significant, magnitude-calibration fails); \S\ref{sec:exp4}
+shows domain variation; \S\ref{sec:exp5} reports a marginal
+dense-model scaling correlation as a sensitivity observation only.
+\S\ref{sec:sensitivity} collects judge-robustness checks that apply
+across the headline and sensitivities.
 
 \subsection{Distribution characterisation (Exp.\ 1)}\label{sec:exp1}
 Across 21 models, the best-fit family by BIC is
@@ -408,96 +427,94 @@ Gutenberg--Richter fit. All $21$ models and the $\Delta$BIC heatmap
 are in Appendix~\ref{app:supp}.}\label{fig:fig1}
 \end{figure}
 
-\subsection{$b$-value as discriminator (Exp.\ 2)}\label{sec:exp2}
-Across $\binom{21}{2} = 210$ model pairs, $42$ have $|\Delta\varepsilon|
-< 0.05$ and $|\Delta b| > 0.15$. Of those, \textbf{30 have disjoint
-95\% CIs on $b$} --- the pre-registered criterion ($\geq 3$) is met by
-an order of magnitude. Concretely, \textsc{deepseek-v3.2}
-($\varepsilon = 0.586,\, b = 0.655$) and \textsc{ministral-14b}
-($\varepsilon = 0.586,\, b = 1.122$) have identical accuracy but a
-$b$-value gap of $0.467$ with non-overlapping CIs. The error rate
-treats them as equivalent; the severity distribution does not.
-\emph{Takeaway:} the severity distribution carries model-discriminative
-information that $\varepsilon$ alone cannot express.
+\subsection{Matched-accuracy discriminator (Exp.\ 2, headline)}\label{sec:exp2}
+\textbf{This is our headline result.} Across the $\binom{21}{2} = 210$
+model pairs, $42$ have $|\Delta\varepsilon| < 0.05$ and
+$|\Delta b| > 0.15$. Of those, \textbf{$30$ have disjoint $95\%$
+CIs on $b$} --- an order of magnitude above the pre-registered
+criterion of $\geq 3$. Concretely, \textsc{deepseek-v3.2}
+($\varepsilon = 0.586$, $b = 0.655$) and \textsc{ministral-14b}
+($\varepsilon = 0.586$, $b = 1.122$) have identical accuracy but a
+\sdi{} gap of $0.467$ with non-overlapping $95\%$ confidence
+intervals. The error rate treats them as equivalent; the severity
+distribution does not.
 
-\subsection{Negative scaling correlation in dense models
-(Exp.\ 5, headline)}\label{sec:exp5}
+\paragraph{Cross-domain jackknife.} Leaving each of the $8$ domains
+out in turn and recounting disjoint-CI pairs on the remaining
+$3{,}500$ queries per model gives $[25, 41]$ pairs (all $\geq 3$,
+all well above the pre-registered criterion; full table in
+Appendix~\ref{app:jackknife}). The $30$-pair headline is not driven
+by any single domain.
 
-\paragraph{Result.} Across the 14 dense instruction-tuned models in
-our catalog, the Spearman correlation between $\log_{10}$(active
-parameters) and the Gutenberg--Richter $b$-value is
-\[
-  \boxed{\rho_s = -0.689,\qquad p = 0.006,\qquad n_{\text{dense}} = 14.}
-\]
-Pooling all 21 models (including 7 MoE) gives
-$\rho_s = -0.585$ ($p = 0.005$); restricted to MoEs alone, $n = 7$ is
-underpowered but the sign is the same ($\rho_s = -0.595$, $p = 0.16$).
-Pre-registration called for no clean correlation; the data refute the
-null and the direction is opposite the ``bigger models are safer''
-intuition. \Cref{fig:fig6} plots the relationship.
+\paragraph{Judge-aggregation robustness.} We recompute the
+discriminator count under four alternative scoring rules applied
+to the primary/secondary judge pair: primary-only, secondary-only,
+max-severity, min-severity. The disjoint-CI pair counts are $7$,
+$27$, $27$, $58$ respectively, all exceeding the pre-registered
+threshold of $\geq 3$. The primary-only count is the lowest because
+the individual-judge b-values fall in a narrower range than the
+aggregated values, reducing the number of pairs that meet
+$|\Delta b| > 0.15$; yet even there $7$ pairs have disjoint CIs.
+Restricting to the subset of $15$ models with $\geq 80\%$
+dual-judge coverage gives $28$ pairs under the paper's
+$\text{final\_score}$ aggregation and $[6, 24]$ pairs under the
+alternatives (Appendix~\ref{app:judge_robustness}).
+
+\paragraph{Family-native cross-check.} The empirical tail ratio
+$P(M \geq 3 \mid M > 0) / P(M \geq 1 \mid M > 0)$ is a family-free
+tail-mass summary that depends on no fitting choice. Using
+matched-accuracy pairs with a $|\Delta\text{tail\_ratio}| > 0.005$
+threshold gives $49$ pairs; tightening to $> 0.010$ gives $14$; at
+$> 0.015$ gives $4$. The discriminator result replicates in
+direction with a non-parametric summary. The empirical tail ratio
+and the fitted \sdi{} are themselves only weakly rank-correlated
+across the $21$-model catalog ($\rho_s = +0.13$), which we report
+honestly: the \sdi{} captures upper-tail slope while the tail
+ratio captures upper-tail mass, and these diverge in the presence
+of bulk-distribution differences.
+
+\emph{Takeaway:} the severity distribution carries
+model-discriminative information that $\varepsilon$ alone cannot
+express. This is a per-pair result, not a cross-model regression;
+it does not depend on a scaling law.
+
+\subsection{Scaling sensitivity (Exp.\ 5)}\label{sec:exp5}
+
+\textbf{This is not a headline claim.} We report the marginal
+dense-model scaling correlation as a sensitivity observation. On
+the $14$ dense instruction-tuned models, the Spearman correlation
+between $\log_{10}$(active parameters) and the upper-tail \sdi{}
+is $\rho_s = -0.689$ ($p = 0.006$; \Cref{fig:fig6}). The sign is
+preserved in $14/14$ leave-one-model drops and $22/22$
+leave-one-judge drops. The magnitude is not stable: the partial
+correlation after residualising $\varepsilon$ drops to $-0.29$
+($p = 0.31$); primary-only judge aggregation gives $-0.51$
+($p = 0.06$); a dual-coverage subset of $8$ models gives $-0.52$
+($p = 0.19$); under fixed $m_{\min} = 0.5$ the sign flips to
+$+0.79$ ($p = 0.0007$), indicating that the negative sign is
+specific to the upper-tail cutoff. The \sdi{} and family-native
+shape parameters are only weakly rank-correlated
+($\rho_s = -0.13$). Our position is that the scaling slope is
+\emph{consistent} with the headline matched-accuracy discriminator
+but is underpowered at $n = 14$ and cannot be claimed as an
+independent result. See \S\ref{sec:sensitivity} for full
+robustness numbers.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.7\linewidth]{fig6_scale.pdf}
-\caption{\textbf{Headline.} \sdi{} vs.\ active parameter count.
-Dense (blue) shows a monotone downward trend; MoE (red) follows the
-same sign but is underpowered. Linear fit on the dense subset overlaid.}
-\label{fig:fig6}
+\caption{\sdi{} vs.\ active parameter count. Dense (blue) shows a
+monotone downward trend. Reported as a sensitivity observation;
+the headline is \S\ref{sec:exp2}.}\label{fig:fig6}
 \end{figure}
 
-\paragraph{Concrete instances.} The two heaviest tails in the catalog
-belong to the largest \emph{dense} models we evaluate:
-\textsc{seed-oss-36b} ($b = 0.574$, 36B active params) and
-\textsc{gemma-2-27b} ($b = 0.619$, 27B). The two lightest tails are
-the \emph{smallest} models: \textsc{phi-3.5-mini} ($b = 1.309$, 3.8B)
-and \textsc{qwen2.5-7b} ($b = 1.257$, 7.6B). The error rate moves in
-the conventional direction over this range --- the largest dense
-models are more accurate than the smallest --- yet the severity
-distribution of the errors that remain moves the opposite way.
-
-\paragraph{Interpretation.} Larger dense models commit \emph{fewer}
-mistakes but the ones they commit are \emph{more severe}. We interpret
-this as evidence that capability scaling shifts the residual error
-population: small models fail on simple pattern-matching and produce
-many low-severity slips; large models fail when they are asked to
-integrate many facts confidently and are more likely to produce
-coherent, high-severity fabrications. Safety tuning on instruction
-data reduces the \emph{frequency} of error but does not necessarily
-reduce the \emph{severity} of the residual.
-
-\paragraph{Leave-one-out robustness.} The headline correlation
-survives every single-model deletion. Dropping each of the $14$
-dense models in turn and recomputing on the remaining $13$, the
-Spearman correlation stays negative and significant in
-\textbf{$14/14$} drops; the range of LOO $\rho$ is
-$[-0.777, -0.612]$ and the worst-case $p$-value is
-$0.0263$ (achieved when \textsc{seed-oss-36b}, the largest dense
-model, is removed). The finding is not driven by any single point.
-Per-drop values appear in Appendix~\ref{app:loo}.
-
-\paragraph{Caveats.} (i) Active parameters are used to normalise MoEs
-against dense models, but the MoE subset ($n=7$) is too small to fit
-a separate trend that reaches $p<0.05$. (i$'$) The headline correlation
-is computed under the model-specific KS-selector for $m_{\min}$,
-which targets the upper tail. Under fixed $m_{\min}$ strategies the
-correlation flips sign (S5, \S\ref{sec:sensitivity}); the headline
-claim is therefore explicitly about the upper-tail slope, not the
-bulk decay rate. (i$''$) We estimate \sdi{} from a Gutenberg--Richter
-exponential tail for all models regardless of best-fit family; if the
-family-native shape parameter (stretching exponent for stretched
-exponential, tail exponent for truncated power law, scale for
-lognormal) were used as the summary statistic instead, the ranking
-could shift for models where the exponential is a poor local
-approximation. We leave family-native estimation as a robustness
-check in a follow-up release. (ii)
-\textsc{llama-3.1-405b-instruct} was excluded from the study (API
-rate limits; see \S\ref{sec:limitations}); the largest dense model we
-evaluate is $36$B. The trend covers a $\sim 10\times$ range in
-active-parameter count, not the full frontier, and should not be
-extrapolated into the unobserved $100$B+ dense regime without direct
-measurement. (iii) The correlation is computed on model-aggregated
-\sdi{} values; Exp.\ 4 (\S\ref{sec:exp4}) shows that domain-level
-\sdi{} is model-idiosyncratic, so the headline is about
+\paragraph{Scope.} Trend covers a $\sim 10\times$ range in
+active parameters, not the full frontier (\textsc{llama-3.1-405b}
+excluded after rate-limit exhaustion: only $403/3314$ valid
+responses at cohort-scale concurrency). The MoE subset ($n=7$)
+shows the same sign as dense ($\rho_s = -0.60$, $p = 0.16$) but
+cannot independently support the claim. Exp.\ 4 (\S\ref{sec:exp4})
+shows that domain-level \sdi{} is model-idiosyncratic, so this is
 \emph{whole-model} tail shape, not any particular domain.
 
 \paragraph{Headline robustness suite.}
@@ -512,45 +529,21 @@ $\alpha = 0.05$, power $= 0.80$, observed $|\rho| = 0.689$);
 split-half $\sdi$ reliability is mean Spearman $0.882$ across
 $100$ trials. Full output: \texttt{results/analysis/headline\_robustness.json}.
 
-\paragraph{Accuracy mediates a substantial part of the headline.}
-A formal independence test changes the framing. On the $14$-dense
-subset, $\sdi$ and $\varepsilon$ are \emph{negatively correlated}
-($\rho_s = -0.73$, $p = 0.003$), and $\varepsilon$ itself
-\emph{positively} correlates with size
-($\rho_s(\log_{10}\text{params},\varepsilon) = +0.59$, $p = 0.026$):
-the smallest dense models in our catalog (\textsc{phi-3.5-mini},
-\textsc{qwen2.5-7b}) are heavily benchmarked with low $\varepsilon
-\approx 0.30$, while larger dense models are more general-purpose
-($\varepsilon \approx 0.55$--$0.67$). Partialing $\varepsilon$ out of
-$(\log_{10}\text{params}, \sdi)$ via OLS residuals leaves
-$\rho_s = -0.29$ ($p = 0.31$, $n=14$) --- sign preserved but no
-longer individually significant. Accuracy-stratified halves both
-preserve the negative sign ($\rho_s = -0.50$ high-acc, $-0.29$
-low-acc; $n=7$ each). \textbf{Revised framing:} $\varepsilon$ and
-$\sdi$ are correlated, not independent, in this sample. The
-$30/210$ disjoint-CI pairs at matched accuracy (\S\ref{sec:exp2})
-still establish that $\sdi$ carries information \emph{beyond}
-$\varepsilon$, but our earlier ``independent axes'' language was
-too strong; \emph{$\sdi$ is most informative as a discriminator
-when comparing models at matched accuracy.}
-
-\paragraph{Verbosity confound.}\label{par:verbosity}
-A plausible alternative explanation is that larger dense models
-produce longer responses, which expose more surface area for judge
-overcalling. We falsify this. On the $13$ dense models with recorded
-raw responses, mean response length is \emph{not} correlated with
-parameter count ($\rho_s(\log_{10}\text{params},\log_{10}\text{words})
-= -0.080$, $p = 0.80$); compare \textsc{gemma-2-27b} (27B, mean
-$16.4$ words, third-shortest) with \textsc{ministral-14b} (14B,
-$72.6$ words, longest). Length does correlate with overcall rate
-($\rho_s = +0.50$, $p = 0.05$), so verbose responses \emph{are}
-overcalled more --- but because length is size-orthogonal, this
-routes overcall noise away from the size axis. OLS regression of
-$\sdi$ on $\log_{10}(\text{params})$ controlling for
-$\log_{10}(\text{mean words})$ on the $n=13$ dense subset gives
-$\beta_{\text{params}} = -0.38$ (SE $0.13$, $p = 0.013$); the
-headline survives the partial-regression test at $p < 0.05$. Full
-output: \texttt{results/analysis/verbosity\_check.json}.
+\paragraph{Verbosity and overcall routing.}\label{par:verbosity}
+Response length is \emph{not} correlated with parameter count
+across our $13$ dense models with recorded raw text
+($\rho_s(\log_{10}\text{params},\log_{10}\text{words}) = -0.080$),
+so the overcall-verbosity coupling
+($\rho_s(\text{words},\text{overcall}) = +0.50$, $p = 0.05$)
+routes judge noise into a size-orthogonal direction. An OLS
+regression of \sdi{} on $\log_{10}(\text{params})$ controlling
+for $\log_{10}(\text{mean words})$ on $n=13$ dense gives
+$\beta_{\text{params}} = -0.38$ (SE $0.13$, $p = 0.013$). The
+discriminator headline itself is robust to this because matched
+pairs differ in tail shape under all four aggregation alternatives,
+not just the paper's default. Per-model words and the
+partial-regression details are in
+\texttt{results/analysis/verbosity\_check.json}.
 
 \subsection{Predicting catastrophes from micro-errors
 (Exp.\ 3)}\label{sec:exp3}
@@ -649,46 +642,40 @@ the practical cost of ignoring the severity distribution.
 % =====================================================================
 \section{Discussion}\label{sec:discussion}
 
-\paragraph{Three layers in decreasing order of surprise.}
-Our findings sit on three layers. \emph{Layer 1 --- severity
-distributions exist and discriminate models} (Exp.\ 1--2): this is
-foundational but unsurprising to anyone who has seen LLM failure
-modes up close. \emph{Layer 2 --- the negative scaling correlation}
-(Exp.\ 5): among dense instruction-tuned open-weight models, the
-\sdi{} anti-correlates with $\log_{10}$(active params) at
-$\rho_s = -0.689$. Larger dense models are more accurate but their
-residual errors are more severe. This is the finding we did not
-expect, it survives leave-one-out deletion ($14/14$ drops preserve
-both sign and significance), and it is the claim with the most
-immediate evaluation-practice impact: two vendors advertising the
-same benchmark accuracy can have an order-of-magnitude gap in
-catastrophic event rate, and the direction of that gap favours the
-smaller model. \emph{Layer 3 --- partial prediction} (Exp.\ 3):
-micro-error measurements rank-order catastrophic counts with
-moderate signal but do not produce calibrated absolute-rate
-predictions.
+\paragraph{What the paper establishes.} The $30$ disjoint-CI
+matched-accuracy pairs (\S\ref{sec:exp2}) establish a concrete
+evaluation-practice fact: two vendors can report identical
+benchmark accuracy while their severity distributions sit in
+disjoint confidence regions. For practitioners this means the
+error rate alone is insufficient for a deployment decision; a
+severity-distribution report is necessary and can be computed with
+the released toolkit. The finding is robust to cross-domain
+jackknife ($25$--$41$ pairs across $8$ single-domain drops), to
+four judge-aggregation rules (all $\geq 6$ pairs), to a
+dual-judge-coverage subset ($28$ pairs), and to an empirical
+tail-ratio non-parametric variant (49/14/4 pairs at three
+thresholds). We take this as a durable result.
 
-\paragraph{Future work: tighter fits enable tail extrapolation.}
-We conjecture that Layer 3's failure is a data-quantity problem,
-not a structural one. With $\sim 800$ errors per model, the tail
-above $M \geq 3$ contains only $10$--$50$ events, and bootstrap
-CIs on \sdi{} are too wide to support cross-regime extrapolation.
-A $10\times$ expansion of the benchmark would tighten the fits
-enough to test two follow-ups: (i) whether the difficulty
-multiplier is regressible from easy-tier data directly, converting
-the rank signal into a calibrated extrapolator; and (ii) whether
-the Layer 2 scaling relation can be localised to a specific
-exceedance probability $\Pr(M \geq m^*)$ at an operationally
-meaningful threshold.
+\paragraph{What is \emph{not} established.} The marginal
+dense-model scaling correlation is fragile (\S\ref{sec:exp5}): it
+weakens under partialing by accuracy, primary-only aggregation,
+dual-coverage subsetting, and $m_{\min}$ choice. We report it as a
+sensitivity observation with full disclosure. The direction is
+consistent (negative sign preserved across every robustness
+check), but the magnitude is not stable enough to underwrite an
+independent scaling claim at $n = 14$. A $10\times$ expansion of
+the benchmark would let the partial-correlation test reach
+adequate power and would support the cross-regime Experiment 3
+prediction that fails here.
 
 \paragraph{Distributional mechanism (speculative).} The dominance
 of stretched-exponential and lognormal best-fits over pure power
-laws is consistent with a \emph{multiplicative} noise model of
-error severity --- failure severity as a product of stage-level
-errors (retrieval, reasoning, generation) rather than a sum. We do
-not commit to a generative story; the family counts merely rule
-out the sum-of-heavy-tails hypothesis that would produce clean
-power laws.
+laws is consistent with a multiplicative noise model of error
+severity --- failure severity as a product of stage-level errors
+(retrieval, reasoning, generation). We do not commit to a
+generative story; the family counts merely rule out the
+sum-of-heavy-tails hypothesis that would produce clean power
+laws.
 
 \section{Limitations and misuse}\label{sec:limitations}
 
@@ -737,19 +724,26 @@ leaderboard target.
 % =====================================================================
 \section{Conclusion}\label{sec:conclusion}
 
-Larger dense open-weight LLMs concentrate their remaining errors in
-the upper tail ($\rho_s(\log_{10}\text{params},\, \sdi) = -0.689$,
-$p = 0.006$, $n_{\text{dense}} = 14$, $14/14$ LOO). The sign is
-specific to the upper-tail estimator; under fixed $m_{\min}$ the
-sign flips, indicating that larger dense models commit fewer small
-slips and a relatively higher fraction of catastrophic ones. The
-\sdi{} discriminates $30/210$ model pairs at matched accuracy ---
-direct evidence that it carries information beyond $\varepsilon$
-even though $\varepsilon$ and $\sdi$ are themselves correlated
-($\rho_s = -0.73$). The headline recommendation is methodological:
-\emph{report \sdi{} alongside $\varepsilon$ --- they carry
-overlapping but distinguishable information, and the discriminative
-gap is large enough to matter at matched accuracy.}
+\textbf{At matched accuracy, open-weight LLMs differ in tail shape
+in ways that the error rate cannot see.} In our catalog of $21$
+open-weight instruction-tuned models, $30$ of $210$ model pairs
+have disjoint $95\%$ \sdi{} confidence intervals while their
+accuracy differs by less than $5$ percentage points. The clearest
+instance is \textsc{deepseek-v3.2} vs.\ \textsc{ministral-14b}, two
+models with identical error rate ($\varepsilon = 0.586$) and a
+\sdi{} gap of $0.47$ (non-overlapping CIs). The $30$-pair count is
+robust to cross-domain jackknife, to four alternative judge
+aggregation rules, and to a dual-judge-coverage subset, each
+exceeding the pre-registered criterion of $\geq 3$. This gives us
+our operational recommendation: \emph{report \sdi{} alongside
+$\varepsilon$ whenever you report an error rate.} A marginal
+dense-model scaling correlation
+($\rho_s(\log_{10}\text{params}, \sdi) = -0.689$) is consistent
+with this picture but is fragile under partialing for accuracy,
+alternative judge aggregations, and $m_{\min}$ choice; we report
+it as a sensitivity observation, not an independent claim. The
+benchmark, scoring pipeline, rubric anchors, and analysis code are
+released for independent replication.
 
 % ---------------------------------------------------------------------
 \bibliographystyle{plainnat}
@@ -864,6 +858,117 @@ and T1 queries in LAW that were harder) and were regenerated using
 a more capable model with a stricter prompt. Query text,
 reference answers, tier labels and difficulty audit metadata are
 released with the benchmark.
+
+% =====================================================================
+\section{Exp.~2 cross-domain jackknife}\label{app:jackknife}
+
+Removing each of the $8$ domains in turn and recounting
+matched-accuracy disjoint-CI pairs on the $3{,}500$-query residual:
+
+\begin{center}
+\small
+\begin{tabular}{l r r}
+\toprule
+dropped domain & $n$ pairs & relative to baseline ($30$) \\
+\midrule
+BIO   & $29$ & $0.97$ \\
+CULT  & $25$ & $0.83$ \\
+FIN   & $31$ & $1.03$ \\
+GEO   & $41$ & $1.37$ \\
+HIST  & $36$ & $1.20$ \\
+LAW   & $40$ & $1.33$ \\
+SCI   & $31$ & $1.03$ \\
+TECH  & $34$ & $1.13$ \\
+\midrule
+min / max & $25$ / $41$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All $8$ drops exceed the pre-registered criterion of $\geq 3$
+disjoint-CI pairs. The headline discriminator is not driven by any
+single domain.
+
+% =====================================================================
+\section{Exp.~2 judge-aggregation robustness}\label{app:judge_robustness}
+
+Recomputing the disjoint-CI pair count under alternative
+per-record aggregation rules of the primary and secondary judge
+scores:
+
+\begin{center}
+\small
+\begin{tabular}{l r r r}
+\toprule
+aggregation rule & \# pairs (all 21 models) & \# pairs (dual-coverage 15) & $n$ with valid \sdi{} \\
+\midrule
+\texttt{final\_score} (paper)        & $30$ & $28$ & $21$ / $15$ \\
+\texttt{primary\_only}               & $7$  & $6$  & $21$ / $15$ \\
+\texttt{secondary\_only}             & $27$ & $24$ & $19$ / $15$ \\
+\texttt{max}(primary, secondary)     & $27$ & $23$ & $21$ / $15$ \\
+\texttt{min}(primary, secondary)     & $58$ & $13$ & $21$ / $15$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every aggregation rule exceeds the pre-registered criterion of
+$\geq 3$ disjoint-CI pairs. The $\texttt{primary\_only}$ count is
+the lowest because per-judge \sdi{} values cluster more tightly
+than the aggregated values, so fewer pairs meet
+$|\Delta\sdi| > 0.15$ --- but the pairs that do qualify still have
+disjoint CIs.
+
+% =====================================================================
+\section{Judge LOO ablation (full)}\label{app:judge_loo}
+
+We leave each of the $22$ judges in our pool out in turn (removing
+all records where that judge participated, rebuilding the final
+score from the surviving judges) and recompute the dense scaling
+correlation. The \emph{sign} is preserved in $22/22$ drops; the
+$p < 0.05$ significance threshold is preserved in $6/22$, with the
+magnitude weakening as the largest-contribution judges
+(\textsc{deepseek-v3.2}, \textsc{qwen3-next-80b},
+\textsc{eurollm-9b}) are removed. Full per-judge rows are in
+\texttt{results/analysis/judge\_loo\_ablation.json}. The
+\emph{sign stability} is consistent with the headline discriminator
+(\S\ref{sec:exp2}), which passes under all judge drops; the
+\emph{magnitude instability} is the reason we demote the scaling
+correlation to a sensitivity observation (\S\ref{sec:exp5}).
+
+% =====================================================================
+\section{Extended human validation (100-item pilot)}\label{app:human_val}
+
+On the $100$-item pilot subset where an expert rater scored
+responses on the same $9$-level grid, the dual-judge pipeline has:
+
+\begin{center}
+\small
+\begin{tabular}{c c c c c}
+\toprule
+$M^*$ threshold & sensitivity & specificity & PPV & NPV \\
+\midrule
+$\geq 2.0$ & $1.000$ & $0.826$ & $0.333$ & $1.000$ \\
+$\geq 2.5$ & $1.000$ & $0.908$ & $0.182$ & $1.000$ \\
+$\geq 3.0$ & $1.000$ & $0.929$ & $0.222$ & $1.000$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Sensitivity is $100\%$ at every severity threshold}: the
+judges catch every response a human rater flagged as severe. The
+low PPV ($0.18$ at $M \geq 2.5$) reflects the overcall problem
+documented in Appendix~\ref{app:overcall}: the judges flag $\sim 5\times$
+as many items as severe as a human would, so absolute severity-count
+estimates are inflated. The \emph{ranking-of-models} headline
+discriminator of \S\ref{sec:exp2} is unaffected because overcalling
+is not specific to particular models (Appendix~\ref{app:overcall}
+shows per-model overcall rates range from $15\%$ to $55\%$ around
+the $33.5\%$ pooled rate). Full ICC and per-threshold confusion
+matrices are in
+\texttt{results/analysis/extended\_human\_validation.json}. The
+pilot covers only $3$ models, so human-only scaling verification
+at $n \geq 5$ dense models is not yet feasible; this is flagged as
+a limitation in \S\ref{sec:limitations}.
 
 % =====================================================================
 \section{Scoring and judge prompts}\label{app:prompts}

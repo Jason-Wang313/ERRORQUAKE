@@ -1,0 +1,539 @@
+{
+  "noise_0": {
+    "noise_prob": 0.0,
+    "n_recovered": 21,
+    "rho_true_vs_b": -0.786461000102856,
+    "p_true_vs_b": 2.361258720260596e-05,
+    "rho_logp_vs_b": 0.7974025974025974,
+    "p_logp_vs_b": 1.5001549621912602e-05,
+    "correct_family_count": 11,
+    "results": [
+      {
+        "name": "synth_tpl_0.5",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 2.0,
+        "estimated_b": 0.40575555272132213,
+        "log_params": 9.0
+      },
+      {
+        "name": "synth_strexp_0.6",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.6666666666666667,
+        "estimated_b": 0.2865383204871917,
+        "log_params": 9.075
+      },
+      {
+        "name": "synth_exp_0.6",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 1.6666666666666667,
+        "estimated_b": 0.3353131531212047,
+        "log_params": 9.15
+      },
+      {
+        "name": "synth_strexp_0.7",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.4285714285714286,
+        "estimated_b": 0.31573265562512953,
+        "log_params": 9.225
+      },
+      {
+        "name": "synth_strexp_0.8",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.25,
+        "estimated_b": 0.373899230813417,
+        "log_params": 9.3
+      },
+      {
+        "name": "synth_tpl_0.8",
+        "family_true": "truncated_power_law",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 1.25,
+        "estimated_b": 0.4963822118827968,
+        "log_params": 9.375
+      },
+      {
+        "name": "synth_lognorm_1.2",
+        "family_true": "lognormal",
+        "family_fit": "exponential",
+        "true_heaviness": 1.2,
+        "estimated_b": 0.3260107401833384,
+        "log_params": 9.45
+      },
+      {
+        "name": "synth_strexp_0.9",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.1111111111111112,
+        "estimated_b": 0.3708765506048442,
+        "log_params": 9.525
+      },
+      {
+        "name": "synth_exp_0.9",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 1.1111111111111112,
+        "estimated_b": 0.4285535934729427,
+        "log_params": 9.6
+      },
+      {
+        "name": "synth_strexp_1.0",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.0,
+        "estimated_b": 0.3964019052901617,
+        "log_params": 9.675
+      },
+      {
+        "name": "synth_strexp_1.1",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 0.9090909090909091,
+        "estimated_b": 0.42655522551968234,
+        "log_params": 9.75
+      },
+      {
+        "name": "synth_strexp_1.2",
+        "family_true": "stretched_exp",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.46671204851641934,
+        "log_params": 9.825
+      },
+      {
+        "name": "synth_exp_1.2",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.5181753589794227,
+        "log_params": 9.9
+      },
+      {
+        "name": "synth_tpl_1.2",
+        "family_true": "truncated_power_law",
+        "family_fit": "lognormal",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.529484671555451,
+        "log_params": 9.975
+      },
+      {
+        "name": "synth_lognorm_0.8",
+        "family_true": "lognormal",
+        "family_fit": "lognormal",
+        "true_heaviness": 0.8,
+        "estimated_b": 0.3649927952220276,
+        "log_params": 10.05
+      },
+      {
+        "name": "synth_exp_1.5",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 0.6666666666666666,
+        "estimated_b": 0.6341116116057945,
+        "log_params": 10.125
+      },
+      {
+        "name": "synth_tpl_1.6",
+        "family_true": "truncated_power_law",
+        "family_fit": "power_law",
+        "true_heaviness": 0.625,
+        "estimated_b": 0.5091058356091812,
+        "log_params": 10.2
+      },
+      {
+        "name": "synth_exp_1.9",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 0.5263157894736842,
+        "estimated_b": 0.7769209307900885,
+        "log_params": 10.275
+      },
+      {
+        "name": "synth_tpl_2.0",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 0.5,
+        "estimated_b": 0.6524242895560163,
+        "log_params": 10.35
+      },
+      {
+        "name": "synth_lognorm_0.5",
+        "family_true": "lognormal",
+        "family_fit": "lognormal",
+        "true_heaviness": 0.5,
+        "estimated_b": 0.509855445124885,
+        "log_params": 10.425
+      },
+      {
+        "name": "synth_lognorm_0.3",
+        "family_true": "lognormal",
+        "family_fit": "lognormal",
+        "true_heaviness": 0.3,
+        "estimated_b": 1.0566339972079115,
+        "log_params": 10.5
+      }
+    ]
+  },
+  "noise_15": {
+    "noise_prob": 0.15,
+    "n_recovered": 21,
+    "rho_true_vs_b": -0.8404976416662144,
+    "p_true_vs_b": 1.8503192785421688e-06,
+    "rho_logp_vs_b": 0.851948051948052,
+    "p_logp_vs_b": 9.557130744669021e-07,
+    "correct_family_count": 12,
+    "results": [
+      {
+        "name": "synth_tpl_0.5",
+        "family_true": "truncated_power_law",
+        "family_fit": "exponential",
+        "true_heaviness": 2.0,
+        "estimated_b": 0.4262837799972629,
+        "log_params": 9.0
+      },
+      {
+        "name": "synth_strexp_0.6",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.6666666666666667,
+        "estimated_b": 0.299680559445934,
+        "log_params": 9.075
+      },
+      {
+        "name": "synth_exp_0.6",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 1.6666666666666667,
+        "estimated_b": 0.36500573748214576,
+        "log_params": 9.15
+      },
+      {
+        "name": "synth_strexp_0.7",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.4285714285714286,
+        "estimated_b": 0.32410160700871943,
+        "log_params": 9.225
+      },
+      {
+        "name": "synth_strexp_0.8",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.25,
+        "estimated_b": 0.35945163838158467,
+        "log_params": 9.3
+      },
+      {
+        "name": "synth_tpl_0.8",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 1.25,
+        "estimated_b": 0.4922511185425299,
+        "log_params": 9.375
+      },
+      {
+        "name": "synth_lognorm_1.2",
+        "family_true": "lognormal",
+        "family_fit": "exponential",
+        "true_heaviness": 1.2,
+        "estimated_b": 0.33761524932932296,
+        "log_params": 9.45
+      },
+      {
+        "name": "synth_strexp_0.9",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.1111111111111112,
+        "estimated_b": 0.3702182468683458,
+        "log_params": 9.525
+      },
+      {
+        "name": "synth_exp_0.9",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 1.1111111111111112,
+        "estimated_b": 0.4398481197792524,
+        "log_params": 9.6
+      },
+      {
+        "name": "synth_strexp_1.0",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.0,
+        "estimated_b": 0.4015910737849032,
+        "log_params": 9.675
+      },
+      {
+        "name": "synth_strexp_1.1",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 0.9090909090909091,
+        "estimated_b": 0.5852524568963607,
+        "log_params": 9.75
+      },
+      {
+        "name": "synth_strexp_1.2",
+        "family_true": "stretched_exp",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.46785483449356763,
+        "log_params": 9.825
+      },
+      {
+        "name": "synth_exp_1.2",
+        "family_true": "exponential",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.49301959931388073,
+        "log_params": 9.9
+      },
+      {
+        "name": "synth_tpl_1.2",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.5464744946183943,
+        "log_params": 9.975
+      },
+      {
+        "name": "synth_lognorm_0.8",
+        "family_true": "lognormal",
+        "family_fit": "lognormal",
+        "true_heaviness": 0.8,
+        "estimated_b": 0.4248443654569181,
+        "log_params": 10.05
+      },
+      {
+        "name": "synth_exp_1.5",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 0.6666666666666666,
+        "estimated_b": 0.5959758986717698,
+        "log_params": 10.125
+      },
+      {
+        "name": "synth_tpl_1.6",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 0.625,
+        "estimated_b": 0.582885090388319,
+        "log_params": 10.2
+      },
+      {
+        "name": "synth_exp_1.9",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 0.5263157894736842,
+        "estimated_b": 0.7106146829900507,
+        "log_params": 10.275
+      },
+      {
+        "name": "synth_tpl_2.0",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 0.5,
+        "estimated_b": 0.646934393067115,
+        "log_params": 10.35
+      },
+      {
+        "name": "synth_lognorm_0.5",
+        "family_true": "lognormal",
+        "family_fit": "lognormal",
+        "true_heaviness": 0.5,
+        "estimated_b": 0.5982400287553644,
+        "log_params": 10.425
+      },
+      {
+        "name": "synth_lognorm_0.3",
+        "family_true": "lognormal",
+        "family_fit": "lognormal",
+        "true_heaviness": 0.3,
+        "estimated_b": 0.8991796103439791,
+        "log_params": 10.5
+      }
+    ]
+  },
+  "noise_35": {
+    "noise_prob": 0.35,
+    "n_recovered": 21,
+    "rho_true_vs_b": -0.6373719528979273,
+    "p_true_vs_b": 0.0018847171072433745,
+    "rho_logp_vs_b": 0.638961038961039,
+    "p_logp_vs_b": 0.0018207240803378814,
+    "correct_family_count": 9,
+    "results": [
+      {
+        "name": "synth_tpl_0.5",
+        "family_true": "truncated_power_law",
+        "family_fit": "exponential",
+        "true_heaviness": 2.0,
+        "estimated_b": 0.6041646138446743,
+        "log_params": 9.0
+      },
+      {
+        "name": "synth_strexp_0.6",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.6666666666666667,
+        "estimated_b": 0.32188312624305393,
+        "log_params": 9.075
+      },
+      {
+        "name": "synth_exp_0.6",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 1.6666666666666667,
+        "estimated_b": 0.3872689647544921,
+        "log_params": 9.15
+      },
+      {
+        "name": "synth_strexp_0.7",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.4285714285714286,
+        "estimated_b": 0.34996765121615503,
+        "log_params": 9.225
+      },
+      {
+        "name": "synth_strexp_0.8",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.25,
+        "estimated_b": 0.36870934470211136,
+        "log_params": 9.3
+      },
+      {
+        "name": "synth_tpl_0.8",
+        "family_true": "truncated_power_law",
+        "family_fit": "exponential",
+        "true_heaviness": 1.25,
+        "estimated_b": 0.47659684296494365,
+        "log_params": 9.375
+      },
+      {
+        "name": "synth_lognorm_1.2",
+        "family_true": "lognormal",
+        "family_fit": "exponential",
+        "true_heaviness": 1.2,
+        "estimated_b": 0.3661524144845933,
+        "log_params": 9.45
+      },
+      {
+        "name": "synth_strexp_0.9",
+        "family_true": "stretched_exp",
+        "family_fit": "exponential",
+        "true_heaviness": 1.1111111111111112,
+        "estimated_b": 0.5498486022118321,
+        "log_params": 9.525
+      },
+      {
+        "name": "synth_exp_0.9",
+        "family_true": "exponential",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 1.1111111111111112,
+        "estimated_b": 0.7097007387199479,
+        "log_params": 9.6
+      },
+      {
+        "name": "synth_strexp_1.0",
+        "family_true": "stretched_exp",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 1.0,
+        "estimated_b": 0.6039574367499769,
+        "log_params": 9.675
+      },
+      {
+        "name": "synth_strexp_1.1",
+        "family_true": "stretched_exp",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.9090909090909091,
+        "estimated_b": 0.6255700970922341,
+        "log_params": 9.75
+      },
+      {
+        "name": "synth_strexp_1.2",
+        "family_true": "stretched_exp",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.678059771745722,
+        "log_params": 9.825
+      },
+      {
+        "name": "synth_exp_1.2",
+        "family_true": "exponential",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.5017991101435474,
+        "log_params": 9.9
+      },
+      {
+        "name": "synth_tpl_1.2",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 0.8333333333333334,
+        "estimated_b": 0.5518314665963788,
+        "log_params": 9.975
+      },
+      {
+        "name": "synth_lognorm_0.8",
+        "family_true": "lognormal",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.8,
+        "estimated_b": 0.5458686016143226,
+        "log_params": 10.05
+      },
+      {
+        "name": "synth_exp_1.5",
+        "family_true": "exponential",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.6666666666666666,
+        "estimated_b": 0.5569786848547563,
+        "log_params": 10.125
+      },
+      {
+        "name": "synth_tpl_1.6",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 0.625,
+        "estimated_b": 0.5606764739914998,
+        "log_params": 10.2
+      },
+      {
+        "name": "synth_exp_1.9",
+        "family_true": "exponential",
+        "family_fit": "exponential",
+        "true_heaviness": 0.5263157894736842,
+        "estimated_b": 0.6426922003256913,
+        "log_params": 10.275
+      },
+      {
+        "name": "synth_tpl_2.0",
+        "family_true": "truncated_power_law",
+        "family_fit": "truncated_power_law",
+        "true_heaviness": 0.5,
+        "estimated_b": 0.604857593197943,
+        "log_params": 10.35
+      },
+      {
+        "name": "synth_lognorm_0.5",
+        "family_true": "lognormal",
+        "family_fit": "lognormal",
+        "true_heaviness": 0.5,
+        "estimated_b": 0.6870127924830055,
+        "log_params": 10.425
+      },
+      {
+        "name": "synth_lognorm_0.3",
+        "family_true": "lognormal",
+        "family_fit": "stretched_exp",
+        "true_heaviness": 0.3,
+        "estimated_b": 0.9160369674035147,
+        "log_params": 10.5
+      }
+    ]
+  }
+}
