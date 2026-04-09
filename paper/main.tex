@@ -245,15 +245,17 @@ and tail shape on our catalog in \S\ref{sec:exp5}.
 hallucination benchmarks.} Several recent works evaluate
 hallucination in specific domains or modalities:
 \citet{dahl2024hallucination} decomposes domain-specific
-hallucination types in legal LLMs; \citet{cliniqlink2024},
-\citet{medheval2024}, \citet{medhallbench2024}, and
-\citet{medhallu2024} target medical and clinical factuality;
-\citet{hallucinogen2024} extends hallucination evaluation to
-vision-language models; and \citet{her2024speech} addresses speech.
-\citet{halueval2024v2} updates the original HaluEval benchmark
-with stricter type taxonomies. These works share our premise that
-binary accuracy obscures critical failure modes, but focus on
-finer-grained type taxonomies within a single domain or modality.
+hallucination types in legal LLMs; \citet{colelough2025cliniqlink},
+\citet{chang2025medheval}, \citet{zuo2024medhallbench}, and
+\citet{pandit2025medhallu} target medical and clinical factuality;
+\citet{seth2024hallucinogen} systematically evaluates object
+hallucination in large vision-language models; and
+\citet{atwany2025her} introduces the Hallucination Error Rate
+metric for speech foundation models. \citet{halueval2024v2}
+updates the original HaluEval benchmark with stricter type
+taxonomies. These works share our premise that binary accuracy
+obscures critical failure modes but focus on finer-grained type
+taxonomies within a single domain or modality.
 \textsc{Errorquake} is complementary: we model the severity
 \emph{distribution} across eight general domains and extract a
 quantitative tail index that enables cross-model comparison and
@@ -472,6 +474,14 @@ across the $21$-model catalog ($\rho_s = +0.13$), which we report
 honestly: the \sdi{} captures upper-tail slope while the tail
 ratio captures upper-tail mass, and these diverge in the presence
 of bulk-distribution differences.
+
+\paragraph{Exceedance threshold sweep (answers Q4).} Tightening
+the minimum tail-support requirement from $T = 30$ exceedances up
+to $T = 200$ drops the surviving model count from $21$ to $9$ but
+keeps the discriminator above the pre-registered threshold at every
+step: $30 \to 22 \to 13 \to 10$ disjoint-CI pairs as $T$ increases
+(Appendix~\ref{app:exceedance}). The headline result does not
+depend on marginal tail support.
 
 \emph{Takeaway:} the severity distribution carries
 model-discriminative information that $\varepsilon$ alone cannot
@@ -1157,17 +1167,103 @@ versions are statistically indistinguishable in tail shape
 \end{figure}
 
 % =====================================================================
+\section{Exceedance threshold sweep (Q4)}\label{app:exceedance}
+
+This appendix answers Q4 (how many exceedances are required for a
+stable \sdi{} fit, and does the headline discriminator survive a
+stricter requirement). For each minimum-exceedance threshold
+$T \in \{30, 50, 75, 100, 150, 200\}$, we exclude models whose
+$m_{\min}$-selected tail contains fewer than $T$ events (insufficient
+statistical support), refit per-model \sdi{} on the survivors, and
+recount both the Exp.~2 disjoint-CI discriminator pairs and the
+Exp.~5 dense scaling correlation plus partial correlation.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{r r r r r r r r}
+\toprule
+$T$ & $n_{\text{surv}}$ & $n_{\text{dense}}$ & discrim.\ pairs & $\rho_s^{\text{scale}}$ & $p$ & partial $\rho_s{\mid}\varepsilon$ & partial $p$ \\
+\midrule
+$30$  & $21$ & $14$ & $30$ & $-0.689$ & $0.006$ & $-0.270$ & $0.35$ \\
+$50$  & $18$ & $13$ & $22$ & $-0.704$ & $0.007$ & $-0.297$ & $0.32$ \\
+$75$  & $11$ &  $8$ & $13$ & $-0.850$ & $0.008$ & $-0.548$ & $0.16$ \\
+$100$ & $11$ &  $8$ & $13$ & $-0.850$ & $0.008$ & $-0.548$ & $0.16$ \\
+$150$ &  $9$ &  $6$ & $10$ & $-0.928$ & $0.008$ & $-0.600$ & $0.21$ \\
+$200$ &  $9$ &  $6$ & $10$ & $-0.928$ & $0.008$ & $-0.600$ & $0.21$ \\
+\bottomrule
+\end{tabular}
+\caption{Exceedance threshold sweep. At every tested threshold the
+Exp.~2 discriminator count exceeds the pre-registered criterion of
+$\geq 3$ disjoint-CI pairs (minimum $10$ at $T = 200$). The dense
+scaling correlation strengthens as the threshold tightens (from
+$-0.689$ to $-0.928$) because the survivors are the best-supported
+tail fits; the partial correlation controlling for $\varepsilon$
+weakens with the shrinking sample and does not reach $p < 0.05$
+at any threshold, consistent with the underpowered regime.}
+\label{tab:exceedance}
+\end{table}
+
+% =====================================================================
 \section{Deployment table (full)}\label{app:deployment}
 
-\Cref{fig:fig10} plots expected catastrophic ($M \geq 3.0$) and
-severe ($M \geq 2.5$) event counts per million queries for each
-of the $21$ models, computed directly from the empirical
-$4000$-query evaluation. \textsc{gemma-3-4b} and
-\textsc{llama-3.2-3b} have the highest catastrophic rate
-(${\sim}10{,}000$ per million), consistent with their small dense
-size and correspondingly flat tails at the upper end of the
-$9$-point scale. Fitted \sdi{} values provide an alternative
-tail-shape summary but are not a calibrated extrapolator
+This appendix answers Q10: expected events per million queries at
+multiple severity thresholds. \Cref{tab:deployment} gives the
+per-model counts at $M \geq \{1.5, 2.0, 2.5, 3.0, 3.5, 4.0\}$
+scaled to per-million-query rates, computed directly from the
+empirical $4{,}000$-query evaluation (no extrapolation, no fit).
+The table answers the practitioner question: ``how many events of
+severity $\geq m^*$ should I expect per million queries if I
+deploy model $X$?''
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l r r r r r r r r}
+\toprule
+model & $\varepsilon$ & $\sdi$ & $M{\geq}1.5$ & $M{\geq}2.0$ & $M{\geq}2.5$ & $M{\geq}3.0$ & $M{\geq}3.5$ & $M{\geq}4.0$ \\
+\midrule
+\textsc{qwen3-next-80b}       & 0.592 & 1.052 & 122{,}061 & 56{,}278 & 10{,}755 & 3{,}252 & 250 & 0 \\
+\textsc{llama-3.2-3b}         & 0.450 & 1.046 & 315{,}695 & 275{,}366 & 81{,}428 & 52{,}915 & 13{,}357 & 4{,}110 \\
+\textsc{gpt-oss-20b}          & 0.586 & 0.938 & 160{,}991 & 78{,}368 & 17{,}026 & 5{,}759 & 1{,}252 & 250 \\
+\textsc{phi-3.5-mini}         & 0.285 & 1.309 & 202{,}076 & 197{,}012 & 17{,}220 & 13{,}928 & 2{,}279 & 0 \\
+\textsc{gemma-3-4b}           & 0.387 & 0.979 & 334{,}883 & 305{,}964 & 101{,}730 & 62{,}742 & 22{,}205 & 2{,}066 \\
+\textsc{qwen2.5-7b}           & 0.316 & 1.257 & 214{,}828 & 211{,}285 & 21{,}761 & 17{,}206 & 3{,}289 & 0 \\
+\textsc{llama-3.1-8b}         & 0.607 & 1.001 & 193{,}250 & 95{,}750 & 25{,}000 & 9{,}750 & 500 & 0 \\
+\textsc{eurollm-9b}           & 0.344 & 1.067 & 243{,}147 & 231{,}726 & 24{,}873 & 17{,}766 & 5{,}076 & 508 \\
+\textsc{solar-10.7b}          & 0.644 & 0.905 & 203{,}759 & 106{,}516 & 27{,}820 & 9{,}524 & 2{,}757 & 501 \\
+\textsc{gemma-3-12b}          & 0.631 & 0.938 & 209{,}960 & 104{,}605 & 25{,}275 & 8{,}509 & 2{,}002 & 250 \\
+\textsc{ministral-14b}        & 0.586 & 1.122 & 208{,}218 & 99{,}975 & 18{,}291 & 4{,}260 & 752 & 0 \\
+\textsc{mistral-small-4-119b} & 0.579 & 0.888 & 154{,}693 & 70{,}588 & 17{,}272 & 5{,}507 & 2{,}503 & 250 \\
+\textsc{llama-4-maverick}     & 0.553 & 1.118 & 121{,}988 & 53{,}464 & 11{,}797 & 3{,}012 & 251 & 0 \\
+\textsc{mistral-medium-3}     & 0.589 & 0.906 & 296{,}137 & 160{,}566 & 18{,}177 & 7{,}574 & 505 & 252 \\
+\textsc{mistral-small-24b}    & 0.566 & 0.999 & 146{,}037 & 63{,}266 & 11{,}503 & 3{,}501 & 750 & 0 \\
+\textsc{gemma-2-27b}          & 0.666 & 0.619 & 172{,}043 & 75{,}769 & 20{,}255 & 6{,}752 & 1{,}000 & 250 \\
+\textsc{gemma-3-27b}          & 0.630 & 0.956 & 174{,}779 & 79{,}697 & 25{,}725 & 5{,}801 & 1{,}009 & 0 \\
+\textsc{kimi-k2}              & 0.615 & 1.041 & 131{,}316 & 61{,}281 & 15{,}258 & 5{,}003 & 250 & 0 \\
+\textsc{seed-oss-36b}         & 0.568 & 0.574 & 185{,}725 & 92{,}988 & 13{,}571 & 6{,}032 & 754 & 251 \\
+\textsc{deepseek-v3.1}        & 0.571 & 0.808 & 131{,}045 & 56{,}126 & 13{,}029 & 5{,}011 & 1{,}253 & 0 \\
+\textsc{deepseek-v3.2}        & 0.587 & 0.655 & 150{,}125 & 69{,}424 & 11{,}028 & 4{,}261 & 501 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{Expected event counts per $1{,}000{,}000$ queries at six
+severity thresholds, computed from the $4{,}000$-query empirical
+evaluation. Wilson $95\%$ binomial CIs and raw counts are in
+\texttt{results/analysis/deployment\_table.json}. Rows sorted by
+$\log_{10}$(active params). No fit, no extrapolation.}
+\label{tab:deployment}
+\end{table}
+
+\Cref{fig:fig10} visualises the $M \geq 2.5$ and $M \geq 3.0$
+columns. \textsc{gemma-3-4b} and \textsc{llama-3.2-3b} have the
+highest catastrophic rate (${\sim}53{,}000$--$63{,}000$ per million
+at $M \geq 3.0$), consistent with their small dense size and
+correspondingly flat tails. At the other end,
+\textsc{qwen3-next-80b} and \textsc{llama-4-maverick} have
+${\sim}3{,}000$ catastrophic events per million --- a
+$\sim 20\times$ spread. Fitted \sdi{} values provide a
+distribution-shape summary but are not a calibrated extrapolator
 (\S\ref{sec:exp3}).
 
 \begin{figure}[h]
