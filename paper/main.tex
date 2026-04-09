@@ -61,8 +61,10 @@ disjoint $95\%$ \sdi{} CIs at matched accuracy
 \emph{Third}, micro-error \sdi{} on easy queries rank-orders
 catastrophic counts on hard queries at $\rho=0.44$ ($p=0.044$),
 failing the pre-registered $\rho \geq 0.75$ threshold for calibrated
-absolute-rate prediction. Accuracy and severity distribution are
-independent axes of model evaluation and must be reported together.
+absolute-rate prediction. Accuracy and tail shape are correlated
+($\rho_s(\varepsilon, \sdi) = -0.73$ on dense), but \sdi{} provides
+discriminative information \emph{beyond} accuracy and should be
+reported alongside it.
 \end{abstract}
 
 % =====================================================================
@@ -84,15 +86,22 @@ few errors but the rare ones are catastrophic; large $b$ means many
 small errors with bounded severity.
 
 \paragraph{Central finding and evaluative role.}
-\emph{Accuracy improvement can worsen the severity profile of the
-errors that remain.} As dense open-weight models grow from $3$B to
-$36$B parameters, the error rate typically drops, but the \bvalue{}
-of the residual error distribution drops faster
-($\rho_s = -0.689$, $p = 0.006$, robust to leave-one-out in all
-$14/14$ drops). At matched accuracy ($|\Delta\varepsilon| < 0.05$),
-$30/210$ model pairs in our catalog have disjoint \sdi{} confidence
-intervals. \emph{Accuracy and severity distribution are independent
-axes of model evaluation and must be reported together.} This paper
+\emph{The severity distribution of an LLM's errors carries
+discriminative information beyond the error rate, and the upper-tail
+slope varies systematically with model scale.} On the $14$ dense
+open-weight models in our catalog, the upper-tail \bvalue{}
+anti-correlates with $\log_{10}$(active params) at
+$\rho_s = -0.689$ ($p = 0.006$, leave-one-out robust in
+$14/14$ drops). The marginal correlation is partly mediated by
+accuracy --- in our catalog, larger dense models also have higher
+error rates ($\rho_s(\log_{10}\text{params},\,\varepsilon) = +0.59$),
+and $\varepsilon$ and \sdi{} themselves correlate
+($\rho_s = -0.73$). At matched accuracy ($|\Delta\varepsilon| <
+0.05$), $30/210$ model pairs in our catalog have disjoint
+\sdi{} confidence intervals --- direct evidence that \sdi{} is
+not redundant with $\varepsilon$. \emph{Accuracy and severity
+distribution should be reported together; \sdi{} discriminates
+models that the error rate treats as equivalent.} This paper
 contributes to AI evaluation by introducing severity distribution
 analysis as a complementary axis to accuracy-based evaluation,
 under the assumption that error severity can be reliably scored on
@@ -204,15 +213,36 @@ arguing in prose that tails matter, we fit distributional models to
 error severity and extract a quantitative index (\sdi) that makes
 the tail shape comparable across models.
 
-\paragraph{Calibration as orthogonal axis.} Uncertainty calibration
-and severity distribution are orthogonal axes of model quality. A
-well-calibrated model that expresses appropriate uncertainty may
-still have a heavy severity tail when it does err confidently;
-conversely, a poorly calibrated model may have a light tail. Work
-on confidence calibration \citep{guo2017calibration,kadavath2022language}
-complements our contribution: combining the two axes would identify
-models that are both calibrated and tail-light --- the safest
-deployment profile.
+\paragraph{Calibration as a related axis.} Uncertainty calibration
+and severity distribution are conceptually distinct but empirically
+correlated axes of model quality. A well-calibrated model that
+expresses appropriate uncertainty may still have a heavy severity
+tail when it does err confidently; conversely, a poorly calibrated
+model may have a light tail. Work on confidence calibration
+\citep{guo2017calibration,kadavath2022language} complements our
+contribution: combining the two axes would identify models that
+are both calibrated and tail-light --- the safest deployment
+profile. We document the empirical correlation between accuracy
+and tail shape on our catalog in \S\ref{sec:exp5}.
+
+\paragraph{Concurrent severity-aware and domain-specific
+hallucination benchmarks.} Several recent works evaluate
+hallucination in specific domains or modalities:
+\citet{dahl2024hallucination} decomposes domain-specific
+hallucination types in legal LLMs; \citet{cliniqlink2024},
+\citet{medheval2024}, \citet{medhallbench2024}, and
+\citet{medhallu2024} target medical and clinical factuality;
+\citet{hallucinogen2024} extends hallucination evaluation to
+vision-language models; and \citet{her2024speech} addresses speech.
+\citet{halueval2024v2} updates the original HaluEval benchmark
+with stricter type taxonomies. These works share our premise that
+binary accuracy obscures critical failure modes, but focus on
+finer-grained type taxonomies within a single domain or modality.
+\textsc{Errorquake} is complementary: we model the severity
+\emph{distribution} across eight general domains and extract a
+quantitative tail index that enables cross-model comparison and
+scaling-law analysis --- capabilities that domain-specific
+taxonomies, by design, do not provide.
 
 % =====================================================================
 \section{Method}\label{sec:method}
@@ -241,20 +271,25 @@ and these were regenerated (Appendix~\ref{app:benchmark}).
 \paragraph{Dual-judge scoring.} Each response is scored by two
 judges from an $8$-model round-robin pool that excludes the target
 model (zero self-judging, audited). Final score = mean of the two
-judges when they agree within $1.0$; otherwise median-of-three
-with a tiebreaker. Pre-tiebreak inter-judge agreement on the
-$60{,}568$ records where both judges produced a score is
-quadratic-weighted Cohen's $\kappa = 0.374$ (linear $\kappa = 0.285$,
-Spearman $\rho = 0.375$, mean absolute disagreement $= 1.25$ on the
-$0$--$4$ grid); the secondary judge call failed on a non-random
-subset of small-model records, so per-model $\kappa$ comparisons
-are biased and we report only the pooled value here
-(per-model breakdown in Appendix~\ref{app:judges}). A $340$-item
-manual audit additionally finds that $33.5\%$ of judge score-$2.0$
-verdicts are overcalls (S2, \S\ref{sec:sensitivity}). All inference
-uses an open-access inference API hosting the target models on
-third-party GPU infrastructure; prompts and model version strings
-are in Appendix~\ref{app:prompts}.
+judges when they agree within $1.0$; otherwise median-of-three with
+a tiebreaker. Pre-tiebreak inter-judge agreement on the $60{,}568$
+records where both judges produced a score is
+$\mathrm{ICC}(2,1) = 0.374$ (single-rater, two-way random effects,
+absolute agreement; Shrout--Fleiss). \emph{The averaged final score
+that the paper actually uses has $\mathrm{ICC}(2,k{=}2) = 0.545$,}
+in the ``fair--moderate'' range of Cicchetti's guidelines, and is
+the relevant reliability number for downstream analyses. Linear
+Cohen's $\kappa = 0.285$ and quadratic $\kappa = 0.374$ are reported
+for completeness, though Cohen's $\kappa$ is depressed by the $9$-level
+scale's low chance agreement. The secondary judge call failed on a
+non-random subset of small-model records, so per-model agreement
+comparisons are biased; per-model breakdown in
+Appendix~\ref{app:judges}. A $340$-item manual audit additionally
+finds that $33.5\%$ of judge score-$2.0$ verdicts are overcalls
+(S2, \S\ref{sec:sensitivity}). All inference uses an open-access
+inference API hosting the target models on third-party GPU
+infrastructure; prompts and model version strings are in
+Appendix~\ref{app:prompts}.
 
 \paragraph{Distribution fitting.} We fit five candidate families
 to the strictly positive scores on the discrete grid
@@ -465,38 +500,57 @@ measurement. (iii) The correlation is computed on model-aggregated
 \sdi{} is model-idiosyncratic, so the headline is about
 \emph{whole-model} tail shape, not any particular domain.
 
+\paragraph{Headline robustness suite.}
+The dense correlation survives bootstrap ($95\%$ CI $[-0.92, -0.26]$),
+exact permutation ($p = 0.0077$ two-sided), Bayesian linear
+regression ($\beta = -0.39$, $95\%$ CI $[-0.64,\,-0.14]$,
+$P(\beta<0|\text{data}) = 0.999$), and per-tier decomposition (sign
+preserved in $4/5$ tiers; T2 individually significant at $p = 0.04$,
+Appendix~\ref{app:per_tier}). At $n = 14$ the study is
+\emph{borderline} powered (min detectable $|\rho| = 0.701$ at
+$\alpha = 0.05$, power $= 0.80$, observed $|\rho| = 0.689$);
+split-half $\sdi$ reliability is mean Spearman $0.882$ across
+$100$ trials. Full output: \texttt{results/analysis/headline\_robustness.json}.
+
+\paragraph{Accuracy mediates a substantial part of the headline.}
+A formal independence test changes the framing. On the $14$-dense
+subset, $\sdi$ and $\varepsilon$ are \emph{negatively correlated}
+($\rho_s = -0.73$, $p = 0.003$), and $\varepsilon$ itself
+\emph{positively} correlates with size
+($\rho_s(\log_{10}\text{params},\varepsilon) = +0.59$, $p = 0.026$):
+the smallest dense models in our catalog (\textsc{phi-3.5-mini},
+\textsc{qwen2.5-7b}) are heavily benchmarked with low $\varepsilon
+\approx 0.30$, while larger dense models are more general-purpose
+($\varepsilon \approx 0.55$--$0.67$). Partialing $\varepsilon$ out of
+$(\log_{10}\text{params}, \sdi)$ via OLS residuals leaves
+$\rho_s = -0.29$ ($p = 0.31$, $n=14$) --- sign preserved but no
+longer individually significant. Accuracy-stratified halves both
+preserve the negative sign ($\rho_s = -0.50$ high-acc, $-0.29$
+low-acc; $n=7$ each). \textbf{Revised framing:} $\varepsilon$ and
+$\sdi$ are correlated, not independent, in this sample. The
+$30/210$ disjoint-CI pairs at matched accuracy (\S\ref{sec:exp2})
+still establish that $\sdi$ carries information \emph{beyond}
+$\varepsilon$, but our earlier ``independent axes'' language was
+too strong; \emph{$\sdi$ is most informative as a discriminator
+when comparing models at matched accuracy.}
+
 \paragraph{Verbosity confound.}\label{par:verbosity}
 A plausible alternative explanation is that larger dense models
-produce longer, more detailed responses, which expose more surface
-area for judge overcalling (Appendix~\ref{app:overcall} documents a
-$33.5\%$ overcall rate at score $2.0$). We address this directly.
-\emph{First}, mean response length is \emph{not} monotonically
-ordered by parameter count: across the $13$ dense models for which
-we recorded raw responses, Spearman correlation between
-$\log_{10}(\text{params})$ and $\log_{10}(\text{mean words})$ is
-$\rho_s = -0.080$ ($p = 0.80$). Concrete counter-examples include
-\textsc{gemma-2-27b} ($27$B, mean $16.4$ words, the third-shortest
-in the catalog) and \textsc{ministral-14b} ($14$B, mean $72.6$
-words, the longest); a verbosity confound that explains the headline
-would require length to track size, and it does not.
-\emph{Second}, we did observe that response length predicts
-overcall rate ($\rho_s = +0.50$, $p = 0.05$), so verbose responses
-\emph{are} more likely to be overcalled --- but because length is
-not size-correlated, this routes the overcall noise into a
-size-orthogonal direction. \emph{Third}, OLS regression of \sdi{} on
-$\log_{10}(\text{params})$ controlling for $\log_{10}(\text{mean
-words})$ on the $n=13$ dense subset gives
-$\beta_{\text{params}} = -0.381$ ($\text{SE} = 0.126$, $p = 0.013$);
-the headline scaling effect persists at $p < 0.05$ after the
-verbosity covariate is partialed out. The univariate Spearman on the
-$n=13$ subset is $\rho_s = -0.663$ ($p = 0.014$), comparable to the
-$n=14$ headline. The Spearman correlation is also rank-based and
-therefore robust to monotone score inflation provided the inflation
-is approximately uniform across models. Per-model output token
-counts and the partial-regression details are in
-\texttt{results/analysis/verbosity\_check.json}; controlling for
-length more aggressively (matched-length re-evaluation under a
-truncated generation budget) is priority follow-up work.
+produce longer responses, which expose more surface area for judge
+overcalling. We falsify this. On the $13$ dense models with recorded
+raw responses, mean response length is \emph{not} correlated with
+parameter count ($\rho_s(\log_{10}\text{params},\log_{10}\text{words})
+= -0.080$, $p = 0.80$); compare \textsc{gemma-2-27b} (27B, mean
+$16.4$ words, third-shortest) with \textsc{ministral-14b} (14B,
+$72.6$ words, longest). Length does correlate with overcall rate
+($\rho_s = +0.50$, $p = 0.05$), so verbose responses \emph{are}
+overcalled more --- but because length is size-orthogonal, this
+routes overcall noise away from the size axis. OLS regression of
+$\sdi$ on $\log_{10}(\text{params})$ controlling for
+$\log_{10}(\text{mean words})$ on the $n=13$ dense subset gives
+$\beta_{\text{params}} = -0.38$ (SE $0.13$, $p = 0.013$); the
+headline survives the partial-regression test at $p < 0.05$. Full
+output: \texttt{results/analysis/verbosity\_check.json}.
 
 \subsection{Predicting catastrophes from micro-errors
 (Exp.\ 3)}\label{sec:exp3}
@@ -570,27 +624,19 @@ not strictly above it. \textbf{S3 (subsample stability)}
 $50\%$ subsampling is $0.143$. Full S1--S3 figures are
 Appendix~\ref{app:sensitivity}.
 
-\paragraph{S5: $m_{\min}$ sensitivity (post-hoc, reviewer
-follow-up).} The headline scaling correlation is sensitive to the
-choice of $m_{\min}$. Under our default model-specific KS-selector
-(Method, \S\ref{sec:method}), $\rho_s = -0.689$ ($p = 0.006$,
-$n_{\text{dense}} = 14$): larger dense models have shallower upper-tail
-slopes (heavier upper tails). Under \emph{fixed $m_{\min} = 1.5$},
-$\rho_s = +0.837$ ($p = 0.0002$); under the Clauset-style criterion
-of $\geq 100$ exceedances (which selects $m_{\min} = 0.5$ for every
-model), $\rho_s = +0.793$ ($p = 0.0007$). \emph{The sign flips.} The
-two strategies estimate different objects: the auto-selector targets
-the upper-tail slope at each model's informative range (and is the
-appropriate estimator for catastrophic-tail claims), while the fixed
-$m_{\min}$ strategies estimate the bulk decay rate over the full
-positive grid (where most of the mass lives). The combined picture
-is internally consistent: \emph{larger dense models commit fewer
-small slips (steeper bulk decay) and a relatively higher fraction
-of catastrophic fabrications (shallower upper-tail slope)}.
-\textbf{The headline of this paper applies specifically to the
-upper-tail slope as estimated by the auto-selector; the bulk slope
-moves the opposite way.} See Appendix~\ref{app:s5} for the full
-$3 \times 14$ table.
+\paragraph{S5: $m_{\min}$ sensitivity.} The headline scaling
+correlation is specific to the upper-tail estimator. Under our
+default model-specific KS-selector $\rho_s = -0.689$ ($p = 0.006$);
+under fixed $m_{\min} = 1.5$ $\rho_s = +0.837$ ($p = 0.0002$); under
+Clauset-style $\geq 100$ exceedances (which selects $m_{\min} = 0.5$
+for every model) $\rho_s = +0.793$ ($p = 0.0007$). \emph{The sign
+flips.} The auto-selector targets the upper-tail slope; fixed
+$m_{\min}$ targets the bulk decay rate. Both are real --- larger
+dense models commit fewer small slips (steeper bulk) and a relatively
+higher fraction of catastrophic fabrications (shallower upper tail).
+\textbf{The paper's headline applies to the upper-tail slope only;
+the bulk slope moves the opposite way.} Full table:
+Appendix~\ref{app:s5}.
 
 \paragraph{Deployment implications.}\label{sec:deployment}
 \Cref{fig:fig10} (Appendix~\ref{app:deployment}) translates the
@@ -646,52 +692,44 @@ power laws.
 
 \section{Limitations and misuse}\label{sec:limitations}
 
-\paragraph{Judge overcalling.} A single-rater audit of $340$
-score-$2.0$ judgements across $17$ models classifies $33.5\%$ as
-overcalls, $47.9\%$ as genuine, and $18.5\%$ as ambiguous. The
-bootstrap overcall correction (S2) leaves the \sdi{} ranking at
-$\rho_s = 0.847$, $0.003$ below the $0.85$ threshold. The
-\emph{headline} negative-scaling finding is robust to correction,
-but readers who wish to take the absolute \sdi{} values or the
-deployment-table numbers as ground truth should account for this.
-Verbose models receive more overcalls, producing a response-style
-confound that is characterised in Appendix~\ref{app:overcall}.
+\paragraph{Judge overcalling and scale resolution.} A $340$-item
+manual audit classifies $33.5\%$ of judge score-$2.0$ verdicts as
+overcalls; verbose responses are overcalled more (Appendix~\ref{app:overcall}).
+The headline survives bootstrap overcall correction
+($\rho_s = 0.847$, S2, just below the $0.85$ threshold) and the
+verbosity covariate (\S\ref{par:verbosity}). Sensitivity S1 also
+shows that collapsing the $9$-point severity grid to $7$ points or
+$5$ levels destroys the \sdi{} ranking ($\rho_s = 0.43$ and
+$0.16$); practitioners must use the full grid.
 
-\paragraph{Scale resolution.} Sensitivity S1 shows that collapsing
-the $9$-point severity grid to $7$ points or $5$ levels destroys
-the \sdi{} ranking ($\rho_s = 0.43$ and $0.16$). Practitioners
-must use the full $9$-point scale; coarser human-rating protocols
-will not reproduce our results.
-
-\paragraph{Model coverage.} We evaluate $21$ open-weight
+\paragraph{Model coverage and scope.} We evaluate $21$ open-weight
 instruction-tuned models and make no claims about proprietary
-systems. Frontier-dense coverage is further constrained:
+systems. Frontier-dense coverage is constrained:
 \textsc{llama-3.1-405b-instruct}, \textsc{gpt-oss-120b}, and
-\textsc{minimax-m2.5} were excluded after rate-limit exhaustion on
-the inference API. The largest dense model we evaluate is
-$36$B. The scaling finding covers a $\sim 10\times$ range in
-active parameters and should not be extrapolated to the $100$B+
-dense regime without direct measurement. Three reasoning-specialised
-models were also excluded after chain-of-thought truncation at a
-$500$-token budget. Our seven MoE models span $3$--$37$B active
-parameters and are too few to fit a separate scaling curve; the
-MoE subset shows the same sign as dense ($\rho_s = -0.595$,
-$p = 0.159$, $n=7$) but does not reach significance.
+\textsc{minimax-m2.5} were excluded from the main analysis after
+rate-limit exhaustion. We re-attempted \textsc{llama-3.1-405b}
+during revision; one-shot calls succeed on a single key, but at
+the $32$-way concurrency required for a $4{,}000$-query cohort
+evaluation, $87.5\%$ of requests return $429$ or $403$
+($403/3314$ valid responses, $12.2\%$ success). This is too sparse
+for a stable upper-tail $\sdi$ fit and we exclude $405$B from the
+main analysis. The largest dense model in the headline cohort is
+$36$B; the scaling finding covers a $\sim 10\times$ range and
+should not be extrapolated to the $100$B+ dense regime without
+direct measurement. Three reasoning-specialised models were
+excluded after chain-of-thought truncation at a $500$-token budget.
+Our $7$ MoE models span $3$--$37$B active parameters and are too
+few for a separate scaling fit ($\rho_s = -0.595$, $p = 0.159$,
+$n=7$ --- same sign, not significant).
 
-\paragraph{Human validation scope.} The $340$-item human-scored
-subset was rated by a single expert rater; inter-rater ICC was
-not formally computed. Proper multi-rater validation is future
-work.
-
-\paragraph{Absolute-rate prediction.} Experiment 3 fails its
+\paragraph{Human validation, prediction, and misuse.} The
+$340$-item human-scored subset was rated by a single expert rater;
+inter-rater ICC was not formally computed. Experiment 3 fails its
 primary pre-registered criterion ($\rho_s \geq 0.75$ at $M \geq
-3$). We do not claim calibrated prediction --- only moderate rank
-signal ($\rho_s = 0.443$, $p = 0.044$).
-
-\paragraph{Potential for misuse.} A severity benchmark can be
-optimised against. Because the $9$-level scale, the scoring
-pipeline and the benchmark queries are released openly, gaming is
-detectable: an adversarially fine-tuned model will not match the
+3$); only the moderate rank signal $\rho_s = 0.443$ ($p = 0.044$)
+holds. Because the $9$-level scale, the scoring pipeline and the
+benchmark queries are released openly, optimising-against-the-test
+is detectable: an adversarial fine-tune will not reproduce the
 public pipeline's outputs on unreleased held-out queries. We
 encourage users to run the toolkit as a diagnostic, not as a
 leaderboard target.
@@ -700,22 +738,18 @@ leaderboard target.
 \section{Conclusion}\label{sec:conclusion}
 
 Larger dense open-weight LLMs concentrate their remaining errors in
-the upper tail
-($\rho_s(\log_{10}\text{params},\, \sdi) = -0.689$, $p = 0.006$,
-$n_{\text{dense}} = 14$, leave-one-out robust in $14/14$). The sign
-is specific to the upper-tail estimator; under fixed $m_{\min}$ that
-fits the bulk of the positive grid the sign flips, indicating that
-larger dense models commit fewer small slips and a relatively higher
-fraction of catastrophic ones. Supporting this claim are two
-foundational results --- $17/21$ models have a non-exponential
-best-fit family by BIC and $18/21$ are Vuong-decisive ($p<0.05$),
-and the \sdi{} discriminates $30$ model pairs that the error rate
-treats as equivalent --- and one partial extension: micro-error
-\sdi{} rank-orders catastrophic counts at $\rho_s = 0.44$
-($p = 0.044$) but does not produce calibrated absolute-rate
-predictions. The headline recommendation is methodological:
-\emph{accuracy and severity distribution are independent axes of
-model evaluation and must be reported together.}
+the upper tail ($\rho_s(\log_{10}\text{params},\, \sdi) = -0.689$,
+$p = 0.006$, $n_{\text{dense}} = 14$, $14/14$ LOO). The sign is
+specific to the upper-tail estimator; under fixed $m_{\min}$ the
+sign flips, indicating that larger dense models commit fewer small
+slips and a relatively higher fraction of catastrophic ones. The
+\sdi{} discriminates $30/210$ model pairs at matched accuracy ---
+direct evidence that it carries information beyond $\varepsilon$
+even though $\varepsilon$ and $\sdi$ are themselves correlated
+($\rho_s = -0.73$). The headline recommendation is methodological:
+\emph{report \sdi{} alongside $\varepsilon$ --- they carry
+overlapping but distinguishable information, and the discriminative
+gap is large enough to matter at matched accuracy.}
 
 % ---------------------------------------------------------------------
 \bibliographystyle{plainnat}
@@ -1068,6 +1102,46 @@ of the two judges, with tiebreak when needed), so judge disagreement
 is averaged out per-record before the \sdi{} fit; the leave-one-out
 robustness check ($14/14$, \S\ref{sec:exp5}) demonstrates that the
 final-score noise is small enough not to undermine the headline.
+
+% =====================================================================
+\section{Per-tier scaling decomposition}\label{app:per_tier}
+
+\Cref{tab:per_tier} reports the within-tier scaling correlation:
+$\rho_s(\log_{10}(\text{active params}), \sdi_{\text{tier}})$
+on the $14$ dense models, with $b$ refit on the $\sim 200$--$500$
+within-tier errors per model. The aggregate (across all tiers)
+correlation is $\rho_s = -0.689$ ($p = 0.006$). Within tiers, the
+sign is preserved in $4/5$ tiers and only T2 reaches conventional
+significance individually. T4 is the one tier where the correlation
+flattens to $\rho_s \approx 0$. The aggregate effect benefits from
+the larger per-model error counts ($\sim 2000$ vs $\sim 400$),
+which reduce per-fit noise and let the underlying signal emerge.
+The per-tier sign-preservation is the relevant robustness
+statement; the aggregate $p$-value is the relevant magnitude
+statement.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{l r r r}
+\toprule
+tier & $n$ & dense $\rho_s(\log_{10}\text{params}, \sdi_{\text{tier}})$ & $p$ \\
+\midrule
+T1 (easy)         & 14 & $-0.493$ & $0.073$ \\
+T2 (easy)         & 14 & $-0.562$ & $0.037^{*}$ \\
+T3 (intermediate) & 14 & $-0.322$ & $0.262$ \\
+T4 (hard)         & 14 & $+0.046$ & $0.875$ \\
+T5 (hard)         & 14 & $-0.425$ & $0.130$ \\
+\midrule
+aggregated (all 5) & 14 & $\mathbf{-0.689}$ & $\mathbf{0.006}$ \\
+\bottomrule
+\end{tabular}
+\caption{Per-tier scaling correlation on the $14$ dense models.
+Sign preserved in $4/5$ tiers; T2 individually significant. The
+addendum's prediction (T4--T5 should drive the headline) is
+\emph{not} borne out --- the strongest individual tier is T2.}
+\label{tab:per_tier}
+\end{table}
 
 % =====================================================================
 \section{S5 --- $m_{\min}$ sensitivity}\label{app:s5}

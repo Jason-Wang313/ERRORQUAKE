@@ -1,0 +1,27 @@
+{
+  "meta/llama-3.1-405b-instruct": {
+    "available": true,
+    "tested_keys": 1,
+    "last_error": null
+  },
+  "meta/llama-3.3-70b-instruct": {
+    "available": true,
+    "tested_keys": 3,
+    "last_error": null
+  },
+  "openai/gpt-oss-120b": {
+    "available": true,
+    "tested_keys": 1,
+    "last_error": null
+  },
+  "minimaxai/minimax-m2.5": {
+    "available": true,
+    "tested_keys": 2,
+    "last_error": null
+  },
+  "meta/llama-3.1-70b-instruct": {
+    "available": true,
+    "tested_keys": 2,
+    "last_error": null
+  }
+}
