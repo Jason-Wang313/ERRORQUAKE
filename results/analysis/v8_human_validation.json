@@ -1,0 +1,87 @@
+{
+  "n_items": 192,
+  "n_matched_to_judge": 191,
+  "icc": {
+    "icc_2_1": 0.9409068861791379,
+    "icc_2_k": 0.9794944717151156,
+    "MSR": 3.2600144524432815,
+    "MSC": 4.035156250000002,
+    "MSE": 0.04650005453752161
+  },
+  "icc_interpretation": "excellent",
+  "pairwise_kappa": {
+    "A_vs_B": {
+      "kappa_lin": 0.8383967935871743,
+      "kappa_quad": 0.9681640645562024
+    },
+    "A_vs_C": {
+      "kappa_lin": 0.847305984492014,
+      "kappa_quad": 0.9667580435723561
+    },
+    "B_vs_C": {
+      "kappa_lin": 0.6934583740866462,
+      "kappa_quad": 0.88928426543031
+    }
+  },
+  "thresholds": {
+    "M_ge_2.0": {
+      "tp": 10,
+      "fp": 20,
+      "fn": 20,
+      "tn": 141,
+      "sensitivity": 0.3333333333333333,
+      "specificity": 0.8757763975155279,
+      "ppv": 0.3333333333333333,
+      "npv": 0.8757763975155279
+    },
+    "M_ge_2.5": {
+      "tp": 3,
+      "fp": 4,
+      "fn": 22,
+      "tn": 162,
+      "sensitivity": 0.12,
+      "specificity": 0.9759036144578314,
+      "ppv": 0.42857142857142855,
+      "npv": 0.8804347826086957
+    },
+    "M_ge_3.0": {
+      "tp": 0,
+      "fp": 2,
+      "fn": 13,
+      "tn": 176,
+      "sensitivity": 0.0,
+      "specificity": 0.9887640449438202,
+      "ppv": 0.0,
+      "npv": 0.9312169312169312
+    }
+  },
+  "mean_abs_error_judge_vs_consensus": 0.7212041884816754,
+  "per_model_human_mean": {
+    "llama-3.2-3b-instruct": 0.9375,
+    "deepseek-v3.2": 0.0,
+    "gpt-oss-20b": 0.7916666666666666,
+    "qwen2.5-7b": 0.7916666666666666,
+    "deepseek-v3.1": 0.3125,
+    "gemma-3-12b": 0.5625,
+    "seed-oss-36b": 0.125,
+    "mistral-small-24b": 0.5,
+    "kimi-k2-instruct": 0.8125,
+    "gemma-3-27b": 0.5625,
+    "mistral-small-4-119b": 0.625,
+    "qwen3-next-80b": 1.1875,
+    "gemma-2-27b": 0.5833333333333334,
+    "llama-3.1-8b-instruct": 0.625,
+    "gemma-3-4b": 0.125,
+    "ministral-14b": 0.5625,
+    "mistral-medium-3": 0.0625,
+    "solar-10.7b": 1.0625,
+    "eurollm-9b": 0.8125,
+    "llama-4-maverick": 0.041666666666666664,
+    "phi-3.5-mini": 1.25
+  },
+  "human_vs_judge_b": {
+    "rho": 0.13281295034849558,
+    "p": 0.5660289406657619,
+    "n": 21
+  }
+}
