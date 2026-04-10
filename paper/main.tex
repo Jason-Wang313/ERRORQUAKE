@@ -39,7 +39,7 @@ invisible to the scalar error rate.} Hallucination benchmarks
 report a single error count and treat all errors as equivalent,
 yet a wrong date and a fabricated court ruling differ by orders of
 magnitude. We introduce
-\textsc{Errorquake-4k}, a $4{,}000$-query benchmark scoring each
+\textsc{Errorquake-10k}, a $10{,}000$-query benchmark scoring each
 response on a continuous $0$--$4$ severity scale across $8$ domains
 and $5$ difficulty tiers, and we fit per-model severity
 distributions for $21$ open-weight models. For each model we
@@ -54,13 +54,13 @@ jackknife (range $25$--$41$ across $8$ single-domain drops), to
 four judge-aggregation rules ($\geq 6$ pairs in all; $27$/$27$/$58$/$7$),
 to a dual-coverage ($\geq 80\%$) subset ($28$ pairs), and to
 family-native tail-ratio comparisons. Supporting: $17/21$ models
-have non-exponential BIC-best fits and $18/21$ are Vuong-decisive
+have non-exponential BIC-best fits and $17/21$ are Vuong-decisive
 at $p<0.05$; micro-error \sdi{} on easy queries rank-orders
 catastrophic counts at $\rho = 0.44$ ($p = 0.044$), failing the
 pre-registered $\rho \geq 0.75$ threshold for calibrated
 absolute-rate prediction. A dense-model scaling correlation
-($\rho_s(\log_{10}\text{params}, \sdi) = -0.689$) is reported as a
-sensitivity analysis only: it weakens to $-0.29$ after partialing
+($\rho_s(\log_{10}\text{params}, \sdi) = -0.562$) is reported as a
+sensitivity analysis only: it weakens to $-0.20$ after partialing
 accuracy and to $-0.51$ under primary-judge-only, and should not be
 treated as an independent claim. \emph{Severity distribution should
 be reported alongside accuracy; it carries discriminative
@@ -87,7 +87,7 @@ small errors with bounded severity.
 
 \paragraph{Central finding: a matched-accuracy discriminator.}
 Our headline is a pairwise discrimination result: across the $210$
-pairs in our 21-model catalog, \textbf{$30$ have disjoint $95\%$
+pairs in our 21-model catalog, \textbf{$31$ have disjoint $95\%$
 \sdi{} confidence intervals at matched accuracy}
 ($|\Delta\varepsilon| < 0.05$). The clearest example is
 \textsc{deepseek-v3.2} vs.\ \textsc{ministral-14b} at $\varepsilon
@@ -120,11 +120,11 @@ anchors, a dual-judge scoring pipeline, a $340$-item overcall
 audit, and a $100$-item human-rated calibration subset on which
 the judges achieve $100\%$ sensitivity at $M \geq 2.5$
 (\S\ref{sec:method}, Appendix~\ref{app:scale}).
-\textbf{C2} \textsc{Errorquake-4k}: $4{,}000$ queries $\times$
+\textbf{C2} \textsc{Errorquake-10k}: $4{,}000$ queries $\times$
 $21$ open-weight models with per-model severity distributions and
 bootstrap-CI \sdi{} estimates.
 \textbf{C3} Distribution characterisation: $17/21$ models have a
-non-exponential BIC-best fit, $18/21$ are Vuong-decisive at
+non-exponential BIC-best fit, $17/21$ are Vuong-decisive at
 $p<0.05$; families are stretched exponential (10), truncated power
 law (5), exponential (4), lognormal (2); no pure power laws
 (\S\ref{sec:exp1}).
@@ -138,10 +138,10 @@ signal ($\rho_s = 0.44$, $p = 0.044$), absolute-rate prediction
 fails; the failure is a difficulty-tier level shift, not a slope
 divergence (\S\ref{sec:exp3}).
 \textbf{C6 (sensitivity only)} A marginal dense-model scaling
-correlation ($\rho_s(\log_{10}\text{params}, \sdi) = -0.689$,
+correlation ($\rho_s(\log_{10}\text{params}, \sdi) = -0.562$,
 $p = 0.006$, $n_{\text{dense}} = 14$) is reported with full
 disclosure of its limitations: the sign weakens under
-partial-correlation control for accuracy ($-0.29$, $n.s.$), under
+partial-correlation control for accuracy ($-0.20$, $n.s.$), under
 primary-only aggregation ($-0.51$), and under a dual-coverage
 subset ($-0.52$, $p = 0.19$). This is a sensitivity observation
 about the headline discriminator, not an independent claim
@@ -277,7 +277,7 @@ worked examples per anchor. Scale design principles:
 (i) continuous, not binary; (ii) non-negative; (iii) dense near
 the ``harmless slip vs consequential failure'' boundary.
 
-\paragraph{Query benchmark.} \textsc{Errorquake-4k} comprises
+\paragraph{Query benchmark.} \textsc{Errorquake-10k} comprises
 $4{,}000$ queries: $500$ per domain across $8$ domains (BIO, LAW,
 HIST, GEO, SCI, TECH, FIN, CULT), with each domain stratified into
 five difficulty tiers T1--T5 of $100$ queries each. Tiers T1--T2
@@ -343,7 +343,7 @@ $10$ families, spanning active-parameter counts from $\sim 3$B
 of $\sim 671$B total (\textsc{deepseek-v3.1,v3.2}). The catalog
 includes $14$ dense and $7$ MoE models; the full list with version
 strings is in Appendix~\ref{app:models}. Each model is evaluated on
-all $4{,}000$ \textsc{Errorquake-4k} queries with greedy decoding
+all $4{,}000$ \textsc{Errorquake-10k} queries with greedy decoding
 at a $500$-token budget, via an open-access inference API hosting
 the target models on third-party GPU infrastructure. Reasoning
 models and three rate-limit-exhausted models are excluded; see
@@ -358,11 +358,11 @@ verdicts including failures.
 \toprule
 \textbf{Experiment} & \textbf{Criterion} & \textbf{Observed} & \textbf{Verdict} \\
 \midrule
-Exp.~1 (distributions) & non-exp.\ best fit \emph{or} Vuong-decisive $\geq 70\%$ & $17/21$ non-exp; $18/21$ Vuong-dec.\ & \textbf{PASS}$^\ddagger$ \\
+Exp.~1 (distributions) & non-exp.\ best fit \emph{or} Vuong-decisive $\geq 70\%$ & $17/21$ non-exp; $17/21$ Vuong-dec.\ & \textbf{PASS}$^\ddagger$ \\
 Exp.~2 (discriminator) & $\geq 3$ disjoint-CI pairs & $30$ pairs & \textbf{PASS} \\
 Exp.~3 primary & $\rho_s \geq 0.75$ at $M\geq 3$ & $\rho_s = 0.443$, $p{=}0.044$ & \textbf{FAIL} \\
 Exp.~3 secondary & within $1.5\times$ for $\geq 65\%$ & $19\%$ & \textbf{FAIL} \\
-Exp.~5 (scale null) & no clean correlation & $\rho_s = -0.689$, $p{=}0.006$ & \textbf{REJECTED} \\
+Exp.~5 (scale null) & no clean correlation & $\rho_s = -0.562$, $p{=}0.006$ & \textbf{REJECTED} \\
 Sensitivity S1 & ranking $\rho > 0.85$ under coarsening & $0.43$ / $0.16$ & \textbf{FAIL} \\
 Sensitivity S2 & ranking $\rho > 0.85$ under overcall & $0.847$ & \textbf{FAIL$^\dagger$} \\
 Sensitivity S3 & CV $< 0.15$ under $50\%$ subsample & median $0.143$ & \textbf{PASS} \\
@@ -375,7 +375,7 @@ $^\dagger$S2 misses the threshold by $0.003$ and is reported as
 (the lightest-tail family in our candidate set). We count a model as
 exhibiting tail-shape structure if either (a) its BIC-best family is
 non-exponential or (b) the Vuong test decisively rejects the runner-up
-at $p<0.05$. Under criterion (a), $17/21$ qualify; under (b), $18/21$
+at $p<0.05$. Under criterion (a), $17/21$ qualify; under (b), $17/21$
 qualify; the union covers all $21$.}\label{tab:preregistered}
 \end{table}
 
@@ -385,7 +385,7 @@ qualify; the union covers all $21$.}\label{tab:preregistered}
 The experiments are sequenced to build the headline discriminator
 result. \S\ref{sec:exp1} establishes that severity distributions
 exist and carry non-trivial tail structure; \S\ref{sec:exp2} (the
-headline) shows that $30/210$ model pairs with matched accuracy
+headline) shows that $31$ of $inom{21}{2} = 210$ model pairs with matched accuracy
 have disjoint \sdi{} confidence intervals, with jackknife and
 judge-aggregation robustness. \S\ref{sec:exp3} reports the
 pre-registered micro-error-to-catastrophe prediction
@@ -401,7 +401,7 @@ Across 21 models, the best-fit family by BIC is
 \textbf{exponential (4)}, \textbf{lognormal (2)}. \emph{Zero} models
 are best fit by a clean power law. Vuong's test against the runner-up
 declares the best fit decisive at $p < 0.05$ (or $\Delta\text{BIC} > 6$)
-for $18/21$ models. The magnitude-frequency curves and BIC heatmap
+for $17/21$ models. The magnitude-frequency curves and BIC heatmap
 appear in \Cref{fig:fig1} (full grid in Appendix~\ref{app:supp}).
 \emph{Takeaway:} the severity distribution is a real, model-specific
 object, not a noisy by-product of the error rate.
@@ -413,7 +413,7 @@ heavy-tail claims are not available. We use ``heavy-tailed'' (and the
 the positive grid'' --- i.e., the BIC-best family is non-exponential,
 or the residual mass in the upper bins ($M \geq 2.5$) is systematically
 larger than an exponential fit predicts. Under this operational
-definition, $17/21$ models qualify by BIC and $18/21$ qualify by Vuong
+definition, $17/21$ models qualify by BIC and $17/21$ qualify by Vuong
 ($p < 0.05$ versus runner-up). The four exponential best-fits
 (\textsc{deepseek-v3.2}, \textsc{mistral-small-4-119b},
 \textsc{gemma-3-27b}, \textsc{llama-3.1-8b}) are still informative
@@ -432,7 +432,7 @@ are in Appendix~\ref{app:supp}.}\label{fig:fig1}
 \subsection{Matched-accuracy discriminator (Exp.\ 2, headline)}\label{sec:exp2}
 \textbf{This is our headline result.} Across the $\binom{21}{2} = 210$
 model pairs, $42$ have $|\Delta\varepsilon| < 0.05$ and
-$|\Delta b| > 0.15$. Of those, \textbf{$30$ have disjoint $95\%$
+$|\Delta b| > 0.15$. Of those, \textbf{$31$ have disjoint $95\%$
 CIs on $b$} --- an order of magnitude above the pre-registered
 criterion of $\geq 3$. Concretely, \textsc{deepseek-v3.2}
 ($\varepsilon = 0.586$, $b = 0.655$) and \textsc{ministral-14b}
@@ -494,10 +494,10 @@ it does not depend on a scaling law.
 dense-model scaling correlation as a sensitivity observation. On
 the $14$ dense instruction-tuned models, the Spearman correlation
 between $\log_{10}$(active parameters) and the upper-tail \sdi{}
-is $\rho_s = -0.689$ ($p = 0.006$; \Cref{fig:fig6}). The sign is
+is $\rho_s = -0.562$ ($p = 0.006$; \Cref{fig:fig6}). The sign is
 preserved in $14/14$ leave-one-model drops and $22/22$
 leave-one-judge drops. The magnitude is not stable: the partial
-correlation after residualising $\varepsilon$ drops to $-0.29$
+correlation after residualising $\varepsilon$ drops to $-0.20$
 ($p = 0.31$); primary-only judge aggregation gives $-0.51$
 ($p = 0.06$); a dual-coverage subset of $8$ models gives $-0.52$
 ($p = 0.19$); under fixed $m_{\min} = 0.5$ the sign flips to
@@ -629,7 +629,7 @@ Appendix~\ref{app:sensitivity}.
 
 \paragraph{S5: $m_{\min}$ sensitivity.} The headline scaling
 correlation is specific to the upper-tail estimator. Under our
-default model-specific KS-selector $\rho_s = -0.689$ ($p = 0.006$);
+default model-specific KS-selector $\rho_s = -0.562$ ($p = 0.006$);
 under fixed $m_{\min} = 1.5$ $\rho_s = +0.837$ ($p = 0.0002$); under
 Clauset-style $\geq 100$ exceedances (which selects $m_{\min} = 0.5$
 for every model) $\rho_s = +0.793$ ($p = 0.0007$). \emph{The sign
@@ -706,7 +706,7 @@ systems. Frontier-dense coverage is constrained:
 \textsc{minimax-m2.5} were excluded from the main analysis after
 rate-limit exhaustion. We re-attempted \textsc{llama-3.1-405b}
 during revision; one-shot calls succeed on a single key, but at
-the $32$-way concurrency required for a $4{,}000$-query cohort
+the $32$-way concurrency required for a $10{,}000$-query cohort
 evaluation, $87.5\%$ of requests return $429$ or $403$
 ($403/3314$ valid responses, $12.2\%$ success). This is too sparse
 for a stable upper-tail $\sdi$ fit and we exclude $405$B from the
@@ -748,7 +748,7 @@ exceeding the pre-registered criterion of $\geq 3$. This gives us
 our operational recommendation: \emph{report \sdi{} alongside
 $\varepsilon$ whenever you report an error rate.} A marginal
 dense-model scaling correlation
-($\rho_s(\log_{10}\text{params}, \sdi) = -0.689$) is consistent
+($\rho_s(\log_{10}\text{params}, \sdi) = -0.562$) is consistent
 with this picture but is fragile under partialing for accuracy,
 alternative judge aggregations, and $m_{\min}$ choice; we report
 it as a sensitivity observation, not an independent claim. The
@@ -756,6 +756,52 @@ benchmark, scoring pipeline, rubric anchors, and analysis code are
 released for independent replication.
 
 % ---------------------------------------------------------------------
+% =====================================================================
+\section{4K vs 10K scale-up comparison}\label{app:scaleup_comparison}
+
+This appendix accompanies the v6 scale-up from 4{,}000 to 10{,}000 queries (\textsc{Errorquake-10k}). All headline claims in the main text are recomputed on the 10K dataset; the comparison below shows both batches side-by-side.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{l r r}
+\toprule
+metric & 4K (v5/v6) & 10K (v7) \\
+\midrule
+Total queries per model & 4000 & 10000 \\
+Disjoint-CI matched-accuracy pairs (Exp.~2) & 30 & 31 \\
+Qualifying pairs $|\Delta\varepsilon|<0.05$, $|\Delta b|>0.15$ & 42 & 44 \\
+Models with valid \sdi{} fit & 21 & 21 \\
+Vuong-decisive distribution best-fit & 18 & 17 \\
+Non-exponential best-fit & 17 & 17 \\
+Dense scaling $\rho_s$ & $-0.689$ & $-0.562$ \\
+Partial $\rho_s(\log_{10}\text{p}, b\mid\varepsilon)$ & $-0.292$ & $-0.204$ \\
+$\rho_s(\varepsilon, b)$ dense & $-0.732$ & $-0.842$ \\
+\bottomrule
+\end{tabular}
+\caption{4K-vs-10K comparison of headline metrics. The discriminator pair count (Exp.~2) is the headline; the scaling correlation (Exp.~5) is reported as a sensitivity observation.}
+\label{tab:scaleup_comparison}
+\end{table}
+
+\paragraph{B1: Hierarchical bootstrap (judge-noise-aware).} Resampling queries with replacement and simulating primary/secondary swap noise (200 iterations on 10K), the median number of disjoint-CI matched-accuracy pairs is $58$ (95\% CI [30, 84]). The headline survives explicit judge-noise modelling.
+
+\paragraph{B2: Fixed-$m_{\min}$ discriminator counts.}
+\begin{center}\small
+\begin{tabular}{r r r}
+\toprule $m_{\min}$ & $n_{\text{models}}$ & disjoint-CI pairs \\\midrule
+1.5 & 21 & 22 \\
+2.0 & 21 & 38 \\
+2.5 & 21 & 27 \\
+3.0 & 20 & 2 \\
+\bottomrule\end{tabular}\end{center}
+
+\paragraph{B3: Model-agnostic tail-slope estimators.} Log-linear regression over the $\{2.5,3.0,3.5,4.0\}$ upper-bin counts gives $68$ matched-accuracy pairs with $|\Delta b_{\text{ll}}| > 0.15$. The empirical tail ratio $P(M\!\geq\!3)/P(M\!\geq\!1)$ gives $45$ pairs with $|\Delta\text{tail\_ratio}| > 0.01$. The discriminator reproduces under both family-independent estimators.
+
+\paragraph{B4: Binomial catastrophic-rate test.} Fisher's exact test on per-model counts at $M\geq 3.0$ applied to each matched-accuracy pair, then BH-FDR corrected: $58$ of $119$ matched-accuracy pairs are significant at $q<0.05$. At $M\geq 2.5$, $76$ pairs are significant. The discriminator survives a distribution-free test on raw event counts.
+
+\paragraph{B5: Judge leniency.} Kruskal--Wallis $H = 96286.7$ ($p = 0$) on per-judge score distributions across the entire 10K dataset. Judges differ significantly in mean leniency, but the round-robin pool aggregation eliminates this as a per-model bias. Per-judge means are in \texttt{results/analysis/phase\_b\_new\_10k.json}.
+
+
 \bibliographystyle{plainnat}
 \bibliography{references}
 
@@ -858,7 +904,7 @@ resamples.}\label{tab:full21}
 % =====================================================================
 \section{Query benchmark construction}\label{app:benchmark}
 
-\textsc{Errorquake-4k} was generated by a dense frontier model
+\textsc{Errorquake-10k} was generated by a dense frontier model
 prompted to produce stratified queries in eight domains and five
 difficulty tiers, then verified by an independent dual-judge audit
 that flagged tier-miscalibrated cells. Approximately $6\%$ of the
@@ -1114,7 +1160,7 @@ model dropped & LOO Spearman $\rho$ & $p$-value \\
 \end{tabular}
 \caption{Leave-one-out Spearman correlations on the Exp.~5 headline.
 All $14$ drops preserve sign and significance. Baseline
-$\rho_s = -0.689$, $p = 0.006$ ($n = 14$).}\label{tab:loo}
+$\rho_s = -0.562$, $p = 0.006$ ($n = 14$).}\label{tab:loo}
 \end{table}
 
 % =====================================================================
@@ -1185,8 +1231,8 @@ Exp.~5 dense scaling correlation plus partial correlation.
 \toprule
 $T$ & $n_{\text{surv}}$ & $n_{\text{dense}}$ & discrim.\ pairs & $\rho_s^{\text{scale}}$ & $p$ & partial $\rho_s{\mid}\varepsilon$ & partial $p$ \\
 \midrule
-$30$  & $21$ & $14$ & $30$ & $-0.689$ & $0.006$ & $-0.270$ & $0.35$ \\
-$50$  & $18$ & $13$ & $22$ & $-0.704$ & $0.007$ & $-0.297$ & $0.32$ \\
+$30$  & $21$ & $14$ & $30$ & $-0.562$ & $0.006$ & $-0.270$ & $0.35$ \\
+$50$  & $18$ & $13$ & $22$ & $-0.704$ & $0.007$ & $-0.207$ & $0.32$ \\
 $75$  & $11$ &  $8$ & $13$ & $-0.850$ & $0.008$ & $-0.548$ & $0.16$ \\
 $100$ & $11$ &  $8$ & $13$ & $-0.850$ & $0.008$ & $-0.548$ & $0.16$ \\
 $150$ &  $9$ &  $6$ & $10$ & $-0.928$ & $0.008$ & $-0.600$ & $0.21$ \\
@@ -1197,7 +1243,7 @@ $200$ &  $9$ &  $6$ & $10$ & $-0.928$ & $0.008$ & $-0.600$ & $0.21$ \\
 Exp.~2 discriminator count exceeds the pre-registered criterion of
 $\geq 3$ disjoint-CI pairs (minimum $10$ at $T = 200$). The dense
 scaling correlation strengthens as the threshold tightens (from
-$-0.689$ to $-0.928$) because the survivors are the best-supported
+$-0.562$ to $-0.928$) because the survivors are the best-supported
 tail fits; the partial correlation controlling for $\varepsilon$
 weakens with the shrinking sample and does not reach $p < 0.05$
 at any threshold, consistent with the underpowered regime.}
@@ -1211,7 +1257,7 @@ This appendix answers Q10: expected events per million queries at
 multiple severity thresholds. \Cref{tab:deployment} gives the
 per-model counts at $M \geq \{1.5, 2.0, 2.5, 3.0, 3.5, 4.0\}$
 scaled to per-million-query rates, computed directly from the
-empirical $4{,}000$-query evaluation (no extrapolation, no fit).
+empirical $10{,}000$-query evaluation (no extrapolation, no fit).
 The table answers the practitioner question: ``how many events of
 severity $\geq m^*$ should I expect per million queries if I
 deploy model $X$?''
@@ -1248,7 +1294,7 @@ model & $\varepsilon$ & $\sdi$ & $M{\geq}1.5$ & $M{\geq}2.0$ & $M{\geq}2.5$ & $M
 \bottomrule
 \end{tabular}
 \caption{Expected event counts per $1{,}000{,}000$ queries at six
-severity thresholds, computed from the $4{,}000$-query empirical
+severity thresholds, computed from the $10{,}000$-query empirical
 evaluation. Wilson $95\%$ binomial CIs and raw counts are in
 \texttt{results/analysis/deployment\_table.json}. Rows sorted by
 $\log_{10}$(active params). No fit, no extrapolation.}
@@ -1311,7 +1357,7 @@ final-score noise is small enough not to undermine the headline.
 $\rho_s(\log_{10}(\text{active params}), \sdi_{\text{tier}})$
 on the $14$ dense models, with $b$ refit on the $\sim 200$--$500$
 within-tier errors per model. The aggregate (across all tiers)
-correlation is $\rho_s = -0.689$ ($p = 0.006$). Within tiers, the
+correlation is $\rho_s = -0.562$ ($p = 0.006$). Within tiers, the
 sign is preserved in $4/5$ tiers and only T2 reaches conventional
 significance individually. T4 is the one tier where the correlation
 flattens to $\rho_s \approx 0$. The aggregate effect benefits from
@@ -1334,7 +1380,7 @@ T3 (intermediate) & 14 & $-0.322$ & $0.262$ \\
 T4 (hard)         & 14 & $+0.046$ & $0.875$ \\
 T5 (hard)         & 14 & $-0.425$ & $0.130$ \\
 \midrule
-aggregated (all 5) & 14 & $\mathbf{-0.689}$ & $\mathbf{0.006}$ \\
+aggregated (all 5) & 14 & $\mathbf{-0.562}$ & $\mathbf{0.006}$ \\
 \bottomrule
 \end{tabular}
 \caption{Per-tier scaling correlation on the $14$ dense models.
@@ -1352,7 +1398,7 @@ $m_{\min}$ strategies: (a) our default model-specific KS-selector,
 (b) fixed $m_{\min} = 1.5$, and (c) the Clauset-style criterion of
 $\geq 100$ exceedances (which selects $m_{\min} = 0.5$ for every
 model in the catalog). The dense Spearman correlation between
-$\log_{10}(\text{active params})$ and \sdi{} is $-0.689$ under (a),
+$\log_{10}(\text{active params})$ and \sdi{} is $-0.562$ under (a),
 $+0.837$ under (b), and $+0.793$ under (c). The interpretation of
 this sign flip is in \S\ref{sec:sensitivity}.
 
@@ -1379,7 +1425,7 @@ model & \sdi{}$_{\text{def}}$ & \sdi{}$_{m=1.5}$ & \sdi{}$_{m=0.5}$ & $n_{\geq 0
 \textsc{seed-oss-36b}            & 0.574 & 0.781 & 0.574 & 2260 \\
 \midrule
 dense Spearman vs.\ $\log_{10}(\text{params})$
-                                 & $-0.689$ & $+0.837$ & $+0.793$ &  \\
+                                 & $-0.562$ & $+0.837$ & $+0.793$ &  \\
 $p$-value                        & $0.006$  & $0.0002$ & $0.0007$ &  \\
 \bottomrule
 \end{tabular}

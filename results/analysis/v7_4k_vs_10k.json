@@ -1,0 +1,44 @@
+{
+  "n_queries": {
+    "4k": 4000,
+    "10k": 10000
+  },
+  "n_pairs_disjoint": {
+    "4k": 30,
+    "10k": 31
+  },
+  "n_pairs_qualifying": {
+    "4k": 42,
+    "10k": 44
+  },
+  "n_models_with_b": {
+    "4k": 21,
+    "10k": 21
+  },
+  "n_decisive": {
+    "4k": 18,
+    "10k": 17
+  },
+  "n_nonexp": {
+    "4k": 17,
+    "10k": 17
+  },
+  "rho_scale": {
+    "4k": -0.689,
+    "10k": -0.5616753713347159
+  },
+  "partial_rho": {
+    "4k": -0.292,
+    "10k": -0.2043956043956044
+  },
+  "rho_eps_b": {
+    "4k": -0.732,
+    "10k": -0.8417582417582418
+  },
+  "exp1_family_counts_10k": {
+    "exponential": 4,
+    "stretched_exp": 13,
+    "truncated_power_law": 4
+  },
+  "b1_hier_bootstrap_pairs_median": 57.5
+}
