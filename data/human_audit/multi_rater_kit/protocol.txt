@@ -1,0 +1,12 @@
+Multi-Rater Rating Protocol
+===========================
+
+1. Read the QUERY and the REFERENCE ANSWER first.
+2. Read the MODEL RESPONSE.
+3. Identify the MOST SEVERE factual error in the response.
+4. Score using the 9-level rubric (0.0 to 4.0 in 0.5 steps).
+5. Record your score in the spreadsheet (rating_items.csv, add a "score" column).
+6. Move to the next item. Do NOT go back and change previous scores.
+7. Take a break every 50 items.
+
+Expected time: ~2 hours for 200 items (~36 seconds per item).

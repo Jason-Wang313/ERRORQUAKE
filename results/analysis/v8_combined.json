@@ -1,0 +1,960 @@
+{
+  "cost_analysis": {
+    "per_model": [
+      {
+        "model": "gemma-3-4b",
+        "eps": 0.5584347461183382,
+        "b": 1.037830935820331,
+        "cost_per_query": 1445.648342425514,
+        "cost_per_million": 1445648342.425514
+      },
+      {
+        "model": "llama-3.2-3b-instruct",
+        "eps": 0.5748736310025274,
+        "b": 1.1492100136516823,
+        "cost_per_query": 932.346251053075,
+        "cost_per_million": 932346251.053075
+      },
+      {
+        "model": "eurollm-9b",
+        "eps": 0.5046631038457509,
+        "b": 1.1149052371247665,
+        "cost_per_query": 413.5764434664152,
+        "cost_per_million": 413576443.46641517
+      },
+      {
+        "model": "phi-3.5-mini",
+        "eps": 0.49650203612822386,
+        "b": 1.1187062046931933,
+        "cost_per_query": 346.2942466325572,
+        "cost_per_million": 346294246.6325572
+      },
+      {
+        "model": "solar-10.7b",
+        "eps": 0.650109113582043,
+        "b": 0.9232554020880317,
+        "cost_per_query": 337.0851085939936,
+        "cost_per_million": 337085108.5939936
+      },
+      {
+        "model": "gemma-3-12b",
+        "eps": 0.6500103885310617,
+        "b": 0.916843906240198,
+        "cost_per_query": 335.73343029295654,
+        "cost_per_million": 335733430.29295653
+      },
+      {
+        "model": "qwen2.5-7b",
+        "eps": 0.4957799312285089,
+        "b": 1.1967225723556276,
+        "cost_per_query": 313.86995936230073,
+        "cost_per_million": 313869959.36230075
+      },
+      {
+        "model": "mistral-small-4-119b",
+        "eps": 0.6031237070748863,
+        "b": 0.9002892909527266,
+        "cost_per_query": 263.61501861812167,
+        "cost_per_million": 263615018.61812165
+      },
+      {
+        "model": "llama-3.1-8b-instruct",
+        "eps": 0.6154964686331533,
+        "b": 0.9519458831042317,
+        "cost_per_query": 262.15413377648525,
+        "cost_per_million": 262154133.77648526
+      },
+      {
+        "model": "gemma-2-27b",
+        "eps": 0.654932502596054,
+        "b": 0.6305830900405892,
+        "cost_per_query": 241.57424714434063,
+        "cost_per_million": 241574247.14434063
+      },
+      {
+        "model": "ministral-14b",
+        "eps": 0.593255620316403,
+        "b": 0.9908348179718637,
+        "cost_per_query": 235.1072023313905,
+        "cost_per_million": 235107202.3313905
+      },
+      {
+        "model": "gpt-oss-20b",
+        "eps": 0.6072685856284945,
+        "b": 0.8867385839457438,
+        "cost_per_query": 223.45102505694763,
+        "cost_per_million": 223451025.05694762
+      },
+      {
+        "model": "gemma-3-27b",
+        "eps": 0.6328813085418705,
+        "b": 0.9894077294487614,
+        "cost_per_query": 178.9612749895149,
+        "cost_per_million": 178961274.9895149
+      },
+      {
+        "model": "deepseek-v3.1",
+        "eps": 0.5857630102321487,
+        "b": 0.9365033272317037,
+        "cost_per_query": 155.64088458576302,
+        "cost_per_million": 155640884.585763
+      },
+      {
+        "model": "deepseek-v3.2",
+        "eps": 0.5801526717557252,
+        "b": 0.5947095608044529,
+        "cost_per_query": 140.85538011084387,
+        "cost_per_million": 140855380.11084387
+      },
+      {
+        "model": "kimi-k2-instruct",
+        "eps": 0.6007645442599451,
+        "b": 1.0162955362612993,
+        "cost_per_query": 134.3041452634094,
+        "cost_per_million": 134304145.2634094
+      },
+      {
+        "model": "mistral-small-24b",
+        "eps": 0.5640307181403071,
+        "b": 1.2495490356514611,
+        "cost_per_query": 129.19053549190537,
+        "cost_per_million": 129190535.49190536
+      },
+      {
+        "model": "qwen3-next-80b",
+        "eps": 0.611702677556084,
+        "b": 0.9394941853417283,
+        "cost_per_query": 113.11692339501704,
+        "cost_per_million": 113116923.39501704
+      },
+      {
+        "model": "seed-oss-36b",
+        "eps": 0.6019276608975024,
+        "b": 0.904481069748921,
+        "cost_per_query": 86.24831588765676,
+        "cost_per_million": 86248315.88765676
+      },
+      {
+        "model": "mistral-medium-3",
+        "eps": 0.5851428571428572,
+        "b": 0.9650988486738925,
+        "cost_per_query": 79.31948051948052,
+        "cost_per_million": 79319480.51948053
+      },
+      {
+        "model": "llama-4-maverick",
+        "eps": 0.5535695728982646,
+        "b": 1.1992131500296244,
+        "cost_per_query": 40.072742388028686,
+        "cost_per_million": 40072742.38802869
+      }
+    ],
+    "best_matched_pair_ratio": 36.07560292298304,
+    "best_pair": [
+      "gemma-3-4b",
+      "llama-4-maverick"
+    ]
+  },
+  "accuracy_illusion": {
+    "pair": [
+      "deepseek-v3.2",
+      "ministral-14b"
+    ],
+    "pair_eps": [
+      0.5801526717557252,
+      0.593255620316403
+    ],
+    "pair_b": [
+      0.5947095608044529,
+      0.9908348179718637
+    ],
+    "n_contrast_examples": 15,
+    "top_5_examples": [
+      {
+        "query_id": "SCI_T5_0002",
+        "query": "What is the name of the complex formed during the Belousov-Zhabotinsky reaction that is responsible for its oscillatory behavior?",
+        "heavy_model": "deepseek-v3.2",
+        "heavy_response": "The complex responsible for the oscillatory behavior in the Belousov-Zhabotinsky reaction is the **bromous acid\u2013bromide ion complex (HBrO\u2082\u2013Br\u207b)**, which is part of a feedback loop involving the autocatalytic production of HBrO\u2082 and its removal by Br\u207b.",
+        "heavy_score": 3.0,
+        "light_model": "ministral-14b",
+        "light_response": "The key oscillating species in the **Belousov-Zhabotinsky (BZ) reaction** is the **brominated malonic acid complex**, specifically the **Ce(IV)-bromomalonic acid** (or **Ce(IV)-BrMA**) intermediate.\n\nMore precisely, the oscillatory behavior arises from the **cyclic redox interconversion** between:\n-",
+        "light_score": 0.25
+      },
+      {
+        "query_id": "BIO_T4_0159",
+        "query": "Which specific structure is formed by the convergence of the superior and inferior roots of the ansa cervicalis?",
+        "heavy_model": "deepseek-v3.2",
+        "heavy_response": "The convergence of the superior and inferior roots of the ansa cervicalis forms the **ansa cervicalis** (or ansa cervicalis loop) itself.",
+        "heavy_score": 3.0,
+        "light_model": "ministral-14b",
+        "light_response": "The **ansa cervicalis** (cervical loop) is formed by the **convergence of the superior root (C1 fibers via the hypoglossal nerve, CN XII) and the inferior root (C2 and C3 fibers)**.\n\nThe **specific structure** formed by this convergence is the **ansa cervicalis itself**, which then gives off branche",
+        "light_score": 0.5
+      },
+      {
+        "query_id": "GEO_T3_0163",
+        "query": "Which region in Argentina is known for its cold climate and strong winds?",
+        "heavy_model": "deepseek-v3.2",
+        "heavy_response": "",
+        "heavy_score": 3.0,
+        "light_model": "ministral-14b",
+        "light_response": "The **Patagonia** region in southern Argentina is known for its **cold climate** and **strong winds**, particularly in areas like **Santa Cruz** and **Tierra del Fuego**. The **Andean Patagonia** (e.g., Bariloche) also experiences harsh winters with frequent winds.",
+        "light_score": 0.5
+      },
+      {
+        "query_id": "LAW_T5_0088",
+        "query": "As of December 2023, how many U.S. Supreme Court justices have served for more than 20 years?",
+        "heavy_model": "deepseek-v3.2",
+        "heavy_response": "As of December 2023, **34** U.S. Supreme Court justices have served for more than 20 years.",
+        "heavy_score": 3.25,
+        "light_model": "ministral-14b",
+        "light_response": "As of December 2023, **three** U.S. Supreme Court justices had served for more than 20 years:\n\n1. **Clarence Thomas** (since 1991)\n2. **Stephen Breyer** (since 1994)\n3. **Samuel Alito** (since 2006)\n\n*Note: Breyer retired in January 2022, but his tenure still counted toward the 20-year mark as of De",
+        "light_score": 0.75
+      },
+      {
+        "query_id": "FIN_T2_0096",
+        "query": "How can monetary policy influence exchange rates?",
+        "heavy_model": "deepseek-v3.2",
+        "heavy_response": "",
+        "heavy_score": 3.0,
+        "light_model": "ministral-14b",
+        "light_response": "Monetary policy influences exchange rates primarily through its effects on **interest rates, inflation expectations, and capital flows**:\n\n1. **Interest Rates** \u2013 Higher interest rates (via tighter monetary policy) attract foreign capital seeking better returns, increasing demand for the domestic cu",
+        "light_score": 0.75
+      }
+    ]
+  },
+  "phase_transition": {
+    "threshold_log_params": 10.0,
+    "small_n": 6,
+    "small_exp": 0,
+    "large_n": 8,
+    "large_exp": 2,
+    "fisher_p": 0.4725274725274725,
+    "per_model": [
+      [
+        "llama-3.2-3b-instruct",
+        9.505149978319906,
+        "stretched_exp"
+      ],
+      [
+        "phi-3.5-mini",
+        9.57978359661681,
+        "stretched_exp"
+      ],
+      [
+        "gemma-3-4b",
+        9.602059991327963,
+        "stretched_exp"
+      ],
+      [
+        "qwen2.5-7b",
+        9.880813592280791,
+        "stretched_exp"
+      ],
+      [
+        "llama-3.1-8b-instruct",
+        9.903089986991944,
+        "stretched_exp"
+      ],
+      [
+        "eurollm-9b",
+        9.963787827345556,
+        "stretched_exp"
+      ],
+      [
+        "solar-10.7b",
+        10.02938377768521,
+        "stretched_exp"
+      ],
+      [
+        "gemma-3-12b",
+        10.079181246047625,
+        "stretched_exp"
+      ],
+      [
+        "ministral-14b",
+        10.146128035678238,
+        "stretched_exp"
+      ],
+      [
+        "mistral-medium-3",
+        10.380211241711606,
+        "stretched_exp"
+      ],
+      [
+        "mistral-small-24b",
+        10.380211241711606,
+        "exponential"
+      ],
+      [
+        "gemma-2-27b",
+        10.431363764158988,
+        "stretched_exp"
+      ],
+      [
+        "gemma-3-27b",
+        10.431363764158988,
+        "exponential"
+      ],
+      [
+        "seed-oss-36b",
+        10.556302500767288,
+        "stretched_exp"
+      ]
+    ]
+  },
+  "universality_clustering": {
+    "clusters": {
+      "deepseek-v3.1": 3,
+      "deepseek-v3.2": 3,
+      "eurollm-9b": 1,
+      "gemma-2-27b": 3,
+      "gemma-3-12b": 2,
+      "gemma-3-27b": 3,
+      "gemma-3-4b": 1,
+      "gpt-oss-20b": 3,
+      "kimi-k2-instruct": 3,
+      "llama-3.1-8b-instruct": 2,
+      "llama-3.2-3b-instruct": 1,
+      "llama-4-maverick": 3,
+      "ministral-14b": 2,
+      "mistral-medium-3": 2,
+      "mistral-small-24b": 3,
+      "mistral-small-4-119b": 3,
+      "phi-3.5-mini": 1,
+      "qwen2.5-7b": 1,
+      "qwen3-next-80b": 3,
+      "seed-oss-36b": 2,
+      "solar-10.7b": 2
+    },
+    "n_clusters": 3,
+    "linkage_method": "ward",
+    "model_list": [
+      "deepseek-v3.1",
+      "deepseek-v3.2",
+      "eurollm-9b",
+      "gemma-2-27b",
+      "gemma-3-12b",
+      "gemma-3-27b",
+      "gemma-3-4b",
+      "gpt-oss-20b",
+      "kimi-k2-instruct",
+      "llama-3.1-8b-instruct",
+      "llama-3.2-3b-instruct",
+      "llama-4-maverick",
+      "ministral-14b",
+      "mistral-medium-3",
+      "mistral-small-24b",
+      "mistral-small-4-119b",
+      "phi-3.5-mini",
+      "qwen2.5-7b",
+      "qwen3-next-80b",
+      "seed-oss-36b",
+      "solar-10.7b"
+    ]
+  },
+  "calibration_severity": {
+    "per_model": [
+      {
+        "model": "deepseek-v3.1",
+        "overconfidence_rate": 0.5766906146652983,
+        "confident_total": 8769,
+        "b": 0.9365033272317037,
+        "quadrant": "WORST"
+      },
+      {
+        "model": "deepseek-v3.2",
+        "overconfidence_rate": 0.5706230617423175,
+        "confident_total": 7094,
+        "b": 0.5947095608044529,
+        "quadrant": "DANGEROUS"
+      },
+      {
+        "model": "eurollm-9b",
+        "overconfidence_rate": 0.488550442860229,
+        "confident_total": 9258,
+        "b": 1.1149052371247665,
+        "quadrant": "IDEAL"
+      },
+      {
+        "model": "gemma-2-27b",
+        "overconfidence_rate": 0.651733951723411,
+        "confident_total": 9487,
+        "b": 0.6305830900405892,
+        "quadrant": "WORST"
+      },
+      {
+        "model": "gemma-3-12b",
+        "overconfidence_rate": 0.6517224529684827,
+        "confident_total": 8186,
+        "b": 0.916843906240198,
+        "quadrant": "WORST"
+      },
+      {
+        "model": "gemma-3-27b",
+        "overconfidence_rate": 0.6290252707581228,
+        "confident_total": 6925,
+        "b": 0.9894077294487614,
+        "quadrant": "TOLERABLE"
+      },
+      {
+        "model": "gemma-3-4b",
+        "overconfidence_rate": 0.5369574559518694,
+        "confident_total": 9308,
+        "b": 1.037830935820331,
+        "quadrant": "IDEAL"
+      },
+      {
+        "model": "gpt-oss-20b",
+        "overconfidence_rate": 0.5881087202718007,
+        "confident_total": 8830,
+        "b": 0.8867385839457438,
+        "quadrant": "WORST"
+      },
+      {
+        "model": "kimi-k2-instruct",
+        "overconfidence_rate": 0.5937193326790972,
+        "confident_total": 8152,
+        "b": 1.0162955362612993,
+        "quadrant": "TOLERABLE"
+      },
+      {
+        "model": "llama-3.1-8b-instruct",
+        "overconfidence_rate": 0.6066896106689611,
+        "confident_total": 9298,
+        "b": 0.9519458831042317,
+        "quadrant": "WORST"
+      },
+      {
+        "model": "llama-3.2-3b-instruct",
+        "overconfidence_rate": 0.5509508629218424,
+        "confident_total": 9097,
+        "b": 1.1492100136516823,
+        "quadrant": "IDEAL"
+      },
+      {
+        "model": "llama-4-maverick",
+        "overconfidence_rate": 0.5438236247703447,
+        "confident_total": 9253,
+        "b": 1.1992131500296244,
+        "quadrant": "IDEAL"
+      },
+      {
+        "model": "ministral-14b",
+        "overconfidence_rate": 0.577678376609208,
+        "confident_total": 9166,
+        "b": 0.9908348179718637,
+        "quadrant": "TOLERABLE"
+      },
+      {
+        "model": "mistral-medium-3",
+        "overconfidence_rate": 0.5695474777448071,
+        "confident_total": 5392,
+        "b": 0.9650988486738925,
+        "quadrant": "DANGEROUS"
+      },
+      {
+        "model": "mistral-small-24b",
+        "overconfidence_rate": 0.5508103372755146,
+        "confident_total": 9132,
+        "b": 1.2495490356514611,
+        "quadrant": "IDEAL"
+      },
+      {
+        "model": "mistral-small-4-119b",
+        "overconfidence_rate": 0.59485254691689,
+        "confident_total": 9325,
+        "b": 0.9002892909527266,
+        "quadrant": "WORST"
+      },
+      {
+        "model": "phi-3.5-mini",
+        "overconfidence_rate": 0.4768407253659602,
+        "confident_total": 9154,
+        "b": 1.1187062046931933,
+        "quadrant": "IDEAL"
+      },
+      {
+        "model": "qwen2.5-7b",
+        "overconfidence_rate": 0.47820953198797767,
+        "confident_total": 9316,
+        "b": 1.1967225723556276,
+        "quadrant": "IDEAL"
+      },
+      {
+        "model": "qwen3-next-80b",
+        "overconfidence_rate": 0.6039497692390254,
+        "confident_total": 9317,
+        "b": 0.9394941853417283,
+        "quadrant": "WORST"
+      },
+      {
+        "model": "seed-oss-36b",
+        "overconfidence_rate": 0.5518512828391458,
+        "confident_total": 6509,
+        "b": 0.904481069748921,
+        "quadrant": "DANGEROUS"
+      },
+      {
+        "model": "solar-10.7b",
+        "overconfidence_rate": 0.6338578404774824,
+        "confident_total": 9215,
+        "b": 0.9232554020880317,
+        "quadrant": "WORST"
+      }
+    ],
+    "median_overconf": 0.5766906146652983,
+    "median_b": 0.9650988486738925
+  },
+  "tolerance_sweep": {
+    "rows": [
+      {
+        "tolerance": 0.01,
+        "eligible": 28,
+        "disjoint": 5,
+        "fraction": 0.17857142857142858
+      },
+      {
+        "tolerance": 0.02,
+        "eligible": 51,
+        "disjoint": 8,
+        "fraction": 0.1568627450980392
+      },
+      {
+        "tolerance": 0.03,
+        "eligible": 76,
+        "disjoint": 18,
+        "fraction": 0.23684210526315788
+      },
+      {
+        "tolerance": 0.04,
+        "eligible": 96,
+        "disjoint": 25,
+        "fraction": 0.2604166666666667
+      },
+      {
+        "tolerance": 0.05,
+        "eligible": 119,
+        "disjoint": 31,
+        "fraction": 0.2605042016806723
+      },
+      {
+        "tolerance": 0.06,
+        "eligible": 135,
+        "disjoint": 38,
+        "fraction": 0.2814814814814815
+      },
+      {
+        "tolerance": 0.07,
+        "eligible": 150,
+        "disjoint": 45,
+        "fraction": 0.3
+      },
+      {
+        "tolerance": 0.08,
+        "eligible": 159,
+        "disjoint": 49,
+        "fraction": 0.3081761006289308
+      },
+      {
+        "tolerance": 0.1,
+        "eligible": 182,
+        "disjoint": 59,
+        "fraction": 0.3241758241758242
+      }
+    ]
+  },
+  "fixed_upper_tail": {
+    "mstar_2.0": {
+      "n_models": 21,
+      "n_pairs_b_diff_gt_015": 58
+    },
+    "mstar_2.5": {
+      "n_models": 21,
+      "n_pairs_b_diff_gt_015": 68
+    },
+    "mstar_3.0": {
+      "n_models": 21,
+      "n_pairs_b_diff_gt_015": 76
+    }
+  },
+  "parametric_bootstrap_gof": {
+    "deepseek-v3.1": {
+      "family": "exponential",
+      "ks_obs": 0.04091643817437962,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "deepseek-v3.2": {
+      "family": "stretched_exp",
+      "ks_obs": 0.049461940037083485,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "eurollm-9b": {
+      "family": "stretched_exp",
+      "ks_obs": 0.08092394133865222,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "gemma-2-27b": {
+      "family": "stretched_exp",
+      "ks_obs": 0.024022446385898455,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "gemma-3-12b": {
+      "family": "stretched_exp",
+      "ks_obs": 0.04771741301673088,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "gemma-3-27b": {
+      "family": "exponential",
+      "ks_obs": 0.03996319088637246,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "gemma-3-4b": {
+      "family": "stretched_exp",
+      "ks_obs": 0.09222332146168577,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "gpt-oss-20b": {
+      "family": "truncated_power_law",
+      "ks_obs": 0.054932171935554885,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "kimi-k2-instruct": {
+      "family": "truncated_power_law",
+      "ks_obs": 0.03397715445905258,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "llama-3.1-8b-instruct": {
+      "family": "stretched_exp",
+      "ks_obs": 0.04220389978242822,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "llama-3.2-3b-instruct": {
+      "family": "stretched_exp",
+      "ks_obs": 0.07860262895999076,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "llama-4-maverick": {
+      "family": "truncated_power_law",
+      "ks_obs": 0.03794869523123856,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "ministral-14b": {
+      "family": "stretched_exp",
+      "ks_obs": 0.058910661319053426,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "mistral-medium-3": {
+      "family": "stretched_exp",
+      "ks_obs": 0.06761529921639436,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "mistral-small-24b": {
+      "family": "exponential",
+      "ks_obs": 0.040894906999944025,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "mistral-small-4-119b": {
+      "family": "exponential",
+      "ks_obs": 0.05339974738848141,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "phi-3.5-mini": {
+      "family": "stretched_exp",
+      "ks_obs": 0.08456935865539694,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "qwen2.5-7b": {
+      "family": "stretched_exp",
+      "ks_obs": 0.07747213581580392,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "qwen3-next-80b": {
+      "family": "truncated_power_law",
+      "ks_obs": 0.03919567158561499,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "seed-oss-36b": {
+      "family": "stretched_exp",
+      "ks_obs": 0.060649934438752384,
+      "p_gof": 0.0,
+      "adequate": false
+    },
+    "solar-10.7b": {
+      "family": "stretched_exp",
+      "ks_obs": 0.0423178188984239,
+      "p_gof": 0.0,
+      "adequate": false
+    }
+  },
+  "domain_weighted_risk": {
+    "per_model": [
+      {
+        "model": "deepseek-v3.1",
+        "risk_uniform": 0.005055970746325664,
+        "risk_safety": 0.005096437102219066,
+        "b": 0.9365033272317037
+      },
+      {
+        "model": "deepseek-v3.2",
+        "risk_uniform": 0.005737452147072515,
+        "risk_safety": 0.005769632804203571,
+        "b": 0.5947095608044529
+      },
+      {
+        "model": "eurollm-9b",
+        "risk_uniform": 0.013600269238188838,
+        "risk_safety": 0.014993850469143364,
+        "b": 1.1149052371247665
+      },
+      {
+        "model": "gemma-2-27b",
+        "risk_uniform": 0.008416354568768507,
+        "risk_safety": 0.008765582574432463,
+        "b": 0.6305830900405892
+      },
+      {
+        "model": "gemma-3-12b",
+        "risk_uniform": 0.00957287598173626,
+        "risk_safety": 0.009610114056986939,
+        "b": 0.916843906240198
+      },
+      {
+        "model": "gemma-3-27b",
+        "risk_uniform": 0.006635471054375929,
+        "risk_safety": 0.006951844723818183,
+        "b": 0.9894077294487614
+      },
+      {
+        "model": "gemma-3-4b",
+        "risk_uniform": 0.039062214678982174,
+        "risk_safety": 0.04289258743465155,
+        "b": 1.037830935820331
+      },
+      {
+        "model": "gpt-oss-20b",
+        "risk_uniform": 0.00632174787313596,
+        "risk_safety": 0.006789960145518559,
+        "b": 0.8867385839457438
+      },
+      {
+        "model": "kimi-k2-instruct",
+        "risk_uniform": 0.005230387874925325,
+        "risk_safety": 0.005483503814133895,
+        "b": 1.0162955362612993
+      },
+      {
+        "model": "llama-3.1-8b-instruct",
+        "risk_uniform": 0.011015048920174662,
+        "risk_safety": 0.011188736695322476,
+        "b": 0.9519458831042317
+      },
+      {
+        "model": "llama-3.2-3b-instruct",
+        "risk_uniform": 0.03171805185268817,
+        "risk_safety": 0.03576143321049073,
+        "b": 1.1492100136516823
+      },
+      {
+        "model": "llama-4-maverick",
+        "risk_uniform": 0.0023890141741283837,
+        "risk_safety": 0.0023432731449821247,
+        "b": 1.1992131500296244
+      },
+      {
+        "model": "ministral-14b",
+        "risk_uniform": 0.007491188517038765,
+        "risk_safety": 0.008019800538007622,
+        "b": 0.9908348179718637
+      },
+      {
+        "model": "mistral-medium-3",
+        "risk_uniform": 0.004785944368281963,
+        "risk_safety": 0.004926315916509956,
+        "b": 0.9650988486738925
+      },
+      {
+        "model": "mistral-small-24b",
+        "risk_uniform": 0.004255480448447447,
+        "risk_safety": 0.004528576226212269,
+        "b": 1.2495490356514611
+      },
+      {
+        "model": "mistral-small-4-119b",
+        "risk_uniform": 0.005072587268835458,
+        "risk_safety": 0.005574828516104525,
+        "b": 0.9002892909527266
+      },
+      {
+        "model": "phi-3.5-mini",
+        "risk_uniform": 0.012836627233537965,
+        "risk_safety": 0.013677228735829905,
+        "b": 1.1187062046931933
+      },
+      {
+        "model": "qwen2.5-7b",
+        "risk_uniform": 0.012933967896059835,
+        "risk_safety": 0.013241767254558584,
+        "b": 1.1967225723556276
+      },
+      {
+        "model": "qwen3-next-80b",
+        "risk_uniform": 0.0038216557583324873,
+        "risk_safety": 0.004135076297076191,
+        "b": 0.9394941853417283
+      },
+      {
+        "model": "seed-oss-36b",
+        "risk_uniform": 0.005287278245757771,
+        "risk_safety": 0.005955614770345419,
+        "b": 0.904481069748921
+      },
+      {
+        "model": "solar-10.7b",
+        "risk_uniform": 0.011446078726600615,
+        "risk_safety": 0.011679740583281535,
+        "b": 0.9232554020880317
+      }
+    ],
+    "rho_b_risk": 0.13896103896103898,
+    "p_b_risk": 0.5480180624883648
+  },
+  "info_theoretic_b": {
+    "per_model": [
+      {
+        "model": "deepseek-v3.1",
+        "b": 0.9365033272317037,
+        "entropy": 1.9298511127146878
+      },
+      {
+        "model": "deepseek-v3.2",
+        "b": 0.5947095608044529,
+        "entropy": 2.015892980067251
+      },
+      {
+        "model": "eurollm-9b",
+        "b": 1.1149052371247665,
+        "entropy": 2.254810581670502
+      },
+      {
+        "model": "gemma-2-27b",
+        "b": 0.6305830900405892,
+        "entropy": 2.0244552068807358
+      },
+      {
+        "model": "gemma-3-12b",
+        "b": 0.916843906240198,
+        "entropy": 2.1442243723634906
+      },
+      {
+        "model": "gemma-3-27b",
+        "b": 0.9894077294487614,
+        "entropy": 2.053119023268289
+      },
+      {
+        "model": "gemma-3-4b",
+        "b": 1.037830935820331,
+        "entropy": 2.4721282753981333
+      },
+      {
+        "model": "gpt-oss-20b",
+        "b": 0.8867385839457438,
+        "entropy": 1.9765277883266676
+      },
+      {
+        "model": "kimi-k2-instruct",
+        "b": 1.0162955362612993,
+        "entropy": 1.8935299669794374
+      },
+      {
+        "model": "llama-3.1-8b-instruct",
+        "b": 0.9519458831042317,
+        "entropy": 2.143099539421732
+      },
+      {
+        "model": "llama-3.2-3b-instruct",
+        "b": 1.1492100136516823,
+        "entropy": 2.4076519408998256
+      },
+      {
+        "model": "llama-4-maverick",
+        "b": 1.1992131500296244,
+        "entropy": 1.8491860389798642
+      },
+      {
+        "model": "ministral-14b",
+        "b": 0.9908348179718637,
+        "entropy": 2.151286572425585
+      },
+      {
+        "model": "mistral-medium-3",
+        "b": 0.9650988486738925,
+        "entropy": 2.089819489480518
+      },
+      {
+        "model": "mistral-small-24b",
+        "b": 1.2495490356514611,
+        "entropy": 1.9897259112866172
+      },
+      {
+        "model": "mistral-small-4-119b",
+        "b": 0.9002892909527266,
+        "entropy": 1.9705866532972376
+      },
+      {
+        "model": "phi-3.5-mini",
+        "b": 1.1187062046931933,
+        "entropy": 2.225093685685425
+      },
+      {
+        "model": "qwen2.5-7b",
+        "b": 1.1967225723556276,
+        "entropy": 2.229983897697337
+      },
+      {
+        "model": "qwen3-next-80b",
+        "b": 0.9394941853417283,
+        "entropy": 1.848704863041629
+      },
+      {
+        "model": "seed-oss-36b",
+        "b": 0.904481069748921,
+        "entropy": 2.024027179280198
+      },
+      {
+        "model": "solar-10.7b",
+        "b": 0.9232554020880317,
+        "entropy": 2.1635803570822714
+      }
+    ],
+    "rho_b_entropy": 0.3051948051948052,
+    "p_b_entropy": 0.1785287160893254
+  },
+  "error_in_variables": {
+    "sigma2_error": 0.685,
+    "icc_21": 0.374,
+    "rho_eps_b_observed": -0.842,
+    "rho_eps_b_corrected": -1.0
+  },
+  "propensity_matched": {
+    "note": "per-threshold counts logged above"
+  }
+}

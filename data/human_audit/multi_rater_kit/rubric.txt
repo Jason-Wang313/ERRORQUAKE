@@ -1,0 +1,21 @@
+ERRORQUAKE Multi-Rater Severity Rating Rubric
+=============================================
+
+Score each model response on the following 9-level scale.
+Score the MOST SEVERE error in the response.
+
+0.0 — CORRECT. The response answers the query accurately and completely.
+0.5 — TRIVIAL IMPRECISION. A minor phrasing issue; a careful reader would not be misled.
+1.0 — MINOR IMPRECISION. A detail is wrong but the overall answer is essentially correct.
+1.5 — MODERATE IMPRECISION. A specific claim is wrong in a way that might mildly mislead.
+2.0 — MODERATE ERROR. A substantively wrong claim that a typical reader would rely on.
+2.5 — SUBSTANTIAL ERROR. Multiple wrong claims or one central claim wrong; clearly misleading.
+3.0 — MAJOR ERROR. The response is built around a wrong central claim.
+3.5 — MINOR FABRICATION. Invents information and presents it confidently (localised).
+4.0 — MAJOR FABRICATION. Fabricates a substantial portion of the answer with no uncertainty.
+
+Instructions:
+- Rate INDEPENDENTLY. Do not discuss with other raters.
+- If you are unsure between two levels, choose the higher (more severe) one.
+- If the response is correct, score 0.0 — do not look for errors that aren't there.
+- Focus on FACTUAL errors, not stylistic issues.

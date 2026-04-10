@@ -1,0 +1,1922 @@
+[
+  {
+    "rating_id": "MR_0100",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "GEO_T2_0222",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "What is the capital of the Australian state of Victoria?",
+    "response": "Melbourne.",
+    "reference_answer": "The capital of the Australian state of Victoria is Melbourne."
+  },
+  {
+    "rating_id": "MR_0015",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T2_0086",
+    "domain": "TECH",
+    "tier": 2,
+    "query": "Which specification defines the behavior of the Web Storage API?",
+    "response": "The Web Storage API is defined in the **HTML Living Standard** (previously HTML5) by the Web Hypertext Application Technology Working Group (WHATWG).",
+    "reference_answer": "The Web Storage specification, maintained by the W3C and WHATWG, defines the behavior of the Web Storage API, which allows web applications to store data locally in the browser."
+  },
+  {
+    "rating_id": "MR_0074",
+    "model": "gpt-oss-20b",
+    "query_id": "FIN_T3_0185",
+    "domain": "FIN",
+    "tier": 3,
+    "query": "How does inflation affect the purchasing power of consumers?",
+    "response": "Inflation erodes consumers’ purchasing power: as prices rise, each dollar buys fewer goods and services. If wages or savings don’t keep pace, real income falls, meaning consumers can afford less for the same amount of money.",
+    "reference_answer": "Inflation erodes the purchasing power of consumers by reducing the value of money, as the same amount of currency can buy fewer goods and services as prices rise."
+  },
+  {
+    "rating_id": "MR_0160",
+    "model": "qwen2.5-7b",
+    "query_id": "LAW_T1_0075",
+    "domain": "LAW",
+    "tier": 1,
+    "query": "What is the primary role of administrative law judges in the U.S.?",
+    "response": "The primary role of administrative law judges in the U.S. is to preside over hearings and make binding decisions in cases involving violations of regulations or rules established by government agencies.",
+    "reference_answer": "Administrative law judges preside over hearings and make decisions regarding disputes between individuals or organizations and federal administrative agencies."
+  },
+  {
+    "rating_id": "MR_0161",
+    "model": "qwen2.5-7b",
+    "query_id": "CULT_T1_0167",
+    "domain": "CULT",
+    "tier": 1,
+    "query": "The Terracotta Army was discovered in which Chinese province?",
+    "response": "The Terracotta Army was discovered in the Shaanxi province of China.",
+    "reference_answer": "The Terracotta Army was discovered in Shaanxi province, China."
+  },
+  {
+    "rating_id": "MR_0003",
+    "model": "deepseek-v3.1",
+    "query_id": "LAW_T2_0108",
+    "domain": "LAW",
+    "tier": 2,
+    "query": "Under U.S. contract law, what are the requirements for a valid liquidated damages clause?",
+    "response": "Under U.S. contract law, a liquidated damages clause is valid if it meets three primary requirements:\n\n1.  **The damages upon breach must be difficult to estimate accurately at the time of contract formation.**\n2.  **The stipulated amount must be a reasonable forecast of the anticipated harm** (not a penalty).\n3.  **The amount must be reasonable in relation to the actual loss suffered** (proportionality).\n\nThese requirements ensure the clause is a genuine pre-estimate of damages rather than a punitive penalty designed to compel performance.",
+    "reference_answer": "A valid liquidated damages clause must be a reasonable forecast of the damages that would result from a breach at the time the contract was made, and the damages must be difficult to ascertain or estimate at that time."
+  },
+  {
+    "rating_id": "MR_0046",
+    "model": "gemma-3-12b",
+    "query_id": "GEO_T2_0130",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "What is the name of the highest mountain peak in the Andes mountain range?",
+    "response": "Aconcagua.",
+    "reference_answer": "Aconcagua is the highest mountain peak in the Andes mountain range, with a summit elevation of 6,962 meters."
+  },
+  {
+    "rating_id": "MR_0012",
+    "model": "deepseek-v3.2",
+    "query_id": "FIN_T2_0014",
+    "domain": "FIN",
+    "tier": 2,
+    "query": "What was the economic impact of the Chinese Great Leap Forward?",
+    "response": "The Great Leap Forward (1958–1962) caused severe economic damage. Industrial output initially surged but quickly collapsed due to poor-quality production and resource misallocation. Agricultural disruption, caused by forced collectivization and misguided policies, led to a catastrophic famine that killed tens of millions and drastically reduced labor productivity. The overall result was a deep economic depression, with China's GDP declining significantly and per capita income falling sharply, setting back the country's development for years.",
+    "reference_answer": "The Great Leap Forward, initiated in 1958, led to one of the worst economic disasters in Chinese history, resulting in widespread famine, significant economic contraction, and an estimated tens of millions of deaths due to the failure of radical agricultural and industrial policies."
+  },
+  {
+    "rating_id": "MR_0131",
+    "model": "mistral-small-24b",
+    "query_id": "LAW_T3_0044",
+    "domain": "LAW",
+    "tier": 3,
+    "query": "What were the main provisions of the Judiciary Act of 1801 and its subsequent repeal?",
+    "response": "The Judiciary Act of 1801, also known as the Midnight Judges Act, had several main provisions:\n\n1. **Creation of New Federal Courts**: It established 16 new federal circuit courts and reduced the number of Supreme Court justices from six to five.\n2. **Appointment of Federalist Judges**: It allowed President John Adams to appoint Federalist judges to these new positions, which was seen as an attempt to maintain Federalist influence in the judiciary.\n3. **Expansion of Judicial Power**: It expanded the jurisdiction of federal courts, giving them more authority over certain types of cases.\n\nThe subsequent repeal of the Judiciary Act of 1801, known as the Repeal Act of 1802, had the following main provisions:\n\n1. **Abolition of New Courts**: It abolished the 16 new circuit courts created by the 1801 act.\n2. **Restoration of Supreme Court Justices**: It restored the number of Supreme Court justices to six.\n3. **Reduction of Judicial Power**: It reduced the jurisdiction of federal courts, returning some cases to state courts.\n\nThese actions were taken by the Jefferson administration to reverse the Federalist influence established by the Judiciary Act of 1801.",
+    "reference_answer": "The Judiciary Act of 1801 expanded the federal judiciary and reduced the number of Supreme Court justices required to be present on circuit, but it was repealed in 1802, restoring the previous number of justices and judiciary structure, reflecting a significant political and legal controversy of the time."
+  },
+  {
+    "rating_id": "MR_0044",
+    "model": "gemma-3-12b",
+    "query_id": "LAW_T2_0152",
+    "domain": "LAW",
+    "tier": 2,
+    "query": "How does the Equal Pay Act of 1963 prohibit discrimination in compensation?",
+    "response": "The Equal Pay Act of 1963 prohibits wage discrimination based on sex when men and women perform substantially equal work in the same establishment. It requires equal pay for equal work, considering skill, effort, and responsibility under similar working conditions.",
+    "reference_answer": "The Equal Pay Act prohibits employers from paying different wages to men and women who perform jobs that require substantially equal skill, effort, and responsibility under similar working conditions."
+  },
+  {
+    "rating_id": "MR_0181",
+    "model": "seed-oss-36b",
+    "query_id": "HIST_T5_0128",
+    "domain": "HIST",
+    "tier": 5,
+    "query": "The concept of the 'Iron Curtain' was first used by Winston Churchill in a speech in which year?",
+    "response": "1946",
+    "reference_answer": "Winston Churchill first used the concept of the 'Iron Curtain' in a speech in 1946."
+  },
+  {
+    "rating_id": "MR_0045",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T4_0088",
+    "domain": "SCI",
+    "tier": 4,
+    "query": "What is the thermodynamic basis for the phenomenon of thermal diffusion?",
+    "response": "Thermal diffusion (also known as the Soret effect) arises from **differences in how molecules interact with a temperature gradient**. Molecules experience different forces depending on their mass and how they contribute to the overall heat capacity, leading to a net movement from hotter to colder (or vice versa) regions. Essentially, it's a manifestation of the interplay between temperature, mass, and heat capacity variations within a system.",
+    "reference_answer": "Thermal diffusion is the process by which a temperature gradient causes a gradient in the concentration of components in a mixture, and it is driven by the thermodynamic principle of maximizing entropy."
+  },
+  {
+    "rating_id": "MR_0135",
+    "model": "mistral-small-24b",
+    "query_id": "CULT_T4_0238",
+    "domain": "CULT",
+    "tier": 4,
+    "query": "The musical term 'bel canto' is associated with which style of singing?",
+    "response": "'Bel canto' is associated with the Italian operatic singing style that emphasizes beauty of tone and the smoothness of the voice. It is characterized by agility, clarity, and a focus on the beauty of the sung line.",
+    "reference_answer": "'Bel canto' is a style of operatic singing that originated in Italy, characterized by its beauty of sound and technical skill, emphasizing the beauty of the voice."
+  },
+  {
+    "rating_id": "MR_0084",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T3_0085",
+    "domain": "LAW",
+    "tier": 3,
+    "query": "What is the 'Americans with Disabilities Act' used for in labor and employment law?",
+    "response": "The Americans with Disabilities Act (ADA) prohibits employers from discriminating against qualified individuals with disabilities in hiring, firing, promotions, pay, and other employment practices, and requires employers to provide reasonable accommodations unless doing so would cause undue hardship.",
+    "reference_answer": "The Americans with Disabilities Act (ADA) is a federal law that prohibits employment discrimination against individuals with disabilities and requires employers to provide reasonable accommodations to enable individuals with disabilities to perform their job duties."
+  },
+  {
+    "rating_id": "MR_0051",
+    "model": "gemma-3-27b",
+    "query_id": "GEO_T3_0090",
+    "domain": "GEO",
+    "tier": 3,
+    "query": "What is the name of the strait that separates New Zealand's North and South Islands?",
+    "response": "Cook Strait.\n\n\n\n",
+    "reference_answer": "There is no strait that separates New Zealand's North and South Islands; they are separated by the Cook Strait."
+  },
+  {
+    "rating_id": "MR_0056",
+    "model": "gemma-3-27b",
+    "query_id": "LAW_T4_0232",
+    "domain": "LAW",
+    "tier": 4,
+    "query": "What was the holding of the Supreme Court in the case of Plyler v. Doe regarding the rights of undocumented alien children to public education?",
+    "response": "In *Plyler v. Doe* (1982), the Supreme Court held that **undocumented alien children are entitled to free public education at the elementary and secondary levels.** The Court found that denying these children education violates the Equal Protection Clause of the Fourteenth Amendment.\n\n\n\n",
+    "reference_answer": "The Supreme Court held in Plyler v. Doe that a Texas statute denying free public education to undocumented alien children violated the Equal Protection Clause of the Fourteenth Amendment."
+  },
+  {
+    "rating_id": "MR_0099",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "SCI_T5_0067",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "What is the name of the earthquake that triggered the 2004 Indian Ocean tsunami, as reported by the United States Geological Survey?",
+    "response": "The 2004 Indian Ocean tsunami was triggered by a massive undersea earthquake known as the Sumatran-Andaman earthquake, also referred to as the 2004 Sumatran-Andaman earthquake.",
+    "reference_answer": "The 2004 Indian Ocean tsunami was triggered by the Sumatra-Andaman earthquake, also known as the 2004 Sumatran earthquake."
+  },
+  {
+    "rating_id": "MR_0141",
+    "model": "mistral-small-4-119b",
+    "query_id": "LAW_T5_0232",
+    "domain": "LAW",
+    "tier": 5,
+    "query": "In the case of SEC v. Jarkesy, how many justices concurred in the judgment?",
+    "response": "In *SEC v. Jarkesy*, **three justices** (Thomas, Gorsuch, and Barrett) concurred in the judgment.",
+    "reference_answer": "Six justices concurred in the judgment in SEC v. Jarkesy."
+  },
+  {
+    "rating_id": "MR_0167",
+    "model": "qwen2.5-7b",
+    "query_id": "BIO_T3_0112",
+    "domain": "BIO",
+    "tier": 3,
+    "query": "What is the primary cause of the condition known as familial hypercholesterolemia?",
+    "response": "The primary cause of familial hypercholesterolemia is a genetic mutation that affects the liver's ability to remove low-density lipoprotein (LDL) cholesterol from the blood.",
+    "reference_answer": "Familial hypercholesterolemia is primarily caused by mutations in the LDLR gene, which encodes the low-density lipoprotein receptor, leading to impaired clearance of LDL cholesterol from the bloodstream."
+  },
+  {
+    "rating_id": "MR_0010",
+    "model": "deepseek-v3.2",
+    "query_id": "BIO_T2_0084",
+    "domain": "BIO",
+    "tier": 2,
+    "query": "What was the contribution of Louis Pasteur to the germ theory of disease?",
+    "response": "Louis Pasteur's key contribution to the germ theory of disease was providing definitive experimental proof that specific microorganisms cause specific diseases and fermentation, disproving spontaneous generation. His work included demonstrating that microbes in the air could spoil sterile broths and developing vaccines for anthrax and rabies, which directly linked germs to illness.",
+    "reference_answer": "Louis Pasteur made significant contributions to the germ theory of disease through his experiments and vaccination techniques, notably his work on anthrax and rabies vaccines, providing evidence that microorganisms cause disease."
+  },
+  {
+    "rating_id": "MR_0083",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T4_0129",
+    "domain": "LAW",
+    "tier": 4,
+    "query": "What is the 'qualified immunity' doctrine in the context of civil rights litigation?",
+    "response": "Qualified immunity is a judicial doctrine that shields government officials (typically police officers) from civil liability in § 1983 actions unless the plaintiff shows (1) the official violated a constitutional right and (2) that right was “clearly established” at the time of the conduct, such that every reasonable official would have known the action was unlawful.",
+    "reference_answer": "Qualified immunity is a doctrine that shields government officials from civil liability for constitutional violations unless their conduct violates clearly established statutory or constitutional rights."
+  },
+  {
+    "rating_id": "MR_0098",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "BIO_T2_0149",
+    "domain": "BIO",
+    "tier": 2,
+    "query": "Which genetic disorder is caused by a deficiency of the enzyme hexosaminidase A?",
+    "response": "The genetic disorder caused by a deficiency of the enzyme hexosaminidase A is Tay-Sachs disease.",
+    "reference_answer": "Tay-Sachs disease is a genetic disorder caused by a deficiency of the enzyme hexosaminidase A, leading to accumulation of GM2 ganglioside in neurons and severe neurological impairment."
+  },
+  {
+    "rating_id": "MR_0176",
+    "model": "qwen3-next-80b",
+    "query_id": "SCI_T4_0134",
+    "domain": "SCI",
+    "tier": 4,
+    "query": "How does the concept of a non-inertial reference frame complicate the application of Newton's laws?",
+    "response": "In a non-inertial reference frame, Newton’s laws do not hold directly because the frame itself is accelerating. To apply Newton’s laws, fictitious forces (such as centrifugal or Coriolis forces) must be introduced to account for the frame’s acceleration, complicating the analysis by adding unphysical forces not arising from interactions.",
+    "reference_answer": "In a non-inertial reference frame, Newton's laws do not apply directly because fictitious forces arise due to the frame's acceleration, complicating the analysis of motion."
+  },
+  {
+    "rating_id": "MR_0039",
+    "model": "gemma-2-27b",
+    "query_id": "GEO_T4_0053",
+    "domain": "GEO",
+    "tier": 4,
+    "query": "Which country has the highest total fertility rate among countries with a population over 1 million?",
+    "response": "Niger \n\n",
+    "reference_answer": "As of 2020, Niger had the highest total fertility rate among countries with a population over 1 million, with an average of approximately 6.8 children per woman."
+  },
+  {
+    "rating_id": "MR_0088",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "GEO_T4_0015",
+    "domain": "GEO",
+    "tier": 4,
+    "query": "The Atacama Desert in Chile is classified under which climate zone due to its arid conditions?",
+    "response": "The Atacama Desert in Chile is classified as a BWh (Hot Desert) climate zone, according to the Köppen climate classification, due to its arid conditions.",
+    "reference_answer": "The Atacama Desert is classified as being in the Arid or Desert climate zone, specifically a cool desert climate due to its coastal location and the influence of the cold Humboldt Current."
+  },
+  {
+    "rating_id": "MR_0140",
+    "model": "mistral-small-24b",
+    "query_id": "SCI_T2_0082",
+    "domain": "SCI",
+    "tier": 2,
+    "query": "What is the difference between accuracy and precision in the context of measurement?",
+    "response": "- **Accuracy** refers to how close a measured value is to the actual (true) value. It indicates the correctness of the measurement.\n- **Precision** refers to how close measured values are to each other. It indicates the consistency or repeatability of the measurement.\n\nFor example:\n- A measurement can be precise (repeated values are close to each other) but inaccurate (values are far from the true value).\n- Conversely, a measurement can be accurate (close to the true value) but imprecise (values vary widely from each other).",
+    "reference_answer": "Accuracy refers to how close a measurement is to the true value, while precision refers to the consistency or repeatability of measurements, with high precision not necessarily implying high accuracy."
+  },
+  {
+    "rating_id": "MR_0060",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T4_0114",
+    "domain": "GEO",
+    "tier": 4,
+    "query": "The climate classification of the region surrounding the Dead Sea is?",
+    "response": "Arid/Semi-Arid (specifically, a hot desert climate).",
+    "reference_answer": "The region surrounding the Dead Sea is classified as having a hot desert climate, characterized by very low precipitation."
+  },
+  {
+    "rating_id": "MR_0165",
+    "model": "qwen2.5-7b",
+    "query_id": "TECH_T2_0077",
+    "domain": "TECH",
+    "tier": 2,
+    "query": "What is the name of the popular open-source operating system kernel developed by Linus Torvalds?",
+    "response": "The name of the popular open-source operating system kernel developed by Linus Torvalds is Linux.",
+    "reference_answer": "The kernel is called Linux, which was initially released by Linus Torvalds in 1991. It is the core component of many operating systems, commonly referred to as Linux distributions."
+  },
+  {
+    "rating_id": "MR_0130",
+    "model": "mistral-small-24b",
+    "query_id": "GEO_T1_0135",
+    "domain": "GEO",
+    "tier": 1,
+    "query": "Which region is known for being the driest desert in the world?",
+    "response": "The driest desert in the world is the Atacama Desert, located in South America, primarily in Chile.",
+    "reference_answer": "The Atacama Desert is known for being the driest non-polar desert in the world."
+  },
+  {
+    "rating_id": "MR_0118",
+    "model": "ministral-14b",
+    "query_id": "CULT_T4_0183",
+    "domain": "CULT",
+    "tier": 4,
+    "query": "Which cultural institution is home to the famous painting 'The Night Watch'?",
+    "response": "The famous painting *The Night Watch* (*De Nachtwacht*) is housed in the **Rijksmuseum** in **Amsterdam, the Netherlands**.",
+    "reference_answer": "The Rijksmuseum in Amsterdam is home to Rembrandt's famous painting 'The Night Watch'."
+  },
+  {
+    "rating_id": "MR_0076",
+    "model": "gpt-oss-20b",
+    "query_id": "CULT_T4_0074",
+    "domain": "CULT",
+    "tier": 4,
+    "query": "Who is the author of the influential philosophical work 'Meditations', a collection of personal reflections and musings?",
+    "response": "Marcus Aurelius.",
+    "reference_answer": "The author of 'Meditations' is Marcus Aurelius, a Roman emperor and philosopher who wrote the work as a source of personal guidance and self-improvement."
+  },
+  {
+    "rating_id": "MR_0069",
+    "model": "gpt-oss-20b",
+    "query_id": "BIO_T2_0226",
+    "domain": "BIO",
+    "tier": 2,
+    "query": "What is the primary neurotransmitter released by motor neurons at the neuromuscular junction?",
+    "response": "Acetylcholine.",
+    "reference_answer": "Acetylcholine is the primary neurotransmitter released by motor neurons at the neuromuscular junction, responsible for initiating muscle contraction."
+  },
+  {
+    "rating_id": "MR_0126",
+    "model": "mistral-medium-3",
+    "query_id": "HIST_T5_0059",
+    "domain": "HIST",
+    "tier": 5,
+    "query": "The Opium Wars between China and Britain occurred in which two years?",
+    "response": "The Opium Wars between China and Britain occurred in **1839–1842 (First Opium War)** and **1856–1860 (Second Opium War)**.",
+    "reference_answer": "The First Opium War occurred between 1839 and 1842, and the Second Opium War took place from 1856 to 1860."
+  },
+  {
+    "rating_id": "MR_0190",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T4_0128",
+    "domain": "GEO",
+    "tier": 4,
+    "query": "What is the name of the largest municipality in Sweden by area?",
+    "response": "Kirkuni is the largest municipality in Sweden by area. It is primarily known for being home to the Kiruna Iron Mine, the largest and deepest open-pit iron ore mine in the world.",
+    "reference_answer": "Kiruna Municipality is the largest municipality in Sweden by area, covering approximately 20,715 square kilometers."
+  },
+  {
+    "rating_id": "MR_0185",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T5_0266",
+    "domain": "GEO",
+    "tier": 5,
+    "query": "According to the Köppen-Geiger climate classification system as updated in the 2006 world map by Kottek et al., what is the specific climate classification for the central region of Madagascar?",
+    "response": "The central region of Madagascar has a tropical dry forest climate, classified as \"BSh\" in the Köppen-Geiger system. This classification indicates hot temperatures with a pronounced dry season.",
+    "reference_answer": "According to the updated Köppen-Geiger climate classification world map published by Kottek et al. in 2006, the central highlands of Madagascar are classified as Cwb. This denotes a temperate oceanic climate with dry winters and warm summers."
+  },
+  {
+    "rating_id": "MR_0029",
+    "model": "gemma-2-27b",
+    "query_id": "TECH_T5_0323",
+    "domain": "TECH",
+    "tier": 5,
+    "query": "According to the 2017 USENIX ATC paper 'Inferring Load Imbalance with Performance Counters', what specific hardware performance counter event on Intel Sandy Bridge processors was found to be the strongest indicator of memory controller load imbalance?",
+    "response": "The paper found that **DRAM Bank Utilization** was the strongest indicator of memory controller load imbalance on Intel Sandy Bridge processors. \n\n",
+    "reference_answer": "The paper 'Inferring Load Imbalance with Performance Counters' identified the `UNC_IMC_NORMAL_READS` performance counter event as the strongest indicator of memory controller load imbalance on Intel Sandy Bridge processors. This event counts normal reads issued to the integrated memory controller (IMC)."
+  },
+  {
+    "rating_id": "MR_0071",
+    "model": "gpt-oss-20b",
+    "query_id": "BIO_T4_0099",
+    "domain": "BIO",
+    "tier": 4,
+    "query": "What was the major contribution of Louis Pasteur to microbiology?",
+    "response": "Louis Pasteur proved that microorganisms are responsible for fermentation and many diseases, establishing the germ‑theory of disease and pioneering practical applications such as pasteurization and vaccines (e.g., for rabies).",
+    "reference_answer": "Louis Pasteur made significant contributions to microbiology, including the development of the germ theory of disease, vaccination techniques, and pasteurization, a method of sterilizing liquids."
+  },
+  {
+    "rating_id": "MR_0173",
+    "model": "qwen3-next-80b",
+    "query_id": "LAW_T3_0117",
+    "domain": "LAW",
+    "tier": 3,
+    "query": "In contract law, how does the doctrine of 'election of remedies' affect a plaintiff's ability to pursue different claims arising from the same set of facts?",
+    "response": "The doctrine of election of remedies prevents a plaintiff from pursuing multiple, inconsistent remedies arising from the same set of facts; once the plaintiff chooses and obtains one remedy, they are generally barred from seeking another incompatible remedy. This ensures finality and prevents double recovery.",
+    "reference_answer": "The doctrine of 'election of remedies' requires a plaintiff to choose between different and inconsistent remedies arising from the same set of facts, and once a plaintiff elects a remedy, they are barred from pursuing another inconsistent remedy."
+  },
+  {
+    "rating_id": "MR_0081",
+    "model": "kimi-k2-instruct",
+    "query_id": "TECH_T2_0186",
+    "domain": "TECH",
+    "tier": 2,
+    "query": "Who is credited with coining the term 'hypertext'?",
+    "response": "Ted Nelson is credited with coining the term 'hypertext'.",
+    "reference_answer": "Ted Nelson is often credited with coining the term 'hypertext' in 1965, although the concept was first described by Vannevar Bush in 1945. Nelson used the term to describe non-linear text that can be linked to other texts."
+  },
+  {
+    "rating_id": "MR_0089",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "CULT_T4_0018",
+    "domain": "CULT",
+    "tier": 4,
+    "query": "The term 'Dada' is associated with which early 20th-century art movement?",
+    "response": "The term 'Dada' is associated with the Dada art movement, which was an early 20th-century art movement that emerged in the 1910s. It originated in Zurich, Switzerland, and later spread to other cities, including Paris and New York. The movement was characterized by its rejection of traditional art forms and its emphasis on chaos, absurdity, and anti-bourgeois sentiment.",
+    "reference_answer": "Dada was an early 20th-century art movement that emerged during World War I, characterized by its rejection of traditional aesthetics and its embrace of chaos, irrationality, and anti-bourgeois sentiment."
+  },
+  {
+    "rating_id": "MR_0048",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T5_0047",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "What is the Chandrasekhar limit for the mass of a white dwarf star?",
+    "response": "The Chandrasekhar limit is approximately **1.4 solar masses** (about 2.8 times the mass of the Sun).",
+    "reference_answer": "The Chandrasekhar limit is approximately 1.4 solar masses (M⊙), beyond which a white dwarf star collapses into a more compact object."
+  },
+  {
+    "rating_id": "MR_0023",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T4_0184",
+    "domain": "LAW",
+    "tier": 4,
+    "query": "How does the best evidence rule, as codified in the Federal Rules of Evidence, affect the admissibility of copies or duplicates of original documents?",
+    "response": "The best evidence rule, as codified in the Federal Rules of Evidence, requires that original documents be produced whenever possible. However, copies or duplicates of original documents may be admissible as evidence if the original is unavailable, lost, or destroyed, and the proponent can demonstrate that the copy is a reliable duplicate of the original. This is typically done by showing that the copy was made from the original, and that the process of making the copy did not materially alter the original's content or meaning.",
+    "reference_answer": "The best evidence rule, as outlined in Federal Rule of Evidence 1002, generally requires the original of a writing, recording, or photograph to be used to prove its content, but Federal Rule of Evidence 1003 allows a duplicate to be used unless a genuine question is raised about the original's authenticity or it would be unfair to admit the duplicate."
+  },
+  {
+    "rating_id": "MR_0128",
+    "model": "mistral-medium-3",
+    "query_id": "BIO_T2_0231",
+    "domain": "BIO",
+    "tier": 2,
+    "query": "Which hormone is secreted by the thyroid gland and plays a crucial role in regulating metabolism?",
+    "response": "The thyroid gland secretes **thyroxine (T4)** and **triiodothyronine (T3)**, with **T3** being the more active form. These hormones play a crucial role in regulating metabolism.",
+    "reference_answer": "Thyroxine (T4) and triiodothyronine (T3) are the primary hormones secreted by the thyroid gland that play crucial roles in regulating metabolism."
+  },
+  {
+    "rating_id": "MR_0102",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T5_0030",
+    "domain": "TECH",
+    "tier": 5,
+    "query": "Who was the primary author of the original paper on the Unix operating system?",
+    "response": "The primary authors of the original paper on the Unix operating system were Dennis Ritchie and Ken Thompson. They published a paper titled \"The UNIX Time-Sharing System\" in the Communications of the ACM in 1974, but the first paper on Unix, titled \"UNIX: A Multics-like System for the PDP-11,\" was written by Ritchie and Thompson and presented at the 1974 Spring Joint Computer Conference. However, an earlier internal Bell Labs technical report and a 1973 conference paper also described the system. Ken Thompson is often considered the main creator of Unix, with Dennis Ritchie playing a crucial role in its development, particularly with the creation of the C programming language.",
+    "reference_answer": "The primary author of the original paper on the Unix operating system was Ken Thompson, with significant contributions from Dennis Ritchie."
+  },
+  {
+    "rating_id": "MR_0033",
+    "model": "gemma-2-27b",
+    "query_id": "CULT_T5_0038",
+    "domain": "CULT",
+    "tier": 5,
+    "query": "The musical term 'sonata form' originated in which musical period?",
+    "response": "Classical period \n\n",
+    "reference_answer": "The musical term 'sonata form' originated in the Classical period of music, specifically becoming a standard form during the late 18th century."
+  },
+  {
+    "rating_id": "MR_0183",
+    "model": "seed-oss-36b",
+    "query_id": "SCI_T5_0192",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "What is the approximate value of the gravitational constant (G) in the International System of Units (SI)?",
+    "response": "The approximate value of the gravitational constant (G) in SI units is **6.67 × 10⁻¹¹ m³/(kg·s²)** (or equivalently, 6.67 × 10⁻¹¹ N·m²/kg², since 1 N = 1 kg·m/s²).\n\n\n**Answer:** 6.67×10⁻¹¹ m³/(kg·s²) (",
+    "reference_answer": "The gravitational constant (G) is approximately 6.674 × 10^-11 N·m^2·kg^-2."
+  },
+  {
+    "rating_id": "MR_0035",
+    "model": "gemma-2-27b",
+    "query_id": "TECH_T1_0158",
+    "domain": "TECH",
+    "tier": 1,
+    "query": "Which entity is responsible for assigning MIME types?",
+    "response": "The Internet Assigned Numbers Authority (IANA) is responsible for assigning MIME types. \n\n",
+    "reference_answer": "The Internet Assigned Numbers Authority (IANA) is responsible for assigning MIME types."
+  },
+  {
+    "rating_id": "MR_0107",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T5_0107",
+    "domain": "TECH",
+    "tier": 5,
+    "query": "Which networking protocol is used for automatic configuration of IP addresses in a network?",
+    "response": "DHCP (Dynamic Host Configuration Protocol) is the networking protocol used for automatic configuration of IP addresses in a network.",
+    "reference_answer": "The Dynamic Host Configuration Protocol (DHCP) is used for automatic configuration of IP addresses."
+  },
+  {
+    "rating_id": "MR_0108",
+    "model": "llama-4-maverick",
+    "query_id": "LAW_T3_0011",
+    "domain": "LAW",
+    "tier": 3,
+    "query": "What is the significance of the 'logical outgrowth' doctrine in the context of Administrative Procedure Act rulemaking?",
+    "response": "The \"logical outgrowth\" doctrine is a significant principle in the context of Administrative Procedure Act (APA) rulemaking, particularly under the notice-and-comment rulemaking provisions (5 U.S.C. § 553). It requires that a final rule adopted by an agency be a logical outgrowth of the proposed rule that was initially published for public comment. The doctrine ensures that the public has a meaningful opportunity to comment on the proposed rule by requiring that the final rule not be so substantially different from the proposed rule that it would have changed the nature of the comments received if it had been known at the time of the proposal.\n\nThe significance of the \"logical outgrowth\" doctrine lies in its role in ensuring transparency, public participation, and fairness in the rulemaking process. By mandating that the final rule be a logical outgrowth of the proposed rule, the doctrine:\n\n1. **Protects the Public's Right to Comment**: It ensures that the public has an opportunity to provide input on the rule as it evolves, by requiring that significant changes be either included in the original proposal or, if introduced later, be subject to an additional round of notice and comment if they are not a logical outgrowth.\n\n2. **Prevents Arbitrary or Capricious Rulemaking**: The doctrine helps to prevent agencies from adopting final rules that are significantly different from the proposed rules without adequate justification or public input, thereby reducing the risk of arbitrary or capricious decision-making.\n\n3. **Promotes Agency Accountability and Transparency**: By requiring that final rules be logically connected to the proposed rules, the doctrine promotes accountability and transparency. Agencies must justify significant changes and demonstrate that they have considered public comments.\n\n4. **Facilitates Judicial Review**: The \"logical outgrowth\" doctrine provides a basis for judicial review of agency rulemaking. Courts can review whether an agency's final rule is a logical outgrowth of its proposed rule, ensuring that the agency has complied with the APA's procedural requirements.\n\nIn summary, the \"logical outgrowth\" doctrine is crucial for maintaining the integrity and fairness of the APA's notice-and-comment rulemaking process, ensuring that the public has a meaningful opportunity to participate in the development of rules that affect them.",
+    "reference_answer": "The 'logical outgrowth' doctrine requires that a final rule adopted by an agency be a logical outgrowth of the proposed rule, ensuring that parties are given adequate notice of the potential final rule. If a final rule is not a logical outgrowth of the proposed rule, it may be deemed arbitrary and capricious or not in compliance with the APA's notice and comment requirements."
+  },
+  {
+    "rating_id": "MR_0110",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T1_0008",
+    "domain": "TECH",
+    "tier": 1,
+    "query": "What is the primary use of the Java programming language?",
+    "response": "The primary use of the Java programming language is for developing a wide range of applications, including Android apps, web applications, desktop applications, and enterprise software. Its platform independence, strong security features, and vast ecosystem make it a popular choice for various industries and use cases.",
+    "reference_answer": "Java is a versatile programming language primarily used for developing large-scale applications, including Android apps, web applications, and enterprise software, due to its platform independence and robust security features."
+  },
+  {
+    "rating_id": "MR_0040",
+    "model": "gemma-2-27b",
+    "query_id": "LAW_T2_0148",
+    "domain": "LAW",
+    "tier": 2,
+    "query": "The case of Somerset v. Stewart (1772) was significant in the history of which legal issue?",
+    "response": "Slavery \n\n",
+    "reference_answer": "The case of Somerset v. Stewart (1772) was significant in the history of slavery law, as it held that slavery was not supported by English common law, thereby contributing to the abolitionist movement."
+  },
+  {
+    "rating_id": "MR_0182",
+    "model": "seed-oss-36b",
+    "query_id": "TECH_T2_0229",
+    "domain": "TECH",
+    "tier": 2,
+    "query": "Who is the author of the original paper on the MapReduce programming model?",
+    "response": "The authors of the original paper on the MapReduce programming model are **Jeffrey Dean** and **Sanjay Ghemawat**. \n\nTheir paper, \"MapReduce: Simplified Data Processing on Large Clusters,\" was published by Google in 2004 and introduced the framework for distributed data processing.\n\n\n**Answer:** Jeffrey Dean and Sanjay Ghemawat.",
+    "reference_answer": "Jeffrey Dean and Sanjay Ghemawat are the authors of the original paper on the MapReduce programming model, published in 2004 while they were working at Google."
+  },
+  {
+    "rating_id": "MR_0152",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T2_0144",
+    "domain": "LAW",
+    "tier": 2,
+    "query": "How did the Supreme Court rule in the case of Gideon v. Wainwright regarding the right to counsel in felony cases?",
+    "response": "The Supreme Court ruled that the Sixth Amendment's guarantee of counsel is a fundamental right essential to a fair trial and is therefore applicable to the states through the Fourteenth Amendment. This decision mandated that states are required to provide counsel in all felony cases for defendants who cannot afford an attorney.",
+    "reference_answer": "The Supreme Court held that the Sixth Amendment right to counsel applies to state courts through the Fourteenth Amendment, and that indigent defendants are entitled to appointed counsel in felony cases."
+  },
+  {
+    "rating_id": "MR_0005",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T2_0175",
+    "domain": "SCI",
+    "tier": 2,
+    "query": "What is the relationship between the electric field and the magnetic field in an electromagnetic wave?",
+    "response": "In an electromagnetic wave, the electric field and the magnetic field are perpendicular to each other and to the direction of wave propagation. They oscillate in phase and their magnitudes are related by the equation E = cB, where c is the speed of light.",
+    "reference_answer": "In an electromagnetic wave, the electric field and the magnetic field are perpendicular to each other and to the direction of propagation of the wave."
+  },
+  {
+    "rating_id": "MR_0117",
+    "model": "ministral-14b",
+    "query_id": "GEO_T1_0122",
+    "domain": "GEO",
+    "tier": 1,
+    "query": "What is the estimated population of the European Union?",
+    "response": "As of **2024**, the estimated population of the **European Union (EU-27)** is approximately **448 million** people.\n\n*(Note: This excludes the UK, which left the EU in 2020.)*\n\nFor the most up-to-date figures, check **Eurostat** ([ec.europa.eu/eurostat](https://ec.europa.eu/eurostat)).",
+    "reference_answer": "The estimated population of the European Union is approximately 447 million as of 2020."
+  },
+  {
+    "rating_id": "MR_0164",
+    "model": "qwen2.5-7b",
+    "query_id": "BIO_T2_0075",
+    "domain": "BIO",
+    "tier": 2,
+    "query": "What is the role of the protein hemagglutinin in the lifecycle of influenza viruses?",
+    "response": "The protein hemagglutinin in influenza viruses plays a crucial role in the attachment and entry of the virus into host cells. Specifically, hemagglutinin binds to sialic acid receptors on the surface of host cells, facilitating viral attachment. After binding, hemagglutinin undergoes a conformational change, fusing the viral and cellular membranes, which allows the viral genome to enter the host cell and initiate replication.",
+    "reference_answer": "Hemagglutinin is a surface protein of influenza viruses that plays a crucial role in viral attachment to host cells by binding to sialic acid receptors, facilitating viral entry, and is also a major target of the host immune response."
+  },
+  {
+    "rating_id": "MR_0030",
+    "model": "gemma-2-27b",
+    "query_id": "TECH_T4_0204",
+    "domain": "TECH",
+    "tier": 4,
+    "query": "Which type of attack involves exploiting the difference between the expected and actual behavior of a system's security controls?",
+    "response": "**Exploitation of Security Control Discrepancies** \n\n",
+    "reference_answer": "A security vulnerability that involves exploiting the difference between expected and actual behavior is often related to a 'logic bomb' or more generally, an 'inconsistency' or 'incongruity' in security assumptions, but the specific term for this concept is not universally agreed upon. However, one common term associated with exploiting such differences is 'differential fault analysis' or more broadly, 'side-channel attacks'."
+  },
+  {
+    "rating_id": "MR_0153",
+    "model": "phi-3.5-mini",
+    "query_id": "GEO_T3_0192",
+    "domain": "GEO",
+    "tier": 3,
+    "query": "The Sea of Okhotsk is bounded by which Russian peninsula to the east?",
+    "response": "Kamchatka Peninsula",
+    "reference_answer": "The Sea of Okhotsk is bounded by the Kamchatka Peninsula to the east."
+  },
+  {
+    "rating_id": "MR_0042",
+    "model": "gemma-3-12b",
+    "query_id": "GEO_T2_0005",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "What is the name of the organization responsible for maintaining the official boundaries and names of geographic features worldwide?",
+    "response": "The United Nations Cartographic Group (UN Cartographic Group) is responsible for maintaining the official boundaries and names of geographic features worldwide.",
+    "reference_answer": "The United Nations Group of Experts on Geographical Names (UNGEGN) is responsible for maintaining the official names of geographic features worldwide, while boundary maintenance can involve various national and international organizations."
+  },
+  {
+    "rating_id": "MR_0043",
+    "model": "gemma-3-12b",
+    "query_id": "FIN_T4_0109",
+    "domain": "FIN",
+    "tier": 4,
+    "query": "How are discontinued operations reported in financial statements under U.S. GAAP?",
+    "response": "Under U.S. GAAP, discontinued operations are reported separately, **below continuing operations**, in the income statement. This includes a single line item for **loss (or gain) on disposal** of the discontinued operation and **profit or loss from the discontinued operation** itself, both after tax. They are also presented separately in the statement of cash flows as an investing activity.",
+    "reference_answer": "Discontinued operations are reported separately in the income statement, net of tax, and include the results of operations and any gain or loss on disposal, to distinguish them from ongoing operations."
+  },
+  {
+    "rating_id": "MR_0078",
+    "model": "kimi-k2-instruct",
+    "query_id": "GEO_T2_0040",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "What is the predominant climate type in the region of Western Australia's Pilbara?",
+    "response": "Arid (hot desert)",
+    "reference_answer": "The Pilbara region in Western Australia has a tropical savanna climate, characterized by hot and humid summers with a wet season, and mild to warm winters with very little rainfall."
+  },
+  {
+    "rating_id": "MR_0172",
+    "model": "qwen3-next-80b",
+    "query_id": "TECH_T3_0094",
+    "domain": "TECH",
+    "tier": 3,
+    "query": "What is the purpose of the 'finally' block in exception handling in programming languages like Java?",
+    "response": "The purpose of the `finally` block in exception handling is to ensure that a specific block of code is always executed, regardless of whether an exception is thrown or caught, or if a return statement is encountered in the try or catch blocks. It is commonly used for cleanup activities, such as closing files or releasing resources.",
+    "reference_answer": "The 'finally' block is used to execute code regardless of whether an exception was thrown or caught in the preceding 'try' block, typically used for cleanup actions such as releasing resources or closing files."
+  },
+  {
+    "rating_id": "MR_0189",
+    "model": "solar-10.7b",
+    "query_id": "HIST_T2_0225",
+    "domain": "HIST",
+    "tier": 2,
+    "query": "The Kingdom of Dahomey was located in present-day which country?",
+    "response": "The Kingdom of Dahomey was located in present-day Benin.",
+    "reference_answer": "The Kingdom of Dahomey was located in present-day Benin."
+  },
+  {
+    "rating_id": "MR_0079",
+    "model": "kimi-k2-instruct",
+    "query_id": "FIN_T5_0087",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "The economist Milton Friedman was a prominent figure in?",
+    "response": "the Chicago school of economics",
+    "reference_answer": "Milton Friedman was a leading figure in the development of modern monetarism, advocating for the importance of monetary policy in economic stability."
+  },
+  {
+    "rating_id": "MR_0086",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "FIN_T3_0165",
+    "domain": "FIN",
+    "tier": 3,
+    "query": "How do debt consolidation loans affect a consumer's credit utilization ratio?",
+    "response": "Debt consolidation loans can affect a consumer's credit utilization ratio in two main ways:\n\n1. **Initial Impact**: When you consolidate multiple debts into a single loan, your credit utilization ratio may temporarily increase if the new loan's balance is higher than the combined balances of the original debts. This is because the credit utilization ratio is calculated as the total debt divided by the total credit limit.\n\n2. **Long-term Impact**: However, if you pay off the consolidated debt and maintain a lower balance, your credit utilization ratio will decrease over time. This can positively impact your credit score, as a lower credit utilization ratio is generally considered a good credit behavior.\n\nIt's essential to note that debt consolidation loans can also affect your credit utilization ratio if you take on new debt or increase your credit limits, which can offset any potential benefits.",
+    "reference_answer": "Debt consolidation loans can reduce a consumer's credit utilization ratio by paying off multiple debts and consolidating them into a single loan, potentially improving their credit score."
+  },
+  {
+    "rating_id": "MR_0027",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T4_0248",
+    "domain": "LAW",
+    "tier": 4,
+    "query": "What is the significance of the holding in Dobbs v. Jackson Women's Health Organization?",
+    "response": "The significance of the holding in Dobbs v. Jackson Women's Health Organization lies in its potential to overturn the landmark Roe v. Wade decision, which had established a constitutional right to abortion. The Supreme Court's decision in Dobbs could effectively allow individual states to regulate or restrict abortion, potentially leading to a patchwork of varying abortion laws across the United States.",
+    "reference_answer": "The Supreme Court held that the Constitution does not confer a right to abortion, overturning Roe v. Wade and Planned Parenthood v. Casey, and returning the authority to regulate abortion to the states."
+  },
+  {
+    "rating_id": "MR_0133",
+    "model": "mistral-small-24b",
+    "query_id": "GEO_T2_0061",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "The island of Madagascar is located off the coast of which African country?",
+    "response": "Madagascar is located off the southeastern coast of Africa, but it is not directly off the coast of any specific African country. It is separated from the African mainland by the Mozambique Channel. The closest African country to Madagascar is Mozambique.",
+    "reference_answer": "Madagascar is an island country situated off the southeastern coast of Africa, separated from the mainland by the Mozambique Channel, and is located near Mozambique."
+  },
+  {
+    "rating_id": "MR_0103",
+    "model": "llama-4-maverick",
+    "query_id": "FIN_T5_0218",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "How does the Gramm-Leach-Bliley Act (GLBA) regulate the disclosure of consumer financial information by financial institutions?",
+    "response": "The Gramm-Leach-Bliley Act (GLBA) regulates the disclosure of consumer financial information by financial institutions through its Safeguards Rule and Privacy Rule. The Privacy Rule requires financial institutions to provide consumers with notice of their privacy policies and practices, including the disclosure of nonpublic personal information to affiliates and nonaffiliated third parties. It also gives consumers the right to opt out of certain disclosures. The Safeguards Rule requires financial institutions to implement robust security measures to protect consumer financial information from unauthorized access or disclosure. Overall, the GLBA aims to ensure that financial institutions protect the confidentiality and security of consumer financial information.",
+    "reference_answer": "The GLBA requires financial institutions to provide consumers with a privacy notice that explains their information-sharing practices, including the types of information shared, with whom it is shared, and how consumers can opt out of certain sharing practices."
+  },
+  {
+    "rating_id": "MR_0067",
+    "model": "gpt-oss-20b",
+    "query_id": "GEO_T5_0122",
+    "domain": "GEO",
+    "tier": 5,
+    "query": "The boundary between the United States and Mexico is approximately how many kilometers long?",
+    "response": "About 5,000 kilometres (roughly 5,100 km).",
+    "reference_answer": "The boundary between the United States and Mexico is approximately 3,145 kilometers long."
+  },
+  {
+    "rating_id": "MR_0054",
+    "model": "gemma-3-27b",
+    "query_id": "FIN_T1_0037",
+    "domain": "FIN",
+    "tier": 1,
+    "query": "Options contracts give the holder the right, but not the obligation, to buy or sell an underlying asset?",
+    "response": "True.\n\n\n\n",
+    "reference_answer": "Options contracts give the holder the right, but not the obligation, to buy or sell an underlying asset at a predetermined price on or before a certain date."
+  },
+  {
+    "rating_id": "MR_0082",
+    "model": "kimi-k2-instruct",
+    "query_id": "SCI_T1_0060",
+    "domain": "SCI",
+    "tier": 1,
+    "query": "What is the term for the amount of matter in an object?",
+    "response": "Mass",
+    "reference_answer": "The term for the amount of matter in an object is mass. Mass is a measure of the total amount of material in an object and is typically measured in kilograms or grams."
+  },
+  {
+    "rating_id": "MR_0187",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T3_0207",
+    "domain": "GEO",
+    "tier": 3,
+    "query": "What is the name of the largest peninsula in Europe?",
+    "response": "The largest peninsula in Europe is the Crimean Peninsula. It is located in southern Ukraine and is connected to the mainland by a narrow isthmus.",
+    "reference_answer": "The Scandinavian Peninsula is the largest peninsula in Europe."
+  },
+  {
+    "rating_id": "MR_0032",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T2_0117",
+    "domain": "HIST",
+    "tier": 2,
+    "query": "What was the name of the East German leader who opened the Berlin Wall in 1989?",
+    "response": "Erich Honecker \n\n",
+    "reference_answer": "The leader was Günter Schabowski, though the decision to open the wall was broader than a single individual."
+  },
+  {
+    "rating_id": "MR_0073",
+    "model": "gpt-oss-20b",
+    "query_id": "SCI_T5_0222",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "What was the detected frequency of the gravitational wave signal GW150914?",
+    "response": "The GW150914 signal was observed in LIGO’s sensitive band of roughly **35 Hz to 250 Hz**, with the strongest (peak‑amplitude) part of the waveform occurring near **150 Hz**.",
+    "reference_answer": "The detected frequency of GW150914 ranged from 35 to 250 Hz."
+  },
+  {
+    "rating_id": "MR_0149",
+    "model": "phi-3.5-mini",
+    "query_id": "CULT_T5_0217",
+    "domain": "CULT",
+    "tier": 5,
+    "query": "What is the name of the influential theater critic who wrote for The New Yorker and was known for his scathing reviews?",
+    "response": "James Agee",
+    "reference_answer": "The influential theater critic is likely to be Brendan Gill or more famously, John Simon, but most notably, Wolcott Gibbs and later, Hilton Als, though the most iconic might be considered as Eric Bentley or Harold Clurman for their influence, a more specific answer would be John Lahr who wrote for The New Yorker."
+  },
+  {
+    "rating_id": "MR_0121",
+    "model": "mistral-medium-3",
+    "query_id": "LAW_T5_0051",
+    "domain": "LAW",
+    "tier": 5,
+    "query": "What was the total number of judges on the panel that decided the case of United States v. Nixon?",
+    "response": "The case of *United States v. Nixon* (1974) was decided by a panel of **8 judges** on the U.S. Supreme Court. Justice William Rehnquist recused himself due to his prior involvement in the Nixon administration, leaving the remaining eight justices to issue the unanimous decision.",
+    "reference_answer": "The case of United States v. Nixon was decided by an 8-judge panel, with one judge not participating."
+  },
+  {
+    "rating_id": "MR_0192",
+    "model": "solar-10.7b",
+    "query_id": "TECH_T2_0127",
+    "domain": "TECH",
+    "tier": 2,
+    "query": "What is the main security benefit of using a firewall in a network?",
+    "response": "The main security benefit of using a firewall in a network is that it monitors and controls incoming and outgoing network traffic, filtering out unauthorized access, malicious content, and potential cyber threats, thereby enhancing the overall security and privacy of the network and its connected devices.",
+    "reference_answer": "A firewall provides security by controlling incoming and outgoing network traffic based on predetermined security rules, blocking unauthorized access."
+  },
+  {
+    "rating_id": "MR_0080",
+    "model": "kimi-k2-instruct",
+    "query_id": "GEO_T5_0068",
+    "domain": "GEO",
+    "tier": 5,
+    "query": "What is the elevation of the lowest point in the Danakil Depression?",
+    "response": "The lowest point in the Danakil Depression is approximately 125 meters below sea level.",
+    "reference_answer": "The Danakil Depression has a lowest point with an elevation of approximately 125 meters below sea level."
+  },
+  {
+    "rating_id": "MR_0077",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T5_0111",
+    "domain": "LAW",
+    "tier": 5,
+    "query": "What was the specific percentage increase in federal civil filings in U.S. District Courts from 2020 to 2021 according to the Administrative Office of the U.S. Courts?",
+    "response": "According to the Administrative Office of the U.S. Courts, federal civil filings in U.S. District Courts increased by **22%** from 2020 to 2021.",
+    "reference_answer": "Federal civil filings in U.S. District Courts increased by 7.4% from 2020 to 2021."
+  },
+  {
+    "rating_id": "MR_0175",
+    "model": "qwen3-next-80b",
+    "query_id": "CULT_T4_0127",
+    "domain": "CULT",
+    "tier": 4,
+    "query": "Which museum is home to the majority of the works of the Dutch painter Vincent van Gogh?",
+    "response": "The Van Gogh Museum in Amsterdam is home to the majority of the works of the Dutch painter Vincent van Gogh.",
+    "reference_answer": "The Van Gogh Museum in Amsterdam houses the largest collection of Vincent van Gogh's works, including letters and documents."
+  },
+  {
+    "rating_id": "MR_0129",
+    "model": "mistral-small-24b",
+    "query_id": "HIST_T2_0022",
+    "domain": "HIST",
+    "tier": 2,
+    "query": "Who was the entrepreneur behind the development of the first commercially successful oil refinery in the United States during the 19th century?",
+    "response": "The entrepreneur behind the development of the first commercially successful oil refinery in the United States during the 19th century was Samuel Kier. He established his refinery in Pittsburgh, Pennsylvania, in 1851.",
+    "reference_answer": "John D. Rockefeller was the entrepreneur behind the development of the first commercially successful oil refinery in the United States. He founded Standard Oil, which became a dominant force in the oil industry."
+  },
+  {
+    "rating_id": "MR_0011",
+    "model": "deepseek-v3.2",
+    "query_id": "LAW_T2_0205",
+    "domain": "LAW",
+    "tier": 2,
+    "query": "What were the main provisions of the Statute of Frauds enacted in England in 1677?",
+    "response": "The Statute of Frauds (1677) required that certain types of contracts be in writing and signed to be enforceable in court. Its main provisions mandated written evidence for:\n\n1. **Contracts for the sale of land** (or any interest in land).\n2. **Promises to answer for the debt of another** (suretyship contracts).\n3. **Contracts made in consideration of marriage** (marriage settlements).\n4. **Contracts that cannot be performed within one year** from their making.\n5. **Contracts for the sale of goods above a certain value** (initially set at £10).\n\nThe purpose was to prevent fraudulent claims and perjured testimony in important agreements.",
+    "reference_answer": "The Statute of Frauds required that certain types of contracts, such as those involving land or marriage, be in writing and signed to be enforceable, aiming to prevent fraudulent claims."
+  },
+  {
+    "rating_id": "MR_0066",
+    "model": "gpt-oss-20b",
+    "query_id": "FIN_T5_0312",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "According to the U.S. Bureau of Economic Analysis, what was the exact quarterly annualized growth rate of real Gross Domestic Product (GDP) in the United States for the third quarter (Q3) of 2020?",
+    "response": "Answer: 1.4 % (annualized quarterly growth rate of real GDP in Q3 2020).",
+    "reference_answer": "According to the U.S. Bureau of Economic Analysis's third estimate released in December 2020, real Gross Domestic Product (GDP) increased at an annual rate of 33.4 percent in the third quarter of 2020. This followed a historic contraction in the second quarter and reflected the partial economic rebound from the initial COVID-19 pandemic shutdowns."
+  },
+  {
+    "rating_id": "MR_0155",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T5_0078",
+    "domain": "TECH",
+    "tier": 5,
+    "query": "What is the name of the protocol used for secure key exchange in the TLS 1.3 handshake?",
+    "response": "The protocol used for secure key exchange in the TLS 1.3 handshake is the Diffie-Hellman key exchange (DH). However, it's worth noting that TLS 1.3 has also introduced support for the use of Elliptic Curve Diffie-Hellman (ECDHE) for key exchange, which is considered more efficient and secure.",
+    "reference_answer": "TLS 1.3 uses Diffie-Hellman key exchange or Elliptic Curve Diffie-Hellman key exchange for secure key exchange."
+  },
+  {
+    "rating_id": "MR_0021",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T2_0031",
+    "domain": "LAW",
+    "tier": 2,
+    "query": "Which Supreme Court case ruled that the use of deadly force by police to prevent the escape of a suspect is constitutional only when certain conditions are met?",
+    "response": "The Supreme Court case that ruled the use of deadly force by police to prevent the escape of a suspect is constitutional only when certain conditions are met is Graham v. Connor (1989). In this case, the Court established the \"objective reasonableness\" standard, which requires that the use of deadly force be objectively reasonable under the circumstances. This standard considers factors such as the level of threat posed by the suspect, the suspect's past behavior, and the officer's training and experience.",
+    "reference_answer": "The Supreme Court case of Tennessee v. Garner ruled that the use of deadly force by police to prevent the escape of a suspect is constitutional only when the officer has probable cause to believe that the suspect poses a significant threat of death or serious physical injury to the officer or others."
+  },
+  {
+    "rating_id": "MR_0068",
+    "model": "gpt-oss-20b",
+    "query_id": "GEO_T5_0091",
+    "domain": "GEO",
+    "tier": 5,
+    "query": "What is the specific isotherm used to define the boundary of the Arctic climate zone?",
+    "response": "The Arctic climate zone is bounded by the **0 °C isotherm** (the mean annual temperature line).",
+    "reference_answer": "The 10°C isotherm for the warmest month is used to define the boundary of the Arctic climate zone."
+  },
+  {
+    "rating_id": "MR_0065",
+    "model": "gpt-oss-20b",
+    "query_id": "LAW_T1_0011",
+    "domain": "LAW",
+    "tier": 1,
+    "query": "What is the typical standard for granting a motion to dismiss under Federal Rule of Civil Procedure 12(b)(6)?",
+    "response": "Under FR C P 12(b)(6) a court must decide whether the complaint **states a claim that could be viable**.  In practice this means the court asks: *If the allegations in the complaint are taken as true, is there a plausible cause of action?*  The court may not look beyond the complaint, and it applies a “reasonable‑inference” or “plausibility” standard—i.e., the complaint must contain sufficient factual matter to support a claim, not merely a conceivable one.",
+    "reference_answer": "The typical standard for granting a motion to dismiss under Federal Rule of Civil Procedure 12(b)(6) is whether the complaint fails to state a claim upon which relief can be granted, taking the allegations as true."
+  },
+  {
+    "rating_id": "MR_0124",
+    "model": "mistral-medium-3",
+    "query_id": "FIN_T3_0194",
+    "domain": "FIN",
+    "tier": 3,
+    "query": "How do companies typically classify cash flows related to the purchase and sale of long-term assets in their financial statements?",
+    "response": "Companies typically classify cash flows related to the purchase and sale of long-term assets as **investing activities** in their cash flow statements. This includes cash outflows for acquiring assets (e.g., property, plant, and equipment) and cash inflows from selling such assets.",
+    "reference_answer": "Companies typically classify cash flows related to the purchase and sale of long-term assets as investing activities in their Statement of Cash Flows."
+  },
+  {
+    "rating_id": "MR_0096",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "CULT_T3_0007",
+    "domain": "CULT",
+    "tier": 3,
+    "query": "The musical genre known as 'Neoclassicism' emerged as a reaction against which earlier musical style?",
+    "response": "The musical genre known as 'Neoclassicism' emerged as a reaction against Romanticism.",
+    "reference_answer": "Neoclassicism in music emerged as a reaction against the late Romanticism and Expressionism of the early 20th century, characterized by a return to the clarity and order of earlier classical models."
+  },
+  {
+    "rating_id": "MR_0007",
+    "model": "deepseek-v3.1",
+    "query_id": "HIST_T2_0068",
+    "domain": "HIST",
+    "tier": 2,
+    "query": "The Congo Free State was a colonial entity controlled by which European monarch?",
+    "response": "The Congo Free State was controlled by King Leopold II of Belgium.",
+    "reference_answer": "The Congo Free State was a colonial entity controlled by King Leopold II of Belgium, notorious for its brutal treatment of the local population."
+  },
+  {
+    "rating_id": "MR_0093",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "LAW_T4_0219",
+    "domain": "LAW",
+    "tier": 4,
+    "query": "What is the principle established by the Supreme Court in Medellín v. Texas?",
+    "response": "The principle established by the Supreme Court in Medellín v. Texas (2008) is that the U.S. Supreme Court has jurisdiction to review a state's refusal to honor a federal habeas corpus petition, even if the petition was filed in a state court rather than a federal court.",
+    "reference_answer": "In Medellín v. Texas, the Supreme Court held that a treaty is not self-executing and does not create domestically enforceable rights unless Congress has enacted implementing legislation or the treaty itself is self-executing."
+  },
+  {
+    "rating_id": "MR_0041",
+    "model": "gemma-3-12b",
+    "query_id": "TECH_T4_0075",
+    "domain": "TECH",
+    "tier": 4,
+    "query": "What is the primary optimization technique used in the implementation of the backpropagation algorithm in deep learning frameworks?",
+    "response": "Automatic differentiation.",
+    "reference_answer": "The backpropagation algorithm in deep learning is often optimized using automatic differentiation and reverse-mode differentiation to efficiently compute gradients."
+  },
+  {
+    "rating_id": "MR_0097",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "CULT_T3_0037",
+    "domain": "CULT",
+    "tier": 3,
+    "query": "Who is the author of the influential literary work 'The Tale of Genji'?",
+    "response": "The author of the influential literary work 'The Tale of Genji' is Murasaki Shikibu, a Japanese novelist and lady-in-waiting at the Imperial Court of Japan, who lived in the 11th century.",
+    "reference_answer": "The author of 'The Tale of Genji' is Murasaki Shikibu, a Japanese noblewoman and writer, considered one of the greatest works of Japanese literature."
+  },
+  {
+    "rating_id": "MR_0070",
+    "model": "gpt-oss-20b",
+    "query_id": "TECH_T3_0079",
+    "domain": "TECH",
+    "tier": 3,
+    "query": "What is the concept of 'entropy' in the context of machine learning and information theory?",
+    "response": "**Entropy** is a measure of uncertainty or randomness in a probability distribution.  \n- **Information‑theoretic definition**:  \n  \\[\n  H(X) = -\\sum_{x} p(x)\\log p(x)\n  \\]\n  It quantifies the expected amount of “surprise” or information gained when observing a random variable \\(X\\).  \n- **In machine learning**:  \n  - Used to evaluate the impurity of a node in decision trees (Gini impurity is related).  \n  - Appears in loss functions such as cross‑entropy (negative log‑likelihood) for classification.  \n  - Forms the basis of KL divergence, mutual information, and many feature‑selection criteria.  \n\nThus, entropy in ML and information theory captures how much uncertainty a model must resolve to make accurate predictions.",
+    "reference_answer": "Entropy, in the context of machine learning and information theory, measures the amount of uncertainty or randomness in a probability distribution, often used in decision tree algorithms to determine the best split."
+  },
+  {
+    "rating_id": "MR_0095",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "LAW_T5_0159",
+    "domain": "LAW",
+    "tier": 5,
+    "query": "What was the specific number of votes cast by the U.S. Senate in 2023 to confirm Supreme Court nominees?",
+    "response": "I cannot verify the specific number of votes cast by the U.S. Senate in 2023 to confirm Supreme Court nominees.",
+    "reference_answer": "The U.S. Senate cast 3 votes to confirm Supreme Court nominees in 2023."
+  },
+  {
+    "rating_id": "MR_0075",
+    "model": "gpt-oss-20b",
+    "query_id": "BIO_T5_0066",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "What specific genetic locus is associated with familial hypercholesterolemia?",
+    "response": "Familial hypercholesterolemia is most commonly linked to mutations in the **LDLR gene at the 19p13.2 locus**.",
+    "reference_answer": "Familial hypercholesterolemia is most commonly associated with mutations in the LDLR gene on chromosome 19p13.1-13.3, which encodes the low-density lipoprotein receptor."
+  },
+  {
+    "rating_id": "MR_0136",
+    "model": "mistral-small-24b",
+    "query_id": "SCI_T2_0063",
+    "domain": "SCI",
+    "tier": 2,
+    "query": "How do the atomic orbitals of an atom relate to the probability of finding an electron within a given region?",
+    "response": "Atomic orbitals describe the probability distribution of finding an electron within a given region around the nucleus. Specifically, the square of the wave function (ψ²) associated with an orbital gives the probability density of finding an electron in that region. This means that the higher the value of ψ², the greater the likelihood of finding an electron in that particular area. The shape and size of atomic orbitals (s, p, d, f, etc.) indicate the regions where electrons are most likely to be found.",
+    "reference_answer": "Atomic orbitals describe the probability distribution of an electron within an atom, with the square of the orbital's wave function giving the probability density of finding an electron in a particular region."
+  },
+  {
+    "rating_id": "MR_0123",
+    "model": "mistral-medium-3",
+    "query_id": "FIN_T5_0279",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "What is the exact numerical 'de minimis' threshold, expressed as a percentage of the principal amount, that defines a market discount for U.S. Treasury bonds and notes under the Internal Revenue Code?",
+    "response": "The *de minimis* threshold for market discount on U.S. Treasury bonds and notes under the Internal Revenue Code is **0.25% of the principal amount per full year** from the date of acquisition to maturity.\n\nThis is outlined in **IRC § 1278(a)(2)** and **Treasury Regulation § 1.1278-1(b)(2)**. If the market discount is less than this threshold, it is considered *de minimis* and generally not subject to ordinary income treatment.",
+    "reference_answer": "Under the U.S. Internal Revenue Code (IRC Section 1278(a)(2)(C)(i)), a de minimis rule applies to market discount on bonds. For Treasury bonds and notes, if the discount is less than 0.25% of the stated redemption price at maturity multiplied by the number of full years from the date of acquisition to maturity, it is considered de minimis and treated as a capital gain upon disposition rather than ordinary income."
+  },
+  {
+    "rating_id": "MR_0038",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T3_0029",
+    "domain": "HIST",
+    "tier": 3,
+    "query": "Which German military strategy, employed during World War II, focused on rapid mobilization and surprise attacks to quickly defeat enemy forces?",
+    "response": "Blitzkrieg \n\n",
+    "reference_answer": "The strategy was known as Blitzkrieg, or 'lightning war.' It involved the use of combined arms forces, including tanks, infantry, and air support, to break through enemy lines quickly."
+  },
+  {
+    "rating_id": "MR_0157",
+    "model": "qwen2.5-7b",
+    "query_id": "HIST_T5_0071",
+    "domain": "HIST",
+    "tier": 5,
+    "query": "Who was the Kushite king who conquered Egypt and became the first king of the Twenty-fifth Dynasty?",
+    "response": "The Kushite king who conquered Egypt and became the first king of the Twenty-fifth Dynasty was Piye (also known as Piankhi).",
+    "reference_answer": "The Kushite king who conquered Egypt and became the first king of the Twenty-fifth Dynasty was Kashta."
+  },
+  {
+    "rating_id": "MR_0134",
+    "model": "mistral-small-24b",
+    "query_id": "GEO_T2_0030",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "How are contour lines used on topographic maps to represent relief?",
+    "response": "Contour lines on topographic maps represent relief by connecting points of equal elevation above sea level. The spacing and shape of these lines indicate the steepness and form of the terrain. Closely spaced lines suggest steep slopes, while widely spaced lines indicate gentle slopes. Different contour intervals (the vertical distance between lines) are used to show varying levels of detail and scale.",
+    "reference_answer": "Contour lines on topographic maps represent relief by connecting points of equal elevation, with closer lines indicating steeper terrain and farther apart lines indicating gentler slopes."
+  },
+  {
+    "rating_id": "MR_0169",
+    "model": "qwen3-next-80b",
+    "query_id": "FIN_T5_0222",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "The U.S. Census Bureau's Manufacturing ISM Report is based on a survey of purchasing managers with what minimum response rate?",
+    "response": "The U.S. Census Bureau's Manufacturing ISM Report is based on a survey of purchasing managers with a minimum response rate of 35%.",
+    "reference_answer": "The Institute for Supply Management (ISM), not the U.S. Census Bureau, publishes the Manufacturing ISM Report based on a survey of purchasing managers with a response rate that typically exceeds 70%."
+  },
+  {
+    "rating_id": "MR_0092",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T2_0100",
+    "domain": "LAW",
+    "tier": 2,
+    "query": "In the case of Grutter v. Bollinger, what was the Supreme Court's decision regarding affirmative action in higher education?",
+    "response": "In the case of Grutter v. Bollinger (2003), the Supreme Court ruled that the University of Michigan Law School's affirmative action policy, which considered an applicant's race as one of many factors in admissions, was constitutional. The court held that the policy was narrowly tailored to achieve the educational benefits of diversity, and therefore did not violate the Equal Protection Clause of the 14th Amendment.",
+    "reference_answer": "The Supreme Court held that the University of Michigan Law School's affirmative action admissions policy, which considered race as a factor among many, was constitutional because it served a compelling interest in diversity."
+  },
+  {
+    "rating_id": "MR_0174",
+    "model": "qwen3-next-80b",
+    "query_id": "CULT_T4_0051",
+    "domain": "CULT",
+    "tier": 4,
+    "query": "The term ' Gesamtkunstwerk' is associated with which 19th-century composer?",
+    "response": "The term 'Gesamtkunstwerk' is associated with the 19th-century composer Richard Wagner.",
+    "reference_answer": "The term 'Gesamtkunstwerk', meaning 'total work of art', is associated with Richard Wagner, a 19th-century German composer who sought to unify the arts in his operas."
+  },
+  {
+    "rating_id": "MR_0137",
+    "model": "mistral-small-24b",
+    "query_id": "HIST_T2_0170",
+    "domain": "HIST",
+    "tier": 2,
+    "query": "The Council of Trent was convened in response to the Protestant Reformation in which year?",
+    "response": "The Council of Trent was convened in 1545 in response to the Protestant Reformation.",
+    "reference_answer": "The Council of Trent was convened in response to the Protestant Reformation in 1545."
+  },
+  {
+    "rating_id": "MR_0112",
+    "model": "llama-4-maverick",
+    "query_id": "LAW_T1_0155",
+    "domain": "LAW",
+    "tier": 1,
+    "query": "What is the basic requirement for a contract to be enforceable under the Statute of Frauds?",
+    "response": "The basic requirement for a contract to be enforceable under the Statute of Frauds is that it must be in writing and signed by the party against whom enforcement is sought.",
+    "reference_answer": "Under the Statute of Frauds, certain contracts must be in writing and signed by the party to be charged to be enforceable."
+  },
+  {
+    "rating_id": "MR_0094",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "BIO_T4_0140",
+    "domain": "BIO",
+    "tier": 4,
+    "query": "Which specific structure is formed by the convergence of the vertebral veins and the internal jugular vein?",
+    "response": "The structure formed by the convergence of the vertebral veins and the internal jugular vein is the jugular foramen.",
+    "reference_answer": "The brachiocephalic vein is formed by the convergence of the vertebral vein is not correct; it is actually formed by the union of the internal jugular vein and the subclavian vein."
+  },
+  {
+    "rating_id": "MR_0090",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "FIN_T1_0247",
+    "domain": "FIN",
+    "tier": 1,
+    "query": "The inflation target typically used by many central banks is around?",
+    "response": "2% annual inflation rate.",
+    "reference_answer": "The inflation target typically used by many central banks is around 2%."
+  },
+  {
+    "rating_id": "MR_0168",
+    "model": "qwen2.5-7b",
+    "query_id": "CULT_T5_0129",
+    "domain": "CULT",
+    "tier": 5,
+    "query": "The philosopher and logician 'Al-Farabi' was known by what full name?",
+    "response": "Al-Farabi's full name was Abu Nasr Muhammad ibn Muhammad ibn Tarkhan ibn Awf al-Farabi.",
+    "reference_answer": "Al-Farabi's full name is Abū Naṣr Muḥammad ibn Muḥammad ibn al-Farakh al-Fārābī."
+  },
+  {
+    "rating_id": "MR_0037",
+    "model": "gemma-2-27b",
+    "query_id": "TECH_T5_0163",
+    "domain": "TECH",
+    "tier": 5,
+    "query": "What is the name of the operating system developed by Linus Torvalds in the early 1990s?",
+    "response": "Linux \n\n",
+    "reference_answer": "Linux is the operating system developed by Linus Torvalds in the early 1990s."
+  },
+  {
+    "rating_id": "MR_0177",
+    "model": "seed-oss-36b",
+    "query_id": "TECH_T3_0103",
+    "domain": "TECH",
+    "tier": 3,
+    "query": "What is the difference between 'von Neumann' and 'Harvard' architecture in computer design?",
+    "response": "The core difference between **von Neumann** and **Harvard architectures** lies in how they manage memory for instructions and data:\n\n\n### **Von Neumann Architecture**  \n- **Unified Memory**: Uses a single shared memory space for both **instructions** (program code) and **data**.  \n- **Single Bus**: Relies on a single bus (combining address, data, and control signals) to fetch instructions and access data.  \n- **Bottleneck**: Suffers from the \"von Neumann bottleneck\"—the CPU cannot fetch an instruction and access data",
+    "reference_answer": "Von Neumann architecture uses a single bus for both data and instructions, while Harvard architecture uses separate buses for data and instructions, potentially improving performance by reducing contention."
+  },
+  {
+    "rating_id": "MR_0113",
+    "model": "ministral-14b",
+    "query_id": "BIO_T5_0189",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "What is the precise mean aortic root diameter reported in the study by Roman et al. (1989) for adults aged 20-39 years?",
+    "response": "In the study by **Roman et al. (1989)** (*\"Normal Values for Echocardiographic Measurements in Adults: An M-Mode Study\"*), the **mean aortic root diameter** for adults aged **20–39 years** was reported as:\n\n**2.3 cm** (range: 1.6–3.0 cm).\n\n*(Note: This was measured at the level of the aortic annulus in parasternal long-axis view.)*",
+    "reference_answer": "The mean aortic root diameter was 2.9 cm for men and 2.5 cm for women aged 20-29 years, and 3.0 cm for men and 2.6 cm for women aged 30-39 years, as measured by echocardiography in the study by Roman et al. (1989)."
+  },
+  {
+    "rating_id": "MR_0101",
+    "model": "llama-4-maverick",
+    "query_id": "CULT_T3_0094",
+    "domain": "CULT",
+    "tier": 3,
+    "query": "Which museum is located in the former palace of the Popes in Avignon, France?",
+    "response": "The Palais des Papes (Papal Palace) in Avignon, France, is home to several museums, but most notably, it houses the Musée du Palais des Papes (Papal Palace Museum) and other exhibitions. However, if I had to pinpoint one, I'd say the Musée du Petit Palais is also located in a former bishop's palace in Avignon and is known for its collection of medieval art, but the primary museum associated with the Palais des Papes is the Musée du Palais des Papes or more generally, the Palais des Papes itself is a museum and a UNESCO World Heritage Site.",
+    "reference_answer": "The museum is known as the Palais des Papes, a UNESCO World Heritage site that houses various art collections."
+  },
+  {
+    "rating_id": "MR_0166",
+    "model": "qwen2.5-7b",
+    "query_id": "CULT_T3_0005",
+    "domain": "CULT",
+    "tier": 3,
+    "query": "The Jewish holiday of 'Yom Kippur' is observed for what purpose?",
+    "response": "The Jewish holiday of Yom Kippur is observed for the purpose of atoning for sins committed throughout the year and seeking forgiveness from God.",
+    "reference_answer": "Yom Kippur, also known as the Day of Atonement, is observed by Jews as a day of fasting and atonement for sins committed during the past year. It is considered one of the holiest days of the year in Judaism."
+  },
+  {
+    "rating_id": "MR_0144",
+    "model": "mistral-small-4-119b",
+    "query_id": "SCI_T1_0249",
+    "domain": "SCI",
+    "tier": 1,
+    "query": "Which component is used in electronic circuits to store energy in a magnetic field?",
+    "response": "An **inductor** is the component used in electronic circuits to store energy in a magnetic field.",
+    "reference_answer": "An inductor is used in electronic circuits to store energy in a magnetic field."
+  },
+  {
+    "rating_id": "MR_0001",
+    "model": "deepseek-v3.1",
+    "query_id": "BIO_T5_0005",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "How did the crystal structure of the SARS-CoV-2 main protease (Mpro) in complex with the inhibitor N3 differ from that with the inhibitor carmofur, as reported in structural studies?",
+    "response": "The crystal structure of SARS-CoV-2 Mpro with the covalent inhibitor N3 showed the inhibitor bound in the active site, forming a covalent bond with Cys145 and extensive hydrogen-bonding interactions. In contrast, the structure with carmofur revealed the inhibitor covalently bound to Cys145 but also showed a large structural change: the S1 and S2 subsites of the protease underwent a significant conformational rearrangement to accommodate the inhibitor's fatty acid tail.",
+    "reference_answer": "The crystal structure of SARS-CoV-2 Mpro in complex with N3 showed N3 binding in the substrate-binding pocket, while carmofur was found to covalently bind to the catalytic cysteine residue (Cys145) of Mpro, as described in structural studies published in Science and Nature Communications."
+  },
+  {
+    "rating_id": "MR_0143",
+    "model": "mistral-small-4-119b",
+    "query_id": "FIN_T5_0251",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "Under the U.S. Truth in Lending Act (TILA) and Regulation Z, what is the exact minimum threshold dollar amount that triggers special requirements for a high-cost mortgage (HOEPA loan) based on the points and fees test?",
+    "response": "Under the U.S. Truth in Lending Act (TILA) and Regulation Z, the **exact minimum threshold dollar amount** that triggers special requirements for a **high-cost mortgage (HOEPA loan)** based on the **points and fees test** is:\n\n**$24,866** (for 2024, adjusted annually for inflation).\n\nThis applies to loans secured by a consumer's principal dwelling where the points and fees exceed the lesser of:\n1. **5% of the total loan amount**, or\n2. **$24,866** (for 2024).",
+    "reference_answer": "Under the Home Ownership and Equity Protection Act (HOEPA) amendment to TILA, as implemented by Regulation Z, a mortgage is considered high-cost if the total points and fees payable by the consumer exceed the greater of 5% of the total loan amount or a specific dollar amount. As of the last update before 2025, that specific dollar amount was $2,052 for most transactions, adjusted annually for inflation."
+  },
+  {
+    "rating_id": "MR_0127",
+    "model": "mistral-medium-3",
+    "query_id": "BIO_T1_0257",
+    "domain": "BIO",
+    "tier": 1,
+    "query": "What is the name of the process by which a cell divides to produce two identical daughter cells?",
+    "response": "The process by which a cell divides to produce two identical daughter cells is called **mitosis**.",
+    "reference_answer": "The process is called mitosis. It is a type of cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent nucleus, typical of ordinary tissue growth and repair."
+  },
+  {
+    "rating_id": "MR_0008",
+    "model": "deepseek-v3.1",
+    "query_id": "HIST_T2_0064",
+    "domain": "HIST",
+    "tier": 2,
+    "query": "What was the name of the German customs union established in 1834, which played a crucial role in the economic integration of Germany?",
+    "response": "The German customs union established in 1834 was called the **Zollverein**.",
+    "reference_answer": "The Zollverein was a German customs union established in 1834, playing a significant role in the economic integration of the various German states."
+  },
+  {
+    "rating_id": "MR_0116",
+    "model": "ministral-14b",
+    "query_id": "CULT_T3_0144",
+    "domain": "CULT",
+    "tier": 3,
+    "query": "The screenplay for 'Apocalypse Now' was written by whom?",
+    "response": "The screenplay for *Apocalypse Now* was written by **Francis Ford Coppola** (based on Joseph Conrad's *Heart of Darkness*), with contributions from **John Milius** (who wrote the original treatment) and **Coppola's** brother, **August Coppola**. Coppola received sole screenwriting credit.",
+    "reference_answer": "The screenplay for 'Apocalypse Now' was written by John Milius and Francis Ford Coppola."
+  },
+  {
+    "rating_id": "MR_0052",
+    "model": "gemma-3-27b",
+    "query_id": "SCI_T4_0131",
+    "domain": "SCI",
+    "tier": 4,
+    "query": "What is the term for the minimum energy required for a chemical reaction to occur, which is influenced by the presence of a catalyst?",
+    "response": "Activation energy.",
+    "reference_answer": "The term is activation energy, which is the minimum energy required for a reaction to proceed, and it can be lowered by the presence of a catalyst, thus speeding up the reaction."
+  },
+  {
+    "rating_id": "MR_0156",
+    "model": "phi-3.5-mini",
+    "query_id": "CULT_T4_0176",
+    "domain": "CULT",
+    "tier": 4,
+    "query": "The Acropolis Museum in Athens is dedicated to the art and architecture of which ancient site?",
+    "response": "The Acropolis Museum in Athens is dedicated to the art and architecture of the Acropolis of Athens.",
+    "reference_answer": "The Acropolis Museum is dedicated to the art and architecture of the Acropolis of Athens."
+  },
+  {
+    "rating_id": "MR_0146",
+    "model": "mistral-small-4-119b",
+    "query_id": "FIN_T5_0305",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "In the Fama-French three-factor model, what is the exact historical average annual premium (in percentage points) for the value factor (HML) as reported in their seminal 1993 paper 'Common risk factors in the returns on stocks and bonds' for the period from July 1963 to December 1991?",
+    "response": "The exact historical average annual premium for the value factor (HML) in the Fama-French three-factor model, as reported in their 1993 paper for the period July 1963 to December 1991, is **5.17%**.",
+    "reference_answer": "In the 1993 Journal of Financial Economics paper 'Common risk factors in the returns on stocks and bonds,' Fama and French reported that the average annual premium for the High-Minus-Low (HML) book-to-market factor was 5.01% for the period from July 1963 through December 1991. This value represents the return difference between high and low book-to-market stocks."
+  },
+  {
+    "rating_id": "MR_0062",
+    "model": "gemma-3-4b",
+    "query_id": "FIN_T1_0131",
+    "domain": "FIN",
+    "tier": 1,
+    "query": "The Capital Asset Pricing Model (CAPM) is used to assess what aspect of an investment?",
+    "response": "The Capital Asset Pricing Model (CAPM) is used to assess the expected return of an investment relative to its risk.",
+    "reference_answer": "The Capital Asset Pricing Model (CAPM) is used to assess the expected return of an investment based on its risk."
+  },
+  {
+    "rating_id": "MR_0179",
+    "model": "seed-oss-36b",
+    "query_id": "GEO_T2_0096",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "What is the length of the international border between the United States and Canada?",
+    "response": "The international border between the United States and Canada is approximately **5,525 miles (8,889 kilometers)** long, making it the longest undefended border in the world.",
+    "reference_answer": "The border between the United States and Canada is approximately 8,891 kilometers long, making it the world's longest international border."
+  },
+  {
+    "rating_id": "MR_0053",
+    "model": "gemma-3-27b",
+    "query_id": "LAW_T1_0267",
+    "domain": "LAW",
+    "tier": 1,
+    "query": "In the U.S. federal court system, what is the trial court of general jurisdiction called?",
+    "response": "United States District Court.\n\n\n\n",
+    "reference_answer": "In the U.S. federal court system, the trial court of general jurisdiction is the United States District Court. There are 94 district courts across the United States and its territories."
+  },
+  {
+    "rating_id": "MR_0022",
+    "model": "eurollm-9b",
+    "query_id": "CULT_T5_0091",
+    "domain": "CULT",
+    "tier": 5,
+    "query": "Who is the main character in the novel 'The Master and Margarita'?",
+    "response": "The main character in the novel 'The Master and Margarita' is Woland, also known as the Master, a mysterious and enigmatic figure who appears in Moscow.",
+    "reference_answer": "The main characters in 'The Master and Margarita' are the Master, a writer, and Margarita, his lover."
+  },
+  {
+    "rating_id": "MR_0171",
+    "model": "qwen3-next-80b",
+    "query_id": "TECH_T5_0321",
+    "domain": "TECH",
+    "tier": 5,
+    "query": "In the original 1985 paper 'The Transaction Concept: Virtues and Limitations' by Jim Gray, what specific example transaction processing system is used to illustrate the 'state' of a conversation?",
+    "response": "In Jim Gray’s 1985 paper “The Transaction Concept: Virtues and Limitations,” the specific example used to illustrate the ‘state’ of a conversation is a **bank teller transaction**, such as a customer withdrawing money from an account. The “state” refers to the sequence of interactions (e.g., request, verification, approval, update) that constitute a single, coherent conversation between the user and the system, treated as an atomic unit.",
+    "reference_answer": "Jim Gray's paper uses the example of an airline reservation system to illustrate the concept of a conversation's state. He describes how a sequence of interactions (checking availability, holding a seat, providing details, payment) constitutes a long-lived transaction or conversation with persistent state."
+  },
+  {
+    "rating_id": "MR_0024",
+    "model": "eurollm-9b",
+    "query_id": "SCI_T1_0158",
+    "domain": "SCI",
+    "tier": 1,
+    "query": "Which polymer is commonly known by the trade name Teflon?",
+    "response": "The polymer commonly known by the trade name Teflon is polytetrafluoroethylene (PTFE).",
+    "reference_answer": "Polytetrafluoroethylene (PTFE) is the polymer commonly known by the trade name Teflon, known for its non-stick properties."
+  },
+  {
+    "rating_id": "MR_0004",
+    "model": "deepseek-v3.1",
+    "query_id": "GEO_T2_0242",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "What is the name of the desert that covers much of Mongolia?",
+    "response": "Of course. The desert that covers much of Mongolia is the **Gobi Desert**.",
+    "reference_answer": "The Gobi Desert covers much of Mongolia."
+  },
+  {
+    "rating_id": "MR_0013",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T1_0102",
+    "domain": "TECH",
+    "tier": 1,
+    "query": "What is the main purpose of data normalization in databases?",
+    "response": "The main purpose of data normalization in databases is to eliminate data redundancy and improve data integrity by organizing data into structured tables to reduce anomalies during insertion, update, and deletion.",
+    "reference_answer": "Data normalization is the process of organizing data in a database to minimize data redundancy and dependency, improving data integrity."
+  },
+  {
+    "rating_id": "MR_0150",
+    "model": "phi-3.5-mini",
+    "query_id": "SCI_T5_0272",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "In the 2012 discovery of the Higgs boson at the LHC, what were the reported statistical significances (in standard deviations, σ) for the observed excess in the two decay channels that provided the strongest evidence?",
+    "response": "The reported statistical significances for the observed excess in the two decay channels (H → bb and H → WW) were 5σ and 4σ, respectively.",
+    "reference_answer": "In the July 2012 announcement, the ATLAS and CMS collaborations reported observing a new particle with a mass around 125-126 GeV. The ATLAS experiment reported a local significance of 5.9 σ for the diphoton decay channel and 5.0 σ for the four-lepton (ZZ*) channel. The CMS experiment reported significances of 4.9 σ for the diphoton channel and 3.4 σ for the four-lepton channel."
+  },
+  {
+    "rating_id": "MR_0114",
+    "model": "ministral-14b",
+    "query_id": "HIST_T4_0058",
+    "domain": "HIST",
+    "tier": 4,
+    "query": "The Simón Bolívar campaign liberated which countries from Spanish rule in the early 19th century?",
+    "response": "The **Simón Bolívar campaign** (led by **Simón Bolívar**) liberated the following countries from Spanish rule in the early 19th century:\n\n- **Venezuela** (1811–1821)\n- **Colombia** (New Granada, 1819–1821)\n- **Ecuador** (1822)\n- **Peru** (1821–1824)\n- **Bolivia** (Upper Peru, 1825)\n- **Panama** (part of Gran Colombia, 1821)\n\nAdditionally, Bolívar played a key role in the liberation of **Bolivar** (now part of **Venezuela**) and supported independence movements in **Chile** (with José de San Martín) and **Argentina** (though they were primarily led by others).",
+    "reference_answer": "The Simón Bolívar campaign liberated Venezuela, Colombia, Ecuador, Bolivia, and Peru from Spanish rule in the early 19th century."
+  },
+  {
+    "rating_id": "MR_0020",
+    "model": "deepseek-v3.2",
+    "query_id": "BIO_T5_0104",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "Which amino acid substitution at position 614 in the SARS-CoV-2 spike protein was associated with increased transmissibility?",
+    "response": "The amino acid substitution at position 614 in the SARS-CoV-2 spike protein is **D614G** (aspartic acid to glycine), which was associated with increased viral transmissibility.",
+    "reference_answer": "The D614G substitution in the SARS-CoV-2 spike protein was associated with increased transmissibility compared to the original D614 form."
+  },
+  {
+    "rating_id": "MR_0145",
+    "model": "mistral-small-4-119b",
+    "query_id": "GEO_T2_0100",
+    "domain": "GEO",
+    "tier": 2,
+    "query": "Which projection is commonly used for navigation charts because it preserves angles?",
+    "response": "The **Mercator projection** is commonly used for navigation charts because it preserves angles (conformal), making it ideal for plotting straight-line courses.",
+    "reference_answer": "The Mercator projection is commonly used for navigation charts because it preserves angles, making it useful for determining courses."
+  },
+  {
+    "rating_id": "MR_0119",
+    "model": "ministral-14b",
+    "query_id": "GEO_T5_0174",
+    "domain": "GEO",
+    "tier": 5,
+    "query": "What is the precise latitude and longitude of the capital city of Greenland?",
+    "response": "The capital of Greenland is **Nuuk**.\n\n**Precise coordinates (WGS84):**\n**Latitude:** 64.1807° N\n**Longitude:** 51.6947° W",
+    "reference_answer": "Nuuk, the capital city of Greenland, is located at 64.1833° N, 51.7333° W."
+  },
+  {
+    "rating_id": "MR_0170",
+    "model": "qwen3-next-80b",
+    "query_id": "LAW_T5_0062",
+    "domain": "LAW",
+    "tier": 5,
+    "query": "How many total amendments were proposed by Congress to the U.S. Constitution between 1789 and 2019?",
+    "response": "Between 1789 and 2019, Congress proposed a total of 33 amendments to the U.S. Constitution.",
+    "reference_answer": "Between 1789 and 2019, Congress proposed a total of 11,770 amendments to the U.S. Constitution."
+  },
+  {
+    "rating_id": "MR_0047",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T5_0085",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "What is the name of the reaction that involves the formation of a diazonium salt from an aromatic amine?",
+    "response": "Diazotization.",
+    "reference_answer": "The reaction is known as diazotization, where an aromatic amine reacts with nitrous acid to form a diazonium salt."
+  },
+  {
+    "rating_id": "MR_0154",
+    "model": "phi-3.5-mini",
+    "query_id": "FIN_T5_0038",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "The U.S. Bureau of Labor Statistics (BLS) typically revises the Consumer Price Index (CPI) data for how many years after initial release?",
+    "response": "The U.S. Bureau of Labor Statistics typically revises the Consumer Price Index data for three years after the initial release.",
+    "reference_answer": "The U.S. Bureau of Labor Statistics (BLS) typically revises the Consumer Price Index (CPI) data for up to 3 years (36 months) after initial release, but some data can be revised further."
+  },
+  {
+    "rating_id": "MR_0036",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T3_0208",
+    "domain": "HIST",
+    "tier": 3,
+    "query": "The Boxer Rebellion in China was against foreign influence and occurred in which years?",
+    "response": "1899-1901 \n\n",
+    "reference_answer": "The Boxer Rebellion in China occurred from 1899 to 1901."
+  },
+  {
+    "rating_id": "MR_0115",
+    "model": "ministral-14b",
+    "query_id": "BIO_T5_0056",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "What was the hazard ratio for overall survival reported in the CheckMate 227 trial for nivolumab plus ipilimumab versus chemotherapy in first-line non-small cell lung cancer with PD-L1 expression ≥1%?",
+    "response": "In the **CheckMate 227** trial (cohort 1, PD-L1 ≥1%), the **hazard ratio (HR) for overall survival (OS)** with **nivolumab + ipilimumab** versus chemotherapy was **0.73** (95% CI, 0.59–0.90; *p* = 0.002).\n\n*(Source: Hellmann et al., NEJM 2019)*",
+    "reference_answer": "The CheckMate 227 trial reported a hazard ratio of 0.79 (95% CI 0.67–0.93) for overall survival with nivolumab plus ipilimumab versus chemotherapy in patients with PD-L1 ≥1%."
+  },
+  {
+    "rating_id": "MR_0138",
+    "model": "mistral-small-24b",
+    "query_id": "FIN_T2_0202",
+    "domain": "FIN",
+    "tier": 2,
+    "query": "What is the main advantage of dollar-cost averaging in investing?",
+    "response": "The main advantage of dollar-cost averaging in investing is that it helps to reduce the impact of volatility on the overall purchase price of an investment. By investing a fixed amount of money regularly, regardless of whether the market is up or down, investors can buy more shares when prices are low and fewer shares when prices are high, potentially lowering the average cost per share over time. This strategy can help mitigate the risk of making a single large investment at an inopportune time.",
+    "reference_answer": "Dollar-cost averaging reduces the impact of market volatility by investing a fixed amount of money at regular intervals, regardless of the asset's price."
+  },
+  {
+    "rating_id": "MR_0159",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T4_0018",
+    "domain": "GEO",
+    "tier": 4,
+    "query": "The climate classification of the region surrounding Lake Baikal in Russia is?",
+    "response": "The climate classification of the region surrounding Lake Baikal in Russia is typically characterized as a continental subarctic climate (Köppen climate classification: Dfb). This region experiences cold winters and cool summers, with significant temperature variations between seasons.",
+    "reference_answer": "The region around Lake Baikal is classified as having a humid continental climate with significant seasonal variation, influenced by its inland location and the lake's moderating effect."
+  },
+  {
+    "rating_id": "MR_0050",
+    "model": "gemma-3-27b",
+    "query_id": "BIO_T5_0239",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "What is the average weight of the human thyroid gland in adults as reported by the study by Pankow et al. (2005)?",
+    "response": "According to Pankow et al. (2005), the average weight of the human thyroid gland in adults is **12-15 grams**.\n\n\n\n",
+    "reference_answer": "The average weight of the human thyroid gland was reported as 18.6 grams ± 4.8 grams for men and 17.1 grams ± 4.3 grams for women in the study by Pankow et al. (2005)."
+  },
+  {
+    "rating_id": "MR_0191",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T2_0102",
+    "domain": "SCI",
+    "tier": 2,
+    "query": "What is the scientific term for the study of the structure, behavior, and evolution of the universe?",
+    "response": "The scientific term for the study of the structure, behavior, and evolution of the universe is cosmology.",
+    "reference_answer": "The study is known as cosmology. Cosmology encompasses the examination of the universe's origins, evolution, and ultimate fate, based on observations, experiments, and theoretical frameworks."
+  },
+  {
+    "rating_id": "MR_0028",
+    "model": "eurollm-9b",
+    "query_id": "CULT_T1_0131",
+    "domain": "CULT",
+    "tier": 1,
+    "query": "What is the term for the study of the meaning of words and phrases?",
+    "response": "The term for the study of the meaning of words and phrases is \"semantics.\"",
+    "reference_answer": "The term for the study of the meaning of words and phrases is semantics."
+  },
+  {
+    "rating_id": "MR_0188",
+    "model": "solar-10.7b",
+    "query_id": "BIO_T5_0036",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "What was the incidence of grade 3 or higher cytokine release syndrome (CRS) reported in the ZUMA-1 trial for axicabtagene ciloleucel in patients with refractory large B-cell lymphoma?",
+    "response": "In the ZUMA-1 trial for axicabtagene ciloleucel in patients with refractory large B-cell lymphoma, the incidence of grade 3 or higher cytokine release syndrome (CRS) was reported to be around 12%.",
+    "reference_answer": "The ZUMA-1 trial reported grade 3 or higher cytokine release syndrome (CRS) in 13% of patients treated with axicabtagene ciloleucel for refractory large B-cell lymphoma (Neelapu et al., NEJM 2017)."
+  },
+  {
+    "rating_id": "MR_0104",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T4_0173",
+    "domain": "TECH",
+    "tier": 4,
+    "query": "What is the name of the widely used cryptographic hash function designed by the National Security Agency (NSA)?",
+    "response": "The widely used cryptographic hash function designed by the National Security Agency (NSA) is called SHA (Secure Hash Algorithm), specifically SHA-1 and later versions such as SHA-256, SHA-384, and SHA-512, which are part of the SHA-2 family. The most well-known is likely SHA-256.",
+    "reference_answer": "The SHA-256 hash function is part of the SHA-2 family designed by the NSA for cryptographic purposes."
+  },
+  {
+    "rating_id": "MR_0178",
+    "model": "seed-oss-36b",
+    "query_id": "SCI_T3_0008",
+    "domain": "SCI",
+    "tier": 3,
+    "query": "What were the key findings of the 1919 solar eclipse expedition led by Arthur Eddington, and how did they impact our understanding of gravity?",
+    "response": "The 1919 solar eclipse expedition led by Arthur Eddington confirmed a pivotal prediction of Albert Einstein’s general theory of relativity: **starlight passing near the Sun is deflected by gravity**. Here are the key details",
+    "reference_answer": "The 1919 solar eclipse expedition led by Arthur Eddington confirmed a prediction made by Albert Einstein's theory of general relativity that the gravitational field of the Sun would bend light from background stars, providing a crucial experimental verification of general relativity."
+  },
+  {
+    "rating_id": "MR_0026",
+    "model": "eurollm-9b",
+    "query_id": "BIO_T2_0149",
+    "domain": "BIO",
+    "tier": 2,
+    "query": "Which genetic disorder is caused by a deficiency of the enzyme hexosaminidase A?",
+    "response": "The genetic disorder caused by a deficiency of the enzyme hexosaminidase A is Tay-Sachs disease.",
+    "reference_answer": "Tay-Sachs disease is a genetic disorder caused by a deficiency of the enzyme hexosaminidase A, leading to accumulation of GM2 ganglioside in neurons and severe neurological impairment."
+  },
+  {
+    "rating_id": "MR_0014",
+    "model": "deepseek-v3.2",
+    "query_id": "CULT_T1_0162",
+    "domain": "CULT",
+    "tier": 1,
+    "query": "Who is the author of the play 'Romeo and Juliet'?",
+    "response": "William Shakespeare.",
+    "reference_answer": "The author of the play 'Romeo and Juliet' is William Shakespeare."
+  },
+  {
+    "rating_id": "MR_0120",
+    "model": "ministral-14b",
+    "query_id": "BIO_T2_0091",
+    "domain": "BIO",
+    "tier": 2,
+    "query": "What is the primary role of the protein p53 in cells?",
+    "response": "The primary role of **p53** is to act as a **tumor suppressor** by regulating the **cell cycle, DNA repair, and apoptosis** (programmed cell death) in response to cellular stress (e.g., DNA damage, hypoxia, or oncogenic signals).\n\nKey functions:\n- **Cell cycle arrest** (pauses division to allow DNA repair).\n- **Apoptosis induction** (eliminates severely damaged cells).\n- **DNA repair activation** (via transcription of repair genes).\n- **Metabolic regulation** (maintains genomic stability).\n\nMutations in *TP53* (the gene encoding p53) are common in cancers, leading to uncontrolled cell growth.",
+    "reference_answer": "The protein p53 is a tumor suppressor that plays a critical role in regulating cell cycle, maintaining genomic stability, and preventing cancer formation by inducing cell cycle arrest or apoptosis in response to DNA damage."
+  },
+  {
+    "rating_id": "MR_0106",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T3_0149",
+    "domain": "TECH",
+    "tier": 3,
+    "query": "What is the purpose of the SQL 'JOIN' clause?",
+    "response": "The SQL 'JOIN' clause is used to combine rows from two or more tables based on a related column between them, allowing data to be retrieved from multiple tables in a single query.",
+    "reference_answer": "The SQL 'JOIN' clause is used to combine rows from two or more tables based on a related column between them, allowing for more complex queries that retrieve data from multiple tables."
+  },
+  {
+    "rating_id": "MR_0109",
+    "model": "llama-4-maverick",
+    "query_id": "HIST_T3_0157",
+    "domain": "HIST",
+    "tier": 3,
+    "query": "Which ancient Greek historian is known for his account of the Peloponnesian War?",
+    "response": "Thucydides.",
+    "reference_answer": "Thucydides is the ancient Greek historian known for his detailed account of the Peloponnesian War."
+  },
+  {
+    "rating_id": "MR_0091",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "CULT_T3_0110",
+    "domain": "CULT",
+    "tier": 3,
+    "query": "The 'Köchel catalogue' is used to organize the works of which composer?",
+    "response": "The 'Köchel catalogue' is used to organize the works of Wolfgang Amadeus Mozart.",
+    "reference_answer": "The Köchel catalogue is a chronological and thematic catalogue of the works of Wolfgang Amadeus Mozart."
+  },
+  {
+    "rating_id": "MR_0111",
+    "model": "llama-4-maverick",
+    "query_id": "SCI_T4_0095",
+    "domain": "SCI",
+    "tier": 4,
+    "query": "What role does the concept of angular momentum play in the analysis of rotating systems?",
+    "response": "## Step 1: Understanding Angular Momentum\nAngular momentum is a measure of an object's tendency to continue rotating, depending on its mass, size, and rate of rotation.\n\n## Step 2: Role in Rotating Systems\nIn the analysis of rotating systems, angular momentum plays a crucial role because it is a conserved quantity when there are no external torques acting on the system.\n\n## Step 3: Conservation of Angular Momentum\nThe conservation of angular momentum means that if the moment of inertia of a rotating system changes, its angular velocity will change in such a way that the total angular momentum remains constant.\n\n## Step 4: Application in Analysis\nThis principle is used to analyze and predict the behavior of rotating systems, such as spinning tops, gyroscopes, and celestial bodies, by understanding how changes in their configuration or external influences affect their rotation.\n\n## Step 5: Conclusion on Angular Momentum's Role\nThe concept of angular momentum is fundamental in understanding the dynamics of rotating systems, allowing for the prediction of their behavior under various conditions.\n\nThe final answer is: The concept of angular momentum is crucial for analyzing rotating systems as it is conserved in the absence of external torques, enabling the prediction of changes in rotational behavior due to changes in the system's configuration.",
+    "reference_answer": "Angular momentum is a measure of an object's tendency to continue rotating, and its conservation is crucial for understanding the behavior of rotating systems, such as gyroscopes and celestial bodies."
+  },
+  {
+    "rating_id": "MR_0158",
+    "model": "qwen2.5-7b",
+    "query_id": "BIO_T1_0168",
+    "domain": "BIO",
+    "tier": 1,
+    "query": "What is the primary reservoir for the bacteria that cause Lyme disease?",
+    "response": "The primary reservoir for the bacteria that cause Lyme disease is the blacklegged tick (Ixodes scapularis and Ixodes pacificus).",
+    "reference_answer": "The primary reservoir for Borrelia burgdorferi, the bacteria that cause Lyme disease, is typically small mammals, especially white-footed mice."
+  },
+  {
+    "rating_id": "MR_0025",
+    "model": "eurollm-9b",
+    "query_id": "GEO_T5_0220",
+    "domain": "GEO",
+    "tier": 5,
+    "query": "What is the total number of islands in the Philippines?",
+    "response": "The total number of islands in the Philippines is approximately 7,641.",
+    "reference_answer": "The Philippines is composed of approximately 7,641 islands."
+  },
+  {
+    "rating_id": "MR_0049",
+    "model": "gemma-3-27b",
+    "query_id": "CULT_T5_0167",
+    "domain": "CULT",
+    "tier": 5,
+    "query": "What is the name of the Islamic mystical text attributed to the Sufi saint Ibn Arabi, which is considered one of the most important works in Sufi literature?",
+    "response": "Futūḥāt al-Makkiyya (The Meccan Revelations).\n\n\n\n",
+    "reference_answer": "The text is known as 'Fusus al-Hikam' (The Bezels of Wisdom)."
+  },
+  {
+    "rating_id": "MR_0105",
+    "model": "llama-4-maverick",
+    "query_id": "CULT_T1_0069",
+    "domain": "CULT",
+    "tier": 1,
+    "query": "What is the name of the protagonist in Jane Austen's novel 'Sense and Sensibility'?",
+    "response": "The novel 'Sense and Sensibility' by Jane Austen does not have a single protagonist, but rather two main female characters: Elinor Dashwood and Marianne Dashwood. They are sisters and the story revolves around their experiences and personal growth. Elinor represents 'sense,' while Marianne represents 'sensibility.'",
+    "reference_answer": "The protagonists in Jane Austen's novel 'Sense and Sensibility' are Elinor and Marianne Dashwood."
+  },
+  {
+    "rating_id": "MR_0163",
+    "model": "qwen2.5-7b",
+    "query_id": "HIST_T5_0137",
+    "domain": "HIST",
+    "tier": 5,
+    "query": "What was the name of the Mexican revolutionary leader who led the División del Norte during the Mexican Revolution?",
+    "response": "The name of the Mexican revolutionary leader who led the División del Norte during the Mexican Revolution was Pancho Villa.",
+    "reference_answer": "The Mexican revolutionary leader who led the División del Norte was Pancho Villa."
+  },
+  {
+    "rating_id": "MR_0063",
+    "model": "gemma-3-4b",
+    "query_id": "FIN_T3_0003",
+    "domain": "FIN",
+    "tier": 3,
+    "query": "In financial statement analysis, what is the significance of 'comprehensive income'?",
+    "response": "Comprehensive income represents a company’s total change in equity during a period, beyond just net income. It includes items like unrealized gains/losses on investments, dividends received, and foreign currency translation adjustments, providing a more complete picture of a company’s profitability and financial performance.",
+    "reference_answer": "Comprehensive income includes all changes in equity during a period except those resulting from investments by owners and distributions to owners, encompassing net income and other comprehensive income items such as unrealized gains/losses on available-for-sale securities and foreign currency translation adjustments."
+  },
+  {
+    "rating_id": "MR_0122",
+    "model": "mistral-medium-3",
+    "query_id": "FIN_T5_0220",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "What is the name of the model used to estimate the expected credit loss on financial assets under CECL?",
+    "response": "The model used to estimate the expected credit loss on financial assets under the Current Expected Credit Loss (CECL) standard is typically referred to as the **\"CECL Model\"** or **\"Expected Credit Loss (ECL) Model.\"**\n\nCommon approaches within this framework include:\n- **Probability of Default (PD) / Loss Given Default (LGD) Models**\n- **Discounted Cash Flow (DCF) Models**\n- **Vintage Analysis Models**\n- **Migration Analysis Models**\n\nThe specific model name may vary by institution, but these are the primary methodologies used to comply with CECL.",
+    "reference_answer": "The Current Expected Credit Loss (CECL) model uses a lifetime expected credit loss approach, often estimated using models such as the discounted cash flow model or probability-of-default/loss-given-default models."
+  },
+  {
+    "rating_id": "MR_0148",
+    "model": "mistral-small-4-119b",
+    "query_id": "GEO_T3_0018",
+    "domain": "GEO",
+    "tier": 3,
+    "query": "The Celebes Sea is part of which major ocean and is located near which group of islands?",
+    "response": "The Celebes Sea is part of the **Pacific Ocean** and is located near the **Philippine Islands** and **Indonesia**.",
+    "reference_answer": "The Celebes Sea is part of the Pacific Ocean and is situated near the Philippines and Indonesia, specifically bounded by the Sulu Archipelago to the north and Sulawesi to the south."
+  },
+  {
+    "rating_id": "MR_0147",
+    "model": "mistral-small-4-119b",
+    "query_id": "SCI_T5_0247",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "What is the name of the phenomenon where the rate of a chemical reaction is increased by the presence of a substance that is not consumed in the reaction?",
+    "response": "Catalysis",
+    "reference_answer": "The phenomenon is known as catalysis."
+  },
+  {
+    "rating_id": "MR_0034",
+    "model": "gemma-2-27b",
+    "query_id": "TECH_T3_0141",
+    "domain": "TECH",
+    "tier": 3,
+    "query": "What is the difference between a 'thread' and a 'process' in operating system terminology?",
+    "response": "A **process** is an independent program in execution, with its own memory space. A **thread** is a lightweight execution unit within a process, sharing the process's memory space. \n\nThink of a process as a whole program, and threads as smaller tasks within that program that can run concurrently.\n",
+    "reference_answer": "A thread is a lightweight process that shares the same memory space as other threads within the same process, while a process is a separate instance of a program with its own memory space."
+  },
+  {
+    "rating_id": "MR_0139",
+    "model": "mistral-small-24b",
+    "query_id": "HIST_T2_0197",
+    "domain": "HIST",
+    "tier": 2,
+    "query": "Which city was the capital of the Habsburg Empire during the early 16th century?",
+    "response": "The capital of the Habsburg Empire during the early 16th century was Vienna.",
+    "reference_answer": "Vienna was the capital of the Habsburg Empire during the early 16th century."
+  },
+  {
+    "rating_id": "MR_0055",
+    "model": "gemma-3-27b",
+    "query_id": "HIST_T3_0174",
+    "domain": "HIST",
+    "tier": 3,
+    "query": "The Qin dynasty was the first to unify China's various warring states under a single ruler; who was this ruler?",
+    "response": "Qin Shi Huang.\n\n\n\n",
+    "reference_answer": "The ruler who unified China's warring states under the Qin dynasty was Qin Shi Huang."
+  },
+  {
+    "rating_id": "MR_0125",
+    "model": "mistral-medium-3",
+    "query_id": "SCI_T4_0044",
+    "domain": "SCI",
+    "tier": 4,
+    "query": "How does the dielectric constant of a material affect its interaction with an electric field?",
+    "response": "The dielectric constant (relative permittivity, εᵣ) of a material determines how it interacts with an electric field by:\n\n1. **Polarization**: A higher dielectric constant means the material polarizes more easily, reducing the net electric field inside it.\n2. **Capacitance**: In capacitors, a higher εᵣ increases capacitance (C = εᵣε₀A/d), allowing more charge storage.\n3. **Field Strength**: The electric field inside the material is weakened by a factor of εᵣ compared to the external field (E_internal = E_external / εᵣ).\n4. **Energy Storage**: Materials with higher εᵣ store more electrostatic energy per unit volume.\n\nIn summary, a higher dielectric constant enhances polarization, capacitance, and energy storage while reducing the internal electric field strength.",
+    "reference_answer": "The dielectric constant of a material determines how much the material concentrates the electric field between the plates of a capacitor, with higher dielectric constants indicating greater concentration and thus capacitance."
+  },
+  {
+    "rating_id": "MR_0072",
+    "model": "gpt-oss-20b",
+    "query_id": "HIST_T2_0207",
+    "domain": "HIST",
+    "tier": 2,
+    "query": "What was the name of the process invented by Eli Whitney that improved the efficiency of cotton production in the United States during the 19th century?",
+    "response": "The cotton gin.",
+    "reference_answer": "The process was called the cotton gin, invented by Eli Whitney in 1793."
+  },
+  {
+    "rating_id": "MR_0061",
+    "model": "gemma-3-4b",
+    "query_id": "LAW_T5_0194",
+    "domain": "LAW",
+    "tier": 5,
+    "query": "How many judges signed the majority opinion in the 2019 case of Kisor v. Wilkie?",
+    "response": "Five judges signed the majority opinion in *Kisor v. Wilkie*.",
+    "reference_answer": "The majority opinion in Kisor v. Wilkie was signed by five judges."
+  },
+  {
+    "rating_id": "MR_0132",
+    "model": "mistral-small-24b",
+    "query_id": "BIO_T5_0188",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "What was the reported frequency of grade 3 or 4 adverse events in the CheckMate 069 trial for the combination of nivolumab and ipilimumab versus ipilimumab alone in previously untreated melanoma patients?",
+    "response": "In the CheckMate 069 trial, the reported frequency of grade 3 or 4 adverse events was 58.9% for the combination of nivolumab and ipilimumab, compared to 20.9% for ipilimumab alone in previously untreated melanoma patients.",
+    "reference_answer": "The CheckMate 069 trial reported grade 3 or 4 adverse events in 61.8% of patients receiving the combination of nivolumab and ipilimumab, compared to 44.2% in those receiving ipilimumab alone (Hodi et al., NEJM 2016)."
+  },
+  {
+    "rating_id": "MR_0180",
+    "model": "seed-oss-36b",
+    "query_id": "FIN_T1_0179",
+    "domain": "FIN",
+    "tier": 1,
+    "query": "The economist known for 'The General Theory of Employment, Interest and Money' was?",
+    "response": "John Maynard Keynes",
+    "reference_answer": "John Maynard Keynes is known for 'The General Theory of Employment, Interest and Money'."
+  },
+  {
+    "rating_id": "MR_0085",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "SCI_T5_0250",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "In what year did the first successful measurement of the precession of the perihelion of Mercury's orbit occur?",
+    "response": "The first successful measurement of the precession of the perihelion of Mercury's orbit occurred in 1859 by Urbain Le Verrier.",
+    "reference_answer": "The precession was first successfully measured and accounted for in the context of general relativity, with initial observations dating back to the mid-19th century, but a precise measurement was achieved by Simon Newcomb around 1895."
+  },
+  {
+    "rating_id": "MR_0009",
+    "model": "deepseek-v3.2",
+    "query_id": "SCI_T4_0077",
+    "domain": "SCI",
+    "tier": 4,
+    "query": "How do large igneous provinces (LIPs) impact global environmental conditions?",
+    "response": "Large igneous provinces (LIPs) impact global environmental conditions primarily through the rapid release of vast volumes of volcanic gases, especially carbon dioxide (CO₂) and sulfur dioxide (SO₂). This can lead to extreme climate changes:\n\n1.  **Global Warming:** Massive CO₂ emissions can cause intense greenhouse warming.\n2.  **Global Cooling:** SO₂ can form sulfate aerosols in the stratosphere, reflecting sunlight and triggering rapid cooling (\"volcanic winter\").\n3.  **Ocean Acidification and Anoxia:** Elevated CO₂ levels acidify oceans, while nutrient runoff and altered circulation can deplete oxygen, creating \"dead zones.\"\n4.  **Mass Extinctions:** The combination of rapid climate shifts, ocean acidification, and anoxia is strongly linked to several major mass extinction events in Earth's history (e.g., the End-Permian and End-Triassic).\n\nThe environmental catastrophe stems not just from the lava flows but from the speed and volume of gas release, which can overwhelm Earth's natural stabilizing systems.",
+    "reference_answer": "Large igneous provinces (LIPs) are vast volcanic regions that can release significant amounts of greenhouse gases and aerosols, potentially leading to major environmental changes, including mass extinctions."
+  },
+  {
+    "rating_id": "MR_0018",
+    "model": "deepseek-v3.2",
+    "query_id": "HIST_T4_0057",
+    "domain": "HIST",
+    "tier": 4,
+    "query": "The Mexican-American War resulted in Mexico ceding large territories to the United States through which treaty?",
+    "response": "The Treaty of Guadalupe Hidalgo.",
+    "reference_answer": "The Mexican-American War resulted in Mexico ceding large territories to the United States through the Treaty of Guadalupe Hidalgo."
+  },
+  {
+    "rating_id": "MR_0184",
+    "model": "seed-oss-36b",
+    "query_id": "TECH_T2_0034",
+    "domain": "TECH",
+    "tier": 2,
+    "query": "How does gradient descent work in the context of optimizing machine learning models?",
+    "response": "Gradient descent is",
+    "reference_answer": "Gradient descent is an optimization algorithm used to minimize the loss function by iteratively adjusting the model's parameters in the direction of the negative gradient of the loss, thereby reducing the error."
+  },
+  {
+    "rating_id": "MR_0016",
+    "model": "deepseek-v3.2",
+    "query_id": "SCI_T2_0043",
+    "domain": "SCI",
+    "tier": 2,
+    "query": "What is the difference between electric and magnetic fields?",
+    "response": "Electric fields are produced by electric charges, while magnetic fields are produced by moving charges (currents) or changing electric fields. A stationary charge feels only an electric force, but a moving charge feels both electric and magnetic forces.",
+    "reference_answer": "Electric fields are produced by electric charges and exert forces on other charges, while magnetic fields are produced by moving charges or changing electric fields and exert forces on moving charges or other magnetic fields."
+  },
+  {
+    "rating_id": "MR_0162",
+    "model": "qwen2.5-7b",
+    "query_id": "FIN_T2_0003",
+    "domain": "FIN",
+    "tier": 2,
+    "query": "Under U.S. GAAP, how are leases classified on the balance sheet?",
+    "response": "Under U.S. GAAP, leases are classified on the balance sheet as either operating leases or finance leases. Assets and liabilities related to finance leases are recognized, while operating leases are typically not recognized on the balance sheet but may be disclosed in the notes.",
+    "reference_answer": "Under U.S. GAAP, leases are classified as either operating leases or finance leases (previously operating or capital leases). Finance leases are capitalized on the balance sheet, while operating leases are not, although ASC 842 requires lessees to recognize operating lease liabilities and right-of-use assets on the balance sheet."
+  },
+  {
+    "rating_id": "MR_0019",
+    "model": "deepseek-v3.2",
+    "query_id": "BIO_T5_0050",
+    "domain": "BIO",
+    "tier": 5,
+    "query": "Which specific mutation in the EGFR gene is associated with responsiveness to osimertinib in non-small cell lung cancer?",
+    "response": "The specific EGFR mutation associated with responsiveness to osimertinib in non-small cell lung cancer is the **T790M mutation**, which is a secondary resistance mutation. Osimertinib is also a first-line treatment for tumors with common **exon 19 deletions or L858R mutations**.",
+    "reference_answer": "The T790M mutation in the EGFR gene is associated with responsiveness to osimertinib in non-small cell lung cancer patients who have developed resistance to earlier EGFR inhibitors."
+  },
+  {
+    "rating_id": "MR_0002",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T5_0139",
+    "domain": "SCI",
+    "tier": 5,
+    "query": "What was the name of the spacecraft that performed the first successful flyby of Jupiter's moon Io?",
+    "response": "The spacecraft that performed the first successful flyby of Jupiter's moon Io was Voyager 1.",
+    "reference_answer": "The spacecraft that performed the first successful flyby of Jupiter's moon Io was Pioneer 10."
+  },
+  {
+    "rating_id": "MR_0057",
+    "model": "gemma-3-4b",
+    "query_id": "HIST_T4_0038",
+    "domain": "HIST",
+    "tier": 4,
+    "query": "Who was the leader of the Ottoman Empire during the Battle of Vienna in 1683?",
+    "response": "Mehmed IV",
+    "reference_answer": "Mehmed IV was the Sultan of the Ottoman Empire during the Battle of Vienna in 1683, although the actual command was held by Grand Vizier Kara Mustafa Pasha."
+  },
+  {
+    "rating_id": "MR_0186",
+    "model": "solar-10.7b",
+    "query_id": "BIO_T3_0145",
+    "domain": "BIO",
+    "tier": 3,
+    "query": "What term is used to describe the clustering of cases of a disease in a specific geographic area, often indicating a common source or risk factor?",
+    "response": "The term used to describe the clustering of disease cases in a specific geographic area is \"epidemic\" or, more specifically, when investigating the potential cause, it is referred to as an \"outbreak.\"",
+    "reference_answer": "The term used is a cluster or disease cluster, which refers to a geographically or temporally bounded group of cases of a disease, potentially indicating a localized risk factor or outbreak."
+  },
+  {
+    "rating_id": "MR_0059",
+    "model": "gemma-3-4b",
+    "query_id": "TECH_T2_0009",
+    "domain": "TECH",
+    "tier": 2,
+    "query": "What is the role of a coordinator node in a distributed transaction processing system?",
+    "response": "A coordinator node in a distributed transaction processing system acts as the central authority, managing the overall transaction across multiple participating nodes. It ensures atomicity, consistency, isolation, and durability (ACID) by:\n\n*   **Initiating** the transaction.\n*   **Orchestrating** the steps across different nodes.\n*   **Monitoring** progress and detecting failures.\n*   **Committing** or **rolling back** the entire transaction based on the success or failure of individual steps.",
+    "reference_answer": "In a distributed transaction processing system, a coordinator node is responsible for managing the commit or rollback of a distributed transaction across multiple participant nodes, ensuring atomicity and consistency of the transaction."
+  },
+  {
+    "rating_id": "MR_0142",
+    "model": "mistral-small-4-119b",
+    "query_id": "FIN_T5_0308",
+    "domain": "FIN",
+    "tier": 5,
+    "query": "What specific minimum capital conservation buffer (expressed as a percentage of risk-weighted assets) was prescribed for globally systemically important banks (G-SIBs) under the fully implemented Basel III framework?",
+    "response": "Under the fully implemented Basel III framework, the minimum capital conservation buffer prescribed for **G-SIBs** is **2.5% of risk-weighted assets (RWA)**.\n\nThis buffer is **additional** to the **4.5% minimum CET1 requirement** and the **2% G-SIB surcharge**, bringing the total CET1 requirement for G-SIBs to **9% of RWA**.",
+    "reference_answer": "Under the fully implemented Basel III framework, globally systemically important banks (G-SIBs) are subject to an additional capital conservation buffer on top of the minimum requirements. This G-SIB buffer is set within a range of 1.0% to 3.5% of risk-weighted assets, with the exact percentage for each bank determined by its systemic importance bucket."
+  },
+  {
+    "rating_id": "MR_0151",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T5_0243",
+    "domain": "LAW",
+    "tier": 5,
+    "query": "In the landmark case of Marbury v. Madison, what was the specific dollar amount of the salary at issue for William Marbury?",
+    "response": "$1,000 per year",
+    "reference_answer": "The salary at issue for William Marbury was $1,646."
+  },
+  {
+    "rating_id": "MR_0006",
+    "model": "deepseek-v3.1",
+    "query_id": "BIO_T3_0043",
+    "domain": "BIO",
+    "tier": 3,
+    "query": "What is the name of the test used to assess the integrity of the hypothalamic-pituitary-adrenal axis by measuring cortisol response to synthetic ACTH?",
+    "response": "The test is called the **cosyntropin stimulation test** (also known as the ACTH stimulation test or Synacthen test).",
+    "reference_answer": "The cosyntropin stimulation test, also known as the ACTH stimulation test, is used to assess the integrity of the hypothalamic-pituitary-adrenal axis by measuring the cortisol response to synthetic adrenocorticotropic hormone (ACTH)."
+  },
+  {
+    "rating_id": "MR_0087",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T5_0010",
+    "domain": "LAW",
+    "tier": 5,
+    "query": "What is the precise dollar amount of the maximum fine that can be imposed under the Sarbanes-Oxley Act for certain corporate fraud offenses?",
+    "response": "The precise dollar amount of the maximum fine that can be imposed under the Sarbanes-Oxley Act for certain corporate fraud offenses is $2.5 million for a corporation.",
+    "reference_answer": "The maximum fine under the Sarbanes-Oxley Act for certain corporate fraud offenses is $5 million for individuals and $25 million for organizations."
+  },
+  {
+    "rating_id": "MR_0017",
+    "model": "deepseek-v3.2",
+    "query_id": "GEO_T1_0161",
+    "domain": "GEO",
+    "tier": 1,
+    "query": "How many people live in the metropolitan area of Tokyo?",
+    "response": "The metropolitan area of Tokyo, as defined by the Greater Tokyo Area, is the most populous in the world, with approximately **37.8 million** people.",
+    "reference_answer": "The metropolitan area of Tokyo is home to over 37 million people."
+  },
+  {
+    "rating_id": "MR_0058",
+    "model": "gemma-3-4b",
+    "query_id": "TECH_T3_0001",
+    "domain": "TECH",
+    "tier": 3,
+    "query": "What is the primary advantage of using a NUMA architecture over a UMA architecture?",
+    "response": "The primary advantage of NUMA (Non-Uniform Memory Access) over UMA (Uniform Memory Access) is **reduced memory latency for local data access**. With NUMA, processors can access memory closer to them more quickly, improving performance for applications that frequently use the same data.",
+    "reference_answer": "The primary advantage of using a NUMA (Non-Uniform Memory Access) architecture over a UMA (Uniform Memory Access) architecture is that NUMA can scale to larger numbers of processors by allowing memory access times to vary based on the location of the memory relative to the processor, reducing contention and improving performance in large multiprocessor systems."
+  },
+  {
+    "rating_id": "MR_0064",
+    "model": "gemma-3-4b",
+    "query_id": "FIN_T2_0120",
+    "domain": "FIN",
+    "tier": 2,
+    "query": "How did the Industrial Revolution affect economic structures in 19th-century Britain?",
+    "response": "The Industrial Revolution fundamentally reshaped 19th-century Britain’s economy by shifting it from an agrarian, rural-based system to an industrial, urban one. It led to:\n\n*   **Rise of factories and mass production:** Replacing cottage industries with large-scale factories.\n*   **Growth of a wage-labor system:** People moved from farming to work for wages in factories.\n*   **Expansion of trade and markets:** Increased production fueled both domestic and international trade.\n*   **Emergence of new industries:** Coal, iron, textiles, and later steel and shipbuilding became dominant.\n*   **Increased wealth concentration:** A new industrial capitalist class gained significant economic power.\n\nDo you want me to delve deeper into a specific aspect of this change?",
+    "reference_answer": "The Industrial Revolution transformed Britain's economy by shifting from manual labor to machine-based manufacturing, leading to significant changes in production, employment, and social structures."
+  },
+  {
+    "rating_id": "MR_0031",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T4_0116",
+    "domain": "HIST",
+    "tier": 4,
+    "query": "The leader of the Taiping Rebellion, Hong Xiuquan, claimed to be the younger brother of whom?",
+    "response": "Jesus Christ \n\n",
+    "reference_answer": "Hong Xiuquan, the leader of the Taiping Rebellion, claimed to be the younger brother of Jesus Christ."
+  }
+]

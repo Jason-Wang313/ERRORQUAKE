@@ -115,12 +115,12 @@ reasoning models, or models below $3$B
 anchors, and analysis code are released for replication.
 
 \paragraph{Contributions.}
-\textbf{C1} A continuous 9-point error-severity scale with
+\textbf{C1} A 9-level ordinal severity scale with
 anchors, a dual-judge scoring pipeline, a $340$-item overcall
 audit, and a $100$-item human-rated calibration subset on which
 the judges achieve $100\%$ sensitivity at $M \geq 2.5$
 (\S\ref{sec:method}, Appendix~\ref{app:scale}).
-\textbf{C2} \textsc{Errorquake-10k}: $4{,}000$ queries $\times$
+\textbf{C2} \textsc{Errorquake-10k}: $10{,}000$ queries $\times$
 $21$ open-weight models with per-model severity distributions and
 bootstrap-CI \sdi{} estimates.
 \textbf{C3} Distribution characterisation: $17/21$ models have a
@@ -278,7 +278,7 @@ worked examples per anchor. Scale design principles:
 the ``harmless slip vs consequential failure'' boundary.
 
 \paragraph{Query benchmark.} \textsc{Errorquake-10k} comprises
-$4{,}000$ queries: $500$ per domain across $8$ domains (BIO, LAW,
+$10{,}000$ queries: $1{,}250$ per domain across $8$ domains (BIO, LAW,
 HIST, GEO, SCI, TECH, FIN, CULT), with each domain stratified into
 five difficulty tiers T1--T5 of $100$ queries each. Tiers T1--T2
 are ``easy'' factual queries; T4--T5 contain trap questions and
@@ -343,7 +343,7 @@ $10$ families, spanning active-parameter counts from $\sim 3$B
 of $\sim 671$B total (\textsc{deepseek-v3.1,v3.2}). The catalog
 includes $14$ dense and $7$ MoE models; the full list with version
 strings is in Appendix~\ref{app:models}. Each model is evaluated on
-all $4{,}000$ \textsc{Errorquake-10k} queries with greedy decoding
+all $10{,}000$ \textsc{Errorquake-10k} queries with greedy decoding
 at a $500$-token budget, via an open-access inference API hosting
 the target models on third-party GPU infrastructure. Reasoning
 models and three rate-limit-exhausted models are excluded; see
@@ -385,7 +385,7 @@ qualify; the union covers all $21$.}\label{tab:preregistered}
 The experiments are sequenced to build the headline discriminator
 result. \S\ref{sec:exp1} establishes that severity distributions
 exist and carry non-trivial tail structure; \S\ref{sec:exp2} (the
-headline) shows that $31$ of $inom{21}{2} = 210$ model pairs with matched accuracy
+headline) shows that $31$ of $inom{21}{2} = 210$ model pairs with matched accuracy
 have disjoint \sdi{} confidence intervals, with jackknife and
 judge-aggregation robustness. \S\ref{sec:exp3} reports the
 pre-registered micro-error-to-catastrophe prediction
