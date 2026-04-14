@@ -1,0 +1,265 @@
+{
+  "summary": {
+    "total_queries": 10000,
+    "verifiable_queries": 4759,
+    "verifiable_fraction": 0.4759,
+    "by_type": {
+      "numeric": 2788,
+      "named_entity": 1296,
+      "definitional": 675
+    },
+    "total_auto_scored": 87056,
+    "models_with_auto_scores": 21
+  },
+  "b_value_correlation": {
+    "n_paired_models": 21,
+    "spearman_rho": -0.3403,
+    "spearman_p": 0.131238,
+    "pearson_r": -0.3877,
+    "pearson_p": 0.08249,
+    "verdict": "VALIDATION_FAILED",
+    "target": "rho >= 0.80 for strong validation"
+  },
+  "item_level_agreement": {
+    "n_items": 87056,
+    "agreement_within_0.5": 0.5639,
+    "agreement_within_1.0": 0.6925,
+    "item_spearman_rho": 0.1173,
+    "item_spearman_p": 0.0
+  },
+  "per_model": {
+    "deepseek-v3.1": {
+      "n_items": 4297,
+      "n_auto_errors": 993,
+      "auto_b": 1.458,
+      "judge_b_on_subset": 1.3135
+    },
+    "deepseek-v3.2": {
+      "n_items": 3583,
+      "n_auto_errors": 857,
+      "auto_b": 1.4163,
+      "judge_b_on_subset": 0.8751
+    },
+    "eurollm-9b": {
+      "n_items": 4555,
+      "n_auto_errors": 864,
+      "auto_b": 0.9383,
+      "judge_b_on_subset": 1.1483
+    },
+    "gemma-2-27b": {
+      "n_items": 4222,
+      "n_auto_errors": 1992,
+      "auto_b": 1.6214,
+      "judge_b_on_subset": 0.91
+    },
+    "gemma-3-12b": {
+      "n_items": 3831,
+      "n_auto_errors": 1801,
+      "auto_b": 1.6707,
+      "judge_b_on_subset": 0.8384
+    },
+    "gemma-3-27b": {
+      "n_items": 3352,
+      "n_auto_errors": 1366,
+      "auto_b": 1.5704,
+      "judge_b_on_subset": 0.9484
+    },
+    "gemma-3-4b": {
+      "n_items": 4294,
+      "n_auto_errors": 1907,
+      "auto_b": 1.6006,
+      "judge_b_on_subset": 1.0644
+    },
+    "gpt-oss-20b": {
+      "n_items": 4138,
+      "n_auto_errors": 1815,
+      "auto_b": 1.6179,
+      "judge_b_on_subset": 0.8871
+    },
+    "kimi-k2-instruct": {
+      "n_items": 3650,
+      "n_auto_errors": 1570,
+      "auto_b": 1.6352,
+      "judge_b_on_subset": 0.9263
+    },
+    "llama-3.1-8b-instruct": {
+      "n_items": 4598,
+      "n_auto_errors": 945,
+      "auto_b": 1.2355,
+      "judge_b_on_subset": 0.9098
+    },
+    "llama-3.2-3b-instruct": {
+      "n_items": 4544,
+      "n_auto_errors": 1005,
+      "auto_b": 0.8309,
+      "judge_b_on_subset": 1.191
+    },
+    "llama-4-maverick": {
+      "n_items": 4519,
+      "n_auto_errors": 755,
+      "auto_b": 1.4516,
+      "judge_b_on_subset": 1.1134
+    },
+    "ministral-14b": {
+      "n_items": 4586,
+      "n_auto_errors": 728,
+      "auto_b": 1.4555,
+      "judge_b_on_subset": 0.9612
+    },
+    "mistral-medium-3": {
+      "n_items": 2661,
+      "n_auto_errors": 321,
+      "auto_b": 1.1416,
+      "judge_b_on_subset": 0.6602
+    },
+    "mistral-small-24b": {
+      "n_items": 4584,
+      "n_auto_errors": 781,
+      "auto_b": 1.2684,
+      "judge_b_on_subset": 0.9651
+    },
+    "mistral-small-4-119b": {
+      "n_items": 4540,
+      "n_auto_errors": 1067,
+      "auto_b": 1.5651,
+      "judge_b_on_subset": 0.9041
+    },
+    "phi-3.5-mini": {
+      "n_items": 4347,
+      "n_auto_errors": 1838,
+      "auto_b": 1.62,
+      "judge_b_on_subset": 1.0701
+    },
+    "qwen2.5-7b": {
+      "n_items": 4566,
+      "n_auto_errors": 1010,
+      "auto_b": 1.2377,
+      "judge_b_on_subset": 1.2361
+    },
+    "qwen3-next-80b": {
+      "n_items": 4488,
+      "n_auto_errors": 1227,
+      "auto_b": 1.5843,
+      "judge_b_on_subset": 0.9378
+    },
+    "seed-oss-36b": {
+      "n_items": 3119,
+      "n_auto_errors": 1134,
+      "auto_b": 1.644,
+      "judge_b_on_subset": 0.9772
+    },
+    "solar-10.7b": {
+      "n_items": 4582,
+      "n_auto_errors": 820,
+      "auto_b": 0.8608,
+      "judge_b_on_subset": 1.2212
+    }
+  },
+  "paired_b_values": [
+    {
+      "model": "deepseek-v3.1",
+      "auto_b": 1.458,
+      "judge_b": 1.3135
+    },
+    {
+      "model": "deepseek-v3.2",
+      "auto_b": 1.4163,
+      "judge_b": 0.8751
+    },
+    {
+      "model": "eurollm-9b",
+      "auto_b": 0.9383,
+      "judge_b": 1.1483
+    },
+    {
+      "model": "gemma-2-27b",
+      "auto_b": 1.6214,
+      "judge_b": 0.91
+    },
+    {
+      "model": "gemma-3-12b",
+      "auto_b": 1.6707,
+      "judge_b": 0.8384
+    },
+    {
+      "model": "gemma-3-27b",
+      "auto_b": 1.5704,
+      "judge_b": 0.9484
+    },
+    {
+      "model": "gemma-3-4b",
+      "auto_b": 1.6006,
+      "judge_b": 1.0644
+    },
+    {
+      "model": "gpt-oss-20b",
+      "auto_b": 1.6179,
+      "judge_b": 0.8871
+    },
+    {
+      "model": "kimi-k2-instruct",
+      "auto_b": 1.6352,
+      "judge_b": 0.9263
+    },
+    {
+      "model": "llama-3.1-8b-instruct",
+      "auto_b": 1.2355,
+      "judge_b": 0.9098
+    },
+    {
+      "model": "llama-3.2-3b-instruct",
+      "auto_b": 0.8309,
+      "judge_b": 1.191
+    },
+    {
+      "model": "llama-4-maverick",
+      "auto_b": 1.4516,
+      "judge_b": 1.1134
+    },
+    {
+      "model": "ministral-14b",
+      "auto_b": 1.4555,
+      "judge_b": 0.9612
+    },
+    {
+      "model": "mistral-medium-3",
+      "auto_b": 1.1416,
+      "judge_b": 0.6602
+    },
+    {
+      "model": "mistral-small-24b",
+      "auto_b": 1.2684,
+      "judge_b": 0.9651
+    },
+    {
+      "model": "mistral-small-4-119b",
+      "auto_b": 1.5651,
+      "judge_b": 0.9041
+    },
+    {
+      "model": "phi-3.5-mini",
+      "auto_b": 1.62,
+      "judge_b": 1.0701
+    },
+    {
+      "model": "qwen2.5-7b",
+      "auto_b": 1.2377,
+      "judge_b": 1.2361
+    },
+    {
+      "model": "qwen3-next-80b",
+      "auto_b": 1.5843,
+      "judge_b": 0.9378
+    },
+    {
+      "model": "seed-oss-36b",
+      "auto_b": 1.644,
+      "judge_b": 0.9772
+    },
+    {
+      "model": "solar-10.7b",
+      "auto_b": 0.8608,
+      "judge_b": 1.2212
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "total_sampled": 1000,
+  "by_severity_band": {
+    "0.5-1.0": 200,
+    "1.0-1.5": 200,
+    "1.5-2.0": 200,
+    "2.0-3.0": 200,
+    "3.0-4.0": 200
+  },
+  "by_model": {
+    "gemma-3-4b": 51,
+    "ministral-14b": 51,
+    "llama-3.1-8b-instruct": 50,
+    "gemma-3-27b": 49,
+    "mistral-small-24b": 49,
+    "gemma-3-12b": 49,
+    "mistral-small-4-119b": 49,
+    "gemma-2-27b": 49,
+    "qwen3-next-80b": 48,
+    "llama-3.2-3b-instruct": 48,
+    "eurollm-9b": 48,
+    "gpt-oss-20b": 48,
+    "deepseek-v3.1": 48,
+    "qwen2.5-7b": 47,
+    "deepseek-v3.2": 47,
+    "kimi-k2-instruct": 47,
+    "solar-10.7b": 47,
+    "seed-oss-36b": 46,
+    "phi-3.5-mini": 46,
+    "mistral-medium-3": 44,
+    "llama-4-maverick": 39
+  },
+  "by_domain": {
+    "LAW": 219,
+    "TECH": 137,
+    "FIN": 136,
+    "GEO": 133,
+    "SCI": 120,
+    "BIO": 106,
+    "CULT": 76,
+    "HIST": 73
+  },
+  "rule_preclassified": 295,
+  "rule_category_counts": {
+    "F_FORMAT": 172,
+    "A_RETRIEVAL": 63,
+    "C_GENERATION": 38,
+    "D_METACOGNITIVE": 22
+  }
+}

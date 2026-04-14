@@ -1,0 +1,4673 @@
+[
+  {
+    "item_id": "EQ_0001",
+    "model": "qwen2.5-7b",
+    "query_id": "BIO_T5_0179",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0002",
+    "model": "ministral-14b",
+    "query_id": "FIN_T5_0217",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0003",
+    "model": "gemma-3-12b",
+    "query_id": "HIST_T5_0043",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0004",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T3_0083",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0005",
+    "model": "ministral-14b",
+    "query_id": "CULT_T2_0059",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0006",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "BIO_T5_0171",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0007",
+    "model": "deepseek-v3.1",
+    "query_id": "HIST_T1_0071",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "HIST",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0008",
+    "model": "deepseek-v3.1",
+    "query_id": "FIN_T4_0192",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0009",
+    "model": "gemma-3-4b",
+    "query_id": "SCI_T2_0066",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0010",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "BIO_T4_0050",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0011",
+    "model": "gemma-2-27b",
+    "query_id": "GEO_T2_0059",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0012",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T5_0279",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0013",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T5_0298",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0014",
+    "model": "qwen2.5-7b",
+    "query_id": "CULT_T3_0119",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0015",
+    "model": "deepseek-v3.2",
+    "query_id": "SCI_T3_0181",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0016",
+    "model": "ministral-14b",
+    "query_id": "TECH_T4_0125",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0017",
+    "model": "solar-10.7b",
+    "query_id": "CULT_T2_0096",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0018",
+    "model": "gemma-2-27b",
+    "query_id": "BIO_T3_0128",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0019",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T3_0140",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0020",
+    "model": "gemma-2-27b",
+    "query_id": "SCI_T1_0107",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0021",
+    "model": "kimi-k2-instruct",
+    "query_id": "FIN_T2_0072",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0022",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "CULT_T3_0076",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0023",
+    "model": "gemma-3-12b",
+    "query_id": "LAW_T5_0077",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0024",
+    "model": "seed-oss-36b",
+    "query_id": "GEO_T1_0029",
+    "judge_score": 0.8,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0025",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "FIN_T5_0327",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0026",
+    "model": "llama-4-maverick",
+    "query_id": "HIST_T3_0224",
+    "judge_score": 2.75,
+    "severity_band": "significant",
+    "domain": "HIST",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0027",
+    "model": "deepseek-v3.2",
+    "query_id": "SCI_T2_0031",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0028",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "GEO_T2_0142",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0029",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "CULT_T5_0119",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0030",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T1_0229",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0031",
+    "model": "seed-oss-36b",
+    "query_id": "BIO_T5_0139",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0032",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "FIN_T1_0225",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0033",
+    "model": "gemma-3-12b",
+    "query_id": "LAW_T5_0118",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0034",
+    "model": "llama-4-maverick",
+    "query_id": "FIN_T2_0010",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0035",
+    "model": "qwen2.5-7b",
+    "query_id": "HIST_T2_0063",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0036",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T1_0044",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0037",
+    "model": "seed-oss-36b",
+    "query_id": "BIO_T5_0034",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0038",
+    "model": "gemma-3-12b",
+    "query_id": "GEO_T2_0002",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0039",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "BIO_T5_0119",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0040",
+    "model": "gemma-3-4b",
+    "query_id": "BIO_T5_0204",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0041",
+    "model": "deepseek-v3.2",
+    "query_id": "LAW_T5_0088",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0042",
+    "model": "ministral-14b",
+    "query_id": "FIN_T5_0316",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0043",
+    "model": "gemma-3-4b",
+    "query_id": "CULT_T3_0071",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0044",
+    "model": "seed-oss-36b",
+    "query_id": "SCI_T4_0031",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0045",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T5_0001",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0046",
+    "model": "qwen2.5-7b",
+    "query_id": "BIO_T3_0239",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0047",
+    "model": "gemma-2-27b",
+    "query_id": "BIO_T5_0135",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0048",
+    "model": "solar-10.7b",
+    "query_id": "BIO_T2_0017",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0049",
+    "model": "seed-oss-36b",
+    "query_id": "FIN_T4_0242",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0050",
+    "model": "deepseek-v3.2",
+    "query_id": "CULT_T1_0202",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0051",
+    "model": "gemma-3-4b",
+    "query_id": "SCI_T4_0195",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0052",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "BIO_T2_0066",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0053",
+    "model": "gemma-2-27b",
+    "query_id": "FIN_T4_0123",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0054",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T4_0007",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0055",
+    "model": "gemma-3-4b",
+    "query_id": "BIO_T5_0159",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0056",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T2_0140",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0057",
+    "model": "qwen2.5-7b",
+    "query_id": "SCI_T2_0134",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0058",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "SCI_T5_0178",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0059",
+    "model": "gemma-3-4b",
+    "query_id": "FIN_T2_0249",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0060",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T1_0245",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0061",
+    "model": "kimi-k2-instruct",
+    "query_id": "FIN_T4_0029",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0062",
+    "model": "qwen2.5-7b",
+    "query_id": "LAW_T4_0057",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0063",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T2_0161",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "HIST",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0064",
+    "model": "qwen2.5-7b",
+    "query_id": "SCI_T4_0080",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0065",
+    "model": "gemma-3-4b",
+    "query_id": "SCI_T5_0009",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0066",
+    "model": "deepseek-v3.2",
+    "query_id": "HIST_T1_0053",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "HIST",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0067",
+    "model": "llama-4-maverick",
+    "query_id": "SCI_T1_0202",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0068",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T5_0128",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0069",
+    "model": "seed-oss-36b",
+    "query_id": "GEO_T1_0237",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0070",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T3_0046",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0071",
+    "model": "llama-4-maverick",
+    "query_id": "BIO_T1_0217",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0072",
+    "model": "eurollm-9b",
+    "query_id": "TECH_T4_0182",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0073",
+    "model": "eurollm-9b",
+    "query_id": "CULT_T3_0173",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0074",
+    "model": "llama-4-maverick",
+    "query_id": "SCI_T3_0204",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0075",
+    "model": "deepseek-v3.2",
+    "query_id": "LAW_T3_0013",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0076",
+    "model": "deepseek-v3.2",
+    "query_id": "CULT_T2_0178",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0077",
+    "model": "deepseek-v3.2",
+    "query_id": "CULT_T5_0006",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0078",
+    "model": "solar-10.7b",
+    "query_id": "LAW_T5_0158",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0079",
+    "model": "eurollm-9b",
+    "query_id": "TECH_T5_0145",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0080",
+    "model": "gemma-2-27b",
+    "query_id": "CULT_T2_0157",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0081",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T5_0091",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0082",
+    "model": "phi-3.5-mini",
+    "query_id": "GEO_T4_0028",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0083",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T2_0059",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0084",
+    "model": "gemma-2-27b",
+    "query_id": "LAW_T5_0201",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0085",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T1_0131",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0086",
+    "model": "deepseek-v3.1",
+    "query_id": "BIO_T2_0056",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0087",
+    "model": "kimi-k2-instruct",
+    "query_id": "TECH_T4_0140",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0088",
+    "model": "llama-4-maverick",
+    "query_id": "FIN_T1_0101",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0089",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "FIN_T5_0053",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0090",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "GEO_T2_0237",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0091",
+    "model": "ministral-14b",
+    "query_id": "SCI_T5_0083",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0092",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T1_0026",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0093",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T1_0193",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0094",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T5_0114",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0095",
+    "model": "qwen2.5-7b",
+    "query_id": "TECH_T4_0142",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0096",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T4_0161",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0097",
+    "model": "seed-oss-36b",
+    "query_id": "LAW_T5_0159",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0098",
+    "model": "seed-oss-36b",
+    "query_id": "LAW_T2_0076",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0099",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "GEO_T1_0101",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0100",
+    "model": "solar-10.7b",
+    "query_id": "TECH_T2_0014",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0101",
+    "model": "solar-10.7b",
+    "query_id": "BIO_T5_0184",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0102",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T5_0028",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0103",
+    "model": "gemma-3-12b",
+    "query_id": "GEO_T1_0054",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0104",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T5_0067",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0105",
+    "model": "ministral-14b",
+    "query_id": "BIO_T5_0047",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0106",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T5_0011",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0107",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T5_0290",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0108",
+    "model": "ministral-14b",
+    "query_id": "LAW_T3_0062",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0109",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "CULT_T5_0097",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0110",
+    "model": "qwen2.5-7b",
+    "query_id": "HIST_T4_0066",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0111",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T3_0165",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0112",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T5_0148",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0113",
+    "model": "gemma-3-12b",
+    "query_id": "BIO_T5_0165",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0114",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T1_0062",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "HIST",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0115",
+    "model": "eurollm-9b",
+    "query_id": "CULT_T2_0041",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0116",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T2_0143",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0117",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T1_0220",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0118",
+    "model": "seed-oss-36b",
+    "query_id": "BIO_T4_0206",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0119",
+    "model": "deepseek-v3.2",
+    "query_id": "CULT_T2_0008",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0120",
+    "model": "kimi-k2-instruct",
+    "query_id": "CULT_T5_0094",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0121",
+    "model": "deepseek-v3.2",
+    "query_id": "LAW_T4_0096",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0122",
+    "model": "deepseek-v3.1",
+    "query_id": "LAW_T1_0173",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0123",
+    "model": "gemma-2-27b",
+    "query_id": "SCI_T5_0006",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0124",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "HIST_T5_0065",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0125",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T2_0159",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0126",
+    "model": "kimi-k2-instruct",
+    "query_id": "SCI_T5_0012",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0127",
+    "model": "eurollm-9b",
+    "query_id": "FIN_T5_0294",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0128",
+    "model": "gemma-3-4b",
+    "query_id": "LAW_T1_0104",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0129",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T5_0105",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0130",
+    "model": "deepseek-v3.1",
+    "query_id": "GEO_T5_0135",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0131",
+    "model": "kimi-k2-instruct",
+    "query_id": "FIN_T5_0168",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0132",
+    "model": "qwen2.5-7b",
+    "query_id": "LAW_T4_0228",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0133",
+    "model": "seed-oss-36b",
+    "query_id": "BIO_T4_0160",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0134",
+    "model": "gemma-3-4b",
+    "query_id": "TECH_T4_0144",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0135",
+    "model": "kimi-k2-instruct",
+    "query_id": "GEO_T4_0211",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0136",
+    "model": "seed-oss-36b",
+    "query_id": "LAW_T5_0119",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0137",
+    "model": "seed-oss-36b",
+    "query_id": "FIN_T5_0272",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0138",
+    "model": "solar-10.7b",
+    "query_id": "CULT_T1_0200",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0139",
+    "model": "eurollm-9b",
+    "query_id": "BIO_T4_0009",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0140",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T5_0106",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0141",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T4_0145",
+    "judge_score": 3.75,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0142",
+    "model": "llama-4-maverick",
+    "query_id": "BIO_T1_0214",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0143",
+    "model": "eurollm-9b",
+    "query_id": "CULT_T2_0097",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0144",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T5_0071",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0145",
+    "model": "qwen2.5-7b",
+    "query_id": "LAW_T5_0077",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0146",
+    "model": "eurollm-9b",
+    "query_id": "FIN_T4_0089",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0147",
+    "model": "solar-10.7b",
+    "query_id": "FIN_T2_0090",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0148",
+    "model": "phi-3.5-mini",
+    "query_id": "CULT_T2_0001",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0149",
+    "model": "gemma-3-12b",
+    "query_id": "HIST_T5_0044",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0150",
+    "model": "solar-10.7b",
+    "query_id": "LAW_T5_0060",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0151",
+    "model": "deepseek-v3.2",
+    "query_id": "SCI_T2_0127",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0152",
+    "model": "gemma-3-12b",
+    "query_id": "GEO_T5_0089",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0153",
+    "model": "kimi-k2-instruct",
+    "query_id": "SCI_T5_0196",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0154",
+    "model": "seed-oss-36b",
+    "query_id": "LAW_T1_0127",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0155",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T5_0248",
+    "judge_score": 2.75,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0156",
+    "model": "ministral-14b",
+    "query_id": "SCI_T5_0015",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0157",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T4_0224",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0158",
+    "model": "eurollm-9b",
+    "query_id": "TECH_T4_0189",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0159",
+    "model": "ministral-14b",
+    "query_id": "LAW_T1_0163",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0160",
+    "model": "gemma-2-27b",
+    "query_id": "FIN_T4_0128",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0161",
+    "model": "deepseek-v3.2",
+    "query_id": "HIST_T5_0131",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0162",
+    "model": "kimi-k2-instruct",
+    "query_id": "FIN_T3_0158",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0163",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "LAW_T5_0177",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0164",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "FIN_T2_0149",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0165",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "HIST_T4_0250",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0166",
+    "model": "deepseek-v3.2",
+    "query_id": "CULT_T3_0211",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0167",
+    "model": "qwen2.5-7b",
+    "query_id": "TECH_T3_0193",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0168",
+    "model": "deepseek-v3.1",
+    "query_id": "BIO_T5_0013",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0169",
+    "model": "solar-10.7b",
+    "query_id": "CULT_T4_0127",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0170",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T2_0152",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0171",
+    "model": "deepseek-v3.1",
+    "query_id": "BIO_T5_0112",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0172",
+    "model": "kimi-k2-instruct",
+    "query_id": "BIO_T3_0040",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0173",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T5_0262",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0174",
+    "model": "phi-3.5-mini",
+    "query_id": "BIO_T3_0120",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0175",
+    "model": "gemma-3-4b",
+    "query_id": "SCI_T3_0120",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0176",
+    "model": "llama-4-maverick",
+    "query_id": "FIN_T5_0327",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0177",
+    "model": "deepseek-v3.2",
+    "query_id": "SCI_T5_0198",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0178",
+    "model": "gemma-2-27b",
+    "query_id": "TECH_T4_0160",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0179",
+    "model": "seed-oss-36b",
+    "query_id": "BIO_T5_0207",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0180",
+    "model": "gemma-2-27b",
+    "query_id": "CULT_T2_0228",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0181",
+    "model": "kimi-k2-instruct",
+    "query_id": "SCI_T3_0085",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0182",
+    "model": "ministral-14b",
+    "query_id": "HIST_T1_0139",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0183",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "SCI_T5_0222",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0184",
+    "model": "deepseek-v3.1",
+    "query_id": "HIST_T2_0237",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0185",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T2_0125",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0186",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "GEO_T1_0221",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0187",
+    "model": "phi-3.5-mini",
+    "query_id": "CULT_T4_0044",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "CULT",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0188",
+    "model": "ministral-14b",
+    "query_id": "HIST_T1_0111",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "HIST",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0189",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T5_0300",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0190",
+    "model": "deepseek-v3.2",
+    "query_id": "LAW_T2_0084",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0191",
+    "model": "deepseek-v3.1",
+    "query_id": "GEO_T5_0095",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0192",
+    "model": "llama-4-maverick",
+    "query_id": "BIO_T1_0201",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0193",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "GEO_T3_0157",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0194",
+    "model": "deepseek-v3.2",
+    "query_id": "FIN_T2_0179",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0195",
+    "model": "solar-10.7b",
+    "query_id": "FIN_T3_0151",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0196",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T4_0011",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0197",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T5_0037",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0198",
+    "model": "gemma-3-4b",
+    "query_id": "TECH_T4_0023",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0199",
+    "model": "llama-4-maverick",
+    "query_id": "GEO_T2_0028",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0200",
+    "model": "deepseek-v3.2",
+    "query_id": "SCI_T4_0077",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0201",
+    "model": "gemma-2-27b",
+    "query_id": "TECH_T5_0040",
+    "judge_score": 2.75,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0202",
+    "model": "qwen2.5-7b",
+    "query_id": "TECH_T5_0336",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0203",
+    "model": "phi-3.5-mini",
+    "query_id": "GEO_T4_0015",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0204",
+    "model": "seed-oss-36b",
+    "query_id": "CULT_T3_0243",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0205",
+    "model": "gemma-3-12b",
+    "query_id": "GEO_T5_0278",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0206",
+    "model": "llama-4-maverick",
+    "query_id": "GEO_T5_0182",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0207",
+    "model": "eurollm-9b",
+    "query_id": "SCI_T4_0059",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0208",
+    "model": "gemma-3-12b",
+    "query_id": "HIST_T4_0092",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0209",
+    "model": "gemma-3-4b",
+    "query_id": "TECH_T2_0202",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0210",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T2_0141",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0211",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T4_0111",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0212",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "LAW_T4_0096",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0213",
+    "model": "ministral-14b",
+    "query_id": "FIN_T5_0259",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0214",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T5_0099",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0215",
+    "model": "phi-3.5-mini",
+    "query_id": "CULT_T5_0157",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0216",
+    "model": "deepseek-v3.1",
+    "query_id": "CULT_T1_0145",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0217",
+    "model": "gemma-3-12b",
+    "query_id": "GEO_T1_0025",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0218",
+    "model": "eurollm-9b",
+    "query_id": "SCI_T2_0104",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0219",
+    "model": "gemma-3-4b",
+    "query_id": "BIO_T4_0114",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0220",
+    "model": "gemma-2-27b",
+    "query_id": "TECH_T4_0052",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0221",
+    "model": "llama-4-maverick",
+    "query_id": "LAW_T5_0077",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0222",
+    "model": "qwen2.5-7b",
+    "query_id": "BIO_T4_0011",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0223",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "TECH_T4_0193",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0224",
+    "model": "llama-4-maverick",
+    "query_id": "GEO_T5_0278",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0225",
+    "model": "llama-4-maverick",
+    "query_id": "FIN_T4_0095",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0226",
+    "model": "eurollm-9b",
+    "query_id": "TECH_T5_0295",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0227",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T5_0204",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0228",
+    "model": "eurollm-9b",
+    "query_id": "HIST_T1_0117",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0229",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T2_0133",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0230",
+    "model": "gemma-2-27b",
+    "query_id": "CULT_T5_0232",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0231",
+    "model": "phi-3.5-mini",
+    "query_id": "SCI_T5_0257",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0232",
+    "model": "llama-4-maverick",
+    "query_id": "LAW_T5_0244",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0233",
+    "model": "gemma-3-4b",
+    "query_id": "BIO_T5_0052",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0234",
+    "model": "kimi-k2-instruct",
+    "query_id": "HIST_T3_0221",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0235",
+    "model": "gemma-2-27b",
+    "query_id": "LAW_T1_0267",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0236",
+    "model": "kimi-k2-instruct",
+    "query_id": "GEO_T4_0101",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0237",
+    "model": "qwen2.5-7b",
+    "query_id": "TECH_T4_0105",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0238",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T5_0138",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0239",
+    "model": "seed-oss-36b",
+    "query_id": "LAW_T3_0094",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0240",
+    "model": "llama-4-maverick",
+    "query_id": "BIO_T2_0166",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0241",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T5_0254",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0242",
+    "model": "ministral-14b",
+    "query_id": "BIO_T5_0207",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0243",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T3_0042",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0244",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T5_0294",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0245",
+    "model": "qwen2.5-7b",
+    "query_id": "FIN_T3_0239",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0246",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T3_0038",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0247",
+    "model": "phi-3.5-mini",
+    "query_id": "BIO_T3_0023",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0248",
+    "model": "phi-3.5-mini",
+    "query_id": "GEO_T5_0257",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0249",
+    "model": "ministral-14b",
+    "query_id": "SCI_T3_0075",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0250",
+    "model": "deepseek-v3.2",
+    "query_id": "HIST_T5_0151",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0251",
+    "model": "seed-oss-36b",
+    "query_id": "CULT_T3_0220",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0252",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "BIO_T2_0028",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0253",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T5_0101",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0254",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T2_0126",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0255",
+    "model": "qwen2.5-7b",
+    "query_id": "LAW_T1_0238",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0256",
+    "model": "solar-10.7b",
+    "query_id": "BIO_T5_0202",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0257",
+    "model": "deepseek-v3.1",
+    "query_id": "GEO_T5_0270",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0258",
+    "model": "eurollm-9b",
+    "query_id": "CULT_T2_0094",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0259",
+    "model": "llama-4-maverick",
+    "query_id": "LAW_T3_0143",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0260",
+    "model": "gemma-3-4b",
+    "query_id": "HIST_T5_0234",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0261",
+    "model": "deepseek-v3.1",
+    "query_id": "HIST_T3_0224",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "HIST",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0262",
+    "model": "qwen2.5-7b",
+    "query_id": "LAW_T4_0028",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0263",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "FIN_T4_0044",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0264",
+    "model": "llama-4-maverick",
+    "query_id": "FIN_T3_0221",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0265",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T4_0082",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0266",
+    "model": "gemma-3-12b",
+    "query_id": "LAW_T5_0049",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0267",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "TECH_T3_0086",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0268",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T2_0075",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0269",
+    "model": "gemma-3-4b",
+    "query_id": "FIN_T1_0008",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0270",
+    "model": "qwen2.5-7b",
+    "query_id": "HIST_T4_0034",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0271",
+    "model": "seed-oss-36b",
+    "query_id": "GEO_T3_0030",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0272",
+    "model": "gemma-3-12b",
+    "query_id": "LAW_T2_0207",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0273",
+    "model": "gemma-3-4b",
+    "query_id": "LAW_T5_0165",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0274",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T5_0202",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0275",
+    "model": "gemma-3-12b",
+    "query_id": "BIO_T1_0267",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0276",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "BIO_T1_0171",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0277",
+    "model": "gemma-3-4b",
+    "query_id": "LAW_T5_0020",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0278",
+    "model": "gemma-3-12b",
+    "query_id": "TECH_T2_0062",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0279",
+    "model": "seed-oss-36b",
+    "query_id": "TECH_T1_0040",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0280",
+    "model": "gemma-2-27b",
+    "query_id": "LAW_T5_0027",
+    "judge_score": 2.75,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0281",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T3_0054",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0282",
+    "model": "gemma-2-27b",
+    "query_id": "LAW_T3_0200",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0283",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T1_0021",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0284",
+    "model": "gemma-2-27b",
+    "query_id": "GEO_T4_0201",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0285",
+    "model": "phi-3.5-mini",
+    "query_id": "SCI_T3_0060",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0286",
+    "model": "gemma-3-12b",
+    "query_id": "TECH_T5_0312",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0287",
+    "model": "gemma-3-12b",
+    "query_id": "LAW_T1_0120",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0288",
+    "model": "kimi-k2-instruct",
+    "query_id": "BIO_T1_0268",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0289",
+    "model": "qwen2.5-7b",
+    "query_id": "BIO_T4_0004",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0290",
+    "model": "gemma-2-27b",
+    "query_id": "LAW_T4_0074",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0291",
+    "model": "solar-10.7b",
+    "query_id": "CULT_T5_0144",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0292",
+    "model": "deepseek-v3.2",
+    "query_id": "CULT_T2_0205",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0293",
+    "model": "eurollm-9b",
+    "query_id": "HIST_T4_0022",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0294",
+    "model": "deepseek-v3.2",
+    "query_id": "SCI_T2_0080",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0295",
+    "model": "gemma-3-12b",
+    "query_id": "LAW_T3_0008",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0296",
+    "model": "deepseek-v3.1",
+    "query_id": "TECH_T5_0265",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0297",
+    "model": "eurollm-9b",
+    "query_id": "FIN_T4_0009",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0298",
+    "model": "deepseek-v3.1",
+    "query_id": "FIN_T4_0126",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0299",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "FIN_T5_0004",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0300",
+    "model": "gemma-2-27b",
+    "query_id": "LAW_T5_0022",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0301",
+    "model": "llama-4-maverick",
+    "query_id": "LAW_T2_0133",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0302",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T5_0165",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0303",
+    "model": "ministral-14b",
+    "query_id": "LAW_T5_0064",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0304",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T3_0005",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0305",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T3_0151",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0306",
+    "model": "deepseek-v3.2",
+    "query_id": "CULT_T5_0240",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0307",
+    "model": "ministral-14b",
+    "query_id": "SCI_T5_0097",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0308",
+    "model": "seed-oss-36b",
+    "query_id": "TECH_T1_0223",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0309",
+    "model": "seed-oss-36b",
+    "query_id": "SCI_T4_0018",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0310",
+    "model": "gemma-2-27b",
+    "query_id": "FIN_T1_0205",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0311",
+    "model": "deepseek-v3.1",
+    "query_id": "CULT_T2_0171",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0312",
+    "model": "gemma-3-12b",
+    "query_id": "HIST_T2_0155",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0313",
+    "model": "seed-oss-36b",
+    "query_id": "GEO_T5_0168",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0314",
+    "model": "ministral-14b",
+    "query_id": "GEO_T1_0055",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0315",
+    "model": "seed-oss-36b",
+    "query_id": "FIN_T4_0031",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0316",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "SCI_T5_0203",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0317",
+    "model": "ministral-14b",
+    "query_id": "LAW_T5_0081",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0318",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T1_0135",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0319",
+    "model": "eurollm-9b",
+    "query_id": "CULT_T1_0082",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "CULT",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0320",
+    "model": "solar-10.7b",
+    "query_id": "HIST_T1_0096",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0321",
+    "model": "llama-4-maverick",
+    "query_id": "BIO_T1_0244",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0322",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "TECH_T5_0208",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0323",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "LAW_T4_0115",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0324",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T5_0004",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0325",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T3_0222",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0326",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T4_0051",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0327",
+    "model": "ministral-14b",
+    "query_id": "SCI_T4_0196",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0328",
+    "model": "deepseek-v3.1",
+    "query_id": "LAW_T5_0070",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0329",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T2_0205",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0330",
+    "model": "deepseek-v3.2",
+    "query_id": "LAW_T5_0072",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0331",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "HIST_T3_0245",
+    "judge_score": 2.75,
+    "severity_band": "significant",
+    "domain": "HIST",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0332",
+    "model": "deepseek-v3.2",
+    "query_id": "LAW_T3_0127",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0333",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "CULT_T3_0124",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0334",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "BIO_T5_0112",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0335",
+    "model": "gemma-2-27b",
+    "query_id": "SCI_T4_0006",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0336",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T5_0118",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0337",
+    "model": "kimi-k2-instruct",
+    "query_id": "SCI_T3_0052",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0338",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T3_0195",
+    "judge_score": 2.75,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0339",
+    "model": "gemma-3-12b",
+    "query_id": "GEO_T5_0263",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0340",
+    "model": "seed-oss-36b",
+    "query_id": "GEO_T1_0204",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0341",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T4_0137",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0342",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "HIST_T2_0243",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0343",
+    "model": "gemma-2-27b",
+    "query_id": "FIN_T5_0298",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0344",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T5_0148",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0345",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T5_0048",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0346",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T5_0012",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0347",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "BIO_T5_0184",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0348",
+    "model": "solar-10.7b",
+    "query_id": "TECH_T5_0328",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0349",
+    "model": "eurollm-9b",
+    "query_id": "FIN_T2_0094",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0350",
+    "model": "seed-oss-36b",
+    "query_id": "SCI_T5_0198",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0351",
+    "model": "llama-4-maverick",
+    "query_id": "BIO_T4_0045",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0352",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "BIO_T2_0028",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0353",
+    "model": "phi-3.5-mini",
+    "query_id": "FIN_T1_0231",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0354",
+    "model": "ministral-14b",
+    "query_id": "FIN_T4_0244",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0355",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T2_0055",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0356",
+    "model": "qwen2.5-7b",
+    "query_id": "SCI_T3_0220",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0357",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T5_0293",
+    "judge_score": 2.75,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0358",
+    "model": "kimi-k2-instruct",
+    "query_id": "GEO_T2_0114",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0359",
+    "model": "gemma-3-4b",
+    "query_id": "FIN_T5_0301",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0360",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "CULT_T4_0146",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0361",
+    "model": "eurollm-9b",
+    "query_id": "TECH_T5_0082",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0362",
+    "model": "solar-10.7b",
+    "query_id": "TECH_T5_0327",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0363",
+    "model": "gemma-3-12b",
+    "query_id": "HIST_T1_0048",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0364",
+    "model": "seed-oss-36b",
+    "query_id": "BIO_T4_0077",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0365",
+    "model": "gemma-3-4b",
+    "query_id": "HIST_T5_0039",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0366",
+    "model": "gemma-3-12b",
+    "query_id": "TECH_T4_0215",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0367",
+    "model": "phi-3.5-mini",
+    "query_id": "BIO_T3_0036",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0368",
+    "model": "seed-oss-36b",
+    "query_id": "FIN_T5_0207",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0369",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T4_0163",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0370",
+    "model": "kimi-k2-instruct",
+    "query_id": "FIN_T2_0100",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0371",
+    "model": "gemma-3-12b",
+    "query_id": "LAW_T1_0280",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0372",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "HIST_T3_0129",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0373",
+    "model": "deepseek-v3.1",
+    "query_id": "TECH_T1_0159",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0374",
+    "model": "seed-oss-36b",
+    "query_id": "FIN_T4_0175",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0375",
+    "model": "eurollm-9b",
+    "query_id": "FIN_T5_0217",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0376",
+    "model": "llama-4-maverick",
+    "query_id": "TECH_T5_0228",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0377",
+    "model": "gemma-3-4b",
+    "query_id": "BIO_T5_0028",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0378",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T3_0144",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0379",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T5_0263",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0380",
+    "model": "phi-3.5-mini",
+    "query_id": "HIST_T4_0016",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0381",
+    "model": "seed-oss-36b",
+    "query_id": "FIN_T1_0211",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0382",
+    "model": "llama-4-maverick",
+    "query_id": "BIO_T1_0130",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0383",
+    "model": "eurollm-9b",
+    "query_id": "BIO_T3_0042",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0384",
+    "model": "deepseek-v3.2",
+    "query_id": "FIN_T3_0043",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0385",
+    "model": "eurollm-9b",
+    "query_id": "FIN_T5_0128",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0386",
+    "model": "phi-3.5-mini",
+    "query_id": "HIST_T5_0109",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0387",
+    "model": "deepseek-v3.1",
+    "query_id": "HIST_T5_0041",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0388",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T1_0096",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0389",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T2_0202",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0390",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T3_0225",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0391",
+    "model": "gemma-3-4b",
+    "query_id": "LAW_T2_0012",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0392",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T4_0061",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0393",
+    "model": "phi-3.5-mini",
+    "query_id": "BIO_T4_0004",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0394",
+    "model": "solar-10.7b",
+    "query_id": "BIO_T1_0211",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0395",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T4_0074",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0396",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T1_0120",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0397",
+    "model": "eurollm-9b",
+    "query_id": "GEO_T2_0060",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0398",
+    "model": "gemma-2-27b",
+    "query_id": "LAW_T5_0136",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0399",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "GEO_T3_0218",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0400",
+    "model": "solar-10.7b",
+    "query_id": "SCI_T1_0198",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0401",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T3_0030",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0402",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "FIN_T2_0016",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0403",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T1_0053",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0404",
+    "model": "gemma-3-4b",
+    "query_id": "LAW_T2_0065",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0405",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T3_0051",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0406",
+    "model": "ministral-14b",
+    "query_id": "LAW_T4_0061",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0407",
+    "model": "solar-10.7b",
+    "query_id": "HIST_T2_0168",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0408",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "TECH_T1_0202",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0409",
+    "model": "deepseek-v3.1",
+    "query_id": "HIST_T4_0250",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0410",
+    "model": "qwen2.5-7b",
+    "query_id": "LAW_T5_0235",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0411",
+    "model": "deepseek-v3.1",
+    "query_id": "LAW_T2_0190",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0412",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "BIO_T5_0038",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0413",
+    "model": "phi-3.5-mini",
+    "query_id": "FIN_T1_0222",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0414",
+    "model": "eurollm-9b",
+    "query_id": "GEO_T5_0046",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0415",
+    "model": "deepseek-v3.2",
+    "query_id": "LAW_T1_0093",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0416",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "SCI_T5_0155",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0417",
+    "model": "kimi-k2-instruct",
+    "query_id": "CULT_T3_0023",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0418",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T5_0043",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0419",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T3_0073",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0420",
+    "model": "eurollm-9b",
+    "query_id": "BIO_T3_0151",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "BIO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0421",
+    "model": "ministral-14b",
+    "query_id": "LAW_T4_0062",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0422",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T5_0159",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0423",
+    "model": "llama-4-maverick",
+    "query_id": "FIN_T3_0043",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0424",
+    "model": "ministral-14b",
+    "query_id": "LAW_T5_0021",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0425",
+    "model": "solar-10.7b",
+    "query_id": "TECH_T1_0187",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0426",
+    "model": "kimi-k2-instruct",
+    "query_id": "CULT_T5_0219",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0427",
+    "model": "kimi-k2-instruct",
+    "query_id": "SCI_T3_0237",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0428",
+    "model": "gemma-3-4b",
+    "query_id": "FIN_T5_0321",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0429",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "TECH_T2_0242",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0430",
+    "model": "qwen2.5-7b",
+    "query_id": "GEO_T4_0132",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0431",
+    "model": "ministral-14b",
+    "query_id": "LAW_T2_0130",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0432",
+    "model": "gemma-2-27b",
+    "query_id": "FIN_T5_0313",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0433",
+    "model": "phi-3.5-mini",
+    "query_id": "GEO_T1_0119",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0434",
+    "model": "gemma-2-27b",
+    "query_id": "FIN_T5_0302",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0435",
+    "model": "deepseek-v3.1",
+    "query_id": "SCI_T1_0106",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0436",
+    "model": "kimi-k2-instruct",
+    "query_id": "SCI_T3_0217",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0437",
+    "model": "seed-oss-36b",
+    "query_id": "GEO_T5_0281",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0438",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "SCI_T5_0012",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0439",
+    "model": "gemma-3-4b",
+    "query_id": "SCI_T3_0094",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0440",
+    "model": "phi-3.5-mini",
+    "query_id": "CULT_T2_0043",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0441",
+    "model": "ministral-14b",
+    "query_id": "BIO_T5_0218",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0442",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T4_0186",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0443",
+    "model": "deepseek-v3.1",
+    "query_id": "TECH_T1_0054",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0444",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "BIO_T4_0222",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0445",
+    "model": "ministral-14b",
+    "query_id": "GEO_T2_0122",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0446",
+    "model": "gemma-2-27b",
+    "query_id": "FIN_T3_0242",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0447",
+    "model": "ministral-14b",
+    "query_id": "BIO_T1_0264",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0448",
+    "model": "qwen2.5-7b",
+    "query_id": "TECH_T4_0238",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0449",
+    "model": "phi-3.5-mini",
+    "query_id": "TECH_T5_0308",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0450",
+    "model": "seed-oss-36b",
+    "query_id": "TECH_T5_0097",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0451",
+    "model": "eurollm-9b",
+    "query_id": "GEO_T4_0137",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0452",
+    "model": "llama-4-maverick",
+    "query_id": "LAW_T5_0193",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0453",
+    "model": "phi-3.5-mini",
+    "query_id": "GEO_T5_0006",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0454",
+    "model": "deepseek-v3.1",
+    "query_id": "HIST_T4_0237",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0455",
+    "model": "gemma-3-12b",
+    "query_id": "TECH_T5_0261",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0456",
+    "model": "gemma-3-4b",
+    "query_id": "CULT_T3_0169",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0457",
+    "model": "gemma-3-12b",
+    "query_id": "SCI_T1_0148",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "SCI",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0458",
+    "model": "eurollm-9b",
+    "query_id": "LAW_T5_0119",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0459",
+    "model": "eurollm-9b",
+    "query_id": "SCI_T3_0239",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0460",
+    "model": "deepseek-v3.2",
+    "query_id": "BIO_T5_0013",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0461",
+    "model": "kimi-k2-instruct",
+    "query_id": "GEO_T1_0097",
+    "judge_score": 1.5,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0462",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "SCI_T5_0270",
+    "judge_score": 0.75,
+    "severity_band": "trivial",
+    "domain": "SCI",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0463",
+    "model": "qwen2.5-7b",
+    "query_id": "LAW_T4_0148",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0464",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "SCI_T3_0091",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0465",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "TECH_T1_0134",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0466",
+    "model": "gemma-2-27b",
+    "query_id": "BIO_T4_0132",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0467",
+    "model": "ministral-14b",
+    "query_id": "LAW_T1_0259",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0468",
+    "model": "qwen2.5-7b",
+    "query_id": "TECH_T2_0214",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0469",
+    "model": "kimi-k2-instruct",
+    "query_id": "LAW_T5_0070",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0470",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "LAW_T5_0017",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0471",
+    "model": "deepseek-v3.1",
+    "query_id": "LAW_T5_0243",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0472",
+    "model": "seed-oss-36b",
+    "query_id": "TECH_T5_0289",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0473",
+    "model": "seed-oss-36b",
+    "query_id": "BIO_T5_0216",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0474",
+    "model": "deepseek-v3.2",
+    "query_id": "HIST_T3_0071",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0475",
+    "model": "deepseek-v3.2",
+    "query_id": "TECH_T5_0253",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0476",
+    "model": "ministral-14b",
+    "query_id": "LAW_T5_0058",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0477",
+    "model": "deepseek-v3.1",
+    "query_id": "FIN_T1_0117",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0478",
+    "model": "solar-10.7b",
+    "query_id": "TECH_T5_0215",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0479",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "GEO_T4_0137",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0480",
+    "model": "deepseek-v3.1",
+    "query_id": "FIN_T5_0254",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0481",
+    "model": "ministral-14b",
+    "query_id": "CULT_T1_0039",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0482",
+    "model": "qwen2.5-7b",
+    "query_id": "CULT_T3_0103",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0483",
+    "model": "gemma-2-27b",
+    "query_id": "HIST_T5_0184",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0484",
+    "model": "solar-10.7b",
+    "query_id": "TECH_T5_0253",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0485",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "HIST_T3_0115",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "HIST",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0486",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "HIST_T2_0026",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "HIST",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0487",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "LAW_T3_0203",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0488",
+    "model": "gemma-3-4b",
+    "query_id": "GEO_T2_0161",
+    "judge_score": 1.75,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0489",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T3_0247",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0490",
+    "model": "gemma-2-27b",
+    "query_id": "GEO_T2_0124",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0491",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "LAW_T4_0250",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0492",
+    "model": "deepseek-v3.2",
+    "query_id": "HIST_T4_0050",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "HIST",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0493",
+    "model": "eurollm-9b",
+    "query_id": "TECH_T5_0251",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0494",
+    "model": "ministral-14b",
+    "query_id": "LAW_T5_0027",
+    "judge_score": 2.75,
+    "severity_band": "significant",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0495",
+    "model": "llama-4-maverick",
+    "query_id": "CULT_T4_0122",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0496",
+    "model": "phi-3.5-mini",
+    "query_id": "LAW_T2_0248",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "LAW",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0497",
+    "model": "ministral-14b",
+    "query_id": "GEO_T3_0185",
+    "judge_score": 2.25,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0498",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "CULT_T4_0044",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "CULT",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0499",
+    "model": "gemma-3-4b",
+    "query_id": "LAW_T5_0164",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0500",
+    "model": "deepseek-v3.1",
+    "query_id": "CULT_T2_0203",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "CULT",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0501",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "LAW_T5_0148",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "LAW",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0502",
+    "model": "llama-4-maverick",
+    "query_id": "FIN_T1_0033",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0503",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "GEO_T2_0099",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "GEO",
+    "tier": 2
+  },
+  {
+    "item_id": "EQ_0504",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "TECH_T5_0331",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0505",
+    "model": "solar-10.7b",
+    "query_id": "GEO_T4_0182",
+    "judge_score": 2.5,
+    "severity_band": "significant",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0506",
+    "model": "llama-3.2-3b-instruct",
+    "query_id": "TECH_T5_0204",
+    "judge_score": 3.0,
+    "severity_band": "significant",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0507",
+    "model": "kimi-k2-instruct",
+    "query_id": "TECH_T5_0333",
+    "judge_score": 4.0,
+    "severity_band": "severe",
+    "domain": "TECH",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0508",
+    "model": "kimi-k2-instruct",
+    "query_id": "CULT_T5_0100",
+    "judge_score": 1.25,
+    "severity_band": "minor",
+    "domain": "CULT",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0509",
+    "model": "ministral-14b",
+    "query_id": "FIN_T5_0286",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0510",
+    "model": "llama-3.1-8b-instruct",
+    "query_id": "FIN_T5_0066",
+    "judge_score": 0.5,
+    "severity_band": "trivial",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0511",
+    "model": "deepseek-v3.1",
+    "query_id": "TECH_T1_0080",
+    "judge_score": 0.0,
+    "severity_band": "correct",
+    "domain": "TECH",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0512",
+    "model": "kimi-k2-instruct",
+    "query_id": "SCI_T3_0234",
+    "judge_score": 2.0,
+    "severity_band": "minor",
+    "domain": "SCI",
+    "tier": 3
+  },
+  {
+    "item_id": "EQ_0513",
+    "model": "kimi-k2-instruct",
+    "query_id": "FIN_T5_0333",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "FIN",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0514",
+    "model": "seed-oss-36b",
+    "query_id": "GEO_T4_0241",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "GEO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0515",
+    "model": "ministral-14b",
+    "query_id": "BIO_T5_0225",
+    "judge_score": 3.25,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0516",
+    "model": "kimi-k2-instruct",
+    "query_id": "BIO_T5_0209",
+    "judge_score": 3.5,
+    "severity_band": "severe",
+    "domain": "BIO",
+    "tier": 5
+  },
+  {
+    "item_id": "EQ_0517",
+    "model": "gemma-3-12b",
+    "query_id": "BIO_T4_0208",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "BIO",
+    "tier": 4
+  },
+  {
+    "item_id": "EQ_0518",
+    "model": "ministral-14b",
+    "query_id": "FIN_T1_0248",
+    "judge_score": 0.25,
+    "severity_band": "correct",
+    "domain": "FIN",
+    "tier": 1
+  },
+  {
+    "item_id": "EQ_0519",
+    "model": "qwen2.5-7b",
+    "query_id": "TECH_T1_0151",
+    "judge_score": 1.0,
+    "severity_band": "trivial",
+    "domain": "TECH",
+    "tier": 1
+  }
+]

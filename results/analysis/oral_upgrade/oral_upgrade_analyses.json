@@ -1,0 +1,363 @@
+{
+  "mi_decomposition": {
+    "n_models": 21,
+    "I_b_model": 2.3157,
+    "I_eps_model": 2.3157,
+    "I_b_model_given_eps": 1.5645,
+    "I_eps_model_given_b": 1.5645,
+    "interpretation": {
+      "b_carries_info_beyond_eps": true,
+      "eps_carries_info_beyond_b": true,
+      "verdict": "b and epsilon carry partially independent information about model identity"
+    },
+    "direct_correlation": {
+      "spearman_rho": -0.4831,
+      "spearman_p": 0.026518,
+      "r_squared_linear": 0.3555,
+      "fraction_b_variance_unexplained_by_eps": 0.6445
+    },
+    "models": {
+      "deepseek-v3.1": {
+        "b": 0.8076,
+        "eps": 0.5708
+      },
+      "deepseek-v3.2": {
+        "b": 0.6554,
+        "eps": 0.5865
+      },
+      "eurollm-9b": {
+        "b": 1.0667,
+        "eps": 0.3442
+      },
+      "gemma-2-27b": {
+        "b": 0.619,
+        "eps": 0.6664
+      },
+      "gemma-3-12b": {
+        "b": 0.9383,
+        "eps": 0.6309
+      },
+      "gemma-3-27b": {
+        "b": 0.9564,
+        "eps": 0.6305
+      },
+      "gemma-3-4b": {
+        "b": 0.9794,
+        "eps": 0.3865
+      },
+      "gpt-oss-20b": {
+        "b": 0.9375,
+        "eps": 0.5861
+      },
+      "kimi-k2-instruct": {
+        "b": 1.0406,
+        "eps": 0.6153
+      },
+      "llama-3.1-8b-instruct": {
+        "b": 1.0005,
+        "eps": 0.6072
+      },
+      "llama-3.2-3b-instruct": {
+        "b": 1.0464,
+        "eps": 0.4495
+      },
+      "llama-4-maverick": {
+        "b": 1.1185,
+        "eps": 0.5535
+      },
+      "ministral-14b": {
+        "b": 1.1222,
+        "eps": 0.5863
+      },
+      "mistral-medium-3": {
+        "b": 0.9064,
+        "eps": 0.5892
+      },
+      "mistral-small-24b": {
+        "b": 0.9989,
+        "eps": 0.5664
+      },
+      "mistral-small-4-119b": {
+        "b": 0.8879,
+        "eps": 0.5785
+      },
+      "phi-3.5-mini": {
+        "b": 1.3088,
+        "eps": 0.2851
+      },
+      "qwen2.5-7b": {
+        "b": 1.2567,
+        "eps": 0.3155
+      },
+      "qwen3-next-80b": {
+        "b": 1.0521,
+        "eps": 0.5915
+      },
+      "seed-oss-36b": {
+        "b": 0.5736,
+        "eps": 0.568
+      },
+      "solar-10.7b": {
+        "b": 0.9053,
+        "eps": 0.6444
+      }
+    }
+  },
+  "chance_kappa_defense": {
+    "n_categories": 9,
+    "scale_points": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0
+    ],
+    "marginal_distribution": {
+      "0.0": 0.4587,
+      "0.5": 0.2522,
+      "1.0": 0.0955,
+      "1.5": 0.0729,
+      "2.0": 0.0956,
+      "2.5": 0.0128,
+      "3.0": 0.0092,
+      "3.5": 0.0025,
+      "4.0": 0.0004
+    },
+    "chance_agreement_unweighted": 0.2979,
+    "chance_agreement_linear_weighted": 0.8111,
+    "observed_kappa_linear": 0.285,
+    "observed_kappa_quadratic": 0.374,
+    "observed_icc_single": 0.374,
+    "observed_icc_averaged": 0.545,
+    "kappa_interpretation": {
+      "n_categories": 9,
+      "chance_agreement": 0.2979,
+      "observed_agreement": 0.498,
+      "kappa_over_chance_agreement": 0.96,
+      "note": "On a 9-category scale with highly skewed marginals (score 0.0 dominates at 45.9%), chance agreement is 29.8%. Observed linear kappa of 0.285 represents agreement 1.0x above chance. The operationally relevant reliability for averaged scores is ICC(2,k=2) = 0.545."
+    },
+    "defense_paragraph": "The single-judge ICC(2,1) = 0.374 and linear Cohen's kappa = 0.285 are reported for completeness but are expected to be low on a 9-level ordinal scale. With 9 categories and a skewed marginal distribution (the modal category '0.0' captures 45.9% of responses), chance agreement is 29.8%, and the observed kappa is 1.0x chance. The reliability of the averaged score used in all downstream analyses is ICC(2,k=2) = 0.545 ('fair-moderate' by Cicchetti's guidelines). The Resolution Bound theorem (Section 3) confirms this reliability level is sufficient for the study's discriminative power at the observed sample size."
+  },
+  "conditional_independence": {
+    "n_dense_models": 14,
+    "models": [
+      "eurollm-9b",
+      "gemma-2-27b",
+      "gemma-3-12b",
+      "gemma-3-27b",
+      "gemma-3-4b",
+      "gpt-oss-20b",
+      "llama-3.1-8b-instruct",
+      "llama-3.2-3b-instruct",
+      "ministral-14b",
+      "mistral-small-24b",
+      "phi-3.5-mini",
+      "qwen2.5-7b",
+      "seed-oss-36b",
+      "solar-10.7b"
+    ],
+    "correlations": {
+      "b_vs_eps": {
+        "rho": -0.6967,
+        "p": 0.005629
+      },
+      "b_vs_log_params": {
+        "rho": -0.6703,
+        "p": 0.008704
+      },
+      "b_vs_eps_controlling_params": {
+        "partial_rho": -0.5136,
+        "p": 0.072613
+      },
+      "b_vs_params_controlling_eps": {
+        "partial_rho": -0.4607,
+        "p": 0.113154
+      }
+    },
+    "interpretation": "Among 14 dense models: b and epsilon have rho = -0.697 (p=0.0056). After controlling for model size, the partial correlation between b and eps is -0.514 (p=0.0726). The partial correlation between b and log(params) controlling for eps is -0.461 (p=0.1132). b carries scaling information beyond what epsilon provides."
+  },
+  "power_analysis": {
+    "n_models": 21,
+    "median_ci_width": 0.2507,
+    "typical_se_b": 0.0639,
+    "min_detectable_delta_b": 0.2534,
+    "observed_median_delta_b_pairs": null,
+    "n_pairs_above_minimum": 0,
+    "total_disjoint_pairs": 0,
+    "interpretation": "At ICC(2,k=2) = 0.545 and typical n_above_mmin, the minimum detectable b-difference is 0.253. The study is marginally powered: 0/0 disjoint-CI pairs exceed the minimum.",
+    "per_model_ci": [
+      {
+        "model": "seed-oss-36b",
+        "b": 0.5736443770317645,
+        "ci_lower": 0.5553072300431962,
+        "ci_upper": 0.5930591809821226,
+        "ci_width": 0.03775195093892647,
+        "n_above_mmin": 2260
+      },
+      {
+        "model": "gemma-2-27b",
+        "b": 0.6190104528798855,
+        "ci_lower": 0.6000711835529619,
+        "ci_upper": 0.6388313960612001,
+        "ci_width": 0.038760212508238245,
+        "n_above_mmin": 2665
+      },
+      {
+        "model": "deepseek-v3.2",
+        "b": 0.6554331426337371,
+        "ci_lower": 0.632187364048114,
+        "ci_upper": 0.6790839209178813,
+        "ci_width": 0.046896556869767236,
+        "n_above_mmin": 2340
+      },
+      {
+        "model": "deepseek-v3.1",
+        "b": 0.8075947165703135,
+        "ci_lower": 0.7577515063733135,
+        "ci_upper": 0.862814868130677,
+        "ci_width": 0.10506336175736353,
+        "n_above_mmin": 523
+      },
+      {
+        "model": "mistral-small-4-119b",
+        "b": 0.8878909407799812,
+        "ci_lower": 0.7442764504063263,
+        "ci_upper": 1.0798673604080862,
+        "ci_width": 0.3355909100017599,
+        "n_above_mmin": 69
+      },
+      {
+        "model": "solar-10.7b",
+        "b": 0.9052899059391726,
+        "ci_lower": 0.7935257200207563,
+        "ci_upper": 1.0423067565678048,
+        "ci_width": 0.24878103654704853,
+        "n_above_mmin": 111
+      },
+      {
+        "model": "mistral-medium-3",
+        "b": 0.9063537013633084,
+        "ci_lower": 0.7916253847350412,
+        "ci_upper": 1.0423067565678048,
+        "ci_width": 0.2506813718327636,
+        "n_above_mmin": 72
+      },
+      {
+        "model": "gpt-oss-20b",
+        "b": 0.9375245958546385,
+        "ci_lower": 0.7981628316059766,
+        "ci_upper": 1.1144160290347596,
+        "ci_width": 0.316253197428783,
+        "n_above_mmin": 68
+      },
+      {
+        "model": "gemma-3-12b",
+        "b": 0.9382618753417843,
+        "ci_lower": 0.8237322567554638,
+        "ci_upper": 1.0764108631221698,
+        "ci_width": 0.252678606366706,
+        "n_above_mmin": 101
+      },
+      {
+        "model": "gemma-3-27b",
+        "b": 0.9563557929019344,
+        "ci_lower": 0.8854003631059845,
+        "ci_upper": 1.0396746687986937,
+        "ci_width": 0.15427430569270928,
+        "n_above_mmin": 316
+      },
+      {
+        "model": "gemma-3-4b",
+        "b": 0.979429782853737,
+        "ci_lower": 0.9078155621719584,
+        "ci_upper": 1.0633104191686666,
+        "ci_width": 0.15549485699670829,
+        "n_above_mmin": 243
+      },
+      {
+        "model": "mistral-small-24b",
+        "b": 0.9988773083774788,
+        "ci_lower": 0.8323977569812325,
+        "ci_upper": 1.2107603737908836,
+        "ci_width": 0.3783626168096511,
+        "n_above_mmin": 46
+      },
+      {
+        "model": "llama-3.1-8b-instruct",
+        "b": 1.0005099943996716,
+        "ci_lower": 0.9228004802715419,
+        "ci_upper": 1.0818522703671245,
+        "ci_width": 0.15905179009558257,
+        "n_above_mmin": 383
+      },
+      {
+        "model": "kimi-k2-instruct",
+        "b": 1.040607805049357,
+        "ci_lower": 0.9479033235304831,
+        "ci_upper": 1.1471929710651936,
+        "ci_width": 0.19928964753471046,
+        "n_above_mmin": 245
+      },
+      {
+        "model": "llama-3.2-3b-instruct",
+        "b": 1.046370330667484,
+        "ci_lower": 0.9417332976007354,
+        "ci_upper": 1.1694727225107169,
+        "ci_width": 0.22773942490998145,
+        "n_above_mmin": 206
+      },
+      {
+        "model": "qwen3-next-80b",
+        "b": 1.05209367446985,
+        "ci_lower": 0.8788076574983449,
+        "ci_upper": 1.2660788285993099,
+        "ci_width": 0.387271171100965,
+        "n_above_mmin": 43
+      },
+      {
+        "model": "eurollm-9b",
+        "b": 1.066688201165882,
+        "ci_lower": 0.9354034994839268,
+        "ci_upper": 1.2408413768664335,
+        "ci_width": 0.3054378773825067,
+        "n_above_mmin": 70
+      },
+      {
+        "model": "llama-4-maverick",
+        "b": 1.1184570218878271,
+        "ci_lower": 0.9384754321587508,
+        "ci_upper": 1.3384813540624818,
+        "ci_width": 0.40000592190373097,
+        "n_above_mmin": 47
+      },
+      {
+        "model": "ministral-14b",
+        "b": 1.1222476877499956,
+        "ci_lower": 0.9680457153874007,
+        "ci_upper": 1.3073607084097894,
+        "ci_width": 0.33931499302238866,
+        "n_above_mmin": 73
+      },
+      {
+        "model": "qwen2.5-7b",
+        "b": 1.2566819050817495,
+        "ci_lower": 1.1144160290347596,
+        "ci_upper": 1.4405865741181045,
+        "ci_width": 0.326170545083345,
+        "n_above_mmin": 68
+      },
+      {
+        "model": "phi-3.5-mini",
+        "b": 1.3088326851878813,
+        "ci_lower": 1.1240563061025344,
+        "ci_upper": 1.5165839050589758,
+        "ci_width": 0.3925275989564414,
+        "n_above_mmin": 55
+      }
+    ]
+  }
+}

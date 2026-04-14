@@ -1,0 +1,49 @@
+{
+  "A_RETRIEVAL": {
+    "description": "Correct concept retrieved, wrong specific fact",
+    "subcategories": {
+      "A1_entity_substitution": "Wrong real entity of the same semantic type (e.g., wrong battle, wrong person, wrong chemical)",
+      "A2_temporal_misattribution": "Right event or entity, wrong date/year/time period",
+      "A3_geographic_misattribution": "Right event or entity, wrong place/location",
+      "A4_numerical_distortion": "Right entity, wrong number (magnitude off by >15%)"
+    }
+  },
+  "B_REASONING": {
+    "description": "Correct facts combined incorrectly",
+    "subcategories": {
+      "B1_causal_inversion": "Reverses cause and effect or gets the direction of a relationship wrong",
+      "B2_scope_overgeneralization": "Applies a specific fact too broadly or conflates related but distinct concepts",
+      "B3_logical_error": "Invalid deduction from correct premises"
+    }
+  },
+  "C_GENERATION": {
+    "description": "Fabricated content stated as fact",
+    "subcategories": {
+      "C1_entity_fabrication": "Invents a nonexistent entity (person, organization, place, law, paper)",
+      "C2_citation_fabrication": "Invents a paper, statistic, study, or source that doesn't exist",
+      "C3_detail_confabulation": "Fabricates specific details about a real topic (fake article count, fake ruling structure)",
+      "C4_false_precision": "Adds fabricated numbers, dates, or statistics to increase apparent credibility"
+    }
+  },
+  "D_METACOGNITIVE": {
+    "description": "Wrong relationship to own knowledge state",
+    "subcategories": {
+      "D1_denial_deflection": "Claims the asked-about fact doesn't exist or isn't relevant when it does",
+      "D2_overconfident_assertion": "States highly uncertain claim with false certainty and no hedging"
+    }
+  },
+  "E_AMPLIFICATION": {
+    "description": "Kernel of truth distorted through elaboration",
+    "subcategories": {
+      "E1_partial_truth_inflated": "Correct starting point but wrong elaboration or conclusion",
+      "E2_analogical_overshoot": "Applies pattern from a similar domain incorrectly"
+    }
+  },
+  "F_FORMAT": {
+    "description": "Response structure issues rather than factual errors",
+    "subcategories": {
+      "F1_incomplete_response": "Correct start but cuts off before answering the question",
+      "F2_irrelevant_response": "Responds to a different question than asked"
+    }
+  }
+}

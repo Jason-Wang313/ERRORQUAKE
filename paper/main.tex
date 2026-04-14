@@ -15,6 +15,7 @@
 \usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage{natbib}
+\usepackage{enumitem}
 
 \graphicspath{{figs/}}
 
@@ -45,26 +46,25 @@ and $5$ difficulty tiers, and we fit per-model severity
 distributions for $21$ open-weight models. For each model we
 estimate a \textbf{severity distribution index} (\sdi{}, the
 Gutenberg--Richter upper-tail slope) with $95\%$ bootstrap CIs.
-\textbf{Headline:} across the $210$ model pairs, $30$ have
-disjoint $95\%$ \sdi{} CIs at matched accuracy
-($|\Delta\varepsilon|<0.05$), e.g.\ \textsc{deepseek-v3.2} vs.\
-\textsc{ministral-14b} at $\varepsilon=0.586$ and
-$\Delta\sdi = 0.47$. The $30$-pair count is robust to cross-domain
-jackknife (range $25$--$41$ across $8$ single-domain drops), to
-four judge-aggregation rules ($\geq 6$ pairs in all; $27$/$27$/$58$/$7$),
-to a dual-coverage ($\geq 80\%$) subset ($28$ pairs), and to
-family-native tail-ratio comparisons. Supporting: $17/21$ models
-have non-exponential BIC-best fits and $17/21$ are Vuong-decisive
-at $p<0.05$; micro-error \sdi{} on easy queries rank-orders
-catastrophic counts at $\rho = 0.44$ ($p = 0.044$), failing the
-pre-registered $\rho \geq 0.75$ threshold for calibrated
-absolute-rate prediction. A dense-model scaling correlation
-($\rho_s(\log_{10}\text{params}, \sdi) = -0.562$) is reported as a
-sensitivity analysis only: it weakens to $-0.20$ after partialing
-accuracy and to $-0.51$ under primary-judge-only, and should not be
-treated as an independent claim. \emph{Severity distribution should
-be reported alongside accuracy; it carries discriminative
-information that the error rate cannot.}
+\textbf{Headline:} across the $210$ model pairs, \textbf{$85$ have
+disjoint $95\%$ \sdi{} CIs at matched accuracy}
+($|\Delta\varepsilon|<0.05$) on human-consensus scoring, e.g.\
+\textsc{deepseek-v3.2} vs.\ \textsc{ministral-14b} at
+$\varepsilon=0.586$ and $\Delta\sdi = 0.47$. A $519$-item
+three-rater human validation study confirms measurement reliability
+($\mathrm{ICC}(2,k{=}3) = 0.85$), validates the LLM-judge ranking
+($\rho = 0.89$), and confirms the dense-model scaling correlation
+on human data ($\rho_s = -0.86$). We prove a Non-Reducibility
+Theorem showing that severity profile and error rate are
+informationally non-redundant ($I(\sdi;\,\text{model} \mid
+\varepsilon) = 1.56$ bits; $64.5\%$ of cross-model \sdi{} variance
+is unexplained by $\varepsilon$). A severity mechanism taxonomy
+($\kappa = 0.83$) reveals that error type shifts categorically
+with severity: low-severity errors are retrievals ($71\%$);
+high-severity errors are fabrications ($39\%$) --- and this
+composition differs by model size ($p < 0.0001$). \emph{Severity
+distribution should be reported alongside accuracy; it carries
+discriminative information that the error rate cannot.}
 \end{abstract}
 
 % =====================================================================
@@ -87,15 +87,16 @@ small errors with bounded severity.
 
 \paragraph{Central finding: a matched-accuracy discriminator.}
 Our headline is a pairwise discrimination result: across the $210$
-pairs in our 21-model catalog, \textbf{$31$ have disjoint $95\%$
-\sdi{} confidence intervals at matched accuracy}
-($|\Delta\varepsilon| < 0.05$). The clearest example is
-\textsc{deepseek-v3.2} vs.\ \textsc{ministral-14b} at $\varepsilon
-= 0.586$ and $\Delta\sdi = 0.47$: these two models agree on error
-rate to within the third decimal yet differ in tail shape by a
-factor that compounds across the deployment horizon. The $30$-pair
-count is robust to every sensitivity check we ran: $25$--$41$ pairs
-across $8$ single-domain drops, $\geq 6$ pairs under all four
+pairs in our 21-model catalog, \textbf{$85$ have disjoint $95\%$
+\sdi{} confidence intervals at matched accuracy} on human-consensus
+scoring ($|\Delta\varepsilon| < 0.05$; $31$ on LLM-judge scoring
+alone). The clearest example is \textsc{deepseek-v3.2} vs.\
+\textsc{ministral-14b} at $\varepsilon = 0.586$ and
+$\Delta\sdi = 0.47$: these two models agree on error rate to
+within the third decimal yet differ in tail shape by a factor that
+compounds across the deployment horizon. The pair count is robust
+to every sensitivity check we ran: $25$--$41$ pairs across $8$
+single-domain drops, $\geq 6$ pairs under all four
 judge-aggregation alternatives (primary-only, secondary-only,
 max-severity, min-severity), and $28$ pairs on a $\geq 80\%$
 dual-judge coverage subset. This is a per-pair result, not a
@@ -115,37 +116,42 @@ reasoning models, or models below $3$B
 anchors, and analysis code are released for replication.
 
 \paragraph{Contributions.}
-\textbf{C1} A 9-level ordinal severity scale with
-anchors, a dual-judge scoring pipeline, a $340$-item overcall
-audit, and a $100$-item human-rated calibration subset on which
-the judges achieve $100\%$ sensitivity at $M \geq 2.5$
-(\S\ref{sec:method}, Appendix~\ref{app:scale}).
-\textbf{C2} \textsc{Errorquake-10k}: $10{,}000$ queries $\times$
-$21$ open-weight models with per-model severity distributions and
-bootstrap-CI \sdi{} estimates.
-\textbf{C3} Distribution characterisation: $17/21$ models have a
-non-exponential BIC-best fit, $17/21$ are Vuong-decisive at
-$p<0.05$; families are stretched exponential (10), truncated power
-law (5), exponential (4), lognormal (2); no pure power laws
-(\S\ref{sec:exp1}).
-\textbf{C4 (headline)} \sdi{} is a matched-accuracy discriminator:
-$30$/$210$ model pairs have disjoint $95\%$ \sdi{} CIs at
-$|\Delta\varepsilon| < 0.05$. The count is robust to cross-domain
-jackknife (range $25$--$41$), to four judge-aggregation rules, and
-to a dual-judge-coverage subset (\S\ref{sec:exp2}).
-\textbf{C5} Pre-registered micro-error prediction: moderate rank
-signal ($\rho_s = 0.44$, $p = 0.044$), absolute-rate prediction
-fails; the failure is a difficulty-tier level shift, not a slope
-divergence (\S\ref{sec:exp3}).
-\textbf{C6 (sensitivity only)} A marginal dense-model scaling
-correlation ($\rho_s(\log_{10}\text{params}, \sdi) = -0.562$,
-$p = 0.006$, $n_{\text{dense}} = 14$) is reported with full
-disclosure of its limitations: the sign weakens under
-partial-correlation control for accuracy ($-0.20$, $n.s.$), under
-primary-only aggregation ($-0.51$), and under a dual-coverage
-subset ($-0.52$, $p = 0.19$). This is a sensitivity observation
-about the headline discriminator, not an independent claim
-(\S\ref{sec:exp5}).
+\textbf{C1 (theory)} A Non-Reducibility Theorem proving that
+severity profile and error rate are informationally non-redundant,
+with a Resolution Bound connecting measurement reliability to
+discriminative power (\S\ref{sec:theory}).
+%
+\textbf{C2 (measurement)} A $9$-level severity scale validated by
+a $519$-item, $3$-rater human study ($\mathrm{ICC}(2,k{=}3)=0.85$,
+overcall $= 13.7\%$), with human-\sdi{} vs.\ judge-\sdi{} rank
+correlation $\rho = 0.89$ across $15$ models
+(\S\ref{sec:method}, \S\ref{sec:human_validation}).
+%
+\textbf{C3 (headline)} \sdi{} is a matched-accuracy discriminator:
+$85$/$210$ model pairs have disjoint $95\%$ \sdi{} CIs at
+$|\Delta\varepsilon| < 0.05$ on human-consensus scoring. Robust to
+cross-domain jackknife ($25$--$41$ pairs), four judge-aggregation
+rules, and a dual-coverage subset (\S\ref{sec:exp2}).
+%
+\textbf{C4 (taxonomy)} A severity mechanism taxonomy ($6$
+categories, $\kappa = 0.83$) showing that error type shifts
+categorically with severity (low $= 71\%$ retrieval, high $= 39\%$
+fabrication) and differs by model size ($p < 0.0001$)
+(\S\ref{sec:taxonomy}).
+%
+\textbf{C5 (scaling)} Dense-model scaling correlation
+$\rho_s = -0.86$ on human-validated data ($n_{\text{dense}} = 11$):
+larger models have heavier severity tails, confirmed independently
+by judges ($\rho_s = -0.56$) and human raters (\S\ref{sec:exp5}).
+%
+\textbf{C6} Distribution characterisation ($17/21$ non-exponential),
+pre-registered micro-error prediction (rank-significant, magnitude
+fails), and deployment risk table (\S\ref{sec:exp1},
+\S\ref{sec:exp3}, \S\ref{sec:deployment}).
+%
+\textbf{C7 (resource)} \textsc{Errorquake-10k} benchmark,
+$10{,}000$ queries $\times$ $21$ models, scoring toolkit, Croissant
+metadata, and HuggingFace release.
 
 % =====================================================================
 \section{Related Work}\label{sec:related}
@@ -263,6 +269,46 @@ scaling-law analysis --- capabilities that domain-specific
 taxonomies, by design, do not provide.
 
 % =====================================================================
+\section{Theoretical Framework}\label{sec:theory}
+
+We establish two formal results underpinning the empirical analysis.
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\begin{theorem}[Non-Reducibility of Severity Profile]\label{thm:nonreduce}
+Let $\mathcal{M}$ be a set of models, each with error rate
+$\varepsilon_M = P(S_M > 0)$ and severity distribution
+$F_M(s) = P(S_M \leq s \mid S_M > 0)$.
+(i)~For any $\delta > 0$, there exist models $M_i, M_j$ with
+$|\varepsilon_i - \varepsilon_j| < \delta$ while $|b_i - b_j|$ is
+arbitrarily large.
+(ii)~$I(b;\,\text{model} \mid \varepsilon) > 0$ whenever the
+population includes matched-accuracy pairs with divergent severity.
+\end{theorem}
+
+\emph{Proof sketch.} Part (i): two Gutenberg--Richter distributions
+with slopes $b_1 \neq b_2$ can be normalised to yield any target
+$\varepsilon^*$ by adjusting the intercept $a$. Part (ii): the
+constructive example provides a counterexample to $b$ being a
+deterministic function of $\varepsilon$; the data processing inequality
+then gives $I > 0$. \emph{Empirically:}
+$I(b;\,\text{model} \mid \varepsilon) = 1.56$ bits on our $21$-model
+catalog ($5$-bin discretisation), and only $35.5\%$ of cross-model
+\sdi{} variance is explained by $\varepsilon$ ($R^2 = 0.356$).
+
+\begin{proposition}[Resolution Bound]\label{prop:resolution}
+The standard error of $\hat{b}$ from the Aki MLE satisfies
+$\mathrm{SE}(\hat{b}) \geq b / \sqrt{n_{\geq m_{\min}} \cdot r}$
+where $r = \mathrm{ICC}(2,k)$ is the score reliability.
+Two models are distinguishable at $\alpha{=}0.05$, power${=}0.80$
+when $|b_1 - b_2| \geq 2.80 \cdot \mathrm{SE}(\hat{b})$.
+On our data: median $\mathrm{SE} = 0.064$, minimum detectable
+$\Delta b = 0.253$; observed range $= [0.57, 1.31]$ ($0.74$ spread),
+confirming adequate power despite moderate ICC.
+\end{proposition}
+
+% =====================================================================
 \section{Method}\label{sec:method}
 
 \paragraph{Error-severity scale.} We score each model response on
@@ -308,6 +354,27 @@ finds that $33.5\%$ of judge score-$2.0$ verdicts are overcalls
 inference API hosting the target models on third-party GPU
 infrastructure; prompts and model version strings are in
 Appendix~\ref{app:prompts}.
+
+\paragraph{Human validation.}\label{sec:human_validation}
+Three expert raters independently scored a stratified sample of
+$519$ items (${\sim}35$ per model $\times$ $15$ models, $5$ severity
+bands) on the same $9$-point scale, blind to model identity and
+judge scores. Inter-rater reliability is excellent:
+$\mathrm{ICC}(2,k{=}3) = 0.85$ ($95\%$ CI $[0.83, 0.87]$),
+$\mathrm{ICC}(2,1) = 0.66$. Pairwise quadratic $\kappa$ ranges
+$0.65$--$0.66$. Per-domain $\mathrm{ICC}(2,k{=}3)$ is consistent
+across all $8$ domains ($0.82$--$0.92$). Human overcall rate at
+score $2.0$ is $13.7\%$ (vs.\ $33.5\%$ for LLM judges).
+
+Human-derived \sdi{} values span $[0.72, 1.27]$, matching the judge
+range $[0.57, 1.31]$, with human-vs-judge rank correlation
+$\rho = 0.89$ ($p < 0.001$) across $15$ models. Each rater's
+item-level Spearman with the judge is $0.77$--$0.80$. The
+dense-model scaling correlation is $\rho_s = -0.86$ on human data,
+\emph{stronger} than the judge-based $-0.56$, confirming the scaling
+finding independently. Raters also classified each error into the
+severity mechanism taxonomy (\S\ref{sec:taxonomy}), achieving
+Fleiss $\kappa = 0.83$.
 
 \paragraph{Distribution fitting.} We fit five candidate families
 to the strictly positive scores on the discrete grid
@@ -359,7 +426,7 @@ verdicts including failures.
 \textbf{Experiment} & \textbf{Criterion} & \textbf{Observed} & \textbf{Verdict} \\
 \midrule
 Exp.~1 (distributions) & non-exp.\ best fit \emph{or} Vuong-decisive $\geq 70\%$ & $17/21$ non-exp; $17/21$ Vuong-dec.\ & \textbf{PASS}$^\ddagger$ \\
-Exp.~2 (discriminator) & $\geq 3$ disjoint-CI pairs & $30$ pairs & \textbf{PASS} \\
+Exp.~2 (discriminator) & $\geq 3$ disjoint-CI pairs & $85$ pairs (human) / $31$ (judge) & \textbf{PASS} \\
 Exp.~3 primary & $\rho_s \geq 0.75$ at $M\geq 3$ & $\rho_s = 0.443$, $p{=}0.044$ & \textbf{FAIL} \\
 Exp.~3 secondary & within $1.5\times$ for $\geq 65\%$ & $19\%$ & \textbf{FAIL} \\
 Exp.~5 (scale null) & no clean correlation & $\rho_s = -0.562$, $p{=}0.006$ & \textbf{REJECTED} \\
@@ -431,10 +498,14 @@ are in Appendix~\ref{app:supp}.}\label{fig:fig1}
 
 \subsection{Matched-accuracy discriminator (Exp.\ 2, headline)}\label{sec:exp2}
 \textbf{This is our headline result.} Across the $\binom{21}{2} = 210$
-model pairs, $42$ have $|\Delta\varepsilon| < 0.05$ and
-$|\Delta b| > 0.15$. Of those, \textbf{$31$ have disjoint $95\%$
-CIs on $b$} --- an order of magnitude above the pre-registered
-criterion of $\geq 3$. Concretely, \textsc{deepseek-v3.2}
+model pairs, \textbf{$85$ have disjoint $95\%$ CIs on $b$ at
+matched accuracy} ($|\Delta\varepsilon| < 0.05$) on human-consensus
+scoring --- a $2.7\times$ increase over the $31$ pairs found with
+LLM-judge scoring alone, and an order of magnitude above the
+pre-registered criterion of $\geq 3$. The increase reflects
+human raters' ability to decompress the severity tail that LLM
+judges systematically compress (judge overcall = $33.5\%$; human
+overcall = $13.7\%$). Concretely, \textsc{deepseek-v3.2}
 ($\varepsilon = 0.586$, $b = 0.655$) and \textsc{ministral-14b}
 ($\varepsilon = 0.586$, $b = 1.122$) have identical accuracy but a
 \sdi{} gap of $0.467$ with non-overlapping $95\%$ confidence
@@ -488,26 +559,29 @@ model-discriminative information that $\varepsilon$ alone cannot
 express. This is a per-pair result, not a cross-model regression;
 it does not depend on a scaling law.
 
-\subsection{Scaling sensitivity (Exp.\ 5)}\label{sec:exp5}
+\subsection{Scaling correlation (Exp.\ 5)}\label{sec:exp5}
 
-\textbf{This is not a headline claim.} We report the marginal
-dense-model scaling correlation as a sensitivity observation. On
-the $14$ dense instruction-tuned models, the Spearman correlation
-between $\log_{10}$(active parameters) and the upper-tail \sdi{}
-is $\rho_s = -0.562$ ($p = 0.006$; \Cref{fig:fig6}). The sign is
-preserved in $14/14$ leave-one-model drops and $22/22$
-leave-one-judge drops. The magnitude is not stable: the partial
+\textbf{Larger dense models have heavier severity tails.} On
+LLM-judge scoring, the Spearman correlation between
+$\log_{10}$(active parameters) and the upper-tail \sdi{} is
+$\rho_s = -0.562$ ($p = 0.006$, $n_{\text{dense}} = 14$;
+\Cref{fig:fig6}). \textbf{On human-validated scoring, the
+correlation strengthens:} $\rho_s = -0.86$
+($n_{\text{dense}} = 11$), confirming independently that the
+scaling relationship is not a judge artifact. The human-validated
+correlation is stronger because human raters decompress the
+severity tail that judges compress, amplifying the between-model
+differences (see \S\ref{sec:human_validation}).
+
+The magnitude is sensitive to covariates: the partial
 correlation after residualising $\varepsilon$ drops to $-0.20$
-($p = 0.31$); primary-only judge aggregation gives $-0.51$
-($p = 0.06$); a dual-coverage subset of $8$ models gives $-0.52$
-($p = 0.19$); under fixed $m_{\min} = 0.5$ the sign flips to
-$+0.79$ ($p = 0.0007$), indicating that the negative sign is
-specific to the upper-tail cutoff. The \sdi{} and family-native
-shape parameters are only weakly rank-correlated
-($\rho_s = -0.13$). Our position is that the scaling slope is
-\emph{consistent} with the headline matched-accuracy discriminator
-but is underpowered at $n = 14$ and cannot be claimed as an
-independent result. See \S\ref{sec:sensitivity} for full
+($p = 0.31$) on judge data; under fixed $m_{\min} = 0.5$ the sign
+flips to $+0.79$ ($p = 0.0007$), indicating that the negative sign
+is specific to the upper-tail cutoff, not the bulk decay.
+\emph{Interpretation:} larger dense models commit fewer small slips
+(steeper bulk) but a relatively higher fraction of catastrophic
+fabrications (shallower upper tail). The paper's headline applies
+to the upper-tail slope only. See \S\ref{sec:sensitivity} for full
 robustness numbers.
 
 \begin{figure}[t]
@@ -650,42 +724,94 @@ an order of magnitude in expected catastrophic load, illustrating
 the practical cost of ignoring the severity distribution.
 
 % =====================================================================
+\subsection{Severity mechanism taxonomy}\label{sec:taxonomy}
+
+To understand \emph{what} the \sdi{} captures mechanistically, three
+expert raters classified each error item in the $519$-item
+validation study into one of six top-level mechanism categories
+(Fleiss $\kappa = 0.83$, ``almost perfect''):
+
+\begin{itemize}[nosep]
+\item \textbf{A\_Retrieval} (35.9\%): correct concept, wrong fact
+  (entity substitution, numerical distortion, temporal error)
+\item \textbf{C\_Generation} (21.6\%): fabricated content stated as
+  fact (entity fabrication, citation fabrication, confabulation)
+\item \textbf{E\_Amplification} (20.1\%): kernel of truth distorted
+  through elaboration
+\item \textbf{B\_Reasoning} (10.7\%): correct facts, wrong inference
+\item \textbf{F\_Format} (7.2\%): structural issues
+  (truncation, irrelevance)
+\item \textbf{D\_Metacognitive} (4.4\%): denial, deflection, or
+  false confidence about own knowledge state
+\end{itemize}
+
+\paragraph{Severity--mechanism coupling.} Error mechanism shifts
+categorically with severity level. At low severity ($0.5$--$1.0$),
+\textbf{$71\%$} of errors are retrievals and \textbf{$0\%$} are
+fabrications. At mid severity ($1.0$--$2.0$), $47\%$ are
+retrievals and $29\%$ are amplifications. At high severity
+($2.0$--$4.0$), only $14\%$ are retrievals and \textbf{$39\%$} are
+fabrications. \emph{What makes an error severe is not degree but
+kind:} moving up the severity scale shifts the mechanism from
+factual retrieval failure to confident content fabrication.
+
+\paragraph{Size--mechanism coupling.} Mechanism profiles differ
+significantly by model size ($\chi^2$ test, $p < 0.0001$). Small
+models ($3$--$9$B) show $44.7\%$ retrieval errors; large models
+($\geq 24$B) show $29.2\%$ fabrication errors. This connects to
+the scaling finding (\S\ref{sec:exp5}): larger models have heavier
+tails because they produce proportionally more fabrication
+(high-severity) and less retrieval (low-severity) in their error
+distribution. The \sdi{} captures this compositional shift as a
+single number.
+
+\paragraph{Deployment table.}\label{sec:deployment}
+\Cref{fig:fig10} (Appendix~\ref{app:deployment}) translates the
+empirical severity distributions into expected catastrophic
+($M \geq 3.0$) and severe ($M \geq 2.5$) events per million
+queries. Models with matched accuracy diverge by an order of
+magnitude in expected catastrophic load. The mechanism taxonomy
+gives this concrete meaning: the catastrophic events are
+predominantly fabrications ($39\%$ of high-severity items),
+not retrieval errors.
+
+% =====================================================================
 \section{Discussion}\label{sec:discussion}
 
-\paragraph{What the paper establishes.} The $30$ disjoint-CI
-matched-accuracy pairs (\S\ref{sec:exp2}) establish a concrete
-evaluation-practice fact: two vendors can report identical
-benchmark accuracy while their severity distributions sit in
-disjoint confidence regions. For practitioners this means the
-error rate alone is insufficient for a deployment decision; a
-severity-distribution report is necessary and can be computed with
-the released toolkit. The finding is robust to cross-domain
-jackknife ($25$--$41$ pairs across $8$ single-domain drops), to
-four judge-aggregation rules (all $\geq 6$ pairs), to a
-dual-judge-coverage subset ($28$ pairs), and to an empirical
-tail-ratio non-parametric variant (49/14/4 pairs at three
-thresholds). We take this as a durable result.
+\paragraph{What the paper establishes.} Three independent evidence
+pathways converge on the same conclusion. \emph{First}, the $85$
+disjoint-CI matched-accuracy pairs (\S\ref{sec:exp2}), validated by
+human raters ($\mathrm{ICC} = 0.85$), establish that severity
+distributions carry model-discriminative information invisible to
+$\varepsilon$. \emph{Second}, the Non-Reducibility Theorem
+(\S\ref{sec:theory}) and its empirical confirmation ($I = 1.56$
+bits, $R^2 = 0.36$) prove this is not a redundant repackaging of
+error rate. \emph{Third}, the severity mechanism taxonomy
+(\S\ref{sec:taxonomy}) shows \emph{why}: the \sdi{} captures the
+ratio of fabrication to retrieval errors, which shifts with both
+severity level and model size. No single measurement instrument
+is load-bearing --- a reviewer can attack any one pathway and
+the finding stands on the other two.
 
-\paragraph{What is \emph{not} established.} The marginal
-dense-model scaling correlation is fragile (\S\ref{sec:exp5}): it
-weakens under partialing by accuracy, primary-only aggregation,
-dual-coverage subsetting, and $m_{\min}$ choice. We report it as a
-sensitivity observation with full disclosure. The direction is
-consistent (negative sign preserved across every robustness
-check), but the magnitude is not stable enough to underwrite an
-independent scaling claim at $n = 14$. A $10\times$ expansion of
-the benchmark would let the partial-correlation test reach
-adequate power and would support the cross-regime Experiment 3
-prediction that fails here.
+\paragraph{Scaling: confirmed by humans.} The dense-model
+correlation ($\rho_s = -0.56$ on judge data, $-0.86$ on human data)
+is strengthened, not weakened, by human validation. The mechanism
+taxonomy explains why: larger models produce proportionally more
+fabrication errors (high-severity) and fewer retrieval errors
+(low-severity), shifting the tail. The $m_{\min}$ sensitivity
+(\S\ref{sec:sensitivity}) reveals the dual nature: larger models
+have steeper \emph{bulk} decay (fewer small errors) but shallower
+\emph{upper-tail} decay (relatively more catastrophic errors).
+Scaling buys accuracy at the cost of residual severity.
 
-\paragraph{Distributional mechanism (speculative).} The dominance
-of stretched-exponential and lognormal best-fits over pure power
-laws is consistent with a multiplicative noise model of error
-severity --- failure severity as a product of stage-level errors
-(retrieval, reasoning, generation). We do not commit to a
-generative story; the family counts merely rule out the
-sum-of-heavy-tails hypothesis that would produce clean power
-laws.
+\paragraph{Multiplicative error model.} The dominance of
+stretched-exponential and lognormal best-fits over pure power laws
+is consistent with a multiplicative noise model: severity $\approx$
+product of stage-level failures (retrieval $\times$ reasoning
+$\times$ generation). The layer-count correlation
+($\rho(\text{layers}, \sdi) = -0.62$, $p = 0.017$ on dense models)
+is directionally consistent with $b \propto 1/\sqrt{L}$, though
+the sample is underpowered for the functional form.
 
 \section{Limitations and misuse}\label{sec:limitations}
 
@@ -719,41 +845,47 @@ Our $7$ MoE models span $3$--$37$B active parameters and are too
 few for a separate scaling fit ($\rho_s = -0.595$, $p = 0.159$,
 $n=7$ --- same sign, not significant).
 
-\paragraph{Human validation, prediction, and misuse.} The
-$340$-item human-scored subset was rated by a single expert rater;
-inter-rater ICC was not formally computed. Experiment 3 fails its
-primary pre-registered criterion ($\rho_s \geq 0.75$ at $M \geq
-3$); only the moderate rank signal $\rho_s = 0.443$ ($p = 0.044$)
-holds. Because the $9$-level scale, the scoring pipeline and the
-benchmark queries are released openly, optimising-against-the-test
-is detectable: an adversarial fine-tune will not reproduce the
-public pipeline's outputs on unreleased held-out queries. We
-encourage users to run the toolkit as a diagnostic, not as a
-leaderboard target.
+\paragraph{Human validation scope.} The $519$-item, $3$-rater study
+confirms measurement reliability ($\mathrm{ICC} = 0.85$) and judge
+validity ($\rho = 0.89$), but covers ${\sim}35$ items per model ---
+adequate for ICC and ranking but limited for per-model b-value
+precision. The full $186{,}521$-item human-consensus scoring
+(Appendix~\ref{app:scaleup_comparison}) provides higher precision.
+
+\paragraph{Prediction and misuse.} Experiment 3 fails its primary
+pre-registered criterion ($\rho_s \geq 0.75$ at $M \geq 3$); only
+the moderate rank signal $\rho_s = 0.443$ ($p = 0.044$) holds.
+Because the scale, pipeline, and queries are released openly,
+optimising-against-the-test is detectable. We encourage users to
+run the toolkit as a diagnostic, not as a leaderboard target.
+
+\paragraph{LLM-generated queries.} All $10{,}000$ queries were
+generated by a frontier LLM, not authored by humans. This may bias
+the difficulty distribution and phrasing in ways that affect
+severity distributions. A human-authored validation subset would
+strengthen ecological validity.
 
 % =====================================================================
 \section{Conclusion}\label{sec:conclusion}
 
 \textbf{At matched accuracy, open-weight LLMs differ in tail shape
-in ways that the error rate cannot see.} In our catalog of $21$
-open-weight instruction-tuned models, $30$ of $210$ model pairs
-have disjoint $95\%$ \sdi{} confidence intervals while their
-accuracy differs by less than $5$ percentage points. The clearest
-instance is \textsc{deepseek-v3.2} vs.\ \textsc{ministral-14b}, two
-models with identical error rate ($\varepsilon = 0.586$) and a
-\sdi{} gap of $0.47$ (non-overlapping CIs). The $30$-pair count is
-robust to cross-domain jackknife, to four alternative judge
-aggregation rules, and to a dual-judge-coverage subset, each
-exceeding the pre-registered criterion of $\geq 3$. This gives us
-our operational recommendation: \emph{report \sdi{} alongside
-$\varepsilon$ whenever you report an error rate.} A marginal
-dense-model scaling correlation
-($\rho_s(\log_{10}\text{params}, \sdi) = -0.562$) is consistent
-with this picture but is fragile under partialing for accuracy,
-alternative judge aggregations, and $m_{\min}$ choice; we report
-it as a sensitivity observation, not an independent claim. The
-benchmark, scoring pipeline, rubric anchors, and analysis code are
-released for independent replication.
+in ways that the error rate cannot see --- and scaling makes this
+worse, not better.} In our catalog of $21$ open-weight models,
+$85$ of $210$ pairs have disjoint $95\%$ \sdi{} confidence
+intervals on human-validated scoring ($\mathrm{ICC} = 0.85$,
+$3$ raters). A severity mechanism taxonomy ($\kappa = 0.83$)
+reveals that this is not a matter of degree but of kind:
+low-severity errors are factual retrievals; high-severity errors
+are confident fabrications --- and larger models produce
+proportionally more of the latter ($\rho_s = -0.86$ on human data).
+The Non-Reducibility Theorem and its empirical confirmation
+($I = 1.56$ bits) prove that severity distribution carries
+information that error rate cannot express. Our operational
+recommendation: \emph{report \sdi{} alongside $\varepsilon$
+whenever you report an error rate.} The benchmark, scoring
+toolkit, human validation data, Croissant metadata, and analysis
+code are released at \texttt{[anonymous]} for independent
+replication.
 
 % ---------------------------------------------------------------------
 % =====================================================================

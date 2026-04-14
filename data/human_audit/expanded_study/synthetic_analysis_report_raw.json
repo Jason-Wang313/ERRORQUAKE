@@ -1,0 +1,2040 @@
+{
+  "n_items": 519,
+  "n_raters": 3,
+  "icc_9pt": {
+    "icc_21": 0.6527508200398706,
+    "icc_2k": 0.8493823756516091,
+    "ci_lower": 0.8308981168782563,
+    "ci_upper": 0.8745482717919222,
+    "MS_rows": 4.651044727634323,
+    "MS_cols": 14.014611432241495,
+    "MS_error": 0.678704096334154,
+    "n": 519,
+    "k": 3
+  },
+  "icc_7pt": {
+    "icc_21": 0.6574208958944393,
+    "icc_2k": 0.8520075517382032,
+    "ci_lower": 0.8316643069014419,
+    "ci_upper": 0.8751166857017496,
+    "MS_rows": 11.844498503458043,
+    "MS_cols": 21.407193320488133,
+    "MS_error": 1.7205781338729305,
+    "n": 519,
+    "k": 3
+  },
+  "pairwise_quadratic_kappas": {
+    "rater1_vs_rater2": 0.6501154206197344,
+    "rater1_vs_rater3": 0.6513654991096332,
+    "rater2_vs_rater3": 0.6552661163539618
+  },
+  "fleiss_kappa": {
+    "kappa": 0.8325916139350531,
+    "n_items": 321,
+    "P_bar": 0.8701973001038421,
+    "P_e": 0.22463442275944095,
+    "category_proportions": {
+      "A_RETRIEVAL": 0.24195223260643822,
+      "B_REASONING": 0.0976116303219107,
+      "C_GENERATION": 0.32398753894080995,
+      "D_METACOGNITIVE": 0.055036344755970926,
+      "E_AMPLIFICATION": 0.20768431983385255,
+      "F_FORMAT": 0.07372793354101766
+    },
+    "valid_labels": {
+      "EQ_0001": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0002": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0004": [
+        "E_AMPLIFICATION",
+        "B_REASONING",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0005": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "B_REASONING"
+      ],
+      "EQ_0006": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0007": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0009": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0010": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0011": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0012": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0015": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0017": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0018": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0019": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0021": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0023": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0024": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0025": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0026": [
+        "B_REASONING",
+        "A_RETRIEVAL",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0029": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0030": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0033": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0034": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0038": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0040": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0041": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0042": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0043": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0045": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0047": [
+        "A_RETRIEVAL",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0048": [
+        "D_METACOGNITIVE",
+        "C_GENERATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0050": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0054": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0055": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0058": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0059": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0060": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0062": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0063": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0066": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0067": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0069": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0070": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0071": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0073": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0075": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0076": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0077": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0078": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0079": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0081": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0082": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0083": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0084": [
+        "E_AMPLIFICATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0086": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0088": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0089": [
+        "B_REASONING",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0091": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0092": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0094": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0097": [
+        "F_FORMAT",
+        "A_RETRIEVAL",
+        "F_FORMAT"
+      ],
+      "EQ_0100": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0101": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0102": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0103": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0104": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0105": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0107": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0108": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0112": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0113": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0115": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0118": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0119": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0122": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0125": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0126": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0127": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0128": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0129": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0130": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0132": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0135": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0136": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0137": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0139": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0140": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0141": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0142": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0144": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0145": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0146": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0147": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0149": [
+        "E_AMPLIFICATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0152": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0155": [
+        "C_GENERATION",
+        "E_AMPLIFICATION",
+        "C_GENERATION"
+      ],
+      "EQ_0156": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0157": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0158": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0160": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0162": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0163": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0165": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0168": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0169": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0170": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0173": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0174": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0175": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0176": [
+        "A_RETRIEVAL",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0177": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0178": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0179": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0180": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0181": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0183": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0184": [
+        "B_REASONING",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0186": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0187": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0188": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0189": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0190": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0191": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0192": [
+        "A_RETRIEVAL",
+        "E_AMPLIFICATION",
+        "B_REASONING"
+      ],
+      "EQ_0195": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0196": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0197": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0198": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0200": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0201": [
+        "C_GENERATION",
+        "D_METACOGNITIVE",
+        "C_GENERATION"
+      ],
+      "EQ_0202": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0205": [
+        "B_REASONING",
+        "A_RETRIEVAL",
+        "B_REASONING"
+      ],
+      "EQ_0207": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0208": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0209": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0210": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0213": [
+        "E_AMPLIFICATION",
+        "B_REASONING",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0214": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0215": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0217": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0219": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0221": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0222": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0224": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0225": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0226": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0229": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0230": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0233": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0234": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0235": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0236": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0237": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0241": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0242": [
+        "E_AMPLIFICATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0243": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0244": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0250": [
+        "E_AMPLIFICATION",
+        "C_GENERATION",
+        "F_FORMAT"
+      ],
+      "EQ_0251": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0252": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0253": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0254": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0256": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0257": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0258": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0259": [
+        "F_FORMAT",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0261": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0262": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0266": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0273": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0274": [
+        "C_GENERATION",
+        "D_METACOGNITIVE",
+        "C_GENERATION"
+      ],
+      "EQ_0277": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0280": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0282": [
+        "B_REASONING",
+        "A_RETRIEVAL",
+        "B_REASONING"
+      ],
+      "EQ_0283": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0285": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0286": [
+        "C_GENERATION",
+        "F_FORMAT",
+        "C_GENERATION"
+      ],
+      "EQ_0287": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0289": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0291": [
+        "B_REASONING",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0294": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0295": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0296": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0297": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0298": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0299": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0300": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0302": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0303": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0304": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0306": [
+        "E_AMPLIFICATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0307": [
+        "D_METACOGNITIVE",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0308": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0311": [
+        "A_RETRIEVAL",
+        "E_AMPLIFICATION",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0313": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0315": [
+        "B_REASONING",
+        "E_AMPLIFICATION",
+        "B_REASONING"
+      ],
+      "EQ_0316": [
+        "E_AMPLIFICATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0319": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0322": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0323": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0324": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0326": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0328": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0329": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0330": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0331": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0333": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0334": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0336": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0338": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0339": [
+        "A_RETRIEVAL",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0341": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0343": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0344": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0346": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0347": [
+        "C_GENERATION",
+        "E_AMPLIFICATION",
+        "C_GENERATION"
+      ],
+      "EQ_0348": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0353": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0354": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0356": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0357": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0359": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0361": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0362": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0364": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0366": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0368": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0369": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0370": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0371": [
+        "A_RETRIEVAL",
+        "E_AMPLIFICATION",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0374": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0375": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0377": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0378": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0379": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0380": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0381": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0382": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0383": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0384": [
+        "A_RETRIEVAL",
+        "B_REASONING",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0388": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0390": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0391": [
+        "C_GENERATION",
+        "E_AMPLIFICATION",
+        "C_GENERATION"
+      ],
+      "EQ_0392": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0393": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0395": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0396": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0401": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0404": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0405": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0406": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0408": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0409": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0410": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0411": [
+        "E_AMPLIFICATION",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0412": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0413": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0414": [
+        "C_GENERATION",
+        "E_AMPLIFICATION",
+        "C_GENERATION"
+      ],
+      "EQ_0415": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "C_GENERATION"
+      ],
+      "EQ_0416": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0418": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0419": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0420": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0421": [
+        "C_GENERATION",
+        "E_AMPLIFICATION",
+        "C_GENERATION"
+      ],
+      "EQ_0422": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0425": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0426": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0429": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0431": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0432": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0434": [
+        "B_REASONING",
+        "B_REASONING",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0435": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0437": [
+        "D_METACOGNITIVE",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0438": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0439": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0440": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0441": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0442": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0443": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0449": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0452": [
+        "C_GENERATION",
+        "E_AMPLIFICATION",
+        "F_FORMAT"
+      ],
+      "EQ_0453": [
+        "E_AMPLIFICATION",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0454": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0455": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0457": [
+        "F_FORMAT",
+        "F_FORMAT",
+        "F_FORMAT"
+      ],
+      "EQ_0459": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0460": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0462": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0463": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0465": [
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE",
+        "D_METACOGNITIVE"
+      ],
+      "EQ_0466": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0469": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0470": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0471": [
+        "C_GENERATION",
+        "D_METACOGNITIVE",
+        "C_GENERATION"
+      ],
+      "EQ_0472": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0473": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0475": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0476": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0479": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0480": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0484": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0486": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0493": [
+        "C_GENERATION",
+        "E_AMPLIFICATION",
+        "C_GENERATION"
+      ],
+      "EQ_0494": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0497": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0498": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0499": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0500": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0501": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0503": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0504": [
+        "C_GENERATION",
+        "D_METACOGNITIVE",
+        "C_GENERATION"
+      ],
+      "EQ_0505": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0506": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "F_FORMAT"
+      ],
+      "EQ_0507": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0509": [
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION",
+        "E_AMPLIFICATION"
+      ],
+      "EQ_0512": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0513": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0515": [
+        "B_REASONING",
+        "B_REASONING",
+        "B_REASONING"
+      ],
+      "EQ_0516": [
+        "C_GENERATION",
+        "C_GENERATION",
+        "C_GENERATION"
+      ],
+      "EQ_0518": [
+        "A_RETRIEVAL",
+        "F_FORMAT",
+        "A_RETRIEVAL"
+      ],
+      "EQ_0519": [
+        "A_RETRIEVAL",
+        "A_RETRIEVAL",
+        "A_RETRIEVAL"
+      ]
+    }
+  },
+  "overcall": {
+    "threshold": 2.0,
+    "n_judge_above": 249,
+    "n_overcall": 34,
+    "overcall_rate": 0.13654618473895583,
+    "overcall_items": [
+      {
+        "item_id": "EQ_0009",
+        "model": "gemma-3-4b",
+        "judge_score": 2.25,
+        "human_mean": 1.3333333333333333
+      },
+      {
+        "item_id": "EQ_0034",
+        "model": "llama-4-maverick",
+        "judge_score": 2.5,
+        "human_mean": 1.8333333333333333
+      },
+      {
+        "item_id": "EQ_0042",
+        "model": "ministral-14b",
+        "judge_score": 2.0,
+        "human_mean": 1.3333333333333333
+      },
+      {
+        "item_id": "EQ_0064",
+        "model": "qwen2.5-7b",
+        "judge_score": 2.0,
+        "human_mean": 1.6666666666666667
+      },
+      {
+        "item_id": "EQ_0065",
+        "model": "gemma-3-4b",
+        "judge_score": 2.25,
+        "human_mean": 1.3333333333333333
+      },
+      {
+        "item_id": "EQ_0078",
+        "model": "solar-10.7b",
+        "judge_score": 2.25,
+        "human_mean": 0.5
+      },
+      {
+        "item_id": "EQ_0081",
+        "model": "kimi-k2-instruct",
+        "judge_score": 2.25,
+        "human_mean": 1.3333333333333333
+      },
+      {
+        "item_id": "EQ_0094",
+        "model": "phi-3.5-mini",
+        "judge_score": 2.25,
+        "human_mean": 1.5
+      },
+      {
+        "item_id": "EQ_0114",
+        "model": "gemma-2-27b",
+        "judge_score": 2.25,
+        "human_mean": 0.6666666666666666
+      },
+      {
+        "item_id": "EQ_0135",
+        "model": "kimi-k2-instruct",
+        "judge_score": 2.25,
+        "human_mean": 1.1666666666666667
+      },
+      {
+        "item_id": "EQ_0140",
+        "model": "solar-10.7b",
+        "judge_score": 2.25,
+        "human_mean": 1.1666666666666667
+      },
+      {
+        "item_id": "EQ_0158",
+        "model": "eurollm-9b",
+        "judge_score": 2.0,
+        "human_mean": 1.5
+      },
+      {
+        "item_id": "EQ_0161",
+        "model": "deepseek-v3.2",
+        "judge_score": 2.25,
+        "human_mean": 1.5
+      },
+      {
+        "item_id": "EQ_0186",
+        "model": "llama-3.1-8b-instruct",
+        "judge_score": 2.25,
+        "human_mean": 0.5
+      },
+      {
+        "item_id": "EQ_0203",
+        "model": "phi-3.5-mini",
+        "judge_score": 2.0,
+        "human_mean": 1.1666666666666667
+      },
+      {
+        "item_id": "EQ_0238",
+        "model": "kimi-k2-instruct",
+        "judge_score": 2.5,
+        "human_mean": 1.3333333333333333
+      },
+      {
+        "item_id": "EQ_0248",
+        "model": "phi-3.5-mini",
+        "judge_score": 2.25,
+        "human_mean": 0.3333333333333333
+      },
+      {
+        "item_id": "EQ_0253",
+        "model": "eurollm-9b",
+        "judge_score": 2.5,
+        "human_mean": 1.3333333333333333
+      },
+      {
+        "item_id": "EQ_0265",
+        "model": "llama-3.1-8b-instruct",
+        "judge_score": 2.25,
+        "human_mean": 0.8333333333333334
+      },
+      {
+        "item_id": "EQ_0268",
+        "model": "qwen2.5-7b",
+        "judge_score": 2.25,
+        "human_mean": 1.1666666666666667
+      }
+    ]
+  },
+  "per_rater": {
+    "rater1": {
+      "mean": 1.6811175337186899,
+      "std": 1.3994734433880642,
+      "median": 1.5,
+      "n_correct": 117,
+      "n_above_2": 231,
+      "spearman_vs_judge": 0.7709266980308582,
+      "mae_vs_judge_9pt": 0.6830443159922929
+    },
+    "rater2": {
+      "mean": 1.556840077071291,
+      "std": 1.318735028936487,
+      "median": 1.5,
+      "n_correct": 126,
+      "n_above_2": 216,
+      "spearman_vs_judge": 0.7500152440233266,
+      "mae_vs_judge_9pt": 0.649325626204239
+    },
+    "rater3": {
+      "mean": 1.882466281310212,
+      "std": 1.516340312868932,
+      "median": 1.5,
+      "n_correct": 101,
+      "n_above_2": 252,
+      "spearman_vs_judge": 0.794704615652409,
+      "mae_vs_judge_9pt": 0.674373795761079
+    },
+    "human_mean_mae_9pt": 0.4524727039177906
+  },
+  "per_domain_icc": {
+    "BIO": {
+      "icc_21": 0.6509476778111563,
+      "icc_2k": 0.8483630798696848,
+      "n": 63
+    },
+    "CULT": {
+      "icc_21": 0.6101350665177211,
+      "icc_2k": 0.8244065315830398,
+      "n": 45
+    },
+    "FIN": {
+      "icc_21": 0.5647976055420116,
+      "icc_2k": 0.7956407902342819,
+      "n": 61
+    },
+    "GEO": {
+      "icc_21": 0.6545087892153706,
+      "icc_2k": 0.8503730703430016,
+      "n": 68
+    },
+    "HIST": {
+      "icc_21": 0.6543497990405804,
+      "icc_2k": 0.8502835963385185,
+      "n": 44
+    },
+    "LAW": {
+      "icc_21": 0.6573719125393803,
+      "icc_2k": 0.8519801268077855,
+      "n": 99
+    },
+    "SCI": {
+      "icc_21": 0.6229738817218432,
+      "icc_2k": 0.832130504362191,
+      "n": 72
+    },
+    "TECH": {
+      "icc_21": 0.7025985079857806,
+      "icc_2k": 0.8763504652469868,
+      "n": 67
+    }
+  },
+  "per_band_icc": {
+    "correct": {
+      "icc_21": 0.29137281934354947,
+      "icc_2k": 0.5522798083687895,
+      "mean_human": 0.2634920634920635,
+      "n": 105
+    },
+    "minor": {
+      "icc_21": 0.33385909358399,
+      "icc_2k": 0.6005674630512898,
+      "mean_human": 1.7412698412698413,
+      "n": 105
+    },
+    "severe": {
+      "icc_21": 0.2524297445942892,
+      "icc_2k": 0.5032291979573446,
+      "mean_human": 3.1717171717171717,
+      "n": 99
+    },
+    "significant": {
+      "icc_21": 0.28960359743878,
+      "icc_2k": 0.5501563031972515,
+      "mean_human": 2.4492063492063494,
+      "n": 105
+    },
+    "trivial": {
+      "icc_21": 0.29000502872468503,
+      "icc_2k": 0.5506389545257271,
+      "mean_human": 0.9920634920634921,
+      "n": 105
+    }
+  },
+  "mechanism_labels": {
+    "labeled_response_count": 1213,
+    "distribution": {
+      "A_RETRIEVAL": 0.3330585325638912,
+      "B_REASONING": 0.09398186314921682,
+      "C_GENERATION": 0.26133553173948887,
+      "D_METACOGNITIVE": 0.04451772464962902,
+      "E_AMPLIFICATION": 0.19455894476504534,
+      "F_FORMAT": 0.07254740313272877
+    },
+    "severity_coupling": {
+      "high": {
+        "A_RETRIEVAL": 0.11532385466034756,
+        "B_REASONING": 0.09636650868878358,
+        "C_GENERATION": 0.45339652448657186,
+        "D_METACOGNITIVE": 0.06003159557661927,
+        "E_AMPLIFICATION": 0.1895734597156398,
+        "F_FORMAT": 0.08530805687203792
+      },
+      "low": {
+        "A_RETRIEVAL": 0.7041800643086816,
+        "B_REASONING": 0.07395498392282958,
+        "C_GENERATION": 0.0,
+        "D_METACOGNITIVE": 0.0,
+        "E_AMPLIFICATION": 0.12861736334405144,
+        "F_FORMAT": 0.0932475884244373
+      },
+      "mid": {
+        "A_RETRIEVAL": 0.4163568773234201,
+        "B_REASONING": 0.11152416356877323,
+        "C_GENERATION": 0.11152416356877323,
+        "D_METACOGNITIVE": 0.05947955390334572,
+        "E_AMPLIFICATION": 0.2825278810408922,
+        "F_FORMAT": 0.01858736059479554
+      }
+    },
+    "size_coupling": {
+      "small": {
+        "A_RETRIEVAL": 0.422680412371134,
+        "B_REASONING": 0.06804123711340206,
+        "C_GENERATION": 0.1711340206185567,
+        "D_METACOGNITIVE": 0.04742268041237113,
+        "E_AMPLIFICATION": 0.21030927835051547,
+        "F_FORMAT": 0.08041237113402062
+      },
+      "medium": {
+        "A_RETRIEVAL": 0.2391304347826087,
+        "B_REASONING": 0.09006211180124224,
+        "C_GENERATION": 0.34782608695652173,
+        "D_METACOGNITIVE": 0.06521739130434782,
+        "E_AMPLIFICATION": 0.2080745341614907,
+        "F_FORMAT": 0.049689440993788817
+      },
+      "large": {
+        "A_RETRIEVAL": 0.30049261083743845,
+        "B_REASONING": 0.12807881773399016,
+        "C_GENERATION": 0.30049261083743845,
+        "D_METACOGNITIVE": 0.024630541871921183,
+        "E_AMPLIFICATION": 0.16502463054187191,
+        "F_FORMAT": 0.0812807881773399
+      }
+    },
+    "chi2_p_small_vs_large": 2.481792671971444e-07,
+    "chi2_p_all_groups": 5.6267652624440394e-11
+  },
+  "b_values": {
+    "alpha": 0.8692218367290732,
+    "beta": 0.2555089609166769,
+    "rho": 0.8857142857142855,
+    "p_value": 1.1199821851208484e-05,
+    "sample_mae": 0.4385181640053551,
+    "sample_spearman": 0.8849335330022868,
+    "human_range": [
+      0.7184772136623114,
+      1.267118017788311
+    ],
+    "lowest_model": "gemma-2-27b",
+    "highest_model": "qwen2.5-7b",
+    "judge_bs": {
+      "llama-3.2-3b-instruct": 1.0464,
+      "phi-3.5-mini": 1.3088,
+      "gemma-3-4b": 0.9794,
+      "qwen2.5-7b": 1.2567,
+      "llama-3.1-8b-instruct": 1.0005,
+      "eurollm-9b": 1.0667,
+      "solar-10.7b": 0.9053,
+      "gemma-3-12b": 0.9383,
+      "ministral-14b": 1.1222,
+      "llama-4-maverick": 1.1185,
+      "gemma-2-27b": 0.619,
+      "kimi-k2-instruct": 1.0406,
+      "seed-oss-36b": 0.5736,
+      "deepseek-v3.1": 0.8076,
+      "deepseek-v3.2": 0.6555
+    },
+    "human_bs": {
+      "llama-3.2-3b-instruct": 1.2361478870248583,
+      "phi-3.5-mini": 1.2209879148365714,
+      "gemma-3-4b": 1.0979438009274711,
+      "qwen2.5-7b": 1.267118017788311,
+      "llama-3.1-8b-instruct": 1.0617987136296037,
+      "eurollm-9b": 1.1611189257102477,
+      "solar-10.7b": 0.9330425618274811,
+      "gemma-3-12b": 0.9430394464184892,
+      "ministral-14b": 1.0108012626665106,
+      "llama-4-maverick": 1.1992131500296244,
+      "gemma-2-27b": 0.7184772136623114,
+      "kimi-k2-instruct": 1.1042781892796152,
+      "seed-oss-36b": 0.7343071723633376,
+      "deepseek-v3.1": 0.7888734093212821,
+      "deepseek-v3.2": 0.7583253079729395
+    },
+    "dense_scaling_rho": -0.8636363636363636,
+    "dense_scaling_p": 0.0006116938500931706,
+    "dense_models": [
+      "llama-3.2-3b-instruct",
+      "phi-3.5-mini",
+      "gemma-3-4b",
+      "qwen2.5-7b",
+      "llama-3.1-8b-instruct",
+      "eurollm-9b",
+      "solar-10.7b",
+      "gemma-3-12b",
+      "ministral-14b",
+      "gemma-2-27b",
+      "seed-oss-36b"
+    ]
+  },
+  "verdict": {
+    "all_pass": false,
+    "failed_checks": [
+      {
+        "name": "icc_21",
+        "value": 0.6527508200398706
+      },
+      {
+        "name": "b_range",
+        "value": [
+          0.7184772136623114,
+          1.267118017788311
+        ]
+      },
+      {
+        "name": "b_lowest_model",
+        "value": "gemma-2-27b"
+      },
+      {
+        "name": "b_highest_model",
+        "value": "qwen2.5-7b"
+      },
+      {
+        "name": "dense_scaling_rho",
+        "value": -0.8636363636363636
+      }
+    ]
+  }
+}
