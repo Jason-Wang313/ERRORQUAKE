@@ -26,7 +26,7 @@ import numpy as np
 from scipy import stats
 from sklearn.metrics import cohen_kappa_score
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 RATED = ROOT / "data" / "human_audit" / "multi_rater_kit" / "rated_items.csv"
 KEY = ROOT / "data" / "human_audit" / "multi_rater_kit" / "rating_items_with_key.json"
 PB = ROOT / "results" / "analysis" / "phase_b_10k.json"
@@ -220,3 +220,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

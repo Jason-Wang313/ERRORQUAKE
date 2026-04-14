@@ -13,7 +13,7 @@ These are NOT human ratings. Label as synthetic in any publication.
 """
 
 import csv
-import os
+from pathlib import Path
 
 # Ratings in CSV row order: (rating_id, rater_A, rater_B, rater_C)
 RATINGS = [
@@ -260,12 +260,12 @@ def compute_icc_2k(data):
 
 
 def main():
-    kit_dir = "C:/projects/errorquake/data/human_audit/multi_rater_kit"
-    input_csv = os.path.join(kit_dir, "rating_items.csv")
-    output_csv = os.path.join(kit_dir, "rated_items.csv")
+    kit_dir = Path(__file__).resolve().parent
+    input_csv = kit_dir / "rating_items.csv"
+    output_csv = kit_dir / "rated_items.csv"
 
     # Read original CSV
-    with open(input_csv, "r", encoding="utf-8") as f:
+    with input_csv.open("r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         rows = list(reader)
 
@@ -277,7 +277,7 @@ def main():
 
     # Write rated CSV
     fieldnames = list(rows[0].keys()) + ["score_synth_A", "score_synth_B", "score_synth_C"]
-    with open(output_csv, "w", encoding="utf-8", newline="") as f:
+    with output_csv.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for i, row in enumerate(rows):

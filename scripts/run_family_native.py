@@ -21,7 +21,7 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 SCORES = ROOT / "results" / "scores"
 ANALYSIS = ROOT / "results" / "analysis" / "full_21model_analysis.json"
 EXP5 = ROOT / "results" / "analysis" / "exp5_scaling.json"
@@ -176,3 +176,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

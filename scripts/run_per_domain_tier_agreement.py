@@ -16,7 +16,7 @@ import numpy as np
 from scipy import stats
 from sklearn.metrics import cohen_kappa_score
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 SCORES = ROOT / "results" / "scores"
 EXP4 = ROOT / "results" / "analysis" / "exp4_domains.json"
 OUT = ROOT / "results" / "analysis" / "agreement_per_domain_tier.json"
@@ -125,3 +125,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

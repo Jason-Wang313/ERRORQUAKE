@@ -28,6 +28,7 @@ paper/*.toc
 paper/*.synctex.gz
 paper/*.fls
 paper/*.fdb_latexmk
+paper/submission_bundle/
 
 # Large raw data — excluded from the public repo because GitHub is not
 # an LFS host for us and these files are either reproducible from the

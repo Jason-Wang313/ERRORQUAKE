@@ -8,7 +8,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-DATA = Path("C:/projects/errorquake/data/queries")
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data" / "queries"
 OUT = DATA / "v6_supplement_6k.jsonl"
 DOMAIN_FILES = ["bio", "law", "hist", "geo", "sci", "tech", "fin", "cult"]
 

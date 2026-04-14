@@ -25,7 +25,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 SCORES = ROOT / "results" / "scores"
 OUT = ROOT / "results" / "analysis" / "icc.json"
 EXCLUDED = {"llama-3.1-70b-instruct", "phi-4-mini-flash-reasoning"}

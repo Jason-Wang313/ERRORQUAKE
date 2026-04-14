@@ -12,6 +12,8 @@ import sys
 import time
 from pathlib import Path
 
+from env_paths import load_keys_from_env_file
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from errorquake.magnitude import SCALE_11, parse_judge_output, render_judge_prompt, resolve_scores
 from errorquake.utils import write_jsonl
@@ -31,12 +33,7 @@ BATCH_SIZE = 100
 
 
 def _load_keys(prefix: str) -> list[str]:
-    env = Path("C:/Users/wangz/MIRROR/.env").read_text(encoding="utf-8")
-    return [
-        line.split("=", 1)[1].strip()
-        for line in env.splitlines()
-        if line.startswith(prefix) and "=" in line and line.split("=", 1)[1].strip()
-    ]
+    return load_keys_from_env_file(prefix)
 
 
 # Build clients

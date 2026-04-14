@@ -16,11 +16,13 @@ import os
 import time
 from pathlib import Path
 
-ROOT = Path("C:/projects/errorquake")
+from env_paths import get_env_path
+
+ROOT = Path(__file__).resolve().parent.parent
 QUERIES = ROOT / "data" / "queries" / "standard_subset_4k.jsonl"
 OUT_DIR = ROOT / "results" / "evaluations_v4"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
-ENV_PATH = Path("C:/Users/wangz/MIRROR/.env")
+ENV_PATH = get_env_path()
 
 MODELS = [
     ("llama-3.1-405b-instruct", "meta/llama-3.1-405b-instruct"),
@@ -237,3 +239,4 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+

@@ -9,8 +9,10 @@ import asyncio
 import json
 from pathlib import Path
 
-ENV_PATH = Path("C:/Users/wangz/MIRROR/.env")
-OUT = Path("C:/projects/errorquake/results/analysis/availability_check.json")
+from env_paths import ROOT, get_env_path
+
+ENV_PATH = get_env_path()
+OUT = ROOT / "results" / "analysis" / "availability_check.json"
 
 CANDIDATES = [
     "meta/llama-3.1-405b-instruct",

@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 from errorquake.analyze import estimate_b_value, fit_all_distributions
 
@@ -227,3 +227,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

@@ -1,8 +1,31 @@
-$repo = "C:\projects\errorquake"
-$manifest = "C:\projects\errorquake\data\queries\manifest.json"
-$log = "C:\projects\errorquake\data\queries\logs\generation_watchdog.log"
-$envPath = "C:\Users\wangz\MIRROR\.env"
+$repo = Split-Path -Parent $PSScriptRoot
+$queriesDir = Join-Path $repo "data\queries"
+$logsDir = Join-Path $queriesDir "logs"
+$manifest = Join-Path $queriesDir "manifest.json"
+$log = Join-Path $logsDir "generation_watchdog.log"
 $lastSeenPid = $null
+
+New-Item -ItemType Directory -Force -Path $logsDir | Out-Null
+
+function Get-EnvPath {
+    if ($env:ERRORQUAKE_ENV_PATH) {
+        return $env:ERRORQUAKE_ENV_PATH
+    }
+
+    $candidates = @(
+        (Join-Path $repo ".env"),
+        (Join-Path $repo "MIRROR\.env"),
+        (Join-Path (Get-Location) ".env")
+    )
+
+    foreach ($candidate in $candidates) {
+        if (Test-Path $candidate) {
+            return $candidate
+        }
+    }
+
+    return $null
+}
 
 function Write-Log {
     param([string]$Message)
@@ -10,9 +33,12 @@ function Write-Log {
 }
 
 function Start-GenerationResume {
-    foreach ($line in Get-Content $envPath) {
-        if ($line -match '^NVIDIA_NIM_API_KEY=(.+)$') {
-            $env:NVIDIA_API_KEY = $Matches[1].Trim()
+    $envPath = Get-EnvPath
+    if ($envPath -and (Test-Path $envPath)) {
+        foreach ($line in Get-Content $envPath) {
+            if ($line -match '^NVIDIA_NIM_API_KEY=(.+)$') {
+                $env:NVIDIA_API_KEY = $Matches[1].Trim()
+            }
         }
     }
 

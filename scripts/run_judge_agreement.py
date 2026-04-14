@@ -12,7 +12,7 @@ import numpy as np
 from scipy import stats
 from sklearn.metrics import cohen_kappa_score
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 SCORES = ROOT / "results" / "scores"
 EXP5 = ROOT / "results" / "analysis" / "exp5_scaling.json"
 OUT = ROOT / "results" / "analysis" / "judge_agreement.json"

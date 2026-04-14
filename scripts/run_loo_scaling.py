@@ -14,8 +14,9 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-ANALYSIS = Path("C:/projects/errorquake/results/analysis/exp5_scaling.json")
-OUT = Path("C:/projects/errorquake/results/analysis/exp5_loo.json")
+ROOT = Path(__file__).resolve().parent.parent
+ANALYSIS = ROOT / "results" / "analysis" / "exp5_scaling.json"
+OUT = ROOT / "results" / "analysis" / "exp5_loo.json"
 
 data = json.loads(ANALYSIS.read_text(encoding="utf-8"))
 points = data["points"]

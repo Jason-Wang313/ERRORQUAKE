@@ -1,9 +1,14 @@
-$progressPath = "C:\projects\errorquake\data\queries\raw\generation_progress.json"
-$logPath = "C:\projects\errorquake\data\queries\logs\prefetch_guardian.log"
+$repo = Split-Path -Parent $PSScriptRoot
+$queriesDir = Join-Path $repo "data\queries"
+$logsDir = Join-Path $queriesDir "logs"
+$progressPath = Join-Path $queriesDir "raw\generation_progress.json"
+$logPath = Join-Path $logsDir "prefetch_guardian.log"
 $stalledMinutes = 12
 $pollSeconds = 180
 $lastCandidates = $null
 $lastChangeAt = Get-Date
+
+New-Item -ItemType Directory -Force -Path $logsDir | Out-Null
 
 function Write-Log {
     param([string]$Message)

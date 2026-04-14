@@ -10,9 +10,10 @@ from __future__ import annotations
 import asyncio
 import random
 import time
-from pathlib import Path
 
-ENV_PATH = Path("C:/Users/wangz/MIRROR/.env")
+from env_paths import get_env_path
+
+ENV_PATH = get_env_path()
 
 CANDIDATES = [
     ("deepseek-v3.2 (judge)", "deepseek-ai/deepseek-v3.2"),

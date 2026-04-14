@@ -21,7 +21,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 EVAL_4K = ROOT / "results" / "evaluations"
 EVAL_6K = ROOT / "results" / "evaluations_v6_supplement"
 SCORES_4K = ROOT / "results" / "scores"
@@ -150,3 +150,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

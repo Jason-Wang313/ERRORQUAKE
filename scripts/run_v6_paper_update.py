@@ -34,7 +34,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 PAPER = ROOT / "paper" / "main.tex"
 PHASE_B = ROOT / "results" / "analysis" / "phase_b_10k.json"
 PHASE_B_NEW = ROOT / "results" / "analysis" / "phase_b_new_10k.json"
@@ -275,3 +275,4 @@ def build_4k_vs_10k_appendix(cmp: dict, pbn: dict) -> str:
 
 if __name__ == "__main__":
     main()
+

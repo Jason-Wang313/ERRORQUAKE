@@ -33,6 +33,8 @@ from errorquake.generate import (
 from errorquake.queries import DOMAINS, TIERS
 from errorquake.utils import ProjectConfig, now_iso, read_jsonl, setup_logger, write_jsonl
 
+ROOT = Path(__file__).resolve().parent.parent
+
 TARGET_CELLS: list[tuple[str, int]] = [
     ("TECH", 5),
     ("FIN", 5),
@@ -615,13 +617,13 @@ def main() -> None:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("C:/projects/errorquake/data/queries"),
+        default=ROOT / "data" / "queries",
         help="Main query output directory.",
     )
     parser.add_argument(
         "--work-dir",
         type=Path,
-        default=Path("C:/projects/errorquake/data/queries/regeneration_work/deepseek_v32_targeted"),
+        default=ROOT / "data" / "queries" / "regeneration_work" / "deepseek_v32_targeted",
         help="Directory to store per-cell intermediate artifacts and progress.",
     )
     parser.add_argument(

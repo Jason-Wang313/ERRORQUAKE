@@ -10,6 +10,8 @@ from statistics import mean
 from typing import Any
 
 
+ROOT = Path(__file__).resolve().parent.parent
+
 DOMAINS = ["BIO", "LAW", "HIST", "GEO", "SCI", "TECH", "FIN", "CULT"]
 
 PERSON_NAME_RE = re.compile(r"\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b")
@@ -466,7 +468,7 @@ def main() -> None:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("C:/projects/errorquake/data/queries"),
+        default=ROOT / "data" / "queries",
         help="Directory containing final domain JSONL files.",
     )
     parser.add_argument(

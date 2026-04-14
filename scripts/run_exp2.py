@@ -16,8 +16,9 @@ import json
 from itertools import combinations
 from pathlib import Path
 
-ANALYSIS = Path("C:/projects/errorquake/results/analysis/full_21model_analysis.json")
-OUT = Path("C:/projects/errorquake/results/analysis/exp2_discriminator.json")
+ROOT = Path(__file__).resolve().parent.parent
+ANALYSIS = ROOT / "results" / "analysis" / "full_21model_analysis.json"
+OUT = ROOT / "results" / "analysis" / "exp2_discriminator.json"
 
 
 def main() -> None:

@@ -9,7 +9,8 @@ import csv
 import json
 from pathlib import Path
 
-PILOT_DIR = Path("C:/projects/errorquake/data/pilot")
+ROOT = Path(__file__).resolve().parent.parent
+PILOT_DIR = ROOT / "data" / "pilot"
 
 # ============================================================
 # SCORES: (rating_id, score_11pt, score_7pt, score_5level, notes)

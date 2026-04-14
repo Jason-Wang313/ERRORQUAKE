@@ -17,6 +17,8 @@ import sys
 import time
 from pathlib import Path
 
+from env_paths import get_env_path
+
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
@@ -53,7 +55,7 @@ INTERVENTIONS = {
     ),
 }
 
-ENV_PATH = Path("C:/Users/wangz/MIRROR/.env")
+ENV_PATH = get_env_path()
 
 
 def load_keys(prefix: str) -> list[str]:

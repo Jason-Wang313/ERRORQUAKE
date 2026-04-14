@@ -1,12 +1,16 @@
-$repo = "C:\projects\errorquake"
-$progressPath = "C:\projects\errorquake\data\queries\raw\generation_progress.json"
-$manifestPath = "C:\projects\errorquake\data\queries\manifest.json"
-$logPath = "C:\projects\errorquake\data\queries\logs\quarterhour_checker.log"
-$statePath = "C:\projects\errorquake\data\queries\quarterhour_checker_state.json"
+$repo = Split-Path -Parent $PSScriptRoot
+$queriesDir = Join-Path $repo "data\queries"
+$logsDir = Join-Path $queriesDir "logs"
+$progressPath = Join-Path $queriesDir "raw\generation_progress.json"
+$manifestPath = Join-Path $queriesDir "manifest.json"
+$logPath = Join-Path $logsDir "quarterhour_checker.log"
+$statePath = Join-Path $queriesDir "quarterhour_checker_state.json"
 $pollSeconds = 900
 $lastTotalCandidates = $null
 $lastCompletedCells = $null
 $checkerStartedAt = (Get-Date).ToUniversalTime().ToString("o")
+
+New-Item -ItemType Directory -Force -Path $logsDir | Out-Null
 
 function Write-Log {
     param([string]$Message)
@@ -114,8 +118,8 @@ while ($true) {
     if ($helperSummary.watchdogs -lt 1) { $warnings += "generation_watchdog_missing" }
     if ($helperSummary.guardians -lt 1) { $warnings += "prefetch_guardian_missing" }
     if ($hasBaseline -and $deltaCandidates -le 0 -and $deltaCells -le 0) { $warnings += "no_progress_in_last_15m" }
-    if (Test-RecentErrorSignal -Path "C:\projects\errorquake\data\queries\logs\verify_sidecar_stderr.log") { $warnings += "verify_sidecar_error_signal" }
-    if (Test-RecentErrorSignal -Path "C:\projects\errorquake\data\queries\logs\prefetch_verify_stderr.log") { $warnings += "prefetch_verify_error_signal" }
+    if (Test-RecentErrorSignal -Path (Join-Path $logsDir "verify_sidecar_stderr.log")) { $warnings += "verify_sidecar_error_signal" }
+    if (Test-RecentErrorSignal -Path (Join-Path $logsDir "prefetch_verify_stderr.log")) { $warnings += "prefetch_verify_error_signal" }
 
     $summary = "status total_candidates=$totalCandidates delta_candidates=$deltaCandidates completed_cells=$completedCells delta_cells=$deltaCells current_cell=$currentCell main_generation=$($helperSummary.main_generation) prefetch_workers=$($helperSummary.prefetch_workers) verify_sidecars=$($helperSummary.verify_sidecars) prefetch_verifiers=$($helperSummary.prefetch_verifiers)"
     if ($warnings.Count -gt 0) {

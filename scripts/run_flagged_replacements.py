@@ -31,6 +31,8 @@ from errorquake.utils import ProjectConfig, now_iso, read_jsonl, setup_logger, w
 from run_tier_audit import collect_flagged_records
 
 
+ROOT = Path(__file__).resolve().parent.parent
+
 TARGET_CELLS: list[tuple[str, int]] = [
     ("TECH", 5),
     ("FIN", 5),
@@ -624,17 +626,17 @@ def main() -> None:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("C:/projects/errorquake/data/queries"),
+        default=ROOT / "data" / "queries",
     )
     parser.add_argument(
         "--work-dir",
         type=Path,
-        default=Path("C:/projects/errorquake/data/queries/regeneration_work/flagged_swaps"),
+        default=ROOT / "data" / "queries" / "regeneration_work" / "flagged_swaps",
     )
     parser.add_argument(
         "--report-path",
         type=Path,
-        default=Path("C:/projects/errorquake/data/queries/tier_audit_report.json"),
+        default=ROOT / "data" / "queries" / "tier_audit_report.json",
     )
     parser.add_argument("--cells", default=None)
     parser.add_argument("--generation-rpm", type=int, default=35)

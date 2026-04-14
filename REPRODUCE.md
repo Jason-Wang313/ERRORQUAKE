@@ -1,112 +1,70 @@
-# ERRORQUAKE-10K — Reproduction Guide
+# ERRORQUAKE-10K Reproduction Guide
 
-## Quick Start
+## Setup
 
 ```bash
 git clone https://github.com/anonymous/errorquake.git
 cd errorquake
-pip install -e .
+pip install -e ".[dev]"
 ```
 
-## Requirements
+## Fast verification
 
-- Python >= 3.9
-- numpy, scipy, pandas, matplotlib, seaborn
-- NVIDIA NIM API key (for re-running evaluations; not needed for analysis)
-
-## Reproducing Analysis from Existing Data
-
-All scored data is included in `results/`. No API calls needed.
+These commands check the local artifact without any API access:
 
 ```bash
-# Experiment 1: Distribution characterization
-python scripts/run_exp1.py
+ruff check src tests
+pytest -q
+python scripts/spot_check.py
+python scripts/count_abstract.py
+powershell -ExecutionPolicy Bypass -File paper/build_submission.ps1
+```
 
-# Experiment 2: Matched-accuracy discriminator
-python scripts/run_exp2.py
-python scripts/run_exp2_robustness.py
+## Saved analysis artifacts used by the submission
 
-# Experiment 3: Micro-error prediction
-python scripts/run_exp3.py
+The submission-critical claims are checked directly against the saved
+10K and human-validation JSON artifacts in:
 
-# Experiment 4: Domain variation
-python scripts/run_exp4.py
+- `results/analysis/v7_4k_vs_10k.json`
+- `results/analysis/v10_full_human.json`
+- `results/analysis/oral_upgrade/oral_upgrade_analyses.json`
+- `data/human_audit/expanded_study/analysis_report.json`
 
-# Experiment 5: Scaling analysis
-python scripts/run_exp5.py
+`python scripts/spot_check.py` is the supported verification entry
+point for these claims.
 
-# Sensitivity analyses
-python scripts/run_sensitivity.py
-python scripts/run_s5_mmin.py
+Some legacy `run_exp*.py` scripts in the repo regenerate earlier 4K or
+judge-only analyses and are kept for project history, but they are not
+the primary source of truth for the current submission numbers.
 
-# Judge agreement
-python scripts/run_icc.py
-python scripts/run_judge_agreement.py
+## Regenerating figures
 
-# Generate all figures
+```bash
 python scripts/make_figures.py
-
-# Oral-caliber upgrade analyses (new)
-python scripts/run_oral_upgrade_analyses.py
-python scripts/run_multiplicative_model_test.py
 ```
 
-## Reproducing from Scratch (Requires API)
-
-### Step 1: Generate queries
-```bash
-python scripts/run_generation.py --domains all --tiers all --n-per-cell 250
-```
-
-### Step 2: Evaluate models
-```bash
-python scripts/run_evaluation.py --models all --queries data/queries/standard_subset_4k.jsonl
-```
-
-### Step 3: Score responses
-```bash
-python scripts/run_scoring.py --models all
-```
-
-### Step 4: Run analysis
-```bash
-python scripts/run_analysis.py
-```
-
-## Data Format
-
-### Evaluation records (`results/evaluations_10k/*.jsonl`)
-```json
-{
-  "query_id": "BIO_T1_0036",
-  "model_name": "deepseek-v3.2",
-  "question": "...",
-  "ground_truth": "...",
-  "response_text": "...",
-  "domain": "BIO",
-  "tier": 1
-}
-```
-
-### Score records (`results/scores_10k/*.jsonl`)
-```json
-{
-  "query_id": "BIO_T1_0036",
-  "model_name": "deepseek-v3.2",
-  "primary_score": 1.0,
-  "secondary_score": 1.5,
-  "final_score": 1.25,
-  "resolution_method": "average"
-}
-```
-
-## Tests
+## Building the submission PDF
 
 ```bash
-pytest tests/ -v
+powershell -ExecutionPolicy Bypass -File paper/build_submission.ps1
 ```
 
-## License
+## Full evaluation pipeline
 
-Code: Apache 2.0
-Data: CC-BY-4.0
+The repository also contains scripts for query generation, model
+evaluation, and LLM-judge scoring. Those workflows require third-party
+provider credentials and may be subject to rate limits or model
+availability changes, so they are not required for reproducing the
+submission from saved artifacts.
+
+## Released artifact contents
+
+- Saved analysis outputs: `results/analysis/`
+- Released benchmark metadata: `data/release/`
+- Human-validation protocol: `data/human_audit/expanded_study/protocol.md`
+- Paper source and figures: `paper/`
+
+## Licenses
+
+- Code: MIT
+- Released benchmark data/metadata: CC-BY-4.0

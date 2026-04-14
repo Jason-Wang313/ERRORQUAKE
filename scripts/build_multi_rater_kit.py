@@ -14,7 +14,7 @@ import json
 import random
 from pathlib import Path
 
-ROOT = Path("C:/projects/errorquake")
+ROOT = Path(__file__).resolve().parent.parent
 SCORES_10K = ROOT / "results" / "scores_10k"
 EVALS_10K = ROOT / "results" / "evaluations_10k"
 OUT_DIR = ROOT / "data" / "human_audit" / "multi_rater_kit"
@@ -148,3 +148,4 @@ Expected time: ~2 hours for 200 items (~36 seconds per item).
 
 if __name__ == "__main__":
     main()
+

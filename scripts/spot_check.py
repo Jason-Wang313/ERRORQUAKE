@@ -1,109 +1,73 @@
-"""Spot-check numbers asserted in paper/main.tex against JSON sources.
-
-Each check loads a specific JSON and compares against the rounded
-claim in the paper. Fails loudly on mismatch.
-"""
+"""Spot-check key paper claims against saved analysis artifacts."""
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-A = Path("C:/projects/errorquake/results/analysis")
+ROOT = Path(__file__).resolve().parent.parent
+ANALYSIS = ROOT / "results" / "analysis"
+EXPANDED_HUMAN = ROOT / "data" / "human_audit" / "expanded_study" / "analysis_report.json"
 
 
-def check(label: str, actual, expected, tol=0.005):
-    if isinstance(expected, (int, str)):
+def load(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def check(label: str, actual, expected, tol: float = 0.005) -> bool:
+    if isinstance(expected, int):
         ok = actual == expected
     else:
         ok = abs(float(actual) - float(expected)) <= tol
     status = "OK  " if ok else "FAIL"
-    print(f"  [{status}] {label}: actual={actual}, paper={expected}")
+    print(f"[{status}] {label}: actual={actual}, paper={expected}")
     return ok
 
 
-results = []
+def main() -> None:
+    results: list[bool] = []
 
-# 1. Exp 5: dense Spearman rho and p-value
-d = json.loads((A / "exp5_scaling.json").read_text(encoding="utf-8"))
-results.append(check("Exp5 dense Spearman rho",
-                     d["correlations"]["dense"]["spearman_rho"], -0.689, 0.001))
-results.append(check("Exp5 dense Spearman p",
-                     d["correlations"]["dense"]["spearman_p"], 0.006, 0.001))
-results.append(check("Exp5 dense n", d["correlations"]["dense"]["n"], 14))
+    scaleup = load(ANALYSIS / "v7_4k_vs_10k.json")
+    results.append(check("Exp1 decisive fits (10K)", scaleup["n_decisive"]["10k"], 17))
+    results.append(check("Exp1 non-exponential fits (10K)", scaleup["n_nonexp"]["10k"], 17))
 
-# 2. Exp 5 all-models
-results.append(check("Exp5 all Spearman rho",
-                     d["correlations"]["all"]["spearman_rho"], -0.585, 0.001))
-results.append(check("Exp5 all n", d["correlations"]["all"]["n"], 21))
+    exp3 = load(ANALYSIS / "exp3_prediction.json")
+    target3 = exp3["target_3.0"]
+    results.append(check("Exp3 rho (M>=3.0)", target3["spearman_rho_counts"], 0.443, 0.002))
+    results.append(check("Exp3 p (M>=3.0)", target3["spearman_p_counts"], 0.044, 0.002))
+    results.append(check("Exp3 within-1.5x count", target3["within_1_5x_count"], 4))
 
-# 3. Exp 3 primary result
-d = json.loads((A / "exp3_prediction.json").read_text(encoding="utf-8"))
-t3 = d["target_3.0"]
-results.append(check("Exp3 Spearman counts rho",
-                     t3["spearman_rho_counts"], 0.443, 0.002))
-results.append(check("Exp3 Spearman counts p",
-                     t3["spearman_p_counts"], 0.044, 0.002))
-results.append(check("Exp3 n_valid", t3["n_valid"], 21))
-results.append(check("Exp3 within_1_5x_count", t3["within_1_5x_count"], 4))
+    results.append(check("Exp5 dense rho (10K)", scaleup["rho_scale"]["10k"], -0.5617, 0.002))
+    results.append(check("Exp5 partial rho (10K)", scaleup["partial_rho"]["10k"], -0.2044, 0.002))
 
-# 4. Exp 3 secondary
-t25 = d["target_2.5"]
-results.append(check("Exp3 M>=2.5 Spearman rho",
-                     t25["spearman_rho_counts"], 0.637, 0.002))
-results.append(check("Exp3 M>=2.5 p",
-                     t25["spearman_p_counts"], 0.002, 0.001))
+    sensitivity = load(ANALYSIS / "sensitivity.json")
+    results.append(check("S1 7-point rho", sensitivity["S1_scale"]["spearman_9pt_to_7pt"], 0.43, 0.02))
+    results.append(check("S1 5-level rho", sensitivity["S1_scale"]["spearman_9pt_to_5lvl"], 0.16, 0.02))
+    results.append(check("S2 mean rho", sensitivity["S2_overcall"]["mean_spearman"], 0.847, 0.002))
+    results.append(check("S3 median CV", sensitivity["S3_subsample"]["median_cv"], 0.143, 0.005))
 
-# 5. Exp 2 disjoint CI count
-d = json.loads((A / "exp2_discriminator.json").read_text(encoding="utf-8"))
-results.append(check("Exp2 disjoint-CI pairs",
-                     d["summary"]["n_pairs_disjoint_CIs"], 30))
-results.append(check("Exp2 qualifying pairs",
-                     d["summary"]["n_pairs_qualifying"], 42))
+    oral = load(ANALYSIS / "oral_upgrade" / "oral_upgrade_analyses.json")
+    mi = oral["mi_decomposition"]
+    results.append(check("Conditional MI I(b;model|eps)", mi["I_b_model_given_eps"], 1.5645, 0.002))
+    results.append(check("R^2(b~eps)", mi["direct_correlation"]["r_squared_linear"], 0.3555, 0.002))
 
-# 6. Exp 1 decisive fits and family counts
-d = json.loads((A / "exp1_distribution.json").read_text(encoding="utf-8"))
-results.append(check("Exp1 n_decisive",
-                     d["summary"]["n_decisive"], 18))
-results.append(check("Exp1 n_models",
-                     d["summary"]["n_models"], 21))
-results.append(check("Exp1 stretched_exp count",
-                     d["summary"]["best_fit_counts"].get("stretched_exp", 0), 10))
+    full_human = load(ANALYSIS / "v10_full_human.json")
+    results.append(check("Human headline disjoint CIs", full_human["headline_human"]["n_disjoint_CIs"], 85))
+    results.append(check("Judge baseline pairs", full_human["headline_human"]["n_judge_baseline"], 31))
 
-# 7. Exp 4 Friedman + Kendall W
-d = json.loads((A / "exp4_domains.json").read_text(encoding="utf-8"))
-results.append(check("Exp4 Friedman chi2",
-                     d["friedman"]["statistic"], 15.94, 0.1))
-results.append(check("Exp4 Friedman p",
-                     d["friedman"]["p_value"], 0.026, 0.002))
-results.append(check("Exp4 Kendall W",
-                     d["kendall_w"]["W"], 0.108, 0.005))
+    expanded = load(EXPANDED_HUMAN)
+    results.append(check("Expanded-study ICC(2,k=3)", expanded["icc_9pt"]["icc_2k"], 0.8513, 0.002))
+    results.append(check("Expanded-study human/judge rho", expanded["b_values"]["rho"], 0.8857, 0.002))
+    results.append(check("Expanded-study dense scaling rho", expanded["b_values"]["dense_scaling_rho"], -0.8636, 0.002))
+    results.append(check("Expanded-study Fleiss kappa", expanded["fleiss_kappa"]["kappa"], 0.8308, 0.002))
+    results.append(check("Expanded-study overcall", expanded["overcall"]["overcall_rate"], 0.1365, 0.002))
 
-# 8. Sensitivity
-d = json.loads((A / "sensitivity.json").read_text(encoding="utf-8"))
-results.append(check("S1 7pt rho", d["S1_scale"]["spearman_9pt_to_7pt"], 0.43, 0.02))
-results.append(check("S1 5lvl rho", d["S1_scale"]["spearman_9pt_to_5lvl"], 0.16, 0.02))
-results.append(check("S2 mean rho", d["S2_overcall"]["mean_spearman"], 0.847, 0.002))
-results.append(check("S3 median CV", d["S3_subsample"]["median_cv"], 0.143, 0.005))
+    passed = sum(results)
+    total = len(results)
+    print(f"\nSPOT CHECK: {passed}/{total} match")
+    if passed != total:
+        raise SystemExit(1)
 
-# 9. Overcall
-d = json.loads((A / "overcall_diagnostic.json").read_text(encoding="utf-8"))
-results.append(check("Overcall n_sampled",
-                     d["overall"]["n_total_sampled"], 340))
-results.append(check("Overcall overall rate",
-                     d["overall"]["overall_overcall_rate"], 0.335, 0.003))
 
-# 10. Exp 5 leave-one-out
-d = json.loads((A / "exp5_loo.json").read_text(encoding="utf-8"))
-results.append(check("LOO n sig/14",
-                     d["n_significant_after_drop"], 14))
-results.append(check("LOO worst-case p",
-                     d["loo_max_p"], 0.0263, 0.001))
-
-n_pass = sum(results)
-n_total = len(results)
-print()
-print(f"SPOT CHECK: {n_pass}/{n_total} match")
-if n_pass != n_total:
-    import sys
-    sys.exit(1)
+if __name__ == "__main__":
+    main()

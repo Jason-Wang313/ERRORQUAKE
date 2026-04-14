@@ -15,8 +15,9 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-ANALYSIS = Path("C:/projects/errorquake/results/analysis/full_21model_analysis.json")
-OUT = Path("C:/projects/errorquake/results/analysis/exp5_scaling.json")
+ROOT = Path(__file__).resolve().parent.parent
+ANALYSIS = ROOT / "results" / "analysis" / "full_21model_analysis.json"
+OUT = ROOT / "results" / "analysis" / "exp5_scaling.json"
 
 # Active param counts (billions). For MoE: active params per token.
 PARAMS = {

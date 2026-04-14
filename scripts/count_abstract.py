@@ -2,7 +2,8 @@
 import re
 from pathlib import Path
 
-text = Path("C:/projects/errorquake/paper/main.tex").read_text(encoding="utf-8")
+ROOT = Path(__file__).resolve().parent.parent
+text = (ROOT / "paper" / "main.tex").read_text(encoding="utf-8")
 m = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", text, re.DOTALL)
 body = m.group(1)
 # Remove LaTeX commands and math

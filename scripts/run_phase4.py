@@ -40,11 +40,12 @@ from errorquake.evaluate import ALL_MODELS, ModelConfig
 from errorquake.generate import _call_nim_text
 
 import os
+from env_paths import get_env_path
 
 
 def _load_env_keys(prefix: str) -> list[str]:
     """Load all keys matching prefix from MIRROR .env."""
-    env_path = Path("C:/Users/wangz/MIRROR/.env")
+    env_path = get_env_path()
     keys = []
     if env_path.exists():
         for line in env_path.read_text(encoding="utf-8").splitlines():

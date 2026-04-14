@@ -10,6 +10,8 @@ import sys
 import time
 from pathlib import Path
 
+from env_paths import load_keys_from_env_file
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from errorquake.evaluate import ALL_MODELS
 
@@ -25,13 +27,7 @@ SMOKE_SIZE = 10   # for not-yet-evaluated models
 
 
 def _load_nim_keys() -> list[str]:
-    env = Path("C:/Users/wangz/MIRROR/.env").read_text(encoding="utf-8")
-    return [
-        line.split("=", 1)[1].strip()
-        for line in env.splitlines()
-        if line.startswith("NVIDIA_NIM_API_KEY") and "=" in line
-        and line.split("=", 1)[1].strip()
-    ]
+    return load_keys_from_env_file("NVIDIA_NIM_API_KEY")
 
 
 def is_reasoning_model(model) -> bool:
